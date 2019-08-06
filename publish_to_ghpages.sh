@@ -28,6 +28,6 @@ hugo --minify
 echo "Updating gh-pages branch"
 cd public && git add --all && git commit -m "Publishing to gh-pages" && cd ..
 
-#echo "Pushing to github"
+echo "Pushing to github"
 #git push --all
 git push origin gh-pages
