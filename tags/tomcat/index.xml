@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tomcat on Tips and Tutorials</title>
+    <link>https://dalanzg.github.io/tips-tutorials/tags/tomcat/</link>
+    <description>Recent content in tomcat on Tips and Tutorials</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright. Tips and Tutorials. All rights reserved.</copyright>
+    <lastBuildDate>Fri, 07 Apr 2017 20:53:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://dalanzg.github.io/tips-tutorials/tags/tomcat/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Setting SSL or https in Tomcat with openSUSE</title>
+      <link>https://dalanzg.github.io/tips-tutorials/posts/2017/04/07/setting-ssl-or-https-in-tomcat-with-opensuse/</link>
+      <pubDate>Fri, 07 Apr 2017 20:53:00 +0200</pubDate>
+      
+      <guid>https://dalanzg.github.io/tips-tutorials/posts/2017/04/07/setting-ssl-or-https-in-tomcat-with-opensuse/</guid>
+      <description>A tutorial to configure Tomcat 8 to support SSL or https connection.
+Requirements You will need the following:
+ An openSUSE virtual machine with VirtualBox (Check this link Java JDK to create Keystores -&amp;gt; Change Java OpenJDK to Oracle JDK Tomcat -&amp;gt; How to install tomcat in openSUSE  This tutorial was created with:
+ openSUSE Leap 42.2 Java Version -&amp;gt; jdk1.8.0_121 Tomcat version -&amp;gt; apache-tomcat-8.0.42  Steps  Create a keystore using Java JDK Set keystore in Tomcat Check SSL or https connection  Create a keystore using Java JDK Keystore file is a container for authorization certificates or public key certificates.</description>
+    </item>
+    
+    <item>
+      <title>How to install Tomcat in openSUSE</title>
+      <link>https://dalanzg.github.io/tips-tutorials/posts/2017/03/24/how-to-install-tomcat-in-opensuse/</link>
+      <pubDate>Fri, 24 Mar 2017 22:50:00 +0100</pubDate>
+      
+      <guid>https://dalanzg.github.io/tips-tutorials/posts/2017/03/24/how-to-install-tomcat-in-opensuse/</guid>
+      <description>Requirements You will need the following:
+ Tomcat 8  Optional -&amp;gt; (Change Java OpenJDK to Oracle JDK to run Tomcat.
+Steps  Download Tomcat 8. This case will be Apache Tomcat 8.0.42 -&amp;gt; Core tar.gz (apache-tomcat-8.0.42.tar.gz).
+ Unzip apache-tomcat-8.0.42.tar.gz file and place it in folder /usr/local/tomcat. /usr/local is a folder similar to /usr and remain safe from system software upgrades.
+dalanz@linux-geij:~&amp;gt; tar -xf apache-tomcat-8.0.42.tar.gz dalanz@linux-geij:~&amp;gt; sudo mkdir -p /usr/local/tomcat dalanz@linux-geij:~&amp;gt; sudo mv apache-tomcat-8.</description>
+    </item>
+    
+    <item>
+      <title>How to install JDK 8 on Mac OS X</title>
+      <link>https://dalanzg.github.io/tips-tutorials/posts/2015/11/22/how-to-install-jdk-8-on-mac-os-x/</link>
+      <pubDate>Sun, 22 Nov 2015 18:00:00 +0200</pubDate>
+      
+      <guid>https://dalanzg.github.io/tips-tutorials/posts/2015/11/22/how-to-install-jdk-8-on-mac-os-x/</guid>
+      <description>If you are planing to develop Java Apps on your Mac, you have to install the JDK package. You only have to install the binary files provided by Oracle.
+ Download JDK 8 from Oracle WebSite. [jdk-8u65-macosx-x64.dmg for Mac]. Double click on jdk-8u65-macosx-x64.dmg and follow the screen instructions. JDK package will have been installed in /Library/Java/JavaVirtualMachines. In my computer, I have both 1.6 and 1.8 JDK package.
+$ ls -l /Library/Java/JavaVirtualMachines drwxr-xr-x 3 root wheel 102 14 jul 23:52 1.</description>
+    </item>
+    
+    <item>
+      <title>How to install Tomcat 7 on Mac OS X</title>
+      <link>https://dalanzg.github.io/tips-tutorials/posts/2015/11/21/how-to-install-tomcat-7-on-mac-os-x/</link>
+      <pubDate>Sat, 21 Nov 2015 18:00:00 +0200</pubDate>
+      
+      <guid>https://dalanzg.github.io/tips-tutorials/posts/2015/11/21/how-to-install-tomcat-7-on-mac-os-x/</guid>
+      <description>Requirements: Java (at least 1.6).
+First, check your java version by opening the terminal:
+$ java -version java version &amp;#34;1.8.0_65&amp;#34; Java(TM) SE Runtime Environment (build 1.8.0_65-b17) Java HotSpot(TM) 64-Bit Server VM (build 25.65-b01, mixed mode) Follow these steps:
+ Download the binary Core Distribution from the original website (apache-tomcat-7.0.65.tar.gz): Apache Tomcat 7 Unzip the file downloaded Create a Tomcat folder in /Library. There we can leave several Tomcat versions to test</description>
+    </item>
+    
+  </channel>
+</rss>

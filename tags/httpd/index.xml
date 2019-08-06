@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>httpd on Tips and Tutorials</title>
+    <link>https://dalanzg.github.io/tips-tutorials/tags/httpd/</link>
+    <description>Recent content in httpd on Tips and Tutorials</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright. Tips and Tutorials. All rights reserved.</copyright>
+    <lastBuildDate>Thu, 01 Nov 2018 13:00:00 +0100</lastBuildDate>
+    
+	<atom:link href="https://dalanzg.github.io/tips-tutorials/tags/httpd/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Tomcat load balancing with mod_proxy and mod_proxy_balancer</title>
+      <link>https://dalanzg.github.io/tips-tutorials/posts/2018/11/01/tomcat-load-balancing-with-mod_proxy-and-mod_proxy_balancer/</link>
+      <pubDate>Thu, 01 Nov 2018 13:00:00 +0100</pubDate>
+      
+      <guid>https://dalanzg.github.io/tips-tutorials/posts/2018/11/01/tomcat-load-balancing-with-mod_proxy-and-mod_proxy_balancer/</guid>
+      <description>This tutorial will explain how to load balancing two Tomcat instances with Apache HTTPD server with mod_proxy and mod_proxy_balancer modules.
+The environment will be simulated with three virtual machines and VirtualBox:
+  # Server FQDN IP      1 apache-server.dalanzg.com 192.168.56.101 Apache HTTPD - Port 80   2 tomcat-server1.dalanzg.com 192.168.56.102 Apache Tomcat - Port 8080   3 tomcat-server2.dalanzg.com 192.168.56.103 Apache Tomcat - Port 8080    Check the following post to configure openSUSE with Internet and statick IP address by using YaST on VirtualBox</description>
+    </item>
+    
+    <item>
+      <title>How to install Apache HTTPD in openSUSE</title>
+      <link>https://dalanzg.github.io/tips-tutorials/posts/2018/06/20/how-to-install-apache-httpd-in-opensuse/</link>
+      <pubDate>Wed, 20 Jun 2018 12:00:00 +0200</pubDate>
+      
+      <guid>https://dalanzg.github.io/tips-tutorials/posts/2018/06/20/how-to-install-apache-httpd-in-opensuse/</guid>
+      <description>This tutorial will explain how to install Apache HTTPD in openSUSE 15.
+The original documentation is found in The Apache HTTP Server Project. And the official documentation for openSUSE is in The Apache HTTP Server.
+Requirements You will need the following:
+ openSUSE Leap 15  Steps  Set hostname and domain Start and stop Apache Start Apache automatically at boot time  Set hostname and domain Files /etc/hostname and /etc/hosts will be modified to resolve the following:</description>
+    </item>
+    
+  </channel>
+</rss>

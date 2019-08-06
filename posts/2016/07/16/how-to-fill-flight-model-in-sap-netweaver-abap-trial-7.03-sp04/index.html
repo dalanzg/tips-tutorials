@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html><head>
+  <title>How to fill flight model in SAP Netweaver ABAP Trial 7.03 SP04</title>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="title" content="How to fill flight model in SAP Netweaver ABAP Trial 7.03 SP04 – Tips and Tutorials">
+  <meta name="description" content="There is a report to clean and restore data flight model in SAP ABAP Netweaver. This report is very useful to refresh all data flight model.">
+  
+  <meta name="generator" content="Hugo 0.56.3" />
+  
+  <meta property="og:title" content="How to fill flight model in SAP Netweaver ABAP Trial 7.03 SP04">
+<meta property="og:description" content="There is a report to clean and restore data flight model in SAP ABAP Netweaver. This report is very useful to refresh all data flight model." />
+<meta property="og:url" content="https://dalanzg.github.io/tips-tutorials/posts/2016/07/16/how-to-fill-flight-model-in-sap-netweaver-abap-trial-7.03-sp04/">
+<meta property="og:site_name" content="Tips and Tutorials">
+<meta property="og:type" content="article">
+  <meta property="og:image" content='https://dalanzg.github.io/tips-tutorials/posts/2016/07/16/how-to-fill-flight-model-in-sap-netweaver-abap-trial-7.03-sp04/img/run-report.png'>
+  <meta property="og:tags" content="sap">
+  <meta property="article:published_time" content="2016-07-16">
+  <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="There is a report to clean and restore data flight model in SAP ABAP Netweaver. This report is very useful to refresh all data flight model." />
+<meta name="twitter:title" content="How to fill flight model in SAP Netweaver ABAP Trial 7.03 SP04" />
+<meta name="twitter:site" content="Tips and Tutorials" />
+<meta name="twitter:creator" content="@dalanzg" />
+  <meta name="twitter:image" content='https://dalanzg.github.io/tips-tutorials/posts/2016/07/16/how-to-fill-flight-model-in-sap-netweaver-abap-trial-7.03-sp04/img/run-report.png'>
+  <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How to fill flight model in SAP Netweaver ABAP Trial 7.03 SP04",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https:\/\/dalanzg.github.io\/tips-tutorials\/posts\/2016\/07\/16\/how-to-fill-flight-model-in-sap-netweaver-abap-trial-7.03-sp04\/"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https:\/\/dalanzg.github.io\/tips-tutorials\/posts\/2016\/07\/16\/how-to-fill-flight-model-in-sap-netweaver-abap-trial-7.03-sp04\/img\/run-report.png",
+    "width":  872 ,
+    "height":  613 
+  },
+  "genre": "posts",
+  "keywords": "sap",
+  "wordcount":  102 ,
+  "url": "https:\/\/dalanzg.github.io\/tips-tutorials\/posts\/2016\/07\/16\/how-to-fill-flight-model-in-sap-netweaver-abap-trial-7.03-sp04\/",
+  "datePublished": "2016-07-16",
+  "dateModified": "2017-02-12",
+  "license": "Copyright. Tips and Tutorials. All rights reserved.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Daniel Lanza",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https:\/\/dalanzg.github.io\/tips-tutorials\/mstile-150x150.png",
+      "width":  150 ,
+      "height":  150 
+    }
+  },
+  "author": {
+    "@type": "Person",
+    "name": "dalanzg"
+  },
+  "description": "There is a report to clean and restore data flight model in SAP ABAP Netweaver. This report is very useful to refresh all data flight model."
+}
+</script>
+  <link rel="apple-touch-icon" sizes="180x180" href="https://dalanzg.github.io/tips-tutorials/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://dalanzg.github.io/tips-tutorials/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://dalanzg.github.io/tips-tutorials/favicon-16x16.png">
+<link rel="manifest" href="https://dalanzg.github.io/tips-tutorials/site.webmanifest">
+<link rel="mask-icon" href="https://dalanzg.github.io/tips-tutorials/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="apple-mobile-web-app-title" content="Tips and Tutorials">
+<meta name="application-name" content="Tips and Tutorials">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+  <link rel="canonical" href="https://dalanzg.github.io/tips-tutorials/posts/2016/07/16/how-to-fill-flight-model-in-sap-netweaver-abap-trial-7.03-sp04/">
+
+  <link rel="stylesheet" href="https://dalanzg.github.io/tips-tutorials/sass/main.min.5f805eac00006ca12f0d48d367bd1bc959826406b3bf3d94a67e3e976d595702.css" integrity="sha256-X4BerAAAbKEvDUjTZ70byVmCZAazvz2Upn4&#43;l21ZVwI=">
+  
+  
+  <link rel="sitemap" href="https://dalanzg.github.io/tips-tutorials/sitemap.xml" title="Sitemap" type="application/xml">
+  <meta name="google-site-verification" content="CeO9J_0wi37-MvDa_F7AmZJYunwDhFGjv8eSlJFPil8" />
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-65400010-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-65400010-1');
+</script><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-8140733006923933",
+    enable_page_level_ads: true
+  });
+</script></head>
+<body>
+    <div class="container"><nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="https://dalanzg.github.io/tips-tutorials/"><strong>Tips and Tutorials</strong></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+    <li class="navbar-item ">
+        <a class="nav-link" href="https://dalanzg.github.io/tips-tutorials/about/" title="">About</a>
+      </li><li class="navbar-item ">
+        <a class="nav-link" href="https://dalanzg.github.io/tips-tutorials/tags/" title="">Tags</a>
+      </li><li class="navbar-item ">
+        <a class="nav-link" href="https://dalanzg.github.io/tips-tutorials/posts/" title="">Posts</a>
+      </li></ul>
+    <form class="form-inline float-xs-right" action="https://dalanzg.github.io/tips-tutorials/search/" method="get" data-search-form>
+      <input class="form-control mr-sm-2" type="text" name="q" placeholder="Search..." data-search-input>
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+    </form>
+  </div>
+</nav>
+<h1 class="mt-5">How to fill flight model in SAP Netweaver ABAP Trial 7.03 SP04</h1><p class="text-muted mt-3">
+	<span>Published on July 16, 2016</span>
+	<span>by Daniel Lanza</span>
+</p>
+<p>
+	<a class="text-muted" href="https://dalanzg.github.io/tips-tutorials/tags/sap"><i class="fas fa-tags"></i>&nbsp;sap</a>
+</p><p>This tutorial will explain how to fill flight model in SAP Netweaver.</p>
+
+<figure class="text-center">
+  <img src="img/flight-model.png" class="figure-img img-fluid rounded" alt="Flight model" width="500">
+  <figcaption class="figure-caption">Flight model</figcaption>
+</figure>
+
+<table class="table table-bordered-striped">
+<thead>
+<tr>
+<th>Table</th>
+<th>Description</th>
+<th>Keys</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>T000</td>
+<td>Client</td>
+<td>client</td>
+</tr>
+
+<tr>
+<td>SCURX</td>
+<td>Currencies</td>
+<td>currency</td>
+</tr>
+
+<tr>
+<td>SBUSPART</td>
+<td>Business partner</td>
+<td>client, partner number</td>
+</tr>
+
+<tr>
+<td>STRAVELAG</td>
+<td>Travel agencies</td>
+<td>client, travel agency number</td>
+</tr>
+
+<tr>
+<td>SCUSTOM</td>
+<td>Customers</td>
+<td>client, customer number</td>
+</tr>
+
+<tr>
+<td>SCARR</td>
+<td>Carriers</td>
+<td>client, carrier ID</td>
+</tr>
+
+<tr>
+<td>SCOUNTER</td>
+<td>Sales counters</td>
+<td>client, carrier ID, sales counter number</td>
+</tr>
+
+<tr>
+<td>SPFLI</td>
+<td>Flight schedule</td>
+<td>client, carrier ID, connection number</td>
+</tr>
+
+<tr>
+<td>SFLIGHT</td>
+<td>Flights</td>
+<td>client, carrier ID, connection number, date of flight</td>
+</tr>
+
+<tr>
+<td>SBOOK</td>
+<td>Flight bookings</td>
+<td>client, carrier ID, connection number, date of flight, booking number, customer number</td>
+</tr>
+</tbody>
+</table>
+
+<p>Run the following report in <strong>SE38</strong> transaction:</p>
+
+<ul>
+<li><strong>SAPBC_DATA_GENERATOR</strong></li>
+</ul>
+
+<figure class="text-center">
+  <img src="img/SAPBC_DATA_GENERATOR-report.png" class="figure-img img-fluid rounded" alt="Flight model" width="500">
+  <figcaption class="figure-caption">Flight model</figcaption>
+</figure>
+
+<figure class="text-center">
+  <img src="img/run-report.png" class="figure-img img-fluid rounded" alt="Run report" width="500">
+  <figcaption class="figure-caption">Run report</figcaption>
+</figure>
+
+<figure class="text-center">
+  <img src="img/log-report.png" class="figure-img img-fluid rounded" alt="Log report" width="300">
+  <figcaption class="figure-caption">Log report</figcaption>
+</figure>
+
+
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "tips-tutorials" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+	<div class="bg-light py-5">
+		<div class="container">
+			<h2 class="text-center">Read next</h2>
+			<div class="row">
+				<div class="col-md-6 text-center">
+						Previous Post:
+						<a href="https://dalanzg.github.io/tips-tutorials/posts/2016/07/14/how-to-enable-soamanager-in-sap-netweaver-abap-trial-7.03-sp04/">How to enable SOAMANAGER in SAP Netweaver ABAP Trial 7.03 SP04</a>
+				</div>
+				<div class="col-md-6 text-center">
+						Next Post:
+						<a href="https://dalanzg.github.io/tips-tutorials/posts/2016/09/25/how-to-publish-rest-web-service-in-sap/">How to publish REST Web Service in SAP</a>
+				</div>
+			</div>
+		</div>
+	</div>
+<div class="container mt-5">
+	<h2 class="text-center">See also</h2>
+	<div class="row">
+			<div class="col-md mb-3">
+				<p class="lead mb-0"><a class="text-body" href="https://dalanzg.github.io/tips-tutorials/posts/2016/07/14/how-to-enable-soamanager-in-sap-netweaver-abap-trial-7.03-sp04/">How to enable SOAMANAGER in SAP Netweaver ABAP Trial 7.03 SP04</a></p>
+				<p class="font-weight-light mt-3">This tutorial will explain how to enable SOAMANAGER in SAP Netweaver ABAP Trial 7.03.
+Requirements A virtual machine with:
+ Windows 7 and SAP Netweaver ABAP Trial Web GUI for SAP Netweaver enabled  Issue When accessing SOAMANAGER, error code 403 turns up.
+Error code 403 SOAMANAGER  If we get error code 500, check Web GUI for Netweaver works properly. It is explained in the installation post
+Solution Go to SICF transaction, and activate the following service:</p>
+				<a href="https://dalanzg.github.io/tips-tutorials/posts/2016/07/14/how-to-enable-soamanager-in-sap-netweaver-abap-trial-7.03-sp04/" class="btn btn-primary">Read more</a>
+			</div>
+			<div class="col-md mb-3">
+				<p class="lead mb-0"><a class="text-body" href="https://dalanzg.github.io/tips-tutorials/posts/2016/07/12/how-to-install-sap-netweaver-abap-trial-7.03-sp04-on-windows-7/">How to install SAP Netweaver ABAP Trial 7.03 SP04 on Windows 7</a></p>
+				<p class="font-weight-light mt-3">This tutorial will explain how to install SAP Netweaver ABAP Trial 7.03 in a virtual machine.
+Requirements A virtual machine with:
+ Windows 7 At least 4 GB RAM 80 GB hard disk space temporary during installation - 36 GB permanent. The faster the better  Other things:
+ Java JRE 1.5 installer A SCN account SAP Netweaver ABAP Trial 7.03 SP04 installer  Steps  Add Microsoft Loopback Adapter Install Java JRE Install SAP Netweaver Install a trial license key Enable Web GUI for SAP Netweaver  Add Microsoft Loopback Adapter A network adapter with static IP address is needed.</p>
+				<a href="https://dalanzg.github.io/tips-tutorials/posts/2016/07/12/how-to-install-sap-netweaver-abap-trial-7.03-sp04-on-windows-7/" class="btn btn-primary">Read more</a>
+			</div>
+	</div>
+</div></div><footer class="blog-footer">
+  <p>
+    <nav class="nav justify-content-center">
+      <a class="nav-link" href="https://dalanzg.github.io/tips-tutorials/index.xml" target="_blank">
+        <i class="fas fa-rss-square fa-2x"></i>
+      </a>
+      
+      <a class="nav-link" href="https://twitter.com/dalanzg" target="_blank">
+        <i class="fab fa-twitter fa-2x"></i>
+      </a>
+      
+      <a class="nav-link" href="https://github.com/dalanzg" target="_blank">
+        <i class="fab fa-github fa-2x"></i>
+      </a>
+      
+      <a class="nav-link" href="https://www.linkedin.com/in/danilanza" target="_blank">
+        <i class="fab fa-linkedin fa-2x"></i>
+      </a>
+      
+    </nav>
+  </p>
+  <p class="text-muted">Copyright &copy; Tips and Tutorials 2019</p>
+  <p class="text-muted"><small>All rights reserved. Blog powered by <a href="https://gohugo.io/">Hugo</a> and hosted on <a href="https://www.github.com">GitHub.</a></small></p>
+  <p class="text-muted"><small><a href="https://opensource.org/licenses/MIT">MIT License</a></small></p>
+</footer>
+
+<script src="https://dalanzg.github.io/tips-tutorials/js/bundle.min.110d3e1a6c79028aa1899125704a04f056b48a7862c0d9058732b1ab70451559.js"></script></body>
+</html>

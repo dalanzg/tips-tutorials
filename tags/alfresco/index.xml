@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>alfresco on Tips and Tutorials</title>
+    <link>https://dalanzg.github.io/tips-tutorials/tags/alfresco/</link>
+    <description>Recent content in alfresco on Tips and Tutorials</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright. Tips and Tutorials. All rights reserved.</copyright>
+    <lastBuildDate>Sat, 07 May 2016 14:00:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://dalanzg.github.io/tips-tutorials/tags/alfresco/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to install Alfresco Community Edition 5.1 in Ubuntu Server 14.04</title>
+      <link>https://dalanzg.github.io/tips-tutorials/posts/2016/05/07/how-to-install-alfresco-community-edition-5.1-in-ubuntu-server-14.04/</link>
+      <pubDate>Sat, 07 May 2016 14:00:00 +0200</pubDate>
+      
+      <guid>https://dalanzg.github.io/tips-tutorials/posts/2016/05/07/how-to-install-alfresco-community-edition-5.1-in-ubuntu-server-14.04/</guid>
+      <description>This tutorial will explain how to install Alfresco Community Edition 5.1 in Ubuntu Server 14.04. In this example, Ubuntu Server is a virtual machine made by VirtualBox.
+Requirements  Ubuntu Server virtual machine with:  Two network adapters: NAT adapter (eth0) Host-only adapter (eth1) with a static IP address -&amp;gt; 192.168.56.101 Base memory: 4608 Mb 2 CPUs  Alfresco Community Edition binary file -&amp;gt; alfresco-community-installer-201604-linux-x64.bin  Check out how to install Ubuntu Server on VirtualBox to get ready a virtual machine to install Alfresco Community Edition.</description>
+    </item>
+    
+  </channel>
+</rss>

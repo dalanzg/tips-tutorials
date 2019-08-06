@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html><head>
+  <title>openSUSE with Internet and static IP address by using YaST on VirtualBox</title>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="title" content="openSUSE with Internet and static IP address by using YaST on VirtualBox – Tips and Tutorials">
+  <meta name="description" content="An openSUSE virtual machine will be configured to have a static IP address and Internet connection on VirtualBox">
+  
+  <meta name="generator" content="Hugo 0.56.3" />
+  
+  <meta property="og:title" content="openSUSE with Internet and static IP address by using YaST on VirtualBox">
+<meta property="og:description" content="An openSUSE virtual machine will be configured to have a static IP address and Internet connection on VirtualBox" />
+<meta property="og:url" content="https://dalanzg.github.io/tips-tutorials/posts/2018/10/20/opensuse-with-internet-and-static-ip-address-by-using-yast-on-virtualbox/">
+<meta property="og:site_name" content="Tips and Tutorials">
+<meta property="og:type" content="article">
+  <meta property="og:image" content='https://dalanzg.github.io/tips-tutorials/posts/2018/10/20/opensuse-with-internet-and-static-ip-address-by-using-yast-on-virtualbox/img/eth4-eth5-configured.png'>
+  <meta property="og:tags" content="opensuse">
+  <meta property="article:published_time" content="2018-10-20">
+  <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="An openSUSE virtual machine will be configured to have a static IP address and Internet connection on VirtualBox" />
+<meta name="twitter:title" content="openSUSE with Internet and static IP address by using YaST on VirtualBox" />
+<meta name="twitter:site" content="Tips and Tutorials" />
+<meta name="twitter:creator" content="@dalanzg" />
+  <meta name="twitter:image" content='https://dalanzg.github.io/tips-tutorials/posts/2018/10/20/opensuse-with-internet-and-static-ip-address-by-using-yast-on-virtualbox/img/eth4-eth5-configured.png'>
+  <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "openSUSE with Internet and static IP address by using YaST on VirtualBox",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https:\/\/dalanzg.github.io\/tips-tutorials\/posts\/2018\/10\/20\/opensuse-with-internet-and-static-ip-address-by-using-yast-on-virtualbox\/"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https:\/\/dalanzg.github.io\/tips-tutorials\/posts\/2018\/10\/20\/opensuse-with-internet-and-static-ip-address-by-using-yast-on-virtualbox\/img\/eth4-eth5-configured.png",
+    "width":  799 ,
+    "height":  598 
+  },
+  "genre": "posts",
+  "keywords": "opensuse",
+  "wordcount":  702 ,
+  "url": "https:\/\/dalanzg.github.io\/tips-tutorials\/posts\/2018\/10\/20\/opensuse-with-internet-and-static-ip-address-by-using-yast-on-virtualbox\/",
+  "datePublished": "2018-10-20",
+  "dateModified": "2018-10-20",
+  "license": "Copyright. Tips and Tutorials. All rights reserved.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Daniel Lanza",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https:\/\/dalanzg.github.io\/tips-tutorials\/mstile-150x150.png",
+      "width":  150 ,
+      "height":  150 
+    }
+  },
+  "author": {
+    "@type": "Person",
+    "name": "dalanzg"
+  },
+  "description": "An openSUSE virtual machine will be configured to have a static IP address and Internet connection on VirtualBox"
+}
+</script>
+  <link rel="apple-touch-icon" sizes="180x180" href="https://dalanzg.github.io/tips-tutorials/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://dalanzg.github.io/tips-tutorials/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://dalanzg.github.io/tips-tutorials/favicon-16x16.png">
+<link rel="manifest" href="https://dalanzg.github.io/tips-tutorials/site.webmanifest">
+<link rel="mask-icon" href="https://dalanzg.github.io/tips-tutorials/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="apple-mobile-web-app-title" content="Tips and Tutorials">
+<meta name="application-name" content="Tips and Tutorials">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+  <link rel="canonical" href="https://dalanzg.github.io/tips-tutorials/posts/2018/10/20/opensuse-with-internet-and-static-ip-address-by-using-yast-on-virtualbox/">
+
+  <link rel="stylesheet" href="https://dalanzg.github.io/tips-tutorials/sass/main.min.5f805eac00006ca12f0d48d367bd1bc959826406b3bf3d94a67e3e976d595702.css" integrity="sha256-X4BerAAAbKEvDUjTZ70byVmCZAazvz2Upn4&#43;l21ZVwI=">
+  
+  
+  <link rel="sitemap" href="https://dalanzg.github.io/tips-tutorials/sitemap.xml" title="Sitemap" type="application/xml">
+  <meta name="google-site-verification" content="CeO9J_0wi37-MvDa_F7AmZJYunwDhFGjv8eSlJFPil8" />
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-65400010-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-65400010-1');
+</script><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-8140733006923933",
+    enable_page_level_ads: true
+  });
+</script></head>
+<body>
+    <div class="container"><nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="https://dalanzg.github.io/tips-tutorials/"><strong>Tips and Tutorials</strong></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+    <li class="navbar-item ">
+        <a class="nav-link" href="https://dalanzg.github.io/tips-tutorials/about/" title="">About</a>
+      </li><li class="navbar-item ">
+        <a class="nav-link" href="https://dalanzg.github.io/tips-tutorials/tags/" title="">Tags</a>
+      </li><li class="navbar-item ">
+        <a class="nav-link" href="https://dalanzg.github.io/tips-tutorials/posts/" title="">Posts</a>
+      </li></ul>
+    <form class="form-inline float-xs-right" action="https://dalanzg.github.io/tips-tutorials/search/" method="get" data-search-form>
+      <input class="form-control mr-sm-2" type="text" name="q" placeholder="Search..." data-search-input>
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+    </form>
+  </div>
+</nav>
+<h1 class="mt-5">openSUSE with Internet and static IP address by using YaST on VirtualBox</h1><p class="text-muted mt-3">
+	<span>Published on October 20, 2018</span>
+	<span>by Daniel Lanza</span>
+</p>
+<p>
+	<a class="text-muted" href="https://dalanzg.github.io/tips-tutorials/tags/opensuse"><i class="fas fa-tags"></i>&nbsp;opensuse</a>
+</p>
+
+<p>An openSUSE virtual machine will be configured to have a static IP address and Internet connection on VirtualBox.</p>
+
+<p>This scenario is really useful if you want to install a specific application in guest and you need to communicate from your host.</p>
+
+<p>Therefore, the virtual machine will have two network adapters:</p>
+
+<ul>
+<li>NAT -&gt; Internet connection</li>
+<li>Host-only-adapter -&gt; Static IP address (192.168.56.200) and FQDN server1.dalanzg.com</li>
+</ul>
+
+<h2 id="steps">Steps</h2>
+
+<ul>
+<li><a href="#settings-for-virtualbox">Settings for VirtualBox</a></li>
+<li><a href="#virtual-machine-network-settings">Virtual machine network settings</a></li>
+<li><a href="#settings-for-network-devices">Settings for network devices</a></li>
+</ul>
+
+<h3 id="settings-for-virtualbox">Settings for VirtualBox</h3>
+
+<p>First, create a Host Network Manager in VirtualBox. In this case, <strong>vboxnet0</strong> with the following features:</p>
+
+<figure class="text-center">
+  <img src="img/adapter-host-network-manager.png" class="figure-img img-fluid rounded" alt="Host network manager" width="500">
+  <figcaption class="figure-caption">Host network manager</figcaption>
+</figure>
+
+<figure class="text-center">
+  <img src="img/dhcp-host-network-manager.png" class="figure-img img-fluid rounded" alt="Host network manager" width="500">
+  <figcaption class="figure-caption">Host network manager</figcaption>
+</figure>
+
+<h3 id="virtual-machine-network-settings">Virtual machine network settings</h3>
+
+<p>Shutdown your virtual machine, and add two network adapters:</p>
+
+<ul>
+<li>NAT adapter for Internet connection</li>
+<li>Host-only-adapter with <strong>vboxnet0</strong> configuration</li>
+</ul>
+
+<figure class="text-center">
+  <img src="img/nat-adapter.png" class="figure-img img-fluid rounded" alt="NAT adapter" width="500">
+  <figcaption class="figure-caption">NAT adapter</figcaption>
+</figure>
+
+<figure class="text-center">
+  <img src="img/host-only-adapter.png" class="figure-img img-fluid rounded" alt="Host-only-adapter" width="500">
+  <figcaption class="figure-caption">Host-only-adapter</figcaption>
+</figure>
+
+<h3 id="settings-for-network-devices">Settings for network devices</h3>
+
+<p>Start the virtual machine, and check the network devices available:</p>
+<div class="highlight"><pre class="chroma"><code class="language-terminal" data-lang="terminal">dlanza@linux-klr1:~&gt; ip a
+1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: eth5: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 08:00:27:4a:28:1b brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global noprefixroute dynamic eth5
+       valid_lft 86250sec preferred_lft 86250sec
+    inet6 fe80::5fa5:3dc:b8c0:52f4/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+3: eth4: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 08:00:27:b6:93:b5 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.56.102/24 brd 192.168.56.255 scope global noprefixroute dynamic eth4
+       valid_lft 1061sec preferred_lft 1061sec
+    inet6 fe80::c12f:4627:19e4:79c5/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+````
+
+The network devices are the following:
+
+- eth5 -&gt; NAT adapter (10.0.2.15)
+- eth4 -&gt; Host-only-adapter with **vboxnet0** configuration (dynamic IP - 192.168.56.102)
+
+Now, let&#39;s going to set the following static IP address with YaST:
+
+- eth5 -&gt; NAT adapter (10.0.2.15)
+- eth4 -&gt; Host-only-adapter with **vboxnet0** configuration (static IP - 192.168.56.200)</code></pre></div>
+<p>terminal
+dlanza@linux-klr1:~&gt; sudo yast</p>
+
+<pre><code>
+Go to System -&gt; Network Settings.
+
+<figure class="text-center">
+  <img src="img/yast-network-settings.png" class="figure-img img-fluid rounded" alt="Network settings" width="500">
+  <figcaption class="figure-caption">Network settings</figcaption>
+</figure>
+
+By default, the network setup method is Network manager service. You will get a warning, since YaSY is unable to configure some options.
+
+<figure class="text-center">
+  <img src="img/warning-network-manager.png" class="figure-img img-fluid rounded" alt="Warning Network manager" width="500">
+  <figcaption class="figure-caption">Warning Network manager</figcaption>
+</figure>
+
+Change Network setup method to Wicked service.
+
+<figure class="text-center">
+  <img src="img/network-manager-service.png" class="figure-img img-fluid rounded" alt="Network manager service" width="500">
+  <figcaption class="figure-caption">Network manager service</figcaption>
+</figure>
+
+<figure class="text-center">
+  <img src="img/wicked-service.png" class="figure-img img-fluid rounded" alt="Wicked service" width="500">
+  <figcaption class="figure-caption">Wicked service</figcaption>
+</figure>
+
+The network devices for NAT and host-only adapters are not configured yet (**82540EM Gibabit Ethernet Controller**)
+
+<figure class="text-center">
+  <img src="img/nat-eth5.png" class="figure-img img-fluid rounded" alt="NAT network device" width="500">
+  <figcaption class="figure-caption">NAT network device</figcaption>
+</figure>
+
+Let's modify the network device **eth4**:
+
+- Host-only-adapter with static IP address 192.168.56.200
+- FQDN hostname server1.dalanzg.com
+
+<figure class="text-center">
+  <img src="img/host-only-adapter-eth4.png" class="figure-img img-fluid rounded" alt="Host-only-adapter network device" width="500">
+  <figcaption class="figure-caption">Host-only-adapter network device</figcaption>
+</figure>
+
+<figure class="text-center">
+  <img src="img/static-ip-address.png" class="figure-img img-fluid rounded" alt="Static IP address" width="500">
+  <figcaption class="figure-caption">Static IP address</figcaption>
+</figure>
+
+And, now the network device **eth5**:
+
+- NAT adapter with DHCP
+
+<figure class="text-center">
+  <img src="img/nat-eth5-2.png" class="figure-img img-fluid rounded" alt="NAT network device" width="500">
+  <figcaption class="figure-caption">NAT network device</figcaption>
+</figure>
+
+<figure class="text-center">
+  <img src="img/nat-dhcp-eth5.png" class="figure-img img-fluid rounded" alt="NAT network device" width="500">
+  <figcaption class="figure-caption">NAT network device</figcaption>
+</figure>
+
+Save changes and see that network devices are configured.
+
+<figure class="text-center">
+  <img src="img/eth4-eth5-configured.png" class="figure-img img-fluid rounded" alt="Network devices configured" width="500">
+  <figcaption class="figure-caption">Network devices configured</figcaption>
+</figure>
+
+Now set hostname and DNS:
+
+- Hostname -&gt; server1
+- Domain -&gt; dalanzg.com
+- DNS -&gt; 8.8.4.4 (from Google)
+
+<figure class="text-center">
+  <img src="img/hostname-dns.png" class="figure-img img-fluid rounded" alt="Hostname and DNS" width="500">
+  <figcaption class="figure-caption">Hostname and DNS</figcaption>
+</figure>
+
+And finally, save Network settings and reboot the virtual machine.
+
+<figure class="text-center">
+  <img src="img/save-network-settings.png" class="figure-img img-fluid rounded" alt="Save network settings" width="500">
+  <figcaption class="figure-caption">Save network settings</figcaption>
+</figure>
+
+After reboot, check again the network devices.
+
+</code></pre>
+
+<p>terminal
+dlanza@server1:~&gt; ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.<sup>1</sup>&frasl;<sub>8</sub> scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::<sup>1</sup>&frasl;<sub>128</sub> scope host
+       valid_lft forever preferred_lft forever
+2: eth5: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 08:00:27:4a:28:1b brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.<sup>15</sup>&frasl;<sub>24</sub> brd 10.0.2.255 scope global eth5
+       valid_lft forever preferred_lft forever
+    inet6 fe80::a00:27ff:fe4a:281b/64 scope link
+       valid_lft forever preferred_lft forever
+3: eth4: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 08:00:27:b6:93:b5 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.56.<sup>200</sup>&frasl;<sub>24</sub> brd 192.168.56.255 scope global eth4
+       valid_lft forever preferred_lft forever
+    inet6 fe80::a00:27ff:feb6:93b5/64 scope link
+       valid_lft forever preferred_lft forever
+````</p>
+
+<p>Next, check the FQDN hostname:</p>
+<div class="highlight"><pre class="chroma"><code class="language-terminal" data-lang="terminal">dlanza@server1:~&gt; hostname
+server1
+dlanza@server1:~&gt; hostname -f
+server1.dalanzg.com
+dlanza@server1:~&gt; ping server1.dalanzg.com
+PING server1.dalanzg.com (192.168.56.200) 56(84) bytes of data.
+64 bytes from server1.dalanzg.com (192.168.56.200): icmp_seq=1 ttl=64 time=0.160 ms
+64 bytes from server1.dalanzg.com (192.168.56.200): icmp_seq=2 ttl=64 time=0.064 ms
+^C
+--- server1.dalanzg.com ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1002ms
+rtt min/avg/max/mdev = 0.064/0.112/0.160/0.048 ms</code></pre></div>
+<p>And finally, the Internet connection:</p>
+<div class="highlight"><pre class="chroma"><code class="language-terminal" data-lang="terminal">dlanza@server1:~&gt; ping www.google.com
+PING www.google.com (216.58.201.164) 56(84) bytes of data.
+64 bytes from mad08s06-in-f4.1e100.net (216.58.201.164): icmp_seq=1 ttl=63 time=7.83 ms
+64 bytes from mad08s06-in-f4.1e100.net (216.58.201.164): icmp_seq=2 ttl=63 time=6.73 ms
+64 bytes from mad08s06-in-f4.1e100.net (216.58.201.164): icmp_seq=3 ttl=63 time=7.50 ms
+^C
+--- www.google.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2004ms
+rtt min/avg/max/mdev = 6.739/7.360/7.835/0.469 ms</code></pre></div>
+
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "tips-tutorials" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+	<div class="bg-light py-5">
+		<div class="container">
+			<h2 class="text-center">Read next</h2>
+			<div class="row">
+				<div class="col-md-6 text-center">
+						Previous Post:
+						<a href="https://dalanzg.github.io/tips-tutorials/posts/2018/06/20/how-to-install-apache-httpd-in-opensuse/">How to install Apache HTTPD in openSUSE</a>
+				</div>
+				<div class="col-md-6 text-center">
+						Next Post:
+						<a href="https://dalanzg.github.io/tips-tutorials/posts/2018/11/01/tomcat-load-balancing-with-mod_proxy-and-mod_proxy_balancer/">Tomcat load balancing with mod_proxy and mod_proxy_balancer</a>
+				</div>
+			</div>
+		</div>
+	</div>
+<div class="container mt-5">
+	<h2 class="text-center">See also</h2>
+	<div class="row">
+			<div class="col-md mb-3">
+				<p class="lead mb-0"><a class="text-body" href="https://dalanzg.github.io/tips-tutorials/posts/2018/06/20/how-to-install-apache-httpd-in-opensuse/">How to install Apache HTTPD in openSUSE</a></p>
+				<p class="font-weight-light mt-3">This tutorial will explain how to install Apache HTTPD in openSUSE 15.
+The original documentation is found in The Apache HTTP Server Project. And the official documentation for openSUSE is in The Apache HTTP Server.
+Requirements You will need the following:
+ openSUSE Leap 15  Steps  Set hostname and domain Start and stop Apache Start Apache automatically at boot time  Set hostname and domain Files /etc/hostname and /etc/hosts will be modified to resolve the following:</p>
+				<a href="https://dalanzg.github.io/tips-tutorials/posts/2018/06/20/how-to-install-apache-httpd-in-opensuse/" class="btn btn-primary">Read more</a>
+			</div>
+			<div class="col-md mb-3">
+				<p class="lead mb-0"><a class="text-body" href="https://dalanzg.github.io/tips-tutorials/posts/2018/03/04/how-to-install-oracle-12c-r2-in-opensuse/">How to install Oracle 12c R2 in openSUSE</a></p>
+				<p class="font-weight-light mt-3">This tutorial will explain how to install Oracle Database 12c R2 in openSUSE Leap 42.3.
+Requirements You will need the following:
+ openSUSE Leap 42.3 -&gt; Install openSUSE virtual machine with VirtualBox Oracle 12c R2 database installation file -&gt; linuxx64_12201_database.zip  Steps  Install libraries Set hostname and domain Create groups and users Grant oracle user access to X server Configuring Kernel Parameters and Resource Limits Create directory for Oracle Database Install Oracle Database Configuration of Oracle Listener Configuration of Oracle Database Create user for database Create table for database Connect to Oracle database with SQL Developer Start database when server is restarted  Install libraries According to Supported SUSE Linux Enterprise Server 12 in Oracle documentation, install the following libraries by using YaST or zypper command:</p>
+				<a href="https://dalanzg.github.io/tips-tutorials/posts/2018/03/04/how-to-install-oracle-12c-r2-in-opensuse/" class="btn btn-primary">Read more</a>
+			</div>
+			<div class="col-md mb-3">
+				<p class="lead mb-0"><a class="text-body" href="https://dalanzg.github.io/tips-tutorials/posts/2017/11/09/how-to-install-sap-netweaver-7.51-as-abap-developer-edition-in-opensuse/">How to install SAP NetWeaver 7.51 as ABAP Developer Edition in openSUSE</a></p>
+				<p class="font-weight-light mt-3">This tutorial will explain how to install SAP NetWeaver as ABAP server in a virtual machine to develop your own custom ABAP objects.
+Requirements You will need the following:
+ An openSUSE virtual machine with VirtualBox (Check this link Download SAP NetWeaver compress files from SAP NetWeaver AS ABAP Developer Edition  Steps  Set port forwarding Set hostname and hosts Install uuidd Mount SAP NetWeaver files Install SAP NetWeaver Install SAP GUI in your host machine SAP GUI for JAVA logon Check SAP NetWeaver license Stop SAP NetWeaver Start SAP NetWeaver  Set port forwarding Forward from the Host IP and ports to the following Guest IP and ports in the virtual machine settings:</p>
+				<a href="https://dalanzg.github.io/tips-tutorials/posts/2017/11/09/how-to-install-sap-netweaver-7.51-as-abap-developer-edition-in-opensuse/" class="btn btn-primary">Read more</a>
+			</div>
+	</div>
+</div></div><footer class="blog-footer">
+  <p>
+    <nav class="nav justify-content-center">
+      <a class="nav-link" href="https://dalanzg.github.io/tips-tutorials/index.xml" target="_blank">
+        <i class="fas fa-rss-square fa-2x"></i>
+      </a>
+      
+      <a class="nav-link" href="https://twitter.com/dalanzg" target="_blank">
+        <i class="fab fa-twitter fa-2x"></i>
+      </a>
+      
+      <a class="nav-link" href="https://github.com/dalanzg" target="_blank">
+        <i class="fab fa-github fa-2x"></i>
+      </a>
+      
+      <a class="nav-link" href="https://www.linkedin.com/in/danilanza" target="_blank">
+        <i class="fab fa-linkedin fa-2x"></i>
+      </a>
+      
+    </nav>
+  </p>
+  <p class="text-muted">Copyright &copy; Tips and Tutorials 2019</p>
+  <p class="text-muted"><small>All rights reserved. Blog powered by <a href="https://gohugo.io/">Hugo</a> and hosted on <a href="https://www.github.com">GitHub.</a></small></p>
+  <p class="text-muted"><small><a href="https://opensource.org/licenses/MIT">MIT License</a></small></p>
+</footer>
+
+<script src="https://dalanzg.github.io/tips-tutorials/js/bundle.min.110d3e1a6c79028aa1899125704a04f056b48a7862c0d9058732b1ab70451559.js"></script></body>
+</html>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>blogger on Tips and Tutorials</title>
+    <link>https://dalanzg.github.io/tips-tutorials/tags/blogger/</link>
+    <description>Recent content in blogger on Tips and Tutorials</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright. Tips and Tutorials. All rights reserved.</copyright>
+    <lastBuildDate>Sun, 30 Aug 2015 18:00:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://dalanzg.github.io/tips-tutorials/tags/blogger/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Meta Tags for Blogger to share your posts on Facebook and Twitter</title>
+      <link>https://dalanzg.github.io/tips-tutorials/posts/2015/08/30/meta-tags-for-blogger-to-share-your-posts-on-facebook-and-twitter/</link>
+      <pubDate>Sun, 30 Aug 2015 18:00:00 +0200</pubDate>
+      
+      <guid>https://dalanzg.github.io/tips-tutorials/posts/2015/08/30/meta-tags-for-blogger-to-share-your-posts-on-facebook-and-twitter/</guid>
+      <description>When it comes to sharing a post on Facebook and Twitter, you would like to customize their contents such as the title, image, summary and so on. This article will explain how to configure your blogger template to share your Blogger posts on Facebook and Twitter.
+To check a preview, please place your post URL in the following websites:
+ Facebook Debugger Twitter Card Validator  I would recommend to check the preview before and after this change.</description>
+    </item>
+    
+    <item>
+      <title>How to choose the first image on Blogger</title>
+      <link>https://dalanzg.github.io/tips-tutorials/posts/2015/08/16/how-to-choose-the-first-image-on-blogger/</link>
+      <pubDate>Sun, 16 Aug 2015 18:00:00 +0200</pubDate>
+      
+      <guid>https://dalanzg.github.io/tips-tutorials/posts/2015/08/16/how-to-choose-the-first-image-on-blogger/</guid>
+      <description>This article will explain how to customize your Index Page regarding images from posts. It is very common to use the following data tag data:post.firstImageUrl to retrieve an image url for the post, but the drawback is that it is the first image.
+The HTML code for Index Page to get an image url of the post is the following:
+&amp;lt;img expr:alt=&amp;#39;data:post.title&amp;#39; expr:src=&amp;#39;data:post.firstImageUrl&amp;#39; expr:title=&amp;#39;data:post.title&amp;#39; /&amp;gt; It is possible to select the image that you want for your index, and it is to trick the post entry.</description>
+    </item>
+    
+  </channel>
+</rss>

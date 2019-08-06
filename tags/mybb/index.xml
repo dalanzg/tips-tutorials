@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mybb on Tips and Tutorials</title>
+    <link>https://dalanzg.github.io/tips-tutorials/tags/mybb/</link>
+    <description>Recent content in mybb on Tips and Tutorials</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright. Tips and Tutorials. All rights reserved.</copyright>
+    <lastBuildDate>Thu, 21 Apr 2016 15:00:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://dalanzg.github.io/tips-tutorials/tags/mybb/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Install MyBB on Ubuntu Server</title>
+      <link>https://dalanzg.github.io/tips-tutorials/posts/2016/04/21/install-mybb-on-ubuntu-server/</link>
+      <pubDate>Thu, 21 Apr 2016 15:00:00 +0200</pubDate>
+      
+      <guid>https://dalanzg.github.io/tips-tutorials/posts/2016/04/21/install-mybb-on-ubuntu-server/</guid>
+      <description>This tutorial will explain how to install MyBB in Ubuntu Server.
+Requirements A Ubuntu Server virtual machine with:
+ MySQL Apache FTP Samba  Check out these posts to get ready:
+ How to install Ubuntu Server on VirtualBox Setting up a Virtual Web Server with VirtualBox, Apache, MySQL, FTP, Ubuntu, and Samba  Our virtual machine has two network adapters. The second one (eth1) is a host-only adapter with a static IP address -&amp;gt; 192.</description>
+    </item>
+    
+  </channel>
+</rss>

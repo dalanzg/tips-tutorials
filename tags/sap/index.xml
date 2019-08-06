@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sap on Tips and Tutorials</title>
+    <link>https://dalanzg.github.io/tips-tutorials/tags/sap/</link>
+    <description>Recent content in sap on Tips and Tutorials</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright. Tips and Tutorials. All rights reserved.</copyright>
+    <lastBuildDate>Wed, 06 Dec 2017 14:00:00 +0100</lastBuildDate>
+    
+	<atom:link href="https://dalanzg.github.io/tips-tutorials/tags/sap/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to install SAP Cloud Connector in SAP NetWeaver Server</title>
+      <link>https://dalanzg.github.io/tips-tutorials/posts/2017/12/06/how-to-install-sap-cloud-connector-in-sap-netweaver-server/</link>
+      <pubDate>Wed, 06 Dec 2017 14:00:00 +0100</pubDate>
+      
+      <guid>https://dalanzg.github.io/tips-tutorials/posts/2017/12/06/how-to-install-sap-cloud-connector-in-sap-netweaver-server/</guid>
+      <description>This tutorial will explain how to install SAP Cloud Connector in a NetWeaver Server.
+Requirements You will need the following:
+ SAP NetWeaver Server and SAPGUI Download Cloud Connector from SAP Development Tools  Steps  Verify SAP NetWeaver is running Unzip and install Cloud Connector Start and Stop Cloud Connector services Login and change Administrator password in Cloud connector  Verify SAP NetWeaver is running Login with npladm user and check SAP NetWeaver services are runnning.</description>
+    </item>
+    
+    <item>
+      <title>How to install ABAP in Eclipse</title>
+      <link>https://dalanzg.github.io/tips-tutorials/posts/2017/11/18/how-to-install-abap-in-eclipse/</link>
+      <pubDate>Sat, 18 Nov 2017 21:20:00 +0100</pubDate>
+      
+      <guid>https://dalanzg.github.io/tips-tutorials/posts/2017/11/18/how-to-install-abap-in-eclipse/</guid>
+      <description>This tutorial will explain how to install ABAP in Eclipse to explore or modify ABAP Development objects.
+Requirements You will need the following:
+ SAP NetWeaver Server and SAPGUI Eclipse (Oxygen)  Steps Run Eclipse and install a new software from the menu.
+Install new software  Add the SAP HANA tools repository:
+ https://tools.hana.ondemand.com/oxygen**  Install the following components:
+ ABAP Development Tools for SAP NetWeaver SAP Cloud Platform Tools UI Development Toolkit for HTML5  Install Eclipse HANA Tools  Install Eclipse HANA Tools  Install Eclipse HANA Tools  Click on the top right-hand corner to open ABAP perspective.</description>
+    </item>
+    
+    <item>
+      <title>How to install SAP NetWeaver 7.51 as ABAP Developer Edition in openSUSE</title>
+      <link>https://dalanzg.github.io/tips-tutorials/posts/2017/11/09/how-to-install-sap-netweaver-7.51-as-abap-developer-edition-in-opensuse/</link>
+      <pubDate>Thu, 09 Nov 2017 13:44:00 +0100</pubDate>
+      
+      <guid>https://dalanzg.github.io/tips-tutorials/posts/2017/11/09/how-to-install-sap-netweaver-7.51-as-abap-developer-edition-in-opensuse/</guid>
+      <description>This tutorial will explain how to install SAP NetWeaver as ABAP server in a virtual machine to develop your own custom ABAP objects.
+Requirements You will need the following:
+ An openSUSE virtual machine with VirtualBox (Check this link Download SAP NetWeaver compress files from SAP NetWeaver AS ABAP Developer Edition  Steps  Set port forwarding Set hostname and hosts Install uuidd Mount SAP NetWeaver files Install SAP NetWeaver Install SAP GUI in your host machine SAP GUI for JAVA logon Check SAP NetWeaver license Stop SAP NetWeaver Start SAP NetWeaver  Set port forwarding Forward from the Host IP and ports to the following Guest IP and ports in the virtual machine settings:</description>
+    </item>
+    
+    <item>
+      <title>How to renew the MiniSAP License</title>
+      <link>https://dalanzg.github.io/tips-tutorials/posts/2016/10/01/how-to-renew-the-minisap-license/</link>
+      <pubDate>Sat, 01 Oct 2016 16:35:00 +0200</pubDate>
+      
+      <guid>https://dalanzg.github.io/tips-tutorials/posts/2016/10/01/how-to-renew-the-minisap-license/</guid>
+      <description>This tutorial will explain how to renew your MiniSAP license. If you want to know how to install MiniSAP, check out this post:
+ How to install MiniSAP.  When logging into MiniSAP, we may get two different pop-up windows:
+ Warning about our license will expire soon Error about license expired  Expired license warning.  Go to SLICENSE and get your Active Hardware Key.
+Active Hardware Key in SLICENSE transaction  Go to http://www.</description>
+    </item>
+    
+    <item>
+      <title>How to test REST Http Client with SAP report</title>
+      <link>https://dalanzg.github.io/tips-tutorials/posts/2016/09/29/how-to-test-rest-http-client-with-sap-report/</link>
+      <pubDate>Thu, 29 Sep 2016 20:05:00 +0200</pubDate>
+      
+      <guid>https://dalanzg.github.io/tips-tutorials/posts/2016/09/29/how-to-test-rest-http-client-with-sap-report/</guid>
+      <description>This tutorial will explain how to check out if our SAP System can consume external or internal Web Services with a SAP report.
+Requirements  External or internal REST service to consume within SAP  Exercise Firstly, find out what is your REST service to test. In this exercise we are going to consume an internal REST Web Service from a SAP Report.
+GET -&amp;gt; http://hostname:port/zrest?myVar=50
+Response:
+{&amp;#34;message&amp;#34;: You have entered myVar=50 as query parameter.</description>
+    </item>
+    
+    <item>
+      <title>How to publish REST Web Service in SAP</title>
+      <link>https://dalanzg.github.io/tips-tutorials/posts/2016/09/25/how-to-publish-rest-web-service-in-sap/</link>
+      <pubDate>Sun, 25 Sep 2016 23:05:00 +0200</pubDate>
+      
+      <guid>https://dalanzg.github.io/tips-tutorials/posts/2016/09/25/how-to-publish-rest-web-service-in-sap/</guid>
+      <description>This tutorial will explain how to publish REST Web Service when SAP Netweaver Gateway is not available.
+Exercise Go to http://hostname:port/zrest?myVar=50 and the server will respond with the following content:
+{&amp;#34;message&amp;#34;: You have entered myVar=50 as query parameter.&amp;#34;} Be in mind that this content could be JSON or XML format. In this exercise, it is a basic JSON object.
+Create custom class Firstly, create a class object with IF_HTTP_EXTENSION interface.</description>
+    </item>
+    
+    <item>
+      <title>How to fill flight model in SAP Netweaver ABAP Trial 7.03 SP04</title>
+      <link>https://dalanzg.github.io/tips-tutorials/posts/2016/07/16/how-to-fill-flight-model-in-sap-netweaver-abap-trial-7.03-sp04/</link>
+      <pubDate>Sat, 16 Jul 2016 09:00:00 +0200</pubDate>
+      
+      <guid>https://dalanzg.github.io/tips-tutorials/posts/2016/07/16/how-to-fill-flight-model-in-sap-netweaver-abap-trial-7.03-sp04/</guid>
+      <description>This tutorial will explain how to fill flight model in SAP Netweaver.
+Flight model    Table Description Keys     T000 Client client   SCURX Currencies currency   SBUSPART Business partner client, partner number   STRAVELAG Travel agencies client, travel agency number   SCUSTOM Customers client, customer number   SCARR Carriers client, carrier ID   SCOUNTER Sales counters client, carrier ID, sales counter number   SPFLI Flight schedule client, carrier ID, connection number   SFLIGHT Flights client, carrier ID, connection number, date of flight   SBOOK Flight bookings client, carrier ID, connection number, date of flight, booking number, customer number    Run the following report in SE38 transaction:</description>
+    </item>
+    
+    <item>
+      <title>How to enable SOAMANAGER in SAP Netweaver ABAP Trial 7.03 SP04</title>
+      <link>https://dalanzg.github.io/tips-tutorials/posts/2016/07/14/how-to-enable-soamanager-in-sap-netweaver-abap-trial-7.03-sp04/</link>
+      <pubDate>Thu, 14 Jul 2016 19:00:00 +0200</pubDate>
+      
+      <guid>https://dalanzg.github.io/tips-tutorials/posts/2016/07/14/how-to-enable-soamanager-in-sap-netweaver-abap-trial-7.03-sp04/</guid>
+      <description>This tutorial will explain how to enable SOAMANAGER in SAP Netweaver ABAP Trial 7.03.
+Requirements A virtual machine with:
+ Windows 7 and SAP Netweaver ABAP Trial Web GUI for SAP Netweaver enabled  Issue When accessing SOAMANAGER, error code 403 turns up.
+Error code 403 SOAMANAGER  If we get error code 500, check Web GUI for Netweaver works properly. It is explained in the installation post
+Solution Go to SICF transaction, and activate the following service:</description>
+    </item>
+    
+    <item>
+      <title>How to install SAP Netweaver ABAP Trial 7.03 SP04 on Windows 7</title>
+      <link>https://dalanzg.github.io/tips-tutorials/posts/2016/07/12/how-to-install-sap-netweaver-abap-trial-7.03-sp04-on-windows-7/</link>
+      <pubDate>Tue, 12 Jul 2016 17:00:00 +0200</pubDate>
+      
+      <guid>https://dalanzg.github.io/tips-tutorials/posts/2016/07/12/how-to-install-sap-netweaver-abap-trial-7.03-sp04-on-windows-7/</guid>
+      <description>This tutorial will explain how to install SAP Netweaver ABAP Trial 7.03 in a virtual machine.
+Requirements A virtual machine with:
+ Windows 7 At least 4 GB RAM 80 GB hard disk space temporary during installation - 36 GB permanent. The faster the better  Other things:
+ Java JRE 1.5 installer A SCN account SAP Netweaver ABAP Trial 7.03 SP04 installer  Steps  Add Microsoft Loopback Adapter Install Java JRE Install SAP Netweaver Install a trial license key Enable Web GUI for SAP Netweaver  Add Microsoft Loopback Adapter A network adapter with static IP address is needed.</description>
+    </item>
+    
+  </channel>
+</rss>

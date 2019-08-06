@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>windows on Tips and Tutorials</title>
+    <link>https://dalanzg.github.io/tips-tutorials/tags/windows/</link>
+    <description>Recent content in windows on Tips and Tutorials</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright. Tips and Tutorials. All rights reserved.</copyright>
+    <lastBuildDate>Sun, 22 May 2016 09:45:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://dalanzg.github.io/tips-tutorials/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to install Windows Server 2012 R2 on VirtualBox</title>
+      <link>https://dalanzg.github.io/tips-tutorials/posts/2016/05/22/how-to-install-windows-server-2012-r2-on-virtualbox/</link>
+      <pubDate>Sun, 22 May 2016 09:45:00 +0200</pubDate>
+      
+      <guid>https://dalanzg.github.io/tips-tutorials/posts/2016/05/22/how-to-install-windows-server-2012-r2-on-virtualbox/</guid>
+      <description>This tutorial will explain how to install Windows Server 2012 R2 in a virtual machine.
+First, you need to have Windows Server 2012 R2 ISO file and VirtualBox installed.
+Create a new virtual machine on VirtualBox by clicking on New. Select type and version of the virtual machine. In this case, Windows 2012 (64-bits).
+Create new virtual machine  Set the amount of memory (RAM). I selected 4096 MB (4 GB).</description>
+    </item>
+    
+  </channel>
+</rss>

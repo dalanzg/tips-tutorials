@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html><head>
+  <title>How to install openSUSE Leap 42.2 in VirtualBox</title>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="title" content="How to install openSUSE Leap 42.2 in VirtualBox – Tips and Tutorials">
+  <meta name="description" content="Steps to install openSUSE Leap 42.2 with VirtualBox.">
+  
+  <meta name="generator" content="Hugo 0.56.3" />
+  
+  <meta property="og:title" content="How to install openSUSE Leap 42.2 in VirtualBox">
+<meta property="og:description" content="Steps to install openSUSE Leap 42.2 with VirtualBox." />
+<meta property="og:url" content="https://dalanzg.github.io/tips-tutorials/posts/2017/02/12/how-to-install-opensuse-leap-42.2-in-virtualbox/">
+<meta property="og:site_name" content="Tips and Tutorials">
+<meta property="og:type" content="article">
+  <meta property="og:image" content='https://dalanzg.github.io/tips-tutorials/posts/2017/02/12/how-to-install-opensuse-leap-42.2-in-virtualbox/img/select-installation.png'>
+  <meta property="og:tags" content="opensuse">
+  <meta property="og:tags" content="virtualbox">
+  <meta property="article:published_time" content="2017-02-12">
+  <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="Steps to install openSUSE Leap 42.2 with VirtualBox." />
+<meta name="twitter:title" content="How to install openSUSE Leap 42.2 in VirtualBox" />
+<meta name="twitter:site" content="Tips and Tutorials" />
+<meta name="twitter:creator" content="@dalanzg" />
+  <meta name="twitter:image" content='https://dalanzg.github.io/tips-tutorials/posts/2017/02/12/how-to-install-opensuse-leap-42.2-in-virtualbox/img/select-installation.png'>
+  <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How to install openSUSE Leap 42.2 in VirtualBox",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https:\/\/dalanzg.github.io\/tips-tutorials\/posts\/2017\/02\/12\/how-to-install-opensuse-leap-42.2-in-virtualbox\/"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https:\/\/dalanzg.github.io\/tips-tutorials\/posts\/2017\/02\/12\/how-to-install-opensuse-leap-42.2-in-virtualbox\/img\/select-installation.png",
+    "width":  800 ,
+    "height":  643 
+  },
+  "genre": "posts",
+  "keywords": "opensuse, virtualbox",
+  "wordcount":  424 ,
+  "url": "https:\/\/dalanzg.github.io\/tips-tutorials\/posts\/2017\/02\/12\/how-to-install-opensuse-leap-42.2-in-virtualbox\/",
+  "datePublished": "2017-02-12",
+  "dateModified": "2017-02-12",
+  "license": "Copyright. Tips and Tutorials. All rights reserved.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Daniel Lanza",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https:\/\/dalanzg.github.io\/tips-tutorials\/mstile-150x150.png",
+      "width":  150 ,
+      "height":  150 
+    }
+  },
+  "author": {
+    "@type": "Person",
+    "name": "dalanzg"
+  },
+  "description": "Steps to install openSUSE Leap 42.2 with VirtualBox."
+}
+</script>
+  <link rel="apple-touch-icon" sizes="180x180" href="https://dalanzg.github.io/tips-tutorials/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://dalanzg.github.io/tips-tutorials/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://dalanzg.github.io/tips-tutorials/favicon-16x16.png">
+<link rel="manifest" href="https://dalanzg.github.io/tips-tutorials/site.webmanifest">
+<link rel="mask-icon" href="https://dalanzg.github.io/tips-tutorials/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="apple-mobile-web-app-title" content="Tips and Tutorials">
+<meta name="application-name" content="Tips and Tutorials">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+  <link rel="canonical" href="https://dalanzg.github.io/tips-tutorials/posts/2017/02/12/how-to-install-opensuse-leap-42.2-in-virtualbox/">
+
+  <link rel="stylesheet" href="https://dalanzg.github.io/tips-tutorials/sass/main.min.5f805eac00006ca12f0d48d367bd1bc959826406b3bf3d94a67e3e976d595702.css" integrity="sha256-X4BerAAAbKEvDUjTZ70byVmCZAazvz2Upn4&#43;l21ZVwI=">
+  
+  
+  <link rel="sitemap" href="https://dalanzg.github.io/tips-tutorials/sitemap.xml" title="Sitemap" type="application/xml">
+  <meta name="google-site-verification" content="CeO9J_0wi37-MvDa_F7AmZJYunwDhFGjv8eSlJFPil8" />
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-65400010-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-65400010-1');
+</script><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-8140733006923933",
+    enable_page_level_ads: true
+  });
+</script></head>
+<body>
+    <div class="container"><nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="https://dalanzg.github.io/tips-tutorials/"><strong>Tips and Tutorials</strong></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+    <li class="navbar-item ">
+        <a class="nav-link" href="https://dalanzg.github.io/tips-tutorials/about/" title="">About</a>
+      </li><li class="navbar-item ">
+        <a class="nav-link" href="https://dalanzg.github.io/tips-tutorials/tags/" title="">Tags</a>
+      </li><li class="navbar-item ">
+        <a class="nav-link" href="https://dalanzg.github.io/tips-tutorials/posts/" title="">Posts</a>
+      </li></ul>
+    <form class="form-inline float-xs-right" action="https://dalanzg.github.io/tips-tutorials/search/" method="get" data-search-form>
+      <input class="form-control mr-sm-2" type="text" name="q" placeholder="Search..." data-search-input>
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+    </form>
+  </div>
+</nav>
+<h1 class="mt-5">How to install openSUSE Leap 42.2 in VirtualBox</h1><p class="text-muted mt-3">
+	<span>Published on February 12, 2017</span>
+	<span>by Daniel Lanza</span>
+</p>
+<p>
+	<a class="text-muted" href="https://dalanzg.github.io/tips-tutorials/tags/opensuse"><i class="fas fa-tags"></i>&nbsp;opensuse</a>
+	<a class="text-muted" href="https://dalanzg.github.io/tips-tutorials/tags/virtualbox"><i class="fas fa-tags"></i>&nbsp;virtualbox</a>
+</p>
+
+<p>This tutorial will explain how to install openSUSE 42.2 Leap in VirtualBox.</p>
+
+<h2 id="requirements">Requirements</h2>
+
+<p>You will need the following:</p>
+
+<ul>
+<li><a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a></li>
+<li><a href="https://software.opensuse.org/422/en">openSUSE Leap 42.2 ISO file</a></li>
+</ul>
+
+<h2 id="steps">Steps</h2>
+
+<ul>
+<li><a href="#preparing-the-virtual-machine">Preparing the virtual machine</a></li>
+<li><a href="#installing-opensuse">Installing openSUSE</a></li>
+<li><a href="#post-installation-tasks">Post-installation tasks</a></li>
+</ul>
+
+<h3 id="preparing-the-virtual-machine">Preparing the virtual machine</h3>
+
+<p>Open VirtualBox and create a new virtual machine. Select Linux type and openSUSE version.</p>
+
+<figure class="text-center">
+  <img src="img/new-virtual-machine.png" class="figure-img img-fluid rounded" alt="New openSUSE virtual machine" width="500">
+  <figcaption class="figure-caption">New openSUSE virtual machine</figcaption>
+</figure>
+
+<p>Select the amount of memory RAM. The recommendation is 4096 MB (4 GB).</p>
+
+<figure class="text-center">
+  <img src="img/memory-size.png" class="figure-img img-fluid rounded" alt="4096-MB memory RAM" width="500">
+  <figcaption class="figure-caption">4096-MB memory RAM</figcaption>
+</figure>
+
+<p>Create a new virtual hard disk.</p>
+
+<figure class="text-center">
+  <img src="img/new-hard-disk.png" class="figure-img img-fluid rounded" alt="New virtual hard disk" width="500">
+  <figcaption class="figure-caption">New virtual hard disk</figcaption>
+</figure>
+
+<p>Select VirtualBox Disk Image.</p>
+
+<figure class="text-center">
+  <img src="img/vdi-hard-disk.png" class="figure-img img-fluid rounded" alt="VirtualBox Disk Image" width="500">
+  <figcaption class="figure-caption">VirtualBox Disk Image</figcaption>
+</figure>
+
+<p>And dynamically allocated.</p>
+
+<figure class="text-center">
+  <img src="img/dynamically-allocated.png" class="figure-img img-fluid rounded" alt="Dynamically allocated" width="500">
+  <figcaption class="figure-caption">Dynamically allocated</figcaption>
+</figure>
+
+<p>The amount of memory size will be 80 GB. As we selected dynamically allocated, the real size of hard disk will be growing until reaching 80 GB.</p>
+
+<figure class="text-center">
+  <img src="img/set-80gb-size.png" class="figure-img img-fluid rounded" alt="80-GB memory size" width="500">
+  <figcaption class="figure-caption">80-GB memory size</figcaption>
+</figure>
+
+<h3 id="installing-opensuse">Installing openSUSE</h3>
+
+<p>We have created a new empty virtual machine. We need to set more properties and load ISO file. Go to settings of the new virtual machine.</p>
+
+<figure class="text-center">
+  <img src="img/settings-virtual-machine.png" class="figure-img img-fluid rounded" alt="Virtual machine settings" width="500">
+  <figcaption class="figure-caption">Virtual machine settings</figcaption>
+</figure>
+
+<p>Enable bidirectional shared clipboard and drag and drop functionality in General tab.</p>
+
+<figure class="text-center">
+  <img src="img/shared-clipboard-and-drag-and-drop.png" class="figure-img img-fluid rounded" alt="Bidirectional shared clipboard and drag and drop" width="500">
+  <figcaption class="figure-caption">Bidirectional shared clipboard and drag and drop</figcaption>
+</figure>
+
+<p>Increase number of processors by 2 in System tab.</p>
+
+<figure class="text-center">
+  <img src="img/increase-processors.png" class="figure-img img-fluid rounded" alt="2 processors" width="500">
+  <figcaption class="figure-caption">2 processors</figcaption>
+</figure>
+
+<p>And increase video memory by 128 MB in Display tab.</p>
+
+<figure class="text-center">
+  <img src="img/set-128mb-video-memory.png" class="figure-img img-fluid rounded" alt="128-MB memory size" width="500">
+  <figcaption class="figure-caption">128-MB memory size</figcaption>
+</figure>
+
+<p>Load openSUSE ISO file in Storage tab.</p>
+
+<figure class="text-center">
+  <img src="img/opensuse-optical-drive-1.png" class="figure-img img-fluid rounded" alt="Load ISO openSUSE" width="500">
+  <figcaption class="figure-caption">Load ISO openSUSE</figcaption>
+</figure>
+
+<figure class="text-center">
+  <img src="img/opensuse-optical-drive-2.png" class="figure-img img-fluid rounded" alt="Load ISO openSUSE" width="500">
+  <figcaption class="figure-caption">Load ISO openSUSE</figcaption>
+</figure>
+
+<p>Let&rsquo;s start and first run the virtual machine.</p>
+
+<figure class="text-center">
+  <img src="img/start-virtual-machine.png" class="figure-img img-fluid rounded" alt="First start the virtual machine" width="500">
+  <figcaption class="figure-caption">First start the virtual machine</figcaption>
+</figure>
+
+<p>The ISO file will be loaded when starting the virtual machine. Select installation.</p>
+
+<figure class="text-center">
+  <img src="img/select-installation.png" class="figure-img img-fluid rounded" alt="Select installation" width="500">
+  <figcaption class="figure-caption">Select installation</figcaption>
+</figure>
+
+<p>Set language and keyboard.</p>
+
+<figure class="text-center">
+  <img src="img/language-and-keyboard.png" class="figure-img img-fluid rounded" alt="Language and keyboard" width="500">
+  <figcaption class="figure-caption">Language and keyboard</figcaption>
+</figure>
+
+<p>Continue the installation options.</p>
+
+<figure class="text-center">
+  <img src="img/installation-options.png" class="figure-img img-fluid rounded" alt="Continue the installation" width="500">
+  <figcaption class="figure-caption">Continue the installation</figcaption>
+</figure>
+
+<p>Edit suggested partition. We will install using one partition and Ext4 file system for root partition.</p>
+
+<figure class="text-center">
+  <img src="img/only-one-partition-1.png" class="figure-img img-fluid rounded" alt="Only one partition" width="500">
+  <figcaption class="figure-caption">Only one partition</figcaption>
+</figure>
+
+<figure class="text-center">
+  <img src="img/only-one-partition-2.png" class="figure-img img-fluid rounded" alt="Only one partition" width="500">
+  <figcaption class="figure-caption">Only one partition</figcaption>
+</figure>
+
+<figure class="text-center">
+  <img src="img/only-one-partition-3.png" class="figure-img img-fluid rounded" alt="Only one partition" width="500">
+  <figcaption class="figure-caption">Only one partition</figcaption>
+</figure>
+
+<p>Set Clock and Time Zone.</p>
+
+<figure class="text-center">
+  <img src="img/clock-and-time-zone.png" class="figure-img img-fluid rounded" alt="Clock and Time Zone" width="500">
+  <figcaption class="figure-caption">Clock and Time Zone</figcaption>
+</figure>
+
+<p>And here the Desktop type. If you only want openSUSE as server, select server (text mode). In this case, we will use KDE Plasma Desktop.</p>
+
+<figure class="text-center">
+  <img src="img/kde-plasma-desktop.png" class="figure-img img-fluid rounded" alt="KDE Plasma Desktop" width="500">
+  <figcaption class="figure-caption">KDE Plasma Desktop</figcaption>
+</figure>
+
+<p>Local user to login.</p>
+
+<figure class="text-center">
+  <img src="img/local-user.png" class="figure-img img-fluid rounded" alt="Local user" width="500">
+  <figcaption class="figure-caption">Local user</figcaption>
+</figure>
+
+<p>Disable firewall and enable SSH service.</p>
+
+<figure class="text-center">
+  <img src="img/firewall-and-ssh-1.png" class="figure-img img-fluid rounded" alt="Firewall and enable SSH" width="500">
+  <figcaption class="figure-caption">Firewall and enable SSH</figcaption>
+</figure>
+
+<figure class="text-center">
+  <img src="img/firewall-and-ssh-2.png" class="figure-img img-fluid rounded" alt="Firewall and enable SSH" width="500">
+  <figcaption class="figure-caption">Firewall and enable SSH</figcaption>
+</figure>
+
+<p>Confirm the installation and wait.</p>
+
+<figure class="text-center">
+  <img src="img/confirm-installation.png" class="figure-img img-fluid rounded" alt="Install openSUSE" width="500">
+  <figcaption class="figure-caption">Install openSUSE</figcaption>
+</figure>
+
+<figure class="text-center">
+  <img src="img/installing-opensuse.png" class="figure-img img-fluid rounded" alt="Install openSUSE" width="500">
+  <figcaption class="figure-caption">Install openSUSE</figcaption>
+</figure>
+
+<p>When finished, openSUSE will be rebooted.</p>
+
+<figure class="text-center">
+  <img src="img/opensuse-installed.png" class="figure-img img-fluid rounded" alt="Install openSUSE" width="500">
+  <figcaption class="figure-caption">Install openSUSE</figcaption>
+</figure>
+
+<h3 id="post-installation-tasks">Post-installation tasks</h3>
+
+<p>Shutdown the virtual machine, and remove the ISO file from virtual drive that was loaded previously.</p>
+
+<figure class="text-center">
+  <img src="img/remove-disk-from-virtual-drive.png" class="figure-img img-fluid rounded" alt="Remove ISO file" width="500">
+  <figcaption class="figure-caption">Remove ISO file</figcaption>
+</figure>
+
+<p>Next, start the virtual machine and update the system with the last software and libraries.</p>
+
+<figure class="text-center">
+  <img src="img/check-software-updates-1.png" class="figure-img img-fluid rounded" alt="Update system" width="500">
+  <figcaption class="figure-caption">Update system</figcaption>
+</figure>
+
+<figure class="text-center">
+  <img src="img/check-software-updates-2.png" class="figure-img img-fluid rounded" alt="Update system" width="500">
+  <figcaption class="figure-caption">Update system</figcaption>
+</figure>
+
+<figure class="text-center">
+  <img src="img/check-software-updates-3.png" class="figure-img img-fluid rounded" alt="Update system" width="500">
+  <figcaption class="figure-caption">Update system</figcaption>
+</figure>
+
+<figure class="text-center">
+  <img src="img/check-software-updates-4.png" class="figure-img img-fluid rounded" alt="Update system" width="500">
+  <figcaption class="figure-caption">Update system</figcaption>
+</figure>
+
+<p>And finally, shutdown the virtual machine to make a snapshot. This snapshot will let you restore a fresh openSUSE installation.</p>
+
+<figure class="text-center">
+  <img src="img/make-snapshot-1.png" class="figure-img img-fluid rounded" alt="Make a snapshot" width="500">
+  <figcaption class="figure-caption">Make a snapshot</figcaption>
+</figure>
+
+<figure class="text-center">
+  <img src="img/make-snapshot-2.png" class="figure-img img-fluid rounded" alt="Make a snapshot" width="500">
+  <figcaption class="figure-caption">Make a snapshot</figcaption>
+</figure>
+
+<figure class="text-center">
+  <img src="img/make-snapshot-3.png" class="figure-img img-fluid rounded" alt="Make a snapshot" width="500">
+  <figcaption class="figure-caption">Make a snapshot</figcaption>
+</figure>
+
+
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "tips-tutorials" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+	<div class="bg-light py-5">
+		<div class="container">
+			<h2 class="text-center">Read next</h2>
+			<div class="row">
+				<div class="col-md-6 text-center">
+						Previous Post:
+						<a href="https://dalanzg.github.io/tips-tutorials/posts/2016/10/01/how-to-renew-the-minisap-license/">How to renew the MiniSAP License</a>
+				</div>
+				<div class="col-md-6 text-center">
+						Next Post:
+						<a href="https://dalanzg.github.io/tips-tutorials/posts/2017/03/17/share-transient-folder-in-opensuse-with-virtualbox/">Share transient folder in openSUSE with VirtualBox</a>
+				</div>
+			</div>
+		</div>
+	</div>
+<div class="container mt-5">
+	<h2 class="text-center">See also</h2>
+	<div class="row">
+			<div class="col-md mb-3">
+				<p class="lead mb-0"><a class="text-body" href="https://dalanzg.github.io/tips-tutorials/posts/2016/05/22/how-to-install-windows-server-2012-r2-on-virtualbox/">How to install Windows Server 2012 R2 on VirtualBox</a></p>
+				<p class="font-weight-light mt-3">This tutorial will explain how to install Windows Server 2012 R2 in a virtual machine.
+First, you need to have Windows Server 2012 R2 ISO file and VirtualBox installed.
+Create a new virtual machine on VirtualBox by clicking on New. Select type and version of the virtual machine. In this case, Windows 2012 (64-bits).
+Create new virtual machine  Set the amount of memory (RAM). I selected 4096 MB (4 GB).</p>
+				<a href="https://dalanzg.github.io/tips-tutorials/posts/2016/05/22/how-to-install-windows-server-2012-r2-on-virtualbox/" class="btn btn-primary">Read more</a>
+			</div>
+			<div class="col-md mb-3">
+				<p class="lead mb-0"><a class="text-body" href="https://dalanzg.github.io/tips-tutorials/posts/2016/04/17/setting-up-a-virtual-web-server-with-virtualbox-apache-mysql-ftp-ubuntu-and-samba/">Setting up a Virtual Web Server with VirtualBox, Apache, MySQL, FTP, Ubuntu, and Samba</a></p>
+				<p class="font-weight-light mt-3">This tutorial will explain how to set up a Ubuntu Server virtual machine with:
+ Apache FTP Samba  First, check out how to install Ubuntu Server on VirtualBox to get ready a virtual machine to test.
+Our virtual machine has two network adapters. The second one (eth1) is a host-only adapter with a static IP address -&gt; 192.168.56.101
+Apache Web Server Apache Web Server needs to be running. The installation and configuration was indicated in the previous post.</p>
+				<a href="https://dalanzg.github.io/tips-tutorials/posts/2016/04/17/setting-up-a-virtual-web-server-with-virtualbox-apache-mysql-ftp-ubuntu-and-samba/" class="btn btn-primary">Read more</a>
+			</div>
+			<div class="col-md mb-3">
+				<p class="lead mb-0"><a class="text-body" href="https://dalanzg.github.io/tips-tutorials/posts/2016/04/15/install-ubuntu-server-14.04.4-on-virtualbox/">Install Ubuntu Server 14.04.4 on VirtualBox</a></p>
+				<p class="font-weight-light mt-3">This tutorial will explain how to install Ubuntu Server on a virtual machine.
+First, you need to have Ubuntu Server ISO file and VirtualBox installed.
+ VirtualBox Ubuntu Server  Create a new virtual machine on VirtualBox by clicking on New.
+Create new virtual machine  Select type and version of the virtual machine. In this case, Linux and Ubuntu (64-bits).
+Select type and version of the virtual machine  Select the amount of memory (RAM).</p>
+				<a href="https://dalanzg.github.io/tips-tutorials/posts/2016/04/15/install-ubuntu-server-14.04.4-on-virtualbox/" class="btn btn-primary">Read more</a>
+			</div>
+	</div>
+</div></div><footer class="blog-footer">
+  <p>
+    <nav class="nav justify-content-center">
+      <a class="nav-link" href="https://dalanzg.github.io/tips-tutorials/index.xml" target="_blank">
+        <i class="fas fa-rss-square fa-2x"></i>
+      </a>
+      
+      <a class="nav-link" href="https://twitter.com/dalanzg" target="_blank">
+        <i class="fab fa-twitter fa-2x"></i>
+      </a>
+      
+      <a class="nav-link" href="https://github.com/dalanzg" target="_blank">
+        <i class="fab fa-github fa-2x"></i>
+      </a>
+      
+      <a class="nav-link" href="https://www.linkedin.com/in/danilanza" target="_blank">
+        <i class="fab fa-linkedin fa-2x"></i>
+      </a>
+      
+    </nav>
+  </p>
+  <p class="text-muted">Copyright &copy; Tips and Tutorials 2019</p>
+  <p class="text-muted"><small>All rights reserved. Blog powered by <a href="https://gohugo.io/">Hugo</a> and hosted on <a href="https://www.github.com">GitHub.</a></small></p>
+  <p class="text-muted"><small><a href="https://opensource.org/licenses/MIT">MIT License</a></small></p>
+</footer>
+
+<script src="https://dalanzg.github.io/tips-tutorials/js/bundle.min.110d3e1a6c79028aa1899125704a04f056b48a7862c0d9058732b1ab70451559.js"></script></body>
+</html>

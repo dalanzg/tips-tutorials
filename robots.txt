@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /tags/
+Disallow: /categories/
+Disallow: /page/
+Sitemap: https://dalanzg.github.io/tips-tutorials/sitemap.xml

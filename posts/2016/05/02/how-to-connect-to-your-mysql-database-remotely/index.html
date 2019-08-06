@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html><head>
+  <title>How to connect to your MySQL database remotely</title>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="title" content="How to connect to your MySQL database remotely – Tips and Tutorials">
+  <meta name="description" content="A MySQL client is connected remotely to the database installed in Ubuntu Server virtual machine.">
+  
+  <meta name="generator" content="Hugo 0.56.3" />
+  
+  <meta property="og:title" content="How to connect to your MySQL database remotely">
+<meta property="og:description" content="A MySQL client is connected remotely to the database installed in Ubuntu Server virtual machine." />
+<meta property="og:url" content="https://dalanzg.github.io/tips-tutorials/posts/2016/05/02/how-to-connect-to-your-mysql-database-remotely/">
+<meta property="og:site_name" content="Tips and Tutorials">
+<meta property="og:type" content="article">
+  <meta property="og:image" content='https://dalanzg.github.io/tips-tutorials/posts/2016/05/02/how-to-connect-to-your-mysql-database-remotely/img/mybb-database-toad.png'>
+  <meta property="og:tags" content="ubuntu">
+  <meta property="og:tags" content="mysql">
+  <meta property="article:published_time" content="2016-05-02">
+  <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="A MySQL client is connected remotely to the database installed in Ubuntu Server virtual machine." />
+<meta name="twitter:title" content="How to connect to your MySQL database remotely" />
+<meta name="twitter:site" content="Tips and Tutorials" />
+<meta name="twitter:creator" content="@dalanzg" />
+  <meta name="twitter:image" content='https://dalanzg.github.io/tips-tutorials/posts/2016/05/02/how-to-connect-to-your-mysql-database-remotely/img/mybb-database-toad.png'>
+  <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How to connect to your MySQL database remotely",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https:\/\/dalanzg.github.io\/tips-tutorials\/posts\/2016\/05\/02\/how-to-connect-to-your-mysql-database-remotely\/"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https:\/\/dalanzg.github.io\/tips-tutorials\/posts\/2016\/05\/02\/how-to-connect-to-your-mysql-database-remotely\/img\/mybb-database-toad.png",
+    "width":  1150 ,
+    "height":  787 
+  },
+  "genre": "posts",
+  "keywords": "ubuntu, mysql",
+  "wordcount":  222 ,
+  "url": "https:\/\/dalanzg.github.io\/tips-tutorials\/posts\/2016\/05\/02\/how-to-connect-to-your-mysql-database-remotely\/",
+  "datePublished": "2016-05-02",
+  "dateModified": "2017-02-12",
+  "license": "Copyright. Tips and Tutorials. All rights reserved.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Daniel Lanza",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https:\/\/dalanzg.github.io\/tips-tutorials\/mstile-150x150.png",
+      "width":  150 ,
+      "height":  150 
+    }
+  },
+  "author": {
+    "@type": "Person",
+    "name": "dalanzg"
+  },
+  "description": "A MySQL client is connected remotely to the database installed in Ubuntu Server virtual machine."
+}
+</script>
+  <link rel="apple-touch-icon" sizes="180x180" href="https://dalanzg.github.io/tips-tutorials/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://dalanzg.github.io/tips-tutorials/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://dalanzg.github.io/tips-tutorials/favicon-16x16.png">
+<link rel="manifest" href="https://dalanzg.github.io/tips-tutorials/site.webmanifest">
+<link rel="mask-icon" href="https://dalanzg.github.io/tips-tutorials/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="apple-mobile-web-app-title" content="Tips and Tutorials">
+<meta name="application-name" content="Tips and Tutorials">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+  <link rel="canonical" href="https://dalanzg.github.io/tips-tutorials/posts/2016/05/02/how-to-connect-to-your-mysql-database-remotely/">
+
+  <link rel="stylesheet" href="https://dalanzg.github.io/tips-tutorials/sass/main.min.5f805eac00006ca12f0d48d367bd1bc959826406b3bf3d94a67e3e976d595702.css" integrity="sha256-X4BerAAAbKEvDUjTZ70byVmCZAazvz2Upn4&#43;l21ZVwI=">
+  
+  
+  <link rel="sitemap" href="https://dalanzg.github.io/tips-tutorials/sitemap.xml" title="Sitemap" type="application/xml">
+  <meta name="google-site-verification" content="CeO9J_0wi37-MvDa_F7AmZJYunwDhFGjv8eSlJFPil8" />
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-65400010-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-65400010-1');
+</script><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-8140733006923933",
+    enable_page_level_ads: true
+  });
+</script></head>
+<body>
+    <div class="container"><nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="https://dalanzg.github.io/tips-tutorials/"><strong>Tips and Tutorials</strong></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+    <li class="navbar-item ">
+        <a class="nav-link" href="https://dalanzg.github.io/tips-tutorials/about/" title="">About</a>
+      </li><li class="navbar-item ">
+        <a class="nav-link" href="https://dalanzg.github.io/tips-tutorials/tags/" title="">Tags</a>
+      </li><li class="navbar-item ">
+        <a class="nav-link" href="https://dalanzg.github.io/tips-tutorials/posts/" title="">Posts</a>
+      </li></ul>
+    <form class="form-inline float-xs-right" action="https://dalanzg.github.io/tips-tutorials/search/" method="get" data-search-form>
+      <input class="form-control mr-sm-2" type="text" name="q" placeholder="Search..." data-search-input>
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+    </form>
+  </div>
+</nav>
+<h1 class="mt-5">How to connect to your MySQL database remotely</h1><p class="text-muted mt-3">
+	<span>Published on May 2, 2016</span>
+	<span>by Daniel Lanza</span>
+</p>
+<p>
+	<a class="text-muted" href="https://dalanzg.github.io/tips-tutorials/tags/ubuntu"><i class="fas fa-tags"></i>&nbsp;ubuntu</a>
+	<a class="text-muted" href="https://dalanzg.github.io/tips-tutorials/tags/mysql"><i class="fas fa-tags"></i>&nbsp;mysql</a>
+</p>
+
+<p>This tutorial will explain how to connect remotely to MySQL database. In this example, MySQL server is installed in Ubuntu Server virtual machine with VirtualBox.</p>
+
+<h2 id="requirements">Requirements</h2>
+
+<ul>
+<li><p>Ubuntu Server virtual machine with MySQL:</p>
+
+<ul>
+<li>Two network adapters:</li>
+<li>NAT adapter (eth0)</li>
+<li>Host-only adapter (eth1) with a static IP address -&gt; <strong>192.168.56.101</strong>.</li>
+<li>Database name: mybb</li>
+</ul></li>
+
+<li><p>MySQL client:</p>
+
+<ul>
+<li><a href="https://www.toadworld.com/">Toad World</a></li>
+</ul></li>
+</ul>
+
+<h2 id="expose-mysql-server">Expose MySQL server</h2>
+
+<p>To expose MySQL to anything other than localhost you will have to expose the IP address. Find <strong>bind-address</strong> in <strong>/etc/mysql/my.cnf</strong> and assigned to your computers IP address.</p>
+<div class="highlight"><pre class="chroma"><code class="language-terminal" data-lang="terminal">sudo vim /etc/mysql/my.cnf</code></pre></div>
+<p>Place your IP in <strong>/etc/mysql/my.cnf</strong> file.</p>
+<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">bind</span><span class="p">-</span><span class="nx">address</span> <span class="p">=</span> <span class="m">192</span>.<span class="m">168</span>.<span class="m">56</span>.<span class="m">101</span></code></pre></div>
+<p>Restart MySQL to apply changes.</p>
+<div class="highlight"><pre class="chroma"><code class="language-terminal" data-lang="terminal">sudo service mysql restart</code></pre></div>
+<h2 id="granting-access">Granting access</h2>
+
+<p>For a remote user to connect with the correct privileges, you need to have that user created in both the localhost and &lsquo;%&rsquo; as in.</p>
+
+<p>Login to your MySQL server.</p>
+<div class="highlight"><pre class="chroma"><code class="language-terminal" data-lang="terminal">mysql -u root -p</code></pre></div>
+<p>Make sure the service user for your application is both localhost and &lsquo;%&rsquo;.</p>
+<div class="highlight"><pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="k">CREATE</span> <span class="n">USER</span> <span class="s1">&#39;mybbuser&#39;</span><span class="o">@</span><span class="s1">&#39;localhost&#39;</span> <span class="n">IDENTIFIED</span> <span class="k">BY</span> <span class="s1">&#39;password&#39;</span><span class="p">;</span>
+<span class="k">CREATE</span> <span class="n">USER</span> <span class="s1">&#39;mybbuser&#39;</span><span class="o">@</span><span class="s1">&#39;%&#39;</span> <span class="n">IDENTIFIED</span> <span class="k">BY</span> <span class="s1">&#39;password&#39;</span><span class="p">;</span></code></pre></div>
+<p>then, grant privileges on the MySQL database (database name: mybb).</p>
+<div class="highlight"><pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="k">GRANT</span> <span class="k">ALL</span> <span class="k">ON</span> <span class="n">mybb</span><span class="p">.</span><span class="o">*</span> <span class="k">TO</span> <span class="s1">&#39;mybbuser&#39;</span><span class="o">@</span><span class="s1">&#39;localhost&#39;</span><span class="p">;</span>
+<span class="k">GRANT</span> <span class="k">ALL</span> <span class="k">ON</span> <span class="n">mybb</span><span class="p">.</span><span class="o">*</span> <span class="k">TO</span> <span class="s1">&#39;mybbuser&#39;</span><span class="o">@</span><span class="s1">&#39;%&#39;</span><span class="p">;</span></code></pre></div>
+<p>and finally,</p>
+<div class="highlight"><pre class="chroma"><code class="language-mysql" data-lang="mysql"><span class="k">FLUSH</span> <span class="n">PRIVILEGES</span><span class="p">;</span>
+<span class="k">EXIT</span><span class="p">;</span></code></pre></div>
+<h2 id="mysql-client">MySQL client</h2>
+
+<p>Open Toad application, and filled up your database parameters.</p>
+
+<p>Test your connection and manage your database with your MySQL client.</p>
+
+<figure class="text-center">
+  <img src="img/test-mysql-connection.png" class="figure-img img-fluid rounded" alt="Test connection" width="500">
+  <figcaption class="figure-caption">Test connection</figcaption>
+</figure>
+
+<figure class="text-center">
+  <img src="img/mybb-database-toad.png" class="figure-img img-fluid rounded" alt="MySQL database with Toad" width="500">
+  <figcaption class="figure-caption">MySQL database with Toad</figcaption>
+</figure>
+
+
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "tips-tutorials" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+	<div class="bg-light py-5">
+		<div class="container">
+			<h2 class="text-center">Read next</h2>
+			<div class="row">
+				<div class="col-md-6 text-center">
+						Previous Post:
+						<a href="https://dalanzg.github.io/tips-tutorials/posts/2016/04/21/install-mybb-on-ubuntu-server/">Install MyBB on Ubuntu Server</a>
+				</div>
+				<div class="col-md-6 text-center">
+						Next Post:
+						<a href="https://dalanzg.github.io/tips-tutorials/posts/2016/05/07/how-to-install-alfresco-community-edition-5.1-in-ubuntu-server-14.04/">How to install Alfresco Community Edition 5.1 in Ubuntu Server 14.04</a>
+				</div>
+			</div>
+		</div>
+	</div>
+<div class="container mt-5">
+	<h2 class="text-center">See also</h2>
+	<div class="row">
+			<div class="col-md mb-3">
+				<p class="lead mb-0"><a class="text-body" href="https://dalanzg.github.io/tips-tutorials/posts/2016/04/21/install-mybb-on-ubuntu-server/">Install MyBB on Ubuntu Server</a></p>
+				<p class="font-weight-light mt-3">This tutorial will explain how to install MyBB in Ubuntu Server.
+Requirements A Ubuntu Server virtual machine with:
+ MySQL Apache FTP Samba  Check out these posts to get ready:
+ How to install Ubuntu Server on VirtualBox Setting up a Virtual Web Server with VirtualBox, Apache, MySQL, FTP, Ubuntu, and Samba  Our virtual machine has two network adapters. The second one (eth1) is a host-only adapter with a static IP address -&gt; 192.</p>
+				<a href="https://dalanzg.github.io/tips-tutorials/posts/2016/04/21/install-mybb-on-ubuntu-server/" class="btn btn-primary">Read more</a>
+			</div>
+			<div class="col-md mb-3">
+				<p class="lead mb-0"><a class="text-body" href="https://dalanzg.github.io/tips-tutorials/posts/2016/04/17/setting-up-a-virtual-web-server-with-virtualbox-apache-mysql-ftp-ubuntu-and-samba/">Setting up a Virtual Web Server with VirtualBox, Apache, MySQL, FTP, Ubuntu, and Samba</a></p>
+				<p class="font-weight-light mt-3">This tutorial will explain how to set up a Ubuntu Server virtual machine with:
+ Apache FTP Samba  First, check out how to install Ubuntu Server on VirtualBox to get ready a virtual machine to test.
+Our virtual machine has two network adapters. The second one (eth1) is a host-only adapter with a static IP address -&gt; 192.168.56.101
+Apache Web Server Apache Web Server needs to be running. The installation and configuration was indicated in the previous post.</p>
+				<a href="https://dalanzg.github.io/tips-tutorials/posts/2016/04/17/setting-up-a-virtual-web-server-with-virtualbox-apache-mysql-ftp-ubuntu-and-samba/" class="btn btn-primary">Read more</a>
+			</div>
+			<div class="col-md mb-3">
+				<p class="lead mb-0"><a class="text-body" href="https://dalanzg.github.io/tips-tutorials/posts/2016/04/15/install-ubuntu-server-14.04.4-on-virtualbox/">Install Ubuntu Server 14.04.4 on VirtualBox</a></p>
+				<p class="font-weight-light mt-3">This tutorial will explain how to install Ubuntu Server on a virtual machine.
+First, you need to have Ubuntu Server ISO file and VirtualBox installed.
+ VirtualBox Ubuntu Server  Create a new virtual machine on VirtualBox by clicking on New.
+Create new virtual machine  Select type and version of the virtual machine. In this case, Linux and Ubuntu (64-bits).
+Select type and version of the virtual machine  Select the amount of memory (RAM).</p>
+				<a href="https://dalanzg.github.io/tips-tutorials/posts/2016/04/15/install-ubuntu-server-14.04.4-on-virtualbox/" class="btn btn-primary">Read more</a>
+			</div>
+	</div>
+</div></div><footer class="blog-footer">
+  <p>
+    <nav class="nav justify-content-center">
+      <a class="nav-link" href="https://dalanzg.github.io/tips-tutorials/index.xml" target="_blank">
+        <i class="fas fa-rss-square fa-2x"></i>
+      </a>
+      
+      <a class="nav-link" href="https://twitter.com/dalanzg" target="_blank">
+        <i class="fab fa-twitter fa-2x"></i>
+      </a>
+      
+      <a class="nav-link" href="https://github.com/dalanzg" target="_blank">
+        <i class="fab fa-github fa-2x"></i>
+      </a>
+      
+      <a class="nav-link" href="https://www.linkedin.com/in/danilanza" target="_blank">
+        <i class="fab fa-linkedin fa-2x"></i>
+      </a>
+      
+    </nav>
+  </p>
+  <p class="text-muted">Copyright &copy; Tips and Tutorials 2019</p>
+  <p class="text-muted"><small>All rights reserved. Blog powered by <a href="https://gohugo.io/">Hugo</a> and hosted on <a href="https://www.github.com">GitHub.</a></small></p>
+  <p class="text-muted"><small><a href="https://opensource.org/licenses/MIT">MIT License</a></small></p>
+</footer>
+
+<script src="https://dalanzg.github.io/tips-tutorials/js/bundle.min.110d3e1a6c79028aa1899125704a04f056b48a7862c0d9058732b1ab70451559.js"></script></body>
+</html>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>opensuse on Tips and Tutorials</title>
+    <link>https://dalanzg.github.io/tips-tutorials/tags/opensuse/</link>
+    <description>Recent content in opensuse on Tips and Tutorials</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright. Tips and Tutorials. All rights reserved.</copyright>
+    <lastBuildDate>Sat, 03 Nov 2018 21:30:00 +0100</lastBuildDate>
+    
+	<atom:link href="https://dalanzg.github.io/tips-tutorials/tags/opensuse/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Tomcat load balancing with HAProxy in openSUSE</title>
+      <link>https://dalanzg.github.io/tips-tutorials/posts/2018/11/03/tomcat-load-balancing-with-haproxy-in-opensuse/</link>
+      <pubDate>Sat, 03 Nov 2018 21:30:00 +0100</pubDate>
+      
+      <guid>https://dalanzg.github.io/tips-tutorials/posts/2018/11/03/tomcat-load-balancing-with-haproxy-in-opensuse/</guid>
+      <description>This tutorial will explain how to load balancing two Tomcat instances with HAProxy in openSUSE.
+The environment will be simulated with three virtual machines and VirtualBox:
+  # Server FQDN IP      1 haproxy-server.dalanzg.com 192.168.56.101 HAProxy - Port 80   2 tomcat-server1.dalanzg.com 192.168.56.102 Apache Tomcat - Port 8080   3 tomcat-server2.dalanzg.com 192.168.56.103 Apache Tomcat - Port 8080    Check the following post to configure openSUSE with Internet and statick IP address by using YaST on VirtualBox</description>
+    </item>
+    
+    <item>
+      <title>Tomcat load balancing with mod_proxy and mod_proxy_balancer</title>
+      <link>https://dalanzg.github.io/tips-tutorials/posts/2018/11/01/tomcat-load-balancing-with-mod_proxy-and-mod_proxy_balancer/</link>
+      <pubDate>Thu, 01 Nov 2018 13:00:00 +0100</pubDate>
+      
+      <guid>https://dalanzg.github.io/tips-tutorials/posts/2018/11/01/tomcat-load-balancing-with-mod_proxy-and-mod_proxy_balancer/</guid>
+      <description>This tutorial will explain how to load balancing two Tomcat instances with Apache HTTPD server with mod_proxy and mod_proxy_balancer modules.
+The environment will be simulated with three virtual machines and VirtualBox:
+  # Server FQDN IP      1 apache-server.dalanzg.com 192.168.56.101 Apache HTTPD - Port 80   2 tomcat-server1.dalanzg.com 192.168.56.102 Apache Tomcat - Port 8080   3 tomcat-server2.dalanzg.com 192.168.56.103 Apache Tomcat - Port 8080    Check the following post to configure openSUSE with Internet and statick IP address by using YaST on VirtualBox</description>
+    </item>
+    
+    <item>
+      <title>openSUSE with Internet and static IP address by using YaST on VirtualBox</title>
+      <link>https://dalanzg.github.io/tips-tutorials/posts/2018/10/20/opensuse-with-internet-and-static-ip-address-by-using-yast-on-virtualbox/</link>
+      <pubDate>Sat, 20 Oct 2018 19:00:00 +0200</pubDate>
+      
+      <guid>https://dalanzg.github.io/tips-tutorials/posts/2018/10/20/opensuse-with-internet-and-static-ip-address-by-using-yast-on-virtualbox/</guid>
+      <description>An openSUSE virtual machine will be configured to have a static IP address and Internet connection on VirtualBox.
+This scenario is really useful if you want to install a specific application in guest and you need to communicate from your host.
+Therefore, the virtual machine will have two network adapters:
+ NAT -&amp;gt; Internet connection Host-only-adapter -&amp;gt; Static IP address (192.168.56.200) and FQDN server1.dalanzg.com  Steps  Settings for VirtualBox Virtual machine network settings Settings for network devices  Settings for VirtualBox First, create a Host Network Manager in VirtualBox.</description>
+    </item>
+    
+    <item>
+      <title>How to install Apache HTTPD in openSUSE</title>
+      <link>https://dalanzg.github.io/tips-tutorials/posts/2018/06/20/how-to-install-apache-httpd-in-opensuse/</link>
+      <pubDate>Wed, 20 Jun 2018 12:00:00 +0200</pubDate>
+      
+      <guid>https://dalanzg.github.io/tips-tutorials/posts/2018/06/20/how-to-install-apache-httpd-in-opensuse/</guid>
+      <description>This tutorial will explain how to install Apache HTTPD in openSUSE 15.
+The original documentation is found in The Apache HTTP Server Project. And the official documentation for openSUSE is in The Apache HTTP Server.
+Requirements You will need the following:
+ openSUSE Leap 15  Steps  Set hostname and domain Start and stop Apache Start Apache automatically at boot time  Set hostname and domain Files /etc/hostname and /etc/hosts will be modified to resolve the following:</description>
+    </item>
+    
+    <item>
+      <title>How to install Oracle 12c R2 in openSUSE</title>
+      <link>https://dalanzg.github.io/tips-tutorials/posts/2018/03/04/how-to-install-oracle-12c-r2-in-opensuse/</link>
+      <pubDate>Sun, 04 Mar 2018 12:00:00 +0100</pubDate>
+      
+      <guid>https://dalanzg.github.io/tips-tutorials/posts/2018/03/04/how-to-install-oracle-12c-r2-in-opensuse/</guid>
+      <description>This tutorial will explain how to install Oracle Database 12c R2 in openSUSE Leap 42.3.
+Requirements You will need the following:
+ openSUSE Leap 42.3 -&amp;gt; Install openSUSE virtual machine with VirtualBox Oracle 12c R2 database installation file -&amp;gt; linuxx64_12201_database.zip  Steps  Install libraries Set hostname and domain Create groups and users Grant oracle user access to X server Configuring Kernel Parameters and Resource Limits Create directory for Oracle Database Install Oracle Database Configuration of Oracle Listener Configuration of Oracle Database Create user for database Create table for database Connect to Oracle database with SQL Developer Start database when server is restarted  Install libraries According to Supported SUSE Linux Enterprise Server 12 in Oracle documentation, install the following libraries by using YaST or zypper command:</description>
+    </item>
+    
+    <item>
+      <title>How to install SAP NetWeaver 7.51 as ABAP Developer Edition in openSUSE</title>
+      <link>https://dalanzg.github.io/tips-tutorials/posts/2017/11/09/how-to-install-sap-netweaver-7.51-as-abap-developer-edition-in-opensuse/</link>
+      <pubDate>Thu, 09 Nov 2017 13:44:00 +0100</pubDate>
+      
+      <guid>https://dalanzg.github.io/tips-tutorials/posts/2017/11/09/how-to-install-sap-netweaver-7.51-as-abap-developer-edition-in-opensuse/</guid>
+      <description>This tutorial will explain how to install SAP NetWeaver as ABAP server in a virtual machine to develop your own custom ABAP objects.
+Requirements You will need the following:
+ An openSUSE virtual machine with VirtualBox (Check this link Download SAP NetWeaver compress files from SAP NetWeaver AS ABAP Developer Edition  Steps  Set port forwarding Set hostname and hosts Install uuidd Mount SAP NetWeaver files Install SAP NetWeaver Install SAP GUI in your host machine SAP GUI for JAVA logon Check SAP NetWeaver license Stop SAP NetWeaver Start SAP NetWeaver  Set port forwarding Forward from the Host IP and ports to the following Guest IP and ports in the virtual machine settings:</description>
+    </item>
+    
+    <item>
+      <title>How to install PostgreSQL in openSUSE</title>
+      <link>https://dalanzg.github.io/tips-tutorials/posts/2017/07/31/how-to-install-postgresql-in-opensuse/</link>
+      <pubDate>Mon, 31 Jul 2017 18:15:00 +0200</pubDate>
+      
+      <guid>https://dalanzg.github.io/tips-tutorials/posts/2017/07/31/how-to-install-postgresql-in-opensuse/</guid>
+      <description>This tutorial will explain how to install postgreSQL server in openSUSE. A new role and database will be created with the client software.
+Requirements You will need the following:
+ openSUSE Leap 42.3  Steps  Install PostgreSQL Post-installation checks Change postgres role password Create a new role Create a new database  Install PostgreSQL Install PostgreSQL from YAST or zypper command:
+ postgresql -&amp;gt; PostgreSQL client postgresql-server -&amp;gt; PostgreSQL server postgresql-contrib -&amp;gt; Contributed extensions and additions</description>
+    </item>
+    
+    <item>
+      <title>Setting mail server with Postfix and Dovecot in openSUSE</title>
+      <link>https://dalanzg.github.io/tips-tutorials/posts/2017/07/30/setting-mail-server-with-postfix-and-dovecot-in-opensuse/</link>
+      <pubDate>Sun, 30 Jul 2017 22:15:00 +0200</pubDate>
+      
+      <guid>https://dalanzg.github.io/tips-tutorials/posts/2017/07/30/setting-mail-server-with-postfix-and-dovecot-in-opensuse/</guid>
+      <description>A tutorial to set a mail server for inbound and outgoing mails:
+ Postfix for outgoing mails (SMTP) Dovecot for inbound mails (IMAP/POP3)  Requirements You will need the following:
+ An openSUSE virtual machine with VirtualBox (Check this link Hostname and domain -&amp;gt; Setting Hostname and domain in openSUSE SMTP server with Postfix running -&amp;gt; Setting Postfix for outgoing mail in openSUSE  In this tutorial, the machine has the following:</description>
+    </item>
+    
+    <item>
+      <title>Error 501 Syntax HELO hostname in postfix</title>
+      <link>https://dalanzg.github.io/tips-tutorials/posts/2017/07/09/error-501-syntax-helo-hostname-in-postfix/</link>
+      <pubDate>Sun, 09 Jul 2017 21:05:00 +0200</pubDate>
+      
+      <guid>https://dalanzg.github.io/tips-tutorials/posts/2017/07/09/error-501-syntax-helo-hostname-in-postfix/</guid>
+      <description>Certain SMTP servers require HELO servername in order to allow a request to proceed. Set a command filter to let it work without any arguments.
+Source
+Requirements You will need the following:
+ An openSUSE virtual machine with VirtualBox (Check this link Hostname and domain -&amp;gt; Setting Hostname and domain in openSUSE SMTP server with Postfix running -&amp;gt; Setting Postfix for outgoing mail in openSUSE  In this tutorial, the machine has the following:</description>
+    </item>
+    
+    <item>
+      <title>Setting Postfix for outgoing mail in openSUSE</title>
+      <link>https://dalanzg.github.io/tips-tutorials/posts/2017/04/14/setting-postfix-for-outgoing-mail-in-opensuse/</link>
+      <pubDate>Fri, 14 Apr 2017 12:45:00 +0200</pubDate>
+      
+      <guid>https://dalanzg.github.io/tips-tutorials/posts/2017/04/14/setting-postfix-for-outgoing-mail-in-opensuse/</guid>
+      <description>A tutorial to set Postfix to send mails in openSUSE.
+Requirements You will need the following:
+ An openSUSE virtual machine with VirtualBox (Check this link Hostname and domain -&amp;gt; Setting Hostname and domain in openSUSE  In this tutorial, the machine has the following:
+ FQDN hostname: mail.dalanzg.com Ethernet IP address: 10.0.2.15  Steps  Install Postfix Change main.cf file Send mail with telnet  Install Postfix By openSUSE installation default, Postfix can be installed.</description>
+    </item>
+    
+    <item>
+      <title>Setting hostname and domain in openSUSE</title>
+      <link>https://dalanzg.github.io/tips-tutorials/posts/2017/04/13/setting-hostname-and-domain-in-opensuse/</link>
+      <pubDate>Thu, 13 Apr 2017 18:00:00 +0200</pubDate>
+      
+      <guid>https://dalanzg.github.io/tips-tutorials/posts/2017/04/13/setting-hostname-and-domain-in-opensuse/</guid>
+      <description>A tutorial to set hostname and domain in openSUSE (server.dalanzg.com):
+ Hostname -&amp;gt; srvopensuse Domain -&amp;gt; dalanzg.com  Requirements You will need the following:
+ An openSUSE virtual machine with VirtualBox (Check this link  Steps  Modify hostname file Modify hosts file Verification  Modify hostname file With root permissions, edit file /etc/hostname.
+dalanz@linux-geij:~&amp;gt; sudo vim /etc/hostname Write the hostname for the server.
+srvopensuse Modify hosts file Check your network interfaces to find out the IP address for your Ethernet network (eth1).</description>
+    </item>
+    
+    <item>
+      <title>Setting SSL or https in Tomcat with openSUSE</title>
+      <link>https://dalanzg.github.io/tips-tutorials/posts/2017/04/07/setting-ssl-or-https-in-tomcat-with-opensuse/</link>
+      <pubDate>Fri, 07 Apr 2017 20:53:00 +0200</pubDate>
+      
+      <guid>https://dalanzg.github.io/tips-tutorials/posts/2017/04/07/setting-ssl-or-https-in-tomcat-with-opensuse/</guid>
+      <description>A tutorial to configure Tomcat 8 to support SSL or https connection.
+Requirements You will need the following:
+ An openSUSE virtual machine with VirtualBox (Check this link Java JDK to create Keystores -&amp;gt; Change Java OpenJDK to Oracle JDK Tomcat -&amp;gt; How to install tomcat in openSUSE  This tutorial was created with:
+ openSUSE Leap 42.2 Java Version -&amp;gt; jdk1.8.0_121 Tomcat version -&amp;gt; apache-tomcat-8.0.42  Steps  Create a keystore using Java JDK Set keystore in Tomcat Check SSL or https connection  Create a keystore using Java JDK Keystore file is a container for authorization certificates or public key certificates.</description>
+    </item>
+    
+    <item>
+      <title>How to install Tomcat in openSUSE</title>
+      <link>https://dalanzg.github.io/tips-tutorials/posts/2017/03/24/how-to-install-tomcat-in-opensuse/</link>
+      <pubDate>Fri, 24 Mar 2017 22:50:00 +0100</pubDate>
+      
+      <guid>https://dalanzg.github.io/tips-tutorials/posts/2017/03/24/how-to-install-tomcat-in-opensuse/</guid>
+      <description>Requirements You will need the following:
+ Tomcat 8  Optional -&amp;gt; (Change Java OpenJDK to Oracle JDK to run Tomcat.
+Steps  Download Tomcat 8. This case will be Apache Tomcat 8.0.42 -&amp;gt; Core tar.gz (apache-tomcat-8.0.42.tar.gz).
+ Unzip apache-tomcat-8.0.42.tar.gz file and place it in folder /usr/local/tomcat. /usr/local is a folder similar to /usr and remain safe from system software upgrades.
+dalanz@linux-geij:~&amp;gt; tar -xf apache-tomcat-8.0.42.tar.gz dalanz@linux-geij:~&amp;gt; sudo mkdir -p /usr/local/tomcat dalanz@linux-geij:~&amp;gt; sudo mv apache-tomcat-8.</description>
+    </item>
+    
+    <item>
+      <title>Change OpenJDK to Oracle JDK in openSUSE</title>
+      <link>https://dalanzg.github.io/tips-tutorials/posts/2017/03/18/change-openjdk-to-oracle-jdk-in-opensuse/</link>
+      <pubDate>Sat, 18 Mar 2017 14:14:00 +0100</pubDate>
+      
+      <guid>https://dalanzg.github.io/tips-tutorials/posts/2017/03/18/change-openjdk-to-oracle-jdk-in-opensuse/</guid>
+      <description>When installing openSUSE, OpenJDK is installed by default. This tutorial will explain how to change to Oracle JDK.
+dalanz@linux-geij:~&amp;gt; java -version openjdk version &amp;#34;1.8.0_121&amp;#34; OpenJDK Runtime Environment (IcedTea 3.3.0) (suse-8.1-x86_64) OpenJDK 64-Bit Server VM (build 25.121-b13, mixed mode) Requirements You will need the following:
+ Oracle JDK 8  Steps  Download Oracle JDK 8. This case will be Linux x64 (jdk-8u121-linux-x64.tar.gz).
+ Unzip jdk-8u121-linux-x64.tar.gz file and change the ownership</description>
+    </item>
+    
+    <item>
+      <title>Share transient folder in openSUSE with VirtualBox</title>
+      <link>https://dalanzg.github.io/tips-tutorials/posts/2017/03/17/share-transient-folder-in-opensuse-with-virtualbox/</link>
+      <pubDate>Fri, 17 Mar 2017 19:00:00 +0100</pubDate>
+      
+      <guid>https://dalanzg.github.io/tips-tutorials/posts/2017/03/17/share-transient-folder-in-opensuse-with-virtualbox/</guid>
+      <description>This tutorial will explain how to share a host holder into your guest virtual machine.
+Requirements You will need the following:
+ An openSUSE virtual machine with VirtualBox (Check this link  Steps  Make transient folder Mount folder Copy and paste files  Make transient folder Go to share folder settings and create a new transient folder.
+Create a new transient folder  Give the name to the transient folder  New transient folder created  It is important to remember the transient folder name.</description>
+    </item>
+    
+    <item>
+      <title>How to install openSUSE Leap 42.2 in VirtualBox</title>
+      <link>https://dalanzg.github.io/tips-tutorials/posts/2017/02/12/how-to-install-opensuse-leap-42.2-in-virtualbox/</link>
+      <pubDate>Sun, 12 Feb 2017 13:00:00 +0100</pubDate>
+      
+      <guid>https://dalanzg.github.io/tips-tutorials/posts/2017/02/12/how-to-install-opensuse-leap-42.2-in-virtualbox/</guid>
+      <description>This tutorial will explain how to install openSUSE 42.2 Leap in VirtualBox.
+Requirements You will need the following:
+ VirtualBox openSUSE Leap 42.2 ISO file  Steps  Preparing the virtual machine Installing openSUSE Post-installation tasks  Preparing the virtual machine Open VirtualBox and create a new virtual machine. Select Linux type and openSUSE version.
+New openSUSE virtual machine  Select the amount of memory RAM. The recommendation is 4096 MB (4 GB).</description>
+    </item>
+    
+  </channel>
+</rss>

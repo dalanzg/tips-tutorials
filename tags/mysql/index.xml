@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mysql on Tips and Tutorials</title>
+    <link>https://dalanzg.github.io/tips-tutorials/tags/mysql/</link>
+    <description>Recent content in mysql on Tips and Tutorials</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright. Tips and Tutorials. All rights reserved.</copyright>
+    <lastBuildDate>Mon, 02 May 2016 12:00:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://dalanzg.github.io/tips-tutorials/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to connect to your MySQL database remotely</title>
+      <link>https://dalanzg.github.io/tips-tutorials/posts/2016/05/02/how-to-connect-to-your-mysql-database-remotely/</link>
+      <pubDate>Mon, 02 May 2016 12:00:00 +0200</pubDate>
+      
+      <guid>https://dalanzg.github.io/tips-tutorials/posts/2016/05/02/how-to-connect-to-your-mysql-database-remotely/</guid>
+      <description>This tutorial will explain how to connect remotely to MySQL database. In this example, MySQL server is installed in Ubuntu Server virtual machine with VirtualBox.
+Requirements  Ubuntu Server virtual machine with MySQL:
+ Two network adapters: NAT adapter (eth0) Host-only adapter (eth1) with a static IP address -&amp;gt; 192.168.56.101. Database name: mybb  MySQL client:
+ Toad World   Expose MySQL server To expose MySQL to anything other than localhost you will have to expose the IP address.</description>
+    </item>
+    
+  </channel>
+</rss>

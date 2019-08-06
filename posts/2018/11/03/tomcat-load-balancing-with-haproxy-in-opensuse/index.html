@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html><head>
+  <title>Tomcat load balancing with HAProxy in openSUSE</title>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="title" content="Tomcat load balancing with HAProxy in openSUSE – Tips and Tutorials">
+  <meta name="description" content="This tutorial will explain how to load balancing two Tomcat instances with HAProxy in openSUSE.">
+  
+  <meta name="generator" content="Hugo 0.56.3" />
+  
+  <meta property="og:title" content="Tomcat load balancing with HAProxy in openSUSE">
+<meta property="og:description" content="This tutorial will explain how to load balancing two Tomcat instances with HAProxy in openSUSE." />
+<meta property="og:url" content="https://dalanzg.github.io/tips-tutorials/posts/2018/11/03/tomcat-load-balancing-with-haproxy-in-opensuse/">
+<meta property="og:site_name" content="Tips and Tutorials">
+<meta property="og:type" content="article">
+  <meta property="og:image" content='https://dalanzg.github.io/tips-tutorials/posts/2018/11/03/tomcat-load-balancing-with-haproxy-in-opensuse/img/haproxy-works.png'>
+  <meta property="og:tags" content="opensuse">
+  <meta property="og:tags" content="haproxy">
+  <meta property="article:published_time" content="2018-11-03">
+  <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="This tutorial will explain how to load balancing two Tomcat instances with HAProxy in openSUSE." />
+<meta name="twitter:title" content="Tomcat load balancing with HAProxy in openSUSE" />
+<meta name="twitter:site" content="Tips and Tutorials" />
+<meta name="twitter:creator" content="@dalanzg" />
+  <meta name="twitter:image" content='https://dalanzg.github.io/tips-tutorials/posts/2018/11/03/tomcat-load-balancing-with-haproxy-in-opensuse/img/haproxy-works.png'>
+  <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Tomcat load balancing with HAProxy in openSUSE",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https:\/\/dalanzg.github.io\/tips-tutorials\/posts\/2018\/11\/03\/tomcat-load-balancing-with-haproxy-in-opensuse\/"
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "https:\/\/dalanzg.github.io\/tips-tutorials\/posts\/2018\/11\/03\/tomcat-load-balancing-with-haproxy-in-opensuse\/img\/haproxy-works.png",
+    "width":  1280 ,
+    "height":  431 
+  },
+  "genre": "posts",
+  "keywords": "opensuse, haproxy",
+  "wordcount":  475 ,
+  "url": "https:\/\/dalanzg.github.io\/tips-tutorials\/posts\/2018\/11\/03\/tomcat-load-balancing-with-haproxy-in-opensuse\/",
+  "datePublished": "2018-11-03",
+  "dateModified": "2018-11-03",
+  "license": "Copyright. Tips and Tutorials. All rights reserved.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Daniel Lanza",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https:\/\/dalanzg.github.io\/tips-tutorials\/mstile-150x150.png",
+      "width":  150 ,
+      "height":  150 
+    }
+  },
+  "author": {
+    "@type": "Person",
+    "name": "dalanzg"
+  },
+  "description": "This tutorial will explain how to load balancing two Tomcat instances with HAProxy in openSUSE."
+}
+</script>
+  <link rel="apple-touch-icon" sizes="180x180" href="https://dalanzg.github.io/tips-tutorials/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://dalanzg.github.io/tips-tutorials/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://dalanzg.github.io/tips-tutorials/favicon-16x16.png">
+<link rel="manifest" href="https://dalanzg.github.io/tips-tutorials/site.webmanifest">
+<link rel="mask-icon" href="https://dalanzg.github.io/tips-tutorials/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="apple-mobile-web-app-title" content="Tips and Tutorials">
+<meta name="application-name" content="Tips and Tutorials">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+  <link rel="canonical" href="https://dalanzg.github.io/tips-tutorials/posts/2018/11/03/tomcat-load-balancing-with-haproxy-in-opensuse/">
+
+  <link rel="stylesheet" href="https://dalanzg.github.io/tips-tutorials/sass/main.min.5f805eac00006ca12f0d48d367bd1bc959826406b3bf3d94a67e3e976d595702.css" integrity="sha256-X4BerAAAbKEvDUjTZ70byVmCZAazvz2Upn4&#43;l21ZVwI=">
+  
+  
+  <link rel="sitemap" href="https://dalanzg.github.io/tips-tutorials/sitemap.xml" title="Sitemap" type="application/xml">
+  <meta name="google-site-verification" content="CeO9J_0wi37-MvDa_F7AmZJYunwDhFGjv8eSlJFPil8" />
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-65400010-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-65400010-1');
+</script><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-8140733006923933",
+    enable_page_level_ads: true
+  });
+</script></head>
+<body>
+    <div class="container"><nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="https://dalanzg.github.io/tips-tutorials/"><strong>Tips and Tutorials</strong></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+    <li class="navbar-item ">
+        <a class="nav-link" href="https://dalanzg.github.io/tips-tutorials/about/" title="">About</a>
+      </li><li class="navbar-item ">
+        <a class="nav-link" href="https://dalanzg.github.io/tips-tutorials/tags/" title="">Tags</a>
+      </li><li class="navbar-item ">
+        <a class="nav-link" href="https://dalanzg.github.io/tips-tutorials/posts/" title="">Posts</a>
+      </li></ul>
+    <form class="form-inline float-xs-right" action="https://dalanzg.github.io/tips-tutorials/search/" method="get" data-search-form>
+      <input class="form-control mr-sm-2" type="text" name="q" placeholder="Search..." data-search-input>
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+    </form>
+  </div>
+</nav>
+<h1 class="mt-5">Tomcat load balancing with HAProxy in openSUSE</h1><p class="text-muted mt-3">
+	<span>Published on November 3, 2018</span>
+	<span>by Daniel Lanza</span>
+</p>
+<p>
+	<a class="text-muted" href="https://dalanzg.github.io/tips-tutorials/tags/opensuse"><i class="fas fa-tags"></i>&nbsp;opensuse</a>
+	<a class="text-muted" href="https://dalanzg.github.io/tips-tutorials/tags/haproxy"><i class="fas fa-tags"></i>&nbsp;haproxy</a>
+</p>
+
+<p>This tutorial will explain how to load balancing two Tomcat instances with HAProxy in openSUSE.</p>
+
+<p>The environment will be simulated with three virtual machines and VirtualBox:</p>
+
+<table class="table table-bordered-striped">
+<thead>
+<tr>
+<th align="center">#</th>
+<th>Server FQDN</th>
+<th>IP</th>
+<th></th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">1</td>
+<td>haproxy-server.dalanzg.com</td>
+<td>192.168.56.101</td>
+<td>HAProxy - Port 80</td>
+</tr>
+
+<tr>
+<td align="center">2</td>
+<td>tomcat-server1.dalanzg.com</td>
+<td>192.168.56.102</td>
+<td>Apache Tomcat - Port 8080</td>
+</tr>
+
+<tr>
+<td align="center">3</td>
+<td>tomcat-server2.dalanzg.com</td>
+<td>192.168.56.103</td>
+<td>Apache Tomcat - Port 8080</td>
+</tr>
+</tbody>
+</table>
+
+<p>Check the following post to configure <a href="https://dalanzg.github.io/tips-tutorials/posts/2018/10/20/opensuse-with-internet-and-static-ip-address-by-using-yast-on-virtualbox/">openSUSE with Internet and statick IP address by using YaST on VirtualBox</a></p>
+
+<h2 id="steps">Steps</h2>
+
+<ul>
+<li><a href="#install-haproxy">Install HAProxy</a></li>
+<li><a href="#install-apache-tomcat">Install Apache Tomcat</a></li>
+<li><a href="#load-balancing-across-multiple-backend-servers-with-haproxy">Load Balancing Across Multiple Backend Servers with HAProxy</a></li>
+</ul>
+
+<h3 id="install-haproxy">Install HAProxy</h3>
+
+<p>Install HAProxy in server #1</p>
+<div class="highlight"><pre class="chroma"><code class="language-terminal" data-lang="terminal">dlanza@haproxy-server:~&gt; sudo zypper install haproxy
+dlanza@haproxy-server:~&gt; sudo systemctl enable haproxy.service 
+Created symlink /etc/systemd/system/multi-user.target.wants/haproxy.service → /usr/lib/systemd/system/haproxy.service.
+dlanza@haproxy-server:~&gt; sudo systemctl start haproxy.service</code></pre></div>
+<p>Check HAProxy works in server #1 from your host machine.</p>
+
+<figure class="text-center">
+  <img src="img/haproxy-works.png" class="figure-img img-fluid rounded" alt="HAProxy works" width="900">
+  <figcaption class="figure-caption">HAProxy works</figcaption>
+</figure>
+
+<h3 id="install-apache-tomcat">Install Apache Tomcat</h3>
+
+<p>Steps for servers #2 and #3:</p>
+
+<ul>
+<li>Download <strong>apache-tomcat-8.5.34.tar.gz</strong></li>
+<li>Deploy Apache Tomcat and change permissions</li>
+<li>Start service</li>
+
+<li><p>Create a static html file</p>
+<div class="highlight"><pre class="chroma"><code class="language-terminal" data-lang="terminal">dlanza@tomcat-server1:~&gt; wget http://apache.uvigo.es/tomcat/tomcat-8/v8.5.34/bin/apache-tomcat-8.5.34.tar.gz
+dlanza@tomcat-server1:~&gt; sudo mv apache-tomcat-8.5.34.tar.gz /opt/
+dlanza@tomcat-server1:~&gt; cd /opt/
+dlanza@tomcat-server1:/opt&gt; sudo tar -xf apache-tomcat-8.5.34.tar.gz 
+dlanza@tomcat-server1:/opt&gt; sudo chown -R dlanza:users apache-tomcat-8.5.34
+dlanza@tomcat-server1:/opt&gt; sudo rm apache-tomcat-8.5.34.tar.gz
+Using CATALINA_BASE:   /opt/apache-tomcat-8.5.34
+Using CATALINA_HOME:   /opt/apache-tomcat-8.5.34
+Using CATALINA_TMPDIR: /opt/apache-tomcat-8.5.34/temp
+Using JRE_HOME:        /usr/lib64/jvm/jre
+Using CLASSPATH:       /opt/apache-tomcat-8.5.34/bin/bootstrap.jar:/opt/apache-tomcat-8.5.34/bin/tomcat-juli.jar
+Tomcat started.</code></pre></div></li>
+</ul>
+
+<p>And create a static html file.</p>
+<div class="highlight"><pre class="chroma"><code class="language-terminal" data-lang="terminal">dlanza@tomcat-server1:/opt&gt; mkdir /opt/apache-tomcat-8.5.34/webapps/dalanzg
+dlanza@tomcat-server1:/opt&gt; vim /opt/apache-tomcat-8.5.34/webapps/dalanzg/index.html</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>Tomcat server #1<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span> 
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span> </code></pre></div>
+<p>Check you can reach the index page from servers #2 and #3:</p>
+
+<ul>
+<li><a href="http://192.168.56.102:8080/dalanzg">http://192.168.56.102:8080/dalanzg</a></li>
+<li><a href="http://192.168.56.103:8080/dalanzg">http://192.168.56.103:8080/dalanzg</a></li>
+</ul>
+
+<figure class="text-center">
+  <img src="img/tomcat1.png" class="figure-img img-fluid rounded" alt="Tomcat 1" width="450">
+  <figcaption class="figure-caption">Tomcat 1</figcaption>
+</figure>
+
+<figure class="text-center">
+  <img src="img/tomcat2.png" class="figure-img img-fluid rounded" alt="Tomcat 2" width="450">
+  <figcaption class="figure-caption">Tomcat 2</figcaption>
+</figure>
+
+<h3 id="load-balancing-across-multiple-backend-servers-with-haproxy">Load Balancing Across Multiple Backend Servers with HAProxy</h3>
+
+<p>The HAProxy configuration will work with the following features:</p>
+
+<ul>
+<li>All the Apache request will be balanced from <a href="http://192.168.56.101/dalanzg">http://192.168.56.101/dalanzg</a> to:
+
+<ul>
+<li><a href="http://192.168.56.102:8080/dalanzg">http://192.168.56.102:8080/dalanzg</a></li>
+<li><a href="http://192.168.56.103:8080/dalanzg">http://192.168.56.103:8080/dalanzg</a></li>
+</ul></li>
+<li>The stats will be accessed with:
+
+<ul>
+<li><a href="http://192.168.56.101:9000/stats">http://192.168.56.101:9000/stats</a></li>
+<li>User authentication:</li>
+<li>User: admin</li>
+<li>Password: haproxy</li>
+</ul></li>
+</ul>
+
+<p>Edit <strong>haproxy.cfg</strong> configuration file.</p>
+<div class="highlight"><pre class="chroma"><code class="language-terminal" data-lang="terminal">dlanza@haproxy-server:~&gt; su -
+haproxy-server:~ # vim /etc/haproxy/haproxy.cfg</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-conf" data-lang="conf">global
+  log /dev/log daemon
+  maxconn 32768
+  chroot /var/lib/haproxy
+  user haproxy
+  group haproxy
+  daemon
+  stats socket /var/lib/haproxy/stats user haproxy group haproxy mode 0640 level operator
+  tune.bufsize 32768
+  tune.ssl.default-dh-param 2048
+  ssl-default-bind-ciphers ALL:!aNULL:!eNULL:!EXPORT:!DES:!3DES:!MD5:!PSK:!RC4:!ADH:!LOW@STRENGTH
+
+defaults
+  log     global
+  mode    http
+  option  log-health-checks
+  option  log-separate-errors
+  option  dontlog-normal
+  option  dontlognull
+  option  httplog
+  option  socket-stats
+  retries 3
+  option  redispatch
+  maxconn 10000
+  timeout connect     5s
+  timeout client     50s
+  timeout server    450s
+
+listen stats
+  bind *:9000
+  mode http
+  stats enable
+  stats hide-version   #Hide HAProxy version
+  stats show-node
+  stats uri /stats   #Stats URI
+  stats auth admin:haproxy   #Authentication credentials
+  stats refresh 5s
+  
+frontend tomcat-service
+  bind *:80
+  acl dalanzg_uri path_beg /dalanzg
+  use_backend tomcat-server if dalanzg_uri  #Balance if URI
+  default_backend tomcat-server   #Balance by default
+
+backend tomcat-server
+  balance roundrobin
+  server tomcat1 192.168.56.102:8080 check
+  server tomcat2 192.168.56.103:8080 check</code></pre></div>
+<p>Restart HAProxy.</p>
+<div class="highlight"><pre class="chroma"><code class="language-terminal" data-lang="terminal">haproxy-server:~ # service haproxy restart</code></pre></div>
+<p>Check stats with authentication in <a href="http://192.168.56.101:9000">http://192.168.56.101:9000</a></p>
+
+<figure class="text-center">
+  <img src="img/stats-auth.png" class="figure-img img-fluid rounded" alt="Authentication for stats" width="600">
+  <figcaption class="figure-caption">Authentication for stats</figcaption>
+</figure>
+
+<figure class="text-center">
+  <img src="img/stats.png" class="figure-img img-fluid rounded" alt="Stats page" width="800">
+  <figcaption class="figure-caption">Stats page</figcaption>
+</figure>
+
+<p>Go several times to <a href="http://192.168.56.101/dalanzg">http://192.168.56.101/dalanzg</a></p>
+
+<figure class="text-center">
+  <img src="img/balancer1.png" class="figure-img img-fluid rounded" alt="Tomcat worker 1" width="500">
+  <figcaption class="figure-caption">Tomcat worker 1</figcaption>
+</figure>
+
+<figure class="text-center">
+  <img src="img/balancer2.png" class="figure-img img-fluid rounded" alt="Tomcat worker 2" width="500">
+  <figcaption class="figure-caption">Tomcat worker 2</figcaption>
+</figure>
+
+<p>And now, shutdown Tomcat 2 and check that <a href="http://192.168.56.101/dalanzg">http://192.168.56.101/dalanzg</a> is still working in Tomcat 1.</p>
+<div class="highlight"><pre class="chroma"><code class="language-terminal" data-lang="terminal">dlanza@tomcat-server2:~&gt; /opt/apache-tomcat-8.5.34/bin/shutdown.sh 
+Using CATALINA_BASE:   /opt/apache-tomcat-8.5.34
+Using CATALINA_HOME:   /opt/apache-tomcat-8.5.34
+Using CATALINA_TMPDIR: /opt/apache-tomcat-8.5.34/temp
+Using JRE_HOME:        /usr/lib64/jvm/jre
+Using CLASSPATH:       /opt/apache-tomcat-8.5.34/bin/bootstrap.jar:/opt/apache-tomcat-8.5.34/bin/tomcat-juli.jar</code></pre></div>
+<figure class="text-center">
+  <img src="img/balancer1.png" class="figure-img img-fluid rounded" alt="Tomcat worker 1" width="500">
+  <figcaption class="figure-caption">Tomcat worker 1</figcaption>
+</figure>
+
+<p>And tomcat2 is down in stats page.</p>
+
+<figure class="text-center">
+  <img src="img/stats-tomcat2-down.png" class="figure-img img-fluid rounded" alt="Tomcat 2 down" width="800">
+  <figcaption class="figure-caption">Tomcat 2 down</figcaption>
+</figure>
+
+
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "tips-tutorials" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+	<div class="bg-light py-5">
+		<div class="container">
+			<h2 class="text-center">Read next</h2>
+			<div class="row">
+				<div class="col-md-6 text-center">
+						Previous Post:
+						<a href="https://dalanzg.github.io/tips-tutorials/posts/2018/11/01/tomcat-load-balancing-with-mod_proxy-and-mod_proxy_balancer/">Tomcat load balancing with mod_proxy and mod_proxy_balancer</a>
+				</div>
+				<div class="col-md-6 text-center">
+						Next Post:
+						<a href="https://dalanzg.github.io/tips-tutorials/about/">About</a>
+				</div>
+			</div>
+		</div>
+	</div>
+<div class="container mt-5">
+	<h2 class="text-center">See also</h2>
+	<div class="row">
+			<div class="col-md mb-3">
+				<p class="lead mb-0"><a class="text-body" href="https://dalanzg.github.io/tips-tutorials/posts/2018/11/01/tomcat-load-balancing-with-mod_proxy-and-mod_proxy_balancer/">Tomcat load balancing with mod_proxy and mod_proxy_balancer</a></p>
+				<p class="font-weight-light mt-3">This tutorial will explain how to load balancing two Tomcat instances with Apache HTTPD server with mod_proxy and mod_proxy_balancer modules.
+The environment will be simulated with three virtual machines and VirtualBox:
+  # Server FQDN IP      1 apache-server.dalanzg.com 192.168.56.101 Apache HTTPD - Port 80   2 tomcat-server1.dalanzg.com 192.168.56.102 Apache Tomcat - Port 8080   3 tomcat-server2.dalanzg.com 192.168.56.103 Apache Tomcat - Port 8080    Check the following post to configure openSUSE with Internet and statick IP address by using YaST on VirtualBox</p>
+				<a href="https://dalanzg.github.io/tips-tutorials/posts/2018/11/01/tomcat-load-balancing-with-mod_proxy-and-mod_proxy_balancer/" class="btn btn-primary">Read more</a>
+			</div>
+			<div class="col-md mb-3">
+				<p class="lead mb-0"><a class="text-body" href="https://dalanzg.github.io/tips-tutorials/posts/2018/10/20/opensuse-with-internet-and-static-ip-address-by-using-yast-on-virtualbox/">openSUSE with Internet and static IP address by using YaST on VirtualBox</a></p>
+				<p class="font-weight-light mt-3">An openSUSE virtual machine will be configured to have a static IP address and Internet connection on VirtualBox.
+This scenario is really useful if you want to install a specific application in guest and you need to communicate from your host.
+Therefore, the virtual machine will have two network adapters:
+ NAT -&gt; Internet connection Host-only-adapter -&gt; Static IP address (192.168.56.200) and FQDN server1.dalanzg.com  Steps  Settings for VirtualBox Virtual machine network settings Settings for network devices  Settings for VirtualBox First, create a Host Network Manager in VirtualBox.</p>
+				<a href="https://dalanzg.github.io/tips-tutorials/posts/2018/10/20/opensuse-with-internet-and-static-ip-address-by-using-yast-on-virtualbox/" class="btn btn-primary">Read more</a>
+			</div>
+			<div class="col-md mb-3">
+				<p class="lead mb-0"><a class="text-body" href="https://dalanzg.github.io/tips-tutorials/posts/2018/06/20/how-to-install-apache-httpd-in-opensuse/">How to install Apache HTTPD in openSUSE</a></p>
+				<p class="font-weight-light mt-3">This tutorial will explain how to install Apache HTTPD in openSUSE 15.
+The original documentation is found in The Apache HTTP Server Project. And the official documentation for openSUSE is in The Apache HTTP Server.
+Requirements You will need the following:
+ openSUSE Leap 15  Steps  Set hostname and domain Start and stop Apache Start Apache automatically at boot time  Set hostname and domain Files /etc/hostname and /etc/hosts will be modified to resolve the following:</p>
+				<a href="https://dalanzg.github.io/tips-tutorials/posts/2018/06/20/how-to-install-apache-httpd-in-opensuse/" class="btn btn-primary">Read more</a>
+			</div>
+	</div>
+</div></div><footer class="blog-footer">
+  <p>
+    <nav class="nav justify-content-center">
+      <a class="nav-link" href="https://dalanzg.github.io/tips-tutorials/index.xml" target="_blank">
+        <i class="fas fa-rss-square fa-2x"></i>
+      </a>
+      
+      <a class="nav-link" href="https://twitter.com/dalanzg" target="_blank">
+        <i class="fab fa-twitter fa-2x"></i>
+      </a>
+      
+      <a class="nav-link" href="https://github.com/dalanzg" target="_blank">
+        <i class="fab fa-github fa-2x"></i>
+      </a>
+      
+      <a class="nav-link" href="https://www.linkedin.com/in/danilanza" target="_blank">
+        <i class="fab fa-linkedin fa-2x"></i>
+      </a>
+      
+    </nav>
+  </p>
+  <p class="text-muted">Copyright &copy; Tips and Tutorials 2019</p>
+  <p class="text-muted"><small>All rights reserved. Blog powered by <a href="https://gohugo.io/">Hugo</a> and hosted on <a href="https://www.github.com">GitHub.</a></small></p>
+  <p class="text-muted"><small><a href="https://opensource.org/licenses/MIT">MIT License</a></small></p>
+</footer>
+
+<script src="https://dalanzg.github.io/tips-tutorials/js/bundle.min.110d3e1a6c79028aa1899125704a04f056b48a7862c0d9058732b1ab70451559.js"></script></body>
+</html>

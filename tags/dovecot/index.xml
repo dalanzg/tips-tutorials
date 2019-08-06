@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dovecot on Tips and Tutorials</title>
+    <link>https://dalanzg.github.io/tips-tutorials/tags/dovecot/</link>
+    <description>Recent content in dovecot on Tips and Tutorials</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright. Tips and Tutorials. All rights reserved.</copyright>
+    <lastBuildDate>Sun, 30 Jul 2017 22:15:00 +0200</lastBuildDate>
+    
+	<atom:link href="https://dalanzg.github.io/tips-tutorials/tags/dovecot/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Setting mail server with Postfix and Dovecot in openSUSE</title>
+      <link>https://dalanzg.github.io/tips-tutorials/posts/2017/07/30/setting-mail-server-with-postfix-and-dovecot-in-opensuse/</link>
+      <pubDate>Sun, 30 Jul 2017 22:15:00 +0200</pubDate>
+      
+      <guid>https://dalanzg.github.io/tips-tutorials/posts/2017/07/30/setting-mail-server-with-postfix-and-dovecot-in-opensuse/</guid>
+      <description>A tutorial to set a mail server for inbound and outgoing mails:
+ Postfix for outgoing mails (SMTP) Dovecot for inbound mails (IMAP/POP3)  Requirements You will need the following:
+ An openSUSE virtual machine with VirtualBox (Check this link Hostname and domain -&amp;gt; Setting Hostname and domain in openSUSE SMTP server with Postfix running -&amp;gt; Setting Postfix for outgoing mail in openSUSE  In this tutorial, the machine has the following:</description>
+    </item>
+    
+  </channel>
+</rss>

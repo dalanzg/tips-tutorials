@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html><head>
+  <title>How to get MD5 checksum for a file in Java</title>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="title" content="How to get MD5 checksum for a file in Java – Tips and Tutorials">
+  <meta name="description" content="MD5 checksum is a 128-bit hash value (32 digit hexadecimal number). This works as a fingerprint for a file which let us compare together other files to find out duplicate files. This post calculate MD5 checksum by Java.">
+  
+  <meta name="generator" content="Hugo 0.56.3" />
+  
+  <meta property="og:title" content="How to get MD5 checksum for a file in Java">
+<meta property="og:description" content="MD5 checksum is a 128-bit hash value (32 digit hexadecimal number). This works as a fingerprint for a file which let us compare together other files to find out duplicate files. This post calculate MD5 checksum by Java." />
+<meta property="og:url" content="https://dalanzg.github.io/tips-tutorials/posts/2016/03/22/how-to-get-md5-checksum-for-a-file-in-java/">
+<meta property="og:site_name" content="Tips and Tutorials">
+<meta property="og:type" content="article">
+    <meta property="og:image" content="https://dalanzg.github.io/tips-tutorials/android-chrome-512x512.png">
+  <meta property="og:tags" content="java">
+  <meta property="article:published_time" content="2016-03-22">
+  <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="MD5 checksum is a 128-bit hash value (32 digit hexadecimal number). This works as a fingerprint for a file which let us compare together other files to find out duplicate files. This post calculate MD5 checksum by Java." />
+<meta name="twitter:title" content="How to get MD5 checksum for a file in Java" />
+<meta name="twitter:site" content="Tips and Tutorials" />
+<meta name="twitter:creator" content="@dalanzg" />
+    <meta name="twitter:image" content="https://dalanzg.github.io/tips-tutorials/android-chrome-512x512.png">
+  <script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How to get MD5 checksum for a file in Java",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https:\/\/dalanzg.github.io\/tips-tutorials\/posts\/2016\/03\/22\/how-to-get-md5-checksum-for-a-file-in-java\/"
+  },
+  
+  "image": {
+    "@type": "ImageObject",
+    "url": "https:\/\/dalanzg.github.io\/tips-tutorials\/mstile-150x150.png",
+    "width":  150 ,
+    "height":  150 
+  },
+  "genre": "posts",
+  "keywords": "java",
+  "wordcount":  208 ,
+  "url": "https:\/\/dalanzg.github.io\/tips-tutorials\/posts\/2016\/03\/22\/how-to-get-md5-checksum-for-a-file-in-java\/",
+  "datePublished": "2016-03-22",
+  "dateModified": "2016-12-27",
+  "license": "Copyright. Tips and Tutorials. All rights reserved.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Daniel Lanza",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https:\/\/dalanzg.github.io\/tips-tutorials\/mstile-150x150.png",
+      "width":  150 ,
+      "height":  150 
+    }
+  },
+  "author": {
+    "@type": "Person",
+    "name": "dalanzg"
+  },
+  "description": "MD5 checksum is a 128-bit hash value (32 digit hexadecimal number). This works as a fingerprint for a file which let us compare together other files to find out duplicate files. This post calculate MD5 checksum by Java."
+}
+</script>
+  <link rel="apple-touch-icon" sizes="180x180" href="https://dalanzg.github.io/tips-tutorials/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://dalanzg.github.io/tips-tutorials/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://dalanzg.github.io/tips-tutorials/favicon-16x16.png">
+<link rel="manifest" href="https://dalanzg.github.io/tips-tutorials/site.webmanifest">
+<link rel="mask-icon" href="https://dalanzg.github.io/tips-tutorials/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="apple-mobile-web-app-title" content="Tips and Tutorials">
+<meta name="application-name" content="Tips and Tutorials">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+  <link rel="canonical" href="https://dalanzg.github.io/tips-tutorials/posts/2016/03/22/how-to-get-md5-checksum-for-a-file-in-java/">
+
+  <link rel="stylesheet" href="https://dalanzg.github.io/tips-tutorials/sass/main.min.5f805eac00006ca12f0d48d367bd1bc959826406b3bf3d94a67e3e976d595702.css" integrity="sha256-X4BerAAAbKEvDUjTZ70byVmCZAazvz2Upn4&#43;l21ZVwI=">
+  
+  
+  <link rel="sitemap" href="https://dalanzg.github.io/tips-tutorials/sitemap.xml" title="Sitemap" type="application/xml">
+  <meta name="google-site-verification" content="CeO9J_0wi37-MvDa_F7AmZJYunwDhFGjv8eSlJFPil8" />
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-65400010-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-65400010-1');
+</script><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-8140733006923933",
+    enable_page_level_ads: true
+  });
+</script></head>
+<body>
+    <div class="container"><nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="https://dalanzg.github.io/tips-tutorials/"><strong>Tips and Tutorials</strong></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+    <li class="navbar-item ">
+        <a class="nav-link" href="https://dalanzg.github.io/tips-tutorials/about/" title="">About</a>
+      </li><li class="navbar-item ">
+        <a class="nav-link" href="https://dalanzg.github.io/tips-tutorials/tags/" title="">Tags</a>
+      </li><li class="navbar-item ">
+        <a class="nav-link" href="https://dalanzg.github.io/tips-tutorials/posts/" title="">Posts</a>
+      </li></ul>
+    <form class="form-inline float-xs-right" action="https://dalanzg.github.io/tips-tutorials/search/" method="get" data-search-form>
+      <input class="form-control mr-sm-2" type="text" name="q" placeholder="Search..." data-search-input>
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+    </form>
+  </div>
+</nav>
+<h1 class="mt-5">How to get MD5 checksum for a file in Java</h1><p class="text-muted mt-3">
+	<span>Published on March 22, 2016</span>
+	<span>by Daniel Lanza</span>
+</p>
+<p>
+	<a class="text-muted" href="https://dalanzg.github.io/tips-tutorials/tags/java"><i class="fas fa-tags"></i>&nbsp;java</a>
+</p>
+
+<p>MD5 checksum is a 128-bit hash value (32 digit hexadecimal number). This works as a fingerprint for a file which let us compare together other files to find out duplicate files.</p>
+
+<p>These Java classes will let us calculate MD5 checksum for any single file.</p>
+
+<h2 id="maven-dependencies">Maven dependencies</h2>
+<div class="highlight"><pre class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;dependencies&gt;</span>
+    <span class="nt">&lt;dependency&gt;</span>
+        <span class="nt">&lt;groupId&gt;</span>commons-codec<span class="nt">&lt;/groupId&gt;</span>
+        <span class="nt">&lt;artifactId&gt;</span>commons-codec<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;version&gt;</span>1.10<span class="nt">&lt;/version&gt;</span>
+    <span class="nt">&lt;/dependency&gt;</span>
+    <span class="nt">&lt;dependency&gt;</span>
+        <span class="nt">&lt;groupId&gt;</span>commons-io<span class="nt">&lt;/groupId&gt;</span>
+        <span class="nt">&lt;artifactId&gt;</span>commons-io<span class="nt">&lt;/artifactId&gt;</span>
+        <span class="nt">&lt;version&gt;</span>2.4<span class="nt">&lt;/version&gt;</span>
+    <span class="nt">&lt;/dependency&gt;</span>
+<span class="nt">&lt;/dependencies&gt;</span></code></pre></div>
+<h2 id="md5-java-class">MD5 Java class</h2>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nf">com</span><span class="p">.</span><span class="na">dalanz</span><span class="p">.</span><span class="na">file</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nf">java</span><span class="p">.</span><span class="na">io</span><span class="p">.</span><span class="na">File</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nf">java</span><span class="p">.</span><span class="na">io</span><span class="p">.</span><span class="na">FileInputStream</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nf">java</span><span class="p">.</span><span class="na">io</span><span class="p">.</span><span class="na">IOException</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nf">org</span><span class="p">.</span><span class="na">apache</span><span class="p">.</span><span class="na">commons</span><span class="p">.</span><span class="na">codec</span><span class="p">.</span><span class="na">digest</span><span class="p">.</span><span class="na">DigestUtils</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nf">org</span><span class="p">.</span><span class="na">apache</span><span class="p">.</span><span class="na">commons</span><span class="p">.</span><span class="na">io</span><span class="p">.</span><span class="na">IOUtils</span><span class="p">;</span>
+
+<span class="kd">public</span> <span class="nf">class</span> <span class="n">GetMD5ForFile</span> <span class="p">{</span>
+
+    <span class="kd">private</span> <span class="nf">File</span> <span class="n">file</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="nf">GetMD5ForFile</span><span class="p">(</span><span class="n">String</span> <span class="nf">filePath</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">file</span> <span class="o">=</span> <span class="k">new</span> <span class="n">File</span><span class="p">(</span><span class="n">filePath</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="nf">GetMD5ForFile</span><span class="p">(</span><span class="n">File</span> <span class="nf">file</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">file</span> <span class="o">=</span> <span class="n">file</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="nf">String</span> <span class="n">getMD5</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">String</span> <span class="nf">md5</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+
+        <span class="n">FileInputStream</span> <span class="nf">fileInputStream</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+
+        <span class="k">try</span> <span class="p">{</span>
+            <span class="n">fileInputStream</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FileInputStream</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">file</span><span class="p">);</span>
+
+            <span class="c1">// md5Hex converts an array of bytes into an array of characters representing the hexadecimal values of each byte in order.
+</span><span class="c1"></span>            <span class="c1">// The returned array will be double the length of the passed array, as it takes two characters to represent any given byte.
+</span><span class="c1"></span>
+            <span class="n">md5</span> <span class="o">=</span> <span class="n">DigestUtils</span><span class="p">.</span><span class="na">md5Hex</span><span class="p">(</span><span class="n">IOUtils</span><span class="p">.</span><span class="na">toByteArray</span><span class="p">(</span><span class="n">fileInputStream</span><span class="p">));</span>
+
+            <span class="n">fileInputStream</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+
+        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">IOException</span> <span class="nf">e</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="n">md5</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+<h2 id="main-class">Main class</h2>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nf">test</span><span class="p">.</span><span class="na">com</span><span class="p">.</span><span class="na">dalanz</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nf">com</span><span class="p">.</span><span class="na">dalanz</span><span class="p">.</span><span class="na">file</span><span class="p">.</span><span class="na">GetMD5ForFile</span><span class="p">;</span>
+
+<span class="kd">public</span> <span class="nf">class</span> <span class="n">test</span> <span class="p">{</span>
+
+    <span class="kd">public</span> <span class="nf">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="nf">args</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="n">String</span> <span class="nf">filePath</span> <span class="o">=</span> <span class="s">&#34;/Users/dlanza/Desktop/Test.txt&#34;</span><span class="p">;</span>
+
+        <span class="n">GetMD5ForFile</span> <span class="nf">file</span> <span class="o">=</span> <span class="k">new</span> <span class="n">GetMD5ForFile</span><span class="p">(</span><span class="n">filePath</span><span class="p">);</span>
+
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;MD5: &#34;</span> <span class="o">+</span> <span class="n">file</span><span class="p">.</span><span class="na">getMD5</span><span class="p">());</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+<h2 id="output">Output</h2>
+<div class="highlight"><pre class="chroma"><code class="language-terminal" data-lang="terminal">MD5: 6cbca9b36efc68e359df0d66338e0141</code></pre></div>
+
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "tips-tutorials" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+	<div class="bg-light py-5">
+		<div class="container">
+			<h2 class="text-center">Read next</h2>
+			<div class="row">
+				<div class="col-md-6 text-center">
+						Previous Post:
+						<a href="https://dalanzg.github.io/tips-tutorials/posts/2016/03/21/how-to-set-java_home-on-mac-os-x/">How to set JAVA_HOME on Mac OS X</a>
+				</div>
+				<div class="col-md-6 text-center">
+						Next Post:
+						<a href="https://dalanzg.github.io/tips-tutorials/posts/2016/03/22/how-to-convert-file-into-array-of-bytes-and-array-of-bytes-to-file-in-java/">How to convert File into Array of Bytes, and Array of Bytes to File in Java</a>
+				</div>
+			</div>
+		</div>
+	</div>
+<div class="container mt-5">
+	<h2 class="text-center">See also</h2>
+	<div class="row">
+			<div class="col-md mb-3">
+				<p class="lead mb-0"><a class="text-body" href="https://dalanzg.github.io/tips-tutorials/posts/2016/03/21/how-to-set-java_home-on-mac-os-x/">How to set JAVA_HOME on Mac OS X</a></p>
+				<p class="font-weight-light mt-3">If you are planing to develop Java Apps on your Mac, you may have to set $JAVA_HOME environment variable.
+Install the latest Java Virtual Machine Go to How to install JDK on Mac OS X) to install a new Java Virtual Machine. Download the latest Java JDK package from Oracle.
+Check Java Virtual Machines List directories in the following root -&gt; /Library/Java/JavaVirtualMachines
+$ ls -l /Library/Java/JavaVirtualMachines drwxr-xr-x 3 root wheel 102 23 dic 20:36 jdk1.</p>
+				<a href="https://dalanzg.github.io/tips-tutorials/posts/2016/03/21/how-to-set-java_home-on-mac-os-x/" class="btn btn-primary">Read more</a>
+			</div>
+			<div class="col-md mb-3">
+				<p class="lead mb-0"><a class="text-body" href="https://dalanzg.github.io/tips-tutorials/posts/2015/11/29/how-to-resolve-404-error-with-tomcat-server-and-eclipse/">How to resolve 404 error with Tomcat Server and Eclipse</a></p>
+				<p class="font-weight-light mt-3">If you start Tomcat from Eclipse and get a 404-Error code when you go to http://localhost:8080, there is a easy way to fix the issue.
+Just go to Properties for Tomcat (right click on Tomcat - Servers Tab)
+Switch location Tomcat Properties  Switch location from [workspace metadata] to [/Servers/Tomcat v&hellip;]
+Restart Tomcat from Eclipse and go back to http://localhost:8080. You will see Tomcat configuration page.
+Tomcat configuration page  </p>
+				<a href="https://dalanzg.github.io/tips-tutorials/posts/2015/11/29/how-to-resolve-404-error-with-tomcat-server-and-eclipse/" class="btn btn-primary">Read more</a>
+			</div>
+	</div>
+</div></div><footer class="blog-footer">
+  <p>
+    <nav class="nav justify-content-center">
+      <a class="nav-link" href="https://dalanzg.github.io/tips-tutorials/index.xml" target="_blank">
+        <i class="fas fa-rss-square fa-2x"></i>
+      </a>
+      
+      <a class="nav-link" href="https://twitter.com/dalanzg" target="_blank">
+        <i class="fab fa-twitter fa-2x"></i>
+      </a>
+      
+      <a class="nav-link" href="https://github.com/dalanzg" target="_blank">
+        <i class="fab fa-github fa-2x"></i>
+      </a>
+      
+      <a class="nav-link" href="https://www.linkedin.com/in/danilanza" target="_blank">
+        <i class="fab fa-linkedin fa-2x"></i>
+      </a>
+      
+    </nav>
+  </p>
+  <p class="text-muted">Copyright &copy; Tips and Tutorials 2019</p>
+  <p class="text-muted"><small>All rights reserved. Blog powered by <a href="https://gohugo.io/">Hugo</a> and hosted on <a href="https://www.github.com">GitHub.</a></small></p>
+  <p class="text-muted"><small><a href="https://opensource.org/licenses/MIT">MIT License</a></small></p>
+</footer>
+
+<script src="https://dalanzg.github.io/tips-tutorials/js/bundle.min.110d3e1a6c79028aa1899125704a04f056b48a7862c0d9058732b1ab70451559.js"></script></body>
+</html>
