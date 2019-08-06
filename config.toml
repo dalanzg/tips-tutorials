@@ -8,7 +8,6 @@ paginate = 10
 pygmentsCodeFences = true
 pygmentsUseClasses = true
 enableRobotsTXT = true
-#publishDir = "docs"
 
 [author]
   name = "Daniel Lanza"

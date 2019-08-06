@@ -10,9 +10,9 @@ comments: true
 
 If you are planing to develop Java Apps on your Mac, you have to install the JDK package. You only have to install the binary files provided by Oracle.
 
-- Download JDK 8 from [Oracle WebSite](http://www.oracle.com/technetwork/java/javase/downloads/index.html). [jdk-8u65-macosx-x64.dmg for Mac].
-- Double click on **jdk-8u65-macosx-x64.dmg** and follow the screen instructions.
-- JDK package will have been installed in **/Library/Java/JavaVirtualMachines**. In my computer, I have both 1.6 and 1.8 JDK package.
+- Download JDK 8 from [Oracle WebSite](http://www.oracle.com/technetwork/java/javase/downloads/index.html) [jdk-8u65-macosx-x64.dmg for Mac]
+- Double click on **jdk-8u65-macosx-x64.dmg** and follow the screen instructions
+- JDK package will have been installed in **/Library/Java/JavaVirtualMachines**. In my computer, I have both 1.6 and 1.8 JDK package
 
 ```terminal
 $ ls -l /Library/Java/JavaVirtualMachines

@@ -1,8 +1,8 @@
 ---
 title: How to install Tomcat 7 on Mac OS X
 description: Download the Tomcat binaries for MAC, and you will be able to start and stop your Application Server.
-date: 2015-11-21T18:00:00+02:00
-lastmod: 2016-12-27T10:51:00+01:00
+date: 2015-11-21T18:00:00+01:00
+lastmod: 2019-08-06T13:00:00+02:00
 tags: [mac, tomcat]
 author: dalanzg
 comments: true
@@ -44,7 +44,7 @@ sudo ./Library/Tomcat/apache-tomcat-7.0.65/bin/startup.sh
 
 Go to [http://localhost:8080](http://localhost:8080).
 
-## Stoping Tomcat
+## Stopping Tomcat
 
 ```terminal
 sudo ./Library/Tomcat/apache-tomcat-7.0.65/bin/shutdown.sh

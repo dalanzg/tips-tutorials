@@ -1,9 +1,9 @@
 # Hugo default output directory
 /public
-/resources
 
-# NPM
+# Exclude folders
 /node_modules
+/resources
 
 # Vendor files
 assets/js/vendor/
