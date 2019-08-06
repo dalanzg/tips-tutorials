@@ -5,7 +5,13 @@ Developed with [Hugo](https://gohugo.io/).
 
 [https://dalanzg.github.io/tips-tutorials/](https://dalanzg.github.io/tips-tutorials/)
 
-# Install Dependencies
+## GitHub configuration
+
+2 branches to separate source code and published site:
+- **master**: source code
+- **gh-pages**: published site
+
+## Install Dependencies
 Feel free to fork my GitHub repository.
 
 Install the following dependencies:
