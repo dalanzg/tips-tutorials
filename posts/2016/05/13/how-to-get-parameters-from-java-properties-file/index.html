@@ -1,291 +1,74 @@
-<!DOCTYPE html>
-<html><head>
-  <title>How to get parameters from Java Properties File</title>
-  
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="title" content="How to get parameters from Java Properties File – Tips and Tutorials">
-  <meta name="description" content="Parameters are read from Java properties file and printed on console.">
-  
-  <meta name="generator" content="Hugo 0.56.3" />
-  
-  <meta property="og:title" content="How to get parameters from Java Properties File">
-<meta property="og:description" content="Parameters are read from Java properties file and printed on console." />
-<meta property="og:url" content="https://dalanzg.github.io/tips-tutorials/posts/2016/05/13/how-to-get-parameters-from-java-properties-file/">
-<meta property="og:site_name" content="Tips and Tutorials">
-<meta property="og:type" content="article">
-    <meta property="og:image" content="https://dalanzg.github.io/tips-tutorials/android-chrome-512x512.png">
-  <meta property="og:tags" content="java">
-  <meta property="article:published_time" content="2016-05-13">
-  <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:description" content="Parameters are read from Java properties file and printed on console." />
-<meta name="twitter:title" content="How to get parameters from Java Properties File" />
-<meta name="twitter:site" content="Tips and Tutorials" />
-<meta name="twitter:creator" content="@dalanzg" />
-    <meta name="twitter:image" content="https://dalanzg.github.io/tips-tutorials/android-chrome-512x512.png">
-  <script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "BlogPosting",
-  "headline": "How to get parameters from Java Properties File",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https:\/\/dalanzg.github.io\/tips-tutorials\/posts\/2016\/05\/13\/how-to-get-parameters-from-java-properties-file\/"
-  },
-  
-  "image": {
-    "@type": "ImageObject",
-    "url": "https:\/\/dalanzg.github.io\/tips-tutorials\/mstile-150x150.png",
-    "width":  150 ,
-    "height":  150 
-  },
-  "genre": "posts",
-  "keywords": "java",
-  "wordcount":  181 ,
-  "url": "https:\/\/dalanzg.github.io\/tips-tutorials\/posts\/2016\/05\/13\/how-to-get-parameters-from-java-properties-file\/",
-  "datePublished": "2016-05-13",
-  "dateModified": "2016-12-27",
-  "license": "Copyright. Tips and Tutorials. All rights reserved.",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Daniel Lanza",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https:\/\/dalanzg.github.io\/tips-tutorials\/mstile-150x150.png",
-      "width":  150 ,
-      "height":  150 
-    }
-  },
-  "author": {
-    "@type": "Person",
-    "name": "dalanzg"
-  },
-  "description": "Parameters are read from Java properties file and printed on console."
-}
-</script>
-  <link rel="apple-touch-icon" sizes="180x180" href="https://dalanzg.github.io/tips-tutorials/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://dalanzg.github.io/tips-tutorials/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="https://dalanzg.github.io/tips-tutorials/favicon-16x16.png">
-<link rel="manifest" href="https://dalanzg.github.io/tips-tutorials/site.webmanifest">
-<link rel="mask-icon" href="https://dalanzg.github.io/tips-tutorials/safari-pinned-tab.svg" color="#5bbad5">
-<meta name="apple-mobile-web-app-title" content="Tips and Tutorials">
-<meta name="application-name" content="Tips and Tutorials">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="theme-color" content="#ffffff">
-  <link rel="canonical" href="https://dalanzg.github.io/tips-tutorials/posts/2016/05/13/how-to-get-parameters-from-java-properties-file/">
-
-  <link rel="stylesheet" href="https://dalanzg.github.io/tips-tutorials/sass/main.min.5f805eac00006ca12f0d48d367bd1bc959826406b3bf3d94a67e3e976d595702.css" integrity="sha256-X4BerAAAbKEvDUjTZ70byVmCZAazvz2Upn4&#43;l21ZVwI=">
-  
-  
-  <link rel="sitemap" href="https://dalanzg.github.io/tips-tutorials/sitemap.xml" title="Sitemap" type="application/xml">
-  <meta name="google-site-verification" content="CeO9J_0wi37-MvDa_F7AmZJYunwDhFGjv8eSlJFPil8" />
-  
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-65400010-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-65400010-1');
-</script><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-8140733006923933",
-    enable_page_level_ads: true
-  });
-</script></head>
-<body>
-    <div class="container"><nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="https://dalanzg.github.io/tips-tutorials/"><strong>Tips and Tutorials</strong></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-    <li class="navbar-item ">
-        <a class="nav-link" href="https://dalanzg.github.io/tips-tutorials/about/" title="">About</a>
-      </li><li class="navbar-item ">
-        <a class="nav-link" href="https://dalanzg.github.io/tips-tutorials/tags/" title="">Tags</a>
-      </li><li class="navbar-item ">
-        <a class="nav-link" href="https://dalanzg.github.io/tips-tutorials/posts/" title="">Posts</a>
-      </li></ul>
-    <form class="form-inline float-xs-right" action="https://dalanzg.github.io/tips-tutorials/search/" method="get" data-search-form>
-      <input class="form-control mr-sm-2" type="text" name="q" placeholder="Search..." data-search-input>
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
-    </form>
-  </div>
-</nav>
-<h1 class="mt-5">How to get parameters from Java Properties File</h1><p class="text-muted mt-3">
-	<span>Published on May 13, 2016</span>
-	<span>by Daniel Lanza</span>
-</p>
-<p>
-	<a class="text-muted" href="https://dalanzg.github.io/tips-tutorials/tags/java"><i class="fas fa-tags"></i>&nbsp;java</a>
-</p>
-
-<p>Parameters are read from Java properties file and printed on console.</p>
-
-<h2 id="java-properties-file">Java Properties File</h2>
-
-<p>The content of Java Properties File is the following:</p>
-<div class="highlight"><pre class="chroma"><code class="language-properties" data-lang="properties">name = Daniel
+<!doctype html><html><head><title>How to get parameters from Java Properties File</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=title content="How to get parameters from Java Properties File – Tips and Tutorials"><meta name=description content="Parameters are read from Java properties file and printed on console."><meta name=generator content="Hugo 0.56.3"><meta property=og:title content="How to get parameters from Java Properties File"><meta property=og:description content="Parameters are read from Java properties file and printed on console."><meta property=og:url content=https://dalanzg.github.io/tips-tutorials/posts/2016/05/13/how-to-get-parameters-from-java-properties-file/><meta property=og:site_name content="Tips and Tutorials"><meta property=og:type content=article><meta property=og:image content=https://dalanzg.github.io/tips-tutorials/android-chrome-512x512.png><meta property=og:tags content=java><meta property=article:published_time content=2016-05-13><meta name=twitter:card content=summary_large_image><meta name=twitter:description content="Parameters are read from Java properties file and printed on console."><meta name=twitter:title content="How to get parameters from Java Properties File"><meta name=twitter:site content="Tips and Tutorials"><meta name=twitter:creator content=@dalanzg><meta name=twitter:image content=https://dalanzg.github.io/tips-tutorials/android-chrome-512x512.png><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"How to get parameters from Java Properties File","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/dalanzg.github.io\/tips-tutorials\/posts\/2016\/05\/13\/how-to-get-parameters-from-java-properties-file\/"},"image":{"@type":"ImageObject","url":"https:\/\/dalanzg.github.io\/tips-tutorials\/mstile-150x150.png","width":150,"height":150},"genre":"posts","keywords":"java","wordcount":181,"url":"https:\/\/dalanzg.github.io\/tips-tutorials\/posts\/2016\/05\/13\/how-to-get-parameters-from-java-properties-file\/","datePublished":"2016-05-13","dateModified":"2016-12-27","license":"Copyright. Tips and Tutorials. All rights reserved.","publisher":{"@type":"Organization","name":"Daniel Lanza","logo":{"@type":"ImageObject","url":"https:\/\/dalanzg.github.io\/tips-tutorials\/mstile-150x150.png","width":150,"height":150}},"author":{"@type":"Person","name":"dalanzg"},"description":"Parameters are read from Java properties file and printed on console."}</script><link rel=apple-touch-icon sizes=180x180 href=https://dalanzg.github.io/tips-tutorials/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=https://dalanzg.github.io/tips-tutorials/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=https://dalanzg.github.io/tips-tutorials/favicon-16x16.png><link rel=manifest href=https://dalanzg.github.io/tips-tutorials/site.webmanifest><link rel=mask-icon href=https://dalanzg.github.io/tips-tutorials/safari-pinned-tab.svg color=#5bbad5><meta name=apple-mobile-web-app-title content="Tips and Tutorials"><meta name=application-name content="Tips and Tutorials"><meta name=msapplication-TileColor content=#da532c><meta name=theme-color content=#ffffff><link rel=canonical href=https://dalanzg.github.io/tips-tutorials/posts/2016/05/13/how-to-get-parameters-from-java-properties-file/><link rel=stylesheet href=https://dalanzg.github.io/tips-tutorials/sass/main.min.5f805eac00006ca12f0d48d367bd1bc959826406b3bf3d94a67e3e976d595702.css integrity="sha256-X4BerAAAbKEvDUjTZ70byVmCZAazvz2Upn4&#43;l21ZVwI="><link rel=sitemap href=https://dalanzg.github.io/tips-tutorials/sitemap.xml title=Sitemap type=application/xml><meta name=google-site-verification content=CeO9J_0wi37-MvDa_F7AmZJYunwDhFGjv8eSlJFPil8><script async src="https://www.googletagmanager.com/gtag/js?id=UA-65400010-1"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','UA-65400010-1');</script><script async src=//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js></script><script>(adsbygoogle=window.adsbygoogle||[]).push({google_ad_client:"ca-pub-8140733006923933",enable_page_level_ads:true});</script></head><body><div class=container><nav class="navbar navbar-expand-lg navbar-light bg-light"><a class=navbar-brand href=https://dalanzg.github.io/tips-tutorials/><strong>Tips and Tutorials</strong></a>
+<button class=navbar-toggler type=button data-toggle=collapse data-target=#navbarSupportedContent aria-controls=navbarSupportedContent aria-expanded=false aria-label="Toggle navigation">
+<span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse" id=navbarSupportedContent><ul class="navbar-nav mr-auto"><li class=navbar-item><a class=nav-link href=https://dalanzg.github.io/tips-tutorials/about/>About</a></li><li class=navbar-item><a class=nav-link href=https://dalanzg.github.io/tips-tutorials/tags/>Tags</a></li><li class=navbar-item><a class=nav-link href=https://dalanzg.github.io/tips-tutorials/posts/>Posts</a></li></ul><form class="form-inline float-xs-right" action=https://dalanzg.github.io/tips-tutorials/search/ method=get data-search-form><input class="form-control mr-sm-2" type=text name=q placeholder=Search... data-search-input>
+<button class="btn btn-outline-success my-2 my-sm-0" type=submit><i class="fas fa-search"></i></button></form></div></nav><h1 class=mt-5>How to get parameters from Java Properties File</h1><p class="text-muted mt-3"><span>Published on May 13, 2016</span>
+<span>by Daniel Lanza</span></p><p><a class=text-muted href=https://dalanzg.github.io/tips-tutorials/tags/java><i class="fas fa-tags"></i>&nbsp;java</a></p><p>Parameters are read from Java properties file and printed on console.</p><h2 id=java-properties-file>Java Properties File</h2><p>The content of Java Properties File is the following:</p><div class=highlight><pre class=chroma><code class=language-properties data-lang=properties>name = Daniel
 lastName = Lanza
-age = 29</code></pre></div>
-<p>And the file is located in the desktop:</p>
+age = 29</code></pre></div><p>And the file is located in the desktop:</p><ul><li><strong>/Users/dalanz/Desktop/test.properties</strong></li></ul><h2 id=user-java-class>User Java class</h2><div class=highlight><pre class=chroma><code class=language-java data-lang=java><span class=kn>package</span> <span class=nf>com</span><span class=p>.</span><span class=na>dalanz</span><span class=p>.</span><span class=na>file</span><span class=p>;</span>
 
-<ul>
-<li><strong>/Users/dalanz/Desktop/test.properties</strong></li>
-</ul>
+<span class=kn>import</span> <span class=nf>java</span><span class=p>.</span><span class=na>io</span><span class=p>.</span><span class=na>FileInputStream</span><span class=p>;</span>
+<span class=kn>import</span> <span class=nf>java</span><span class=p>.</span><span class=na>io</span><span class=p>.</span><span class=na>IOException</span><span class=p>;</span>
+<span class=kn>import</span> <span class=nf>java</span><span class=p>.</span><span class=na>io</span><span class=p>.</span><span class=na>InputStream</span><span class=p>;</span>
+<span class=kn>import</span> <span class=nf>java</span><span class=p>.</span><span class=na>util</span><span class=p>.</span><span class=na>Properties</span><span class=p>;</span>
 
-<h2 id="user-java-class">User Java class</h2>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nf">com</span><span class="p">.</span><span class="na">dalanz</span><span class="p">.</span><span class="na">file</span><span class="p">;</span>
+<span class=kd>public</span> <span class=nf>class</span> <span class=n>ReadProperties</span> <span class=p>{</span>
 
-<span class="kn">import</span> <span class="nf">java</span><span class="p">.</span><span class="na">io</span><span class="p">.</span><span class="na">FileInputStream</span><span class="p">;</span>
-<span class="kn">import</span> <span class="nf">java</span><span class="p">.</span><span class="na">io</span><span class="p">.</span><span class="na">IOException</span><span class="p">;</span>
-<span class="kn">import</span> <span class="nf">java</span><span class="p">.</span><span class="na">io</span><span class="p">.</span><span class="na">InputStream</span><span class="p">;</span>
-<span class="kn">import</span> <span class="nf">java</span><span class="p">.</span><span class="na">util</span><span class="p">.</span><span class="na">Properties</span><span class="p">;</span>
+    <span class=kd>private</span> <span class=nf>String</span> <span class=n>fileSource</span><span class=p>;</span>
 
-<span class="kd">public</span> <span class="nf">class</span> <span class="n">ReadProperties</span> <span class="p">{</span>
+    <span class=kd>public</span> <span class=nf>ReadProperties</span> <span class=p>(</span><span class=n>String</span> <span class=nf>fileSource</span><span class=p>)</span> <span class=p>{</span>
+        <span class=k>this</span><span class=p>.</span><span class=na>fileSource</span> <span class=o>=</span> <span class=n>fileSource</span><span class=p>;</span>
+    <span class=p>}</span>
 
-    <span class="kd">private</span> <span class="nf">String</span> <span class="n">fileSource</span><span class="p">;</span>
+    <span class=kd>public</span> <span class=nf>String</span> <span class=n>getProperty</span><span class=p>(</span><span class=n>String</span> <span class=nf>key</span><span class=p>)</span> <span class=p>{</span>
 
-    <span class="kd">public</span> <span class="nf">ReadProperties</span> <span class="p">(</span><span class="n">String</span> <span class="nf">fileSource</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">this</span><span class="p">.</span><span class="na">fileSource</span> <span class="o">=</span> <span class="n">fileSource</span><span class="p">;</span>
-    <span class="p">}</span>
+        <span class=n>Properties</span> <span class=nf>prop</span> <span class=o>=</span> <span class=k>new</span> <span class=n>Properties</span><span class=p>();</span>
+        <span class=n>InputStream</span> <span class=nf>input</span> <span class=o>=</span> <span class=kc>null</span><span class=p>;</span>
 
-    <span class="kd">public</span> <span class="nf">String</span> <span class="n">getProperty</span><span class="p">(</span><span class="n">String</span> <span class="nf">key</span><span class="p">)</span> <span class="p">{</span>
+        <span class=k>try</span> <span class=p>{</span>
+            <span class=n>input</span> <span class=o>=</span> <span class=k>new</span> <span class=n>FileInputStream</span><span class=p>(</span><span class=k>this</span><span class=p>.</span><span class=na>fileSource</span><span class=p>);</span>
 
-        <span class="n">Properties</span> <span class="nf">prop</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Properties</span><span class="p">();</span>
-        <span class="n">InputStream</span> <span class="nf">input</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+            <span class=c1>// Load a properties file
+</span><span class=c1></span>            <span class=n>prop</span><span class=p>.</span><span class=na>load</span><span class=p>(</span><span class=n>input</span><span class=p>);</span>
 
-        <span class="k">try</span> <span class="p">{</span>
-            <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="n">FileInputStream</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">fileSource</span><span class="p">);</span>
+            <span class=c1>// Get the property value
+</span><span class=c1></span>            <span class=k>return</span> <span class=n>prop</span><span class=p>.</span><span class=na>getProperty</span><span class=p>(</span><span class=n>key</span><span class=p>);</span>
+        <span class=p>}</span> <span class=k>catch</span> <span class=p>(</span><span class=n>IOException</span> <span class=nf>ex</span><span class=p>)</span> <span class=p>{</span>
+            <span class=n>ex</span><span class=p>.</span><span class=na>printStackTrace</span><span class=p>();</span>
+            <span class=k>return</span> <span class=kc>null</span><span class=p>;</span>
+        <span class=p>}</span> <span class=k>finally</span> <span class=p>{</span>
+            <span class=k>if</span> <span class=p>(</span><span class=n>input</span> <span class=o>!=</span> <span class=kc>null</span><span class=p>)</span> <span class=p>{</span>
+                <span class=k>try</span> <span class=p>{</span>
+                    <span class=n>input</span><span class=p>.</span><span class=na>close</span><span class=p>();</span>
+                <span class=p>}</span> <span class=k>catch</span> <span class=p>(</span><span class=n>IOException</span> <span class=nf>e</span><span class=p>)</span> <span class=p>{</span>
+                    <span class=n>e</span><span class=p>.</span><span class=na>printStackTrace</span><span class=p>();</span>
+                <span class=p>}</span>
+            <span class=p>}</span>
+        <span class=p>}</span>
+    <span class=p>}</span>
+<span class=p>}</span></code></pre></div><h2 id=main-class>Main Class</h2><div class=highlight><pre class=chroma><code class=language-java data-lang=java><span class=kn>package</span> <span class=nf>test</span><span class=p>.</span><span class=na>com</span><span class=p>.</span><span class=na>dalanz</span><span class=p>;</span>
 
-            <span class="c1">// Load a properties file
-</span><span class="c1"></span>            <span class="n">prop</span><span class="p">.</span><span class="na">load</span><span class="p">(</span><span class="n">input</span><span class="p">);</span>
+<span class=kn>import</span> <span class=nf>com</span><span class=p>.</span><span class=na>dalanz</span><span class=p>.</span><span class=na>file</span><span class=p>.</span><span class=o>*</span><span class=p>;</span>
 
-            <span class="c1">// Get the property value
-</span><span class="c1"></span>            <span class="k">return</span> <span class="n">prop</span><span class="p">.</span><span class="na">getProperty</span><span class="p">(</span><span class="n">key</span><span class="p">);</span>
-        <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">IOException</span> <span class="nf">ex</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">ex</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
-            <span class="k">return</span> <span class="kc">null</span><span class="p">;</span>
-        <span class="p">}</span> <span class="k">finally</span> <span class="p">{</span>
-            <span class="k">if</span> <span class="p">(</span><span class="n">input</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
-                <span class="k">try</span> <span class="p">{</span>
-                    <span class="n">input</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
-                <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">IOException</span> <span class="nf">e</span><span class="p">)</span> <span class="p">{</span>
-                    <span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
-                <span class="p">}</span>
-            <span class="p">}</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span></code></pre></div>
-<h2 id="main-class">Main Class</h2>
-<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kn">package</span> <span class="nf">test</span><span class="p">.</span><span class="na">com</span><span class="p">.</span><span class="na">dalanz</span><span class="p">;</span>
+<span class=kd>public</span> <span class=nf>class</span> <span class=n>test</span> <span class=p>{</span>
 
-<span class="kn">import</span> <span class="nf">com</span><span class="p">.</span><span class="na">dalanz</span><span class="p">.</span><span class="na">file</span><span class="p">.</span><span class="o">*</span><span class="p">;</span>
+    <span class=kd>public</span> <span class=nf>static</span> <span class=kt>void</span> <span class=nf>main</span><span class=p>(</span><span class=n>String</span><span class=p>[]</span> <span class=nf>args</span><span class=p>)</span> <span class=p>{</span>
 
-<span class="kd">public</span> <span class="nf">class</span> <span class="n">test</span> <span class="p">{</span>
+        <span class=n>String</span> <span class=nf>sourceFile</span> <span class=o>=</span> <span class=s>&#34;/Users/dalanz/Desktop/test.properties&#34;</span><span class=p>;</span>
 
-    <span class="kd">public</span> <span class="nf">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="p">[]</span> <span class="nf">args</span><span class="p">)</span> <span class="p">{</span>
+        <span class=n>ReadProperties</span> <span class=nf>prop</span> <span class=o>=</span> <span class=k>new</span> <span class=n>ReadProperties</span><span class=p>(</span><span class=n>sourceFile</span><span class=p>);</span>
 
-        <span class="n">String</span> <span class="nf">sourceFile</span> <span class="o">=</span> <span class="s">&#34;/Users/dalanz/Desktop/test.properties&#34;</span><span class="p">;</span>
+        <span class=n>System</span><span class=p>.</span><span class=na>out</span><span class=p>.</span><span class=na>println</span><span class=p>(</span><span class=s>&#34;Name: &#34;</span> <span class=o>+</span> <span class=n>prop</span><span class=p>.</span><span class=na>getProperty</span><span class=p>(</span><span class=s>&#34;name&#34;</span><span class=p>));</span>
+        <span class=n>System</span><span class=p>.</span><span class=na>out</span><span class=p>.</span><span class=na>println</span><span class=p>(</span><span class=s>&#34;Last name: &#34;</span> <span class=o>+</span> <span class=n>prop</span><span class=p>.</span><span class=na>getProperty</span><span class=p>(</span><span class=s>&#34;lastName&#34;</span><span class=p>));</span>
+        <span class=n>System</span><span class=p>.</span><span class=na>out</span><span class=p>.</span><span class=na>println</span><span class=p>(</span><span class=s>&#34;Age: &#34;</span> <span class=o>+</span> <span class=n>prop</span><span class=p>.</span><span class=na>getProperty</span><span class=p>(</span><span class=s>&#34;age&#34;</span><span class=p>));</span>
 
-        <span class="n">ReadProperties</span> <span class="nf">prop</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ReadProperties</span><span class="p">(</span><span class="n">sourceFile</span><span class="p">);</span>
-
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Name: &#34;</span> <span class="o">+</span> <span class="n">prop</span><span class="p">.</span><span class="na">getProperty</span><span class="p">(</span><span class="s">&#34;name&#34;</span><span class="p">));</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Last name: &#34;</span> <span class="o">+</span> <span class="n">prop</span><span class="p">.</span><span class="na">getProperty</span><span class="p">(</span><span class="s">&#34;lastName&#34;</span><span class="p">));</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Age: &#34;</span> <span class="o">+</span> <span class="n">prop</span><span class="p">.</span><span class="na">getProperty</span><span class="p">(</span><span class="s">&#34;age&#34;</span><span class="p">));</span>
-
-    <span class="p">}</span>
-<span class="p">}</span></code></pre></div>
-<h2 id="output">Output</h2>
-<div class="highlight"><pre class="chroma"><code class="language-terminal" data-lang="terminal">Name: Daniel
+    <span class=p>}</span>
+<span class=p>}</span></code></pre></div><h2 id=output>Output</h2><div class=highlight><pre class=chroma><code class=language-terminal data-lang=terminal>Name: Daniel
 Last Name: Lanza
-Age: 29</code></pre></div>
-
-<div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "tips-tutorials" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-	<div class="bg-light py-5">
-		<div class="container">
-			<h2 class="text-center">Read next</h2>
-			<div class="row">
-				<div class="col-md-6 text-center">
-						Previous Post:
-						<a href="https://dalanzg.github.io/tips-tutorials/posts/2016/05/07/how-to-install-alfresco-community-edition-5.1-in-ubuntu-server-14.04/">How to install Alfresco Community Edition 5.1 in Ubuntu Server 14.04</a>
-				</div>
-				<div class="col-md-6 text-center">
-						Next Post:
-						<a href="https://dalanzg.github.io/tips-tutorials/posts/2016/05/14/how-to-get-parameters-from-xml-properties-file/">How to get parameters from XML Properties File</a>
-				</div>
-			</div>
-		</div>
-	</div>
-<div class="container mt-5">
-	<h2 class="text-center">See also</h2>
-	<div class="row">
-			<div class="col-md mb-3">
-				<p class="lead mb-0"><a class="text-body" href="https://dalanzg.github.io/tips-tutorials/posts/2016/03/23/how-to-convert-java-object-to-json-and-json-to-java-object-with-gson/">How to convert Java object to JSON and JSON to Java object with Gson</a></p>
-				<p class="font-weight-light mt-3">A simple Java object will become to JSON by using Gson. Besides, this will become into Java object.
-Maven dependencies &lt;dependencies&gt; &lt;dependency&gt; &lt;groupId&gt;com.google.code.gson/groupId&gt; &lt;artifactId&gt;gson&lt;/artifactId&gt; &lt;version&gt;2.6.2&lt;/version&gt; &lt;/dependency&gt; &lt;/dependencies&gt; User Java class package com.dalanz.json; import java.util.ArrayList; import java.util.List; public class User { private String firstName; private String lastName; private int age; private List&lt;String&gt; messages; public User(){} public User(String firstName, String lastName, int age, List&lt;String&gt; messages) { this.firstName = firstName; this.lastName = lastName; this.</p>
-				<a href="https://dalanzg.github.io/tips-tutorials/posts/2016/03/23/how-to-convert-java-object-to-json-and-json-to-java-object-with-gson/" class="btn btn-primary">Read more</a>
-			</div>
-			<div class="col-md mb-3">
-				<p class="lead mb-0"><a class="text-body" href="https://dalanzg.github.io/tips-tutorials/posts/2016/03/22/how-to-zip-a-folder-and-unzip-a-zip-file-in-java/">How to zip a folder and unzip a Zip file in Java</a></p>
-				<p class="font-weight-light mt-3">A folder with subfolders and files will be zipped. Besides, the zip file will be unzipped.
-Zip directory Java class package com.dalanz.file; import java.io.File; import java.io.FileInputStream; import java.io.FileOutputStream; import java.io.IOException; import java.util.ArrayList; import java.util.zip.ZipEntry; import java.util.zip.ZipInputStream; import java.util.zip.ZipOutputStream; public class ZipDirectory { private String folderPath; private String zipPath; private static ArrayList&lt;String&gt; fileList = null; private static String sourceFolder = null; public String getFolderPath() { return folderPath; } public void setFolderPath(String folderPath) { this.</p>
-				<a href="https://dalanzg.github.io/tips-tutorials/posts/2016/03/22/how-to-zip-a-folder-and-unzip-a-zip-file-in-java/" class="btn btn-primary">Read more</a>
-			</div>
-			<div class="col-md mb-3">
-				<p class="lead mb-0"><a class="text-body" href="https://dalanzg.github.io/tips-tutorials/posts/2016/03/22/how-to-convert-file-into-array-of-bytes-and-array-of-bytes-to-file-in-java/">How to convert File into Array of Bytes, and Array of Bytes to File in Java</a></p>
-				<p class="font-weight-light mt-3">Array of bytes will be calculated from a file, and then, that array of bytes will be used to create a file with different filename.
-Array of bytes Java class package com.dalanz.file; import java.io.File; import java.io.FileInputStream; import java.io.FileOutputStream; public class ArrayBytesFile { // Attributes  private File file; private byte[] bFile; // Constructors  public ArrayBytesFile() { this.file = null; this.bFile = null; } public ArrayBytesFile (File file) { this.</p>
-				<a href="https://dalanzg.github.io/tips-tutorials/posts/2016/03/22/how-to-convert-file-into-array-of-bytes-and-array-of-bytes-to-file-in-java/" class="btn btn-primary">Read more</a>
-			</div>
-	</div>
-</div></div><footer class="blog-footer">
-  <p>
-    <nav class="nav justify-content-center">
-      <a class="nav-link" href="https://dalanzg.github.io/tips-tutorials/index.xml" target="_blank">
-        <i class="fas fa-rss-square fa-2x"></i>
-      </a>
-      
-      <a class="nav-link" href="https://twitter.com/dalanzg" target="_blank">
-        <i class="fab fa-twitter fa-2x"></i>
-      </a>
-      
-      <a class="nav-link" href="https://github.com/dalanzg" target="_blank">
-        <i class="fab fa-github fa-2x"></i>
-      </a>
-      
-      <a class="nav-link" href="https://www.linkedin.com/in/danilanza" target="_blank">
-        <i class="fab fa-linkedin fa-2x"></i>
-      </a>
-      
-    </nav>
-  </p>
-  <p class="text-muted">Copyright &copy; Tips and Tutorials 2019</p>
-  <p class="text-muted"><small>All rights reserved. Blog powered by <a href="https://gohugo.io/">Hugo</a> and hosted on <a href="https://www.github.com">GitHub.</a></small></p>
-  <p class="text-muted"><small><a href="https://opensource.org/licenses/MIT">MIT License</a></small></p>
-</footer>
-
-<script src="https://dalanzg.github.io/tips-tutorials/js/bundle.min.110d3e1a6c79028aa1899125704a04f056b48a7862c0d9058732b1ab70451559.js"></script></body>
-</html>
+Age: 29</code></pre></div><div id=disqus_thread></div><script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return;}
+var d=document,s=d.createElement('script');s.async=true;s.src='//'+"tips-tutorials"+'.disqus.com/embed.js';s.setAttribute('data-timestamp',+new Date());(d.head||d.body).appendChild(s);})();</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a><div class="bg-light py-5"><div class=container><h2 class=text-center>Read next</h2><div class=row><div class="col-md-6 text-center">Previous Post:
+<a href=https://dalanzg.github.io/tips-tutorials/posts/2016/05/07/how-to-install-alfresco-community-edition-5.1-in-ubuntu-server-14.04/>How to install Alfresco Community Edition 5.1 in Ubuntu Server 14.04</a></div><div class="col-md-6 text-center">Next Post:
+<a href=https://dalanzg.github.io/tips-tutorials/posts/2016/05/14/how-to-get-parameters-from-xml-properties-file/>How to get parameters from XML Properties File</a></div></div></div></div><div class="container mt-5"><h2 class=text-center>See also</h2><div class=row><div class="col-md mb-3"><p class="lead mb-0"><a class=text-body href=https://dalanzg.github.io/tips-tutorials/posts/2016/03/23/how-to-convert-java-object-to-json-and-json-to-java-object-with-gson/>How to convert Java object to JSON and JSON to Java object with Gson</a></p><p class="font-weight-light mt-3">A simple Java object will become to JSON by using Gson. Besides, this will become into Java object.
+Maven dependencies &lt;dependencies&gt; &lt;dependency&gt; &lt;groupId&gt;com.google.code.gson/groupId&gt; &lt;artifactId&gt;gson&lt;/artifactId&gt; &lt;version&gt;2.6.2&lt;/version&gt; &lt;/dependency&gt; &lt;/dependencies&gt; User Java class package com.dalanz.json; import java.util.ArrayList; import java.util.List; public class User { private String firstName; private String lastName; private int age; private List&lt;String&gt; messages; public User(){} public User(String firstName, String lastName, int age, List&lt;String&gt; messages) { this.firstName = firstName; this.lastName = lastName; this.</p><a href=https://dalanzg.github.io/tips-tutorials/posts/2016/03/23/how-to-convert-java-object-to-json-and-json-to-java-object-with-gson/ class="btn btn-primary">Read more</a></div><div class="col-md mb-3"><p class="lead mb-0"><a class=text-body href=https://dalanzg.github.io/tips-tutorials/posts/2016/03/22/how-to-zip-a-folder-and-unzip-a-zip-file-in-java/>How to zip a folder and unzip a Zip file in Java</a></p><p class="font-weight-light mt-3">A folder with subfolders and files will be zipped. Besides, the zip file will be unzipped.
+Zip directory Java class package com.dalanz.file; import java.io.File; import java.io.FileInputStream; import java.io.FileOutputStream; import java.io.IOException; import java.util.ArrayList; import java.util.zip.ZipEntry; import java.util.zip.ZipInputStream; import java.util.zip.ZipOutputStream; public class ZipDirectory { private String folderPath; private String zipPath; private static ArrayList&lt;String&gt; fileList = null; private static String sourceFolder = null; public String getFolderPath() { return folderPath; } public void setFolderPath(String folderPath) { this.</p><a href=https://dalanzg.github.io/tips-tutorials/posts/2016/03/22/how-to-zip-a-folder-and-unzip-a-zip-file-in-java/ class="btn btn-primary">Read more</a></div><div class="col-md mb-3"><p class="lead mb-0"><a class=text-body href=https://dalanzg.github.io/tips-tutorials/posts/2016/03/22/how-to-convert-file-into-array-of-bytes-and-array-of-bytes-to-file-in-java/>How to convert File into Array of Bytes, and Array of Bytes to File in Java</a></p><p class="font-weight-light mt-3">Array of bytes will be calculated from a file, and then, that array of bytes will be used to create a file with different filename.
+Array of bytes Java class package com.dalanz.file; import java.io.File; import java.io.FileInputStream; import java.io.FileOutputStream; public class ArrayBytesFile { // Attributes private File file; private byte[] bFile; // Constructors public ArrayBytesFile() { this.file = null; this.bFile = null; } public ArrayBytesFile (File file) { this.</p><a href=https://dalanzg.github.io/tips-tutorials/posts/2016/03/22/how-to-convert-file-into-array-of-bytes-and-array-of-bytes-to-file-in-java/ class="btn btn-primary">Read more</a></div></div></div></div><footer class=blog-footer><p><nav class="nav justify-content-center"><a class=nav-link href=https://dalanzg.github.io/tips-tutorials/index.xml target=_blank><i class="fas fa-rss-square fa-2x"></i></a><a class=nav-link href=https://twitter.com/dalanzg target=_blank><i class="fab fa-twitter fa-2x"></i></a><a class=nav-link href=https://github.com/dalanzg target=_blank><i class="fab fa-github fa-2x"></i></a><a class=nav-link href=https://www.linkedin.com/in/danilanza target=_blank><i class="fab fa-linkedin fa-2x"></i></a></nav></p><p class=text-muted>Copyright &copy; Tips and Tutorials 2019</p><p class=text-muted><small>All rights reserved. Blog powered by <a href=https://gohugo.io/>Hugo</a> and hosted on <a href=https://www.github.com>GitHub.</a></small></p><p class=text-muted><small><a href=https://opensource.org/licenses/MIT>MIT License</a></small></p></footer><script src=https://dalanzg.github.io/tips-tutorials/js/bundle.min.110d3e1a6c79028aa1899125704a04f056b48a7862c0d9058732b1ab70451559.js></script></body></html>

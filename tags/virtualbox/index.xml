@@ -1,77 +1,17 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>virtualbox on Tips and Tutorials</title>
-    <link>https://dalanzg.github.io/tips-tutorials/tags/virtualbox/</link>
-    <description>Recent content in virtualbox on Tips and Tutorials</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>Copyright. Tips and Tutorials. All rights reserved.</copyright>
-    <lastBuildDate>Fri, 17 Mar 2017 19:00:00 +0100</lastBuildDate>
-    
-	<atom:link href="https://dalanzg.github.io/tips-tutorials/tags/virtualbox/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Share transient folder in openSUSE with VirtualBox</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2017/03/17/share-transient-folder-in-opensuse-with-virtualbox/</link>
-      <pubDate>Fri, 17 Mar 2017 19:00:00 +0100</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2017/03/17/share-transient-folder-in-opensuse-with-virtualbox/</guid>
-      <description>This tutorial will explain how to share a host holder into your guest virtual machine.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>virtualbox on Tips and Tutorials</title><link>https://dalanzg.github.io/tips-tutorials/tags/virtualbox/</link><description>Recent content in virtualbox on Tips and Tutorials</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Copyright. Tips and Tutorials. All rights reserved.</copyright><lastBuildDate>Fri, 17 Mar 2017 19:00:00 +0100</lastBuildDate><atom:link href="https://dalanzg.github.io/tips-tutorials/tags/virtualbox/index.xml" rel="self" type="application/rss+xml"/><item><title>Share transient folder in openSUSE with VirtualBox</title><link>https://dalanzg.github.io/tips-tutorials/posts/2017/03/17/share-transient-folder-in-opensuse-with-virtualbox/</link><pubDate>Fri, 17 Mar 2017 19:00:00 +0100</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2017/03/17/share-transient-folder-in-opensuse-with-virtualbox/</guid><description>This tutorial will explain how to share a host holder into your guest virtual machine.
 Requirements You will need the following:
- An openSUSE virtual machine with VirtualBox (Check this link  Steps  Make transient folder Mount folder Copy and paste files  Make transient folder Go to share folder settings and create a new transient folder.
-Create a new transient folder  Give the name to the transient folder  New transient folder created  It is important to remember the transient folder name.</description>
-    </item>
-    
-    <item>
-      <title>How to install openSUSE Leap 42.2 in VirtualBox</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2017/02/12/how-to-install-opensuse-leap-42.2-in-virtualbox/</link>
-      <pubDate>Sun, 12 Feb 2017 13:00:00 +0100</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2017/02/12/how-to-install-opensuse-leap-42.2-in-virtualbox/</guid>
-      <description>This tutorial will explain how to install openSUSE 42.2 Leap in VirtualBox.
+An openSUSE virtual machine with VirtualBox (Check this link Steps Make transient folder Mount folder Copy and paste files Make transient folder Go to share folder settings and create a new transient folder.
+Create a new transient folder Give the name to the transient folder New transient folder created It is important to remember the transient folder name.</description></item><item><title>How to install openSUSE Leap 42.2 in VirtualBox</title><link>https://dalanzg.github.io/tips-tutorials/posts/2017/02/12/how-to-install-opensuse-leap-42.2-in-virtualbox/</link><pubDate>Sun, 12 Feb 2017 13:00:00 +0100</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2017/02/12/how-to-install-opensuse-leap-42.2-in-virtualbox/</guid><description>This tutorial will explain how to install openSUSE 42.2 Leap in VirtualBox.
 Requirements You will need the following:
- VirtualBox openSUSE Leap 42.2 ISO file  Steps  Preparing the virtual machine Installing openSUSE Post-installation tasks  Preparing the virtual machine Open VirtualBox and create a new virtual machine. Select Linux type and openSUSE version.
-New openSUSE virtual machine  Select the amount of memory RAM. The recommendation is 4096 MB (4 GB).</description>
-    </item>
-    
-    <item>
-      <title>How to install Windows Server 2012 R2 on VirtualBox</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2016/05/22/how-to-install-windows-server-2012-r2-on-virtualbox/</link>
-      <pubDate>Sun, 22 May 2016 09:45:00 +0200</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2016/05/22/how-to-install-windows-server-2012-r2-on-virtualbox/</guid>
-      <description>This tutorial will explain how to install Windows Server 2012 R2 in a virtual machine.
+VirtualBox openSUSE Leap 42.2 ISO file Steps Preparing the virtual machine Installing openSUSE Post-installation tasks Preparing the virtual machine Open VirtualBox and create a new virtual machine. Select Linux type and openSUSE version.
+New openSUSE virtual machine Select the amount of memory RAM. The recommendation is 4096 MB (4 GB).</description></item><item><title>How to install Windows Server 2012 R2 on VirtualBox</title><link>https://dalanzg.github.io/tips-tutorials/posts/2016/05/22/how-to-install-windows-server-2012-r2-on-virtualbox/</link><pubDate>Sun, 22 May 2016 09:45:00 +0200</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2016/05/22/how-to-install-windows-server-2012-r2-on-virtualbox/</guid><description>This tutorial will explain how to install Windows Server 2012 R2 in a virtual machine.
 First, you need to have Windows Server 2012 R2 ISO file and VirtualBox installed.
 Create a new virtual machine on VirtualBox by clicking on New. Select type and version of the virtual machine. In this case, Windows 2012 (64-bits).
-Create new virtual machine  Set the amount of memory (RAM). I selected 4096 MB (4 GB).</description>
-    </item>
-    
-    <item>
-      <title>Setting up a Virtual Web Server with VirtualBox, Apache, MySQL, FTP, Ubuntu, and Samba</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2016/04/17/setting-up-a-virtual-web-server-with-virtualbox-apache-mysql-ftp-ubuntu-and-samba/</link>
-      <pubDate>Sun, 17 Apr 2016 15:00:00 +0200</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2016/04/17/setting-up-a-virtual-web-server-with-virtualbox-apache-mysql-ftp-ubuntu-and-samba/</guid>
-      <description>This tutorial will explain how to set up a Ubuntu Server virtual machine with:
- Apache FTP Samba  First, check out how to install Ubuntu Server on VirtualBox to get ready a virtual machine to test.
+Create new virtual machine Set the amount of memory (RAM). I selected 4096 MB (4 GB).</description></item><item><title>Setting up a Virtual Web Server with VirtualBox, Apache, MySQL, FTP, Ubuntu, and Samba</title><link>https://dalanzg.github.io/tips-tutorials/posts/2016/04/17/setting-up-a-virtual-web-server-with-virtualbox-apache-mysql-ftp-ubuntu-and-samba/</link><pubDate>Sun, 17 Apr 2016 15:00:00 +0200</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2016/04/17/setting-up-a-virtual-web-server-with-virtualbox-apache-mysql-ftp-ubuntu-and-samba/</guid><description>This tutorial will explain how to set up a Ubuntu Server virtual machine with:
+Apache FTP Samba First, check out how to install Ubuntu Server on VirtualBox to get ready a virtual machine to test.
 Our virtual machine has two network adapters. The second one (eth1) is a host-only adapter with a static IP address -&amp;gt; 192.168.56.101
-Apache Web Server Apache Web Server needs to be running. The installation and configuration was indicated in the previous post.</description>
-    </item>
-    
-    <item>
-      <title>Install Ubuntu Server 14.04.4 on VirtualBox</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2016/04/15/install-ubuntu-server-14.04.4-on-virtualbox/</link>
-      <pubDate>Fri, 15 Apr 2016 22:45:00 +0200</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2016/04/15/install-ubuntu-server-14.04.4-on-virtualbox/</guid>
-      <description>This tutorial will explain how to install Ubuntu Server on a virtual machine.
+Apache Web Server Apache Web Server needs to be running. The installation and configuration was indicated in the previous post.</description></item><item><title>Install Ubuntu Server 14.04.4 on VirtualBox</title><link>https://dalanzg.github.io/tips-tutorials/posts/2016/04/15/install-ubuntu-server-14.04.4-on-virtualbox/</link><pubDate>Fri, 15 Apr 2016 22:45:00 +0200</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2016/04/15/install-ubuntu-server-14.04.4-on-virtualbox/</guid><description>This tutorial will explain how to install Ubuntu Server on a virtual machine.
 First, you need to have Ubuntu Server ISO file and VirtualBox installed.
- VirtualBox Ubuntu Server  Create a new virtual machine on VirtualBox by clicking on New.
-Create new virtual machine  Select type and version of the virtual machine. In this case, Linux and Ubuntu (64-bits).
-Select type and version of the virtual machine  Select the amount of memory (RAM).</description>
-    </item>
-    
-  </channel>
-</rss>
+VirtualBox Ubuntu Server Create a new virtual machine on VirtualBox by clicking on New.
+Create new virtual machine Select type and version of the virtual machine. In this case, Linux and Ubuntu (64-bits).
+Select type and version of the virtual machine Select the amount of memory (RAM).</description></item></channel></rss>

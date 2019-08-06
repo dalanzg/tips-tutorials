@@ -1,571 +1,124 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Tips and Tutorials</title>
-    <link>https://dalanzg.github.io/tips-tutorials/</link>
-    <description>Recent content on Tips and Tutorials</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>Copyright. Tips and Tutorials. All rights reserved.</copyright>
-    <lastBuildDate>Sun, 02 Jun 2019 12:57:21 +0200</lastBuildDate>
-    
-	<atom:link href="https://dalanzg.github.io/tips-tutorials/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Search</title>
-      <link>https://dalanzg.github.io/tips-tutorials/search/</link>
-      <pubDate>Sun, 02 Jun 2019 12:57:21 +0200</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/search/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Search Index</title>
-      <link>https://dalanzg.github.io/tips-tutorials/index.json</link>
-      <pubDate>Sun, 02 Jun 2019 12:57:21 +0200</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/index.json</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://dalanzg.github.io/tips-tutorials/about/</link>
-      <pubDate>Sun, 17 Feb 2019 17:51:42 +0100</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/about/</guid>
-      <description>I’m Daniel Lanza.
-This is my personal blog and I like to write codes and short notes on here. If you find errors on my posts or have any suggestions, please drop some lines at comment section.</description>
-    </item>
-    
-    <item>
-      <title>Tomcat load balancing with HAProxy in openSUSE</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2018/11/03/tomcat-load-balancing-with-haproxy-in-opensuse/</link>
-      <pubDate>Sat, 03 Nov 2018 21:30:00 +0100</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2018/11/03/tomcat-load-balancing-with-haproxy-in-opensuse/</guid>
-      <description>This tutorial will explain how to load balancing two Tomcat instances with HAProxy in openSUSE.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tips and Tutorials</title><link>https://dalanzg.github.io/tips-tutorials/</link><description>Recent content on Tips and Tutorials</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Copyright. Tips and Tutorials. All rights reserved.</copyright><lastBuildDate>Sun, 02 Jun 2019 12:57:21 +0200</lastBuildDate><atom:link href="https://dalanzg.github.io/tips-tutorials/index.xml" rel="self" type="application/rss+xml"/><item><title>Search</title><link>https://dalanzg.github.io/tips-tutorials/search/</link><pubDate>Sun, 02 Jun 2019 12:57:21 +0200</pubDate><guid>https://dalanzg.github.io/tips-tutorials/search/</guid><description/></item><item><title>Search Index</title><link>https://dalanzg.github.io/tips-tutorials/index.json</link><pubDate>Sun, 02 Jun 2019 12:57:21 +0200</pubDate><guid>https://dalanzg.github.io/tips-tutorials/index.json</guid><description/></item><item><title>About</title><link>https://dalanzg.github.io/tips-tutorials/about/</link><pubDate>Sun, 17 Feb 2019 17:51:42 +0100</pubDate><guid>https://dalanzg.github.io/tips-tutorials/about/</guid><description>I’m Daniel Lanza.
+This is my personal blog and I like to write codes and short notes on here. If you find errors on my posts or have any suggestions, please drop some lines at comment section.</description></item><item><title>Tomcat load balancing with HAProxy in openSUSE</title><link>https://dalanzg.github.io/tips-tutorials/posts/2018/11/03/tomcat-load-balancing-with-haproxy-in-opensuse/</link><pubDate>Sat, 03 Nov 2018 21:30:00 +0100</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2018/11/03/tomcat-load-balancing-with-haproxy-in-opensuse/</guid><description>This tutorial will explain how to load balancing two Tomcat instances with HAProxy in openSUSE.
 The environment will be simulated with three virtual machines and VirtualBox:
-  # Server FQDN IP      1 haproxy-server.dalanzg.com 192.168.56.101 HAProxy - Port 80   2 tomcat-server1.dalanzg.com 192.168.56.102 Apache Tomcat - Port 8080   3 tomcat-server2.dalanzg.com 192.168.56.103 Apache Tomcat - Port 8080    Check the following post to configure openSUSE with Internet and statick IP address by using YaST on VirtualBox</description>
-    </item>
-    
-    <item>
-      <title>Tomcat load balancing with mod_proxy and mod_proxy_balancer</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2018/11/01/tomcat-load-balancing-with-mod_proxy-and-mod_proxy_balancer/</link>
-      <pubDate>Thu, 01 Nov 2018 13:00:00 +0100</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2018/11/01/tomcat-load-balancing-with-mod_proxy-and-mod_proxy_balancer/</guid>
-      <description>This tutorial will explain how to load balancing two Tomcat instances with Apache HTTPD server with mod_proxy and mod_proxy_balancer modules.
+# Server FQDN IP 1 haproxy-server.dalanzg.com 192.168.56.101 HAProxy - Port 80 2 tomcat-server1.dalanzg.com 192.168.56.102 Apache Tomcat - Port 8080 3 tomcat-server2.dalanzg.com 192.168.56.103 Apache Tomcat - Port 8080 Check the following post to configure openSUSE with Internet and statick IP address by using YaST on VirtualBox</description></item><item><title>Tomcat load balancing with mod_proxy and mod_proxy_balancer</title><link>https://dalanzg.github.io/tips-tutorials/posts/2018/11/01/tomcat-load-balancing-with-mod_proxy-and-mod_proxy_balancer/</link><pubDate>Thu, 01 Nov 2018 13:00:00 +0100</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2018/11/01/tomcat-load-balancing-with-mod_proxy-and-mod_proxy_balancer/</guid><description>This tutorial will explain how to load balancing two Tomcat instances with Apache HTTPD server with mod_proxy and mod_proxy_balancer modules.
 The environment will be simulated with three virtual machines and VirtualBox:
-  # Server FQDN IP      1 apache-server.dalanzg.com 192.168.56.101 Apache HTTPD - Port 80   2 tomcat-server1.dalanzg.com 192.168.56.102 Apache Tomcat - Port 8080   3 tomcat-server2.dalanzg.com 192.168.56.103 Apache Tomcat - Port 8080    Check the following post to configure openSUSE with Internet and statick IP address by using YaST on VirtualBox</description>
-    </item>
-    
-    <item>
-      <title>openSUSE with Internet and static IP address by using YaST on VirtualBox</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2018/10/20/opensuse-with-internet-and-static-ip-address-by-using-yast-on-virtualbox/</link>
-      <pubDate>Sat, 20 Oct 2018 19:00:00 +0200</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2018/10/20/opensuse-with-internet-and-static-ip-address-by-using-yast-on-virtualbox/</guid>
-      <description>An openSUSE virtual machine will be configured to have a static IP address and Internet connection on VirtualBox.
+# Server FQDN IP 1 apache-server.dalanzg.com 192.168.56.101 Apache HTTPD - Port 80 2 tomcat-server1.dalanzg.com 192.168.56.102 Apache Tomcat - Port 8080 3 tomcat-server2.dalanzg.com 192.168.56.103 Apache Tomcat - Port 8080 Check the following post to configure openSUSE with Internet and statick IP address by using YaST on VirtualBox</description></item><item><title>openSUSE with Internet and static IP address by using YaST on VirtualBox</title><link>https://dalanzg.github.io/tips-tutorials/posts/2018/10/20/opensuse-with-internet-and-static-ip-address-by-using-yast-on-virtualbox/</link><pubDate>Sat, 20 Oct 2018 19:00:00 +0200</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2018/10/20/opensuse-with-internet-and-static-ip-address-by-using-yast-on-virtualbox/</guid><description>An openSUSE virtual machine will be configured to have a static IP address and Internet connection on VirtualBox.
 This scenario is really useful if you want to install a specific application in guest and you need to communicate from your host.
 Therefore, the virtual machine will have two network adapters:
- NAT -&amp;gt; Internet connection Host-only-adapter -&amp;gt; Static IP address (192.168.56.200) and FQDN server1.dalanzg.com  Steps  Settings for VirtualBox Virtual machine network settings Settings for network devices  Settings for VirtualBox First, create a Host Network Manager in VirtualBox.</description>
-    </item>
-    
-    <item>
-      <title>How to install Apache HTTPD in openSUSE</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2018/06/20/how-to-install-apache-httpd-in-opensuse/</link>
-      <pubDate>Wed, 20 Jun 2018 12:00:00 +0200</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2018/06/20/how-to-install-apache-httpd-in-opensuse/</guid>
-      <description>This tutorial will explain how to install Apache HTTPD in openSUSE 15.
+NAT -&amp;gt; Internet connection Host-only-adapter -&amp;gt; Static IP address (192.168.56.200) and FQDN server1.dalanzg.com Steps Settings for VirtualBox Virtual machine network settings Settings for network devices Settings for VirtualBox First, create a Host Network Manager in VirtualBox.</description></item><item><title>How to install Apache HTTPD in openSUSE</title><link>https://dalanzg.github.io/tips-tutorials/posts/2018/06/20/how-to-install-apache-httpd-in-opensuse/</link><pubDate>Wed, 20 Jun 2018 12:00:00 +0200</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2018/06/20/how-to-install-apache-httpd-in-opensuse/</guid><description>This tutorial will explain how to install Apache HTTPD in openSUSE 15.
 The original documentation is found in The Apache HTTP Server Project. And the official documentation for openSUSE is in The Apache HTTP Server.
 Requirements You will need the following:
- openSUSE Leap 15  Steps  Set hostname and domain Start and stop Apache Start Apache automatically at boot time  Set hostname and domain Files /etc/hostname and /etc/hosts will be modified to resolve the following:</description>
-    </item>
-    
-    <item>
-      <title>How to install Oracle 12c R2 in openSUSE</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2018/03/04/how-to-install-oracle-12c-r2-in-opensuse/</link>
-      <pubDate>Sun, 04 Mar 2018 12:00:00 +0100</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2018/03/04/how-to-install-oracle-12c-r2-in-opensuse/</guid>
-      <description>This tutorial will explain how to install Oracle Database 12c R2 in openSUSE Leap 42.3.
+openSUSE Leap 15 Steps Set hostname and domain Start and stop Apache Start Apache automatically at boot time Set hostname and domain Files /etc/hostname and /etc/hosts will be modified to resolve the following:</description></item><item><title>How to install Oracle 12c R2 in openSUSE</title><link>https://dalanzg.github.io/tips-tutorials/posts/2018/03/04/how-to-install-oracle-12c-r2-in-opensuse/</link><pubDate>Sun, 04 Mar 2018 12:00:00 +0100</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2018/03/04/how-to-install-oracle-12c-r2-in-opensuse/</guid><description>This tutorial will explain how to install Oracle Database 12c R2 in openSUSE Leap 42.3.
 Requirements You will need the following:
- openSUSE Leap 42.3 -&amp;gt; Install openSUSE virtual machine with VirtualBox Oracle 12c R2 database installation file -&amp;gt; linuxx64_12201_database.zip  Steps  Install libraries Set hostname and domain Create groups and users Grant oracle user access to X server Configuring Kernel Parameters and Resource Limits Create directory for Oracle Database Install Oracle Database Configuration of Oracle Listener Configuration of Oracle Database Create user for database Create table for database Connect to Oracle database with SQL Developer Start database when server is restarted  Install libraries According to Supported SUSE Linux Enterprise Server 12 in Oracle documentation, install the following libraries by using YaST or zypper command:</description>
-    </item>
-    
-    <item>
-      <title>How to install SAP Cloud Connector in SAP NetWeaver Server</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2017/12/06/how-to-install-sap-cloud-connector-in-sap-netweaver-server/</link>
-      <pubDate>Wed, 06 Dec 2017 14:00:00 +0100</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2017/12/06/how-to-install-sap-cloud-connector-in-sap-netweaver-server/</guid>
-      <description>This tutorial will explain how to install SAP Cloud Connector in a NetWeaver Server.
+openSUSE Leap 42.3 -&amp;gt; Install openSUSE virtual machine with VirtualBox Oracle 12c R2 database installation file -&amp;gt; linuxx64_12201_database.zip Steps Install libraries Set hostname and domain Create groups and users Grant oracle user access to X server Configuring Kernel Parameters and Resource Limits Create directory for Oracle Database Install Oracle Database Configuration of Oracle Listener Configuration of Oracle Database Create user for database Create table for database Connect to Oracle database with SQL Developer Start database when server is restarted Install libraries According to Supported SUSE Linux Enterprise Server 12 in Oracle documentation, install the following libraries by using YaST or zypper command:</description></item><item><title>How to install SAP Cloud Connector in SAP NetWeaver Server</title><link>https://dalanzg.github.io/tips-tutorials/posts/2017/12/06/how-to-install-sap-cloud-connector-in-sap-netweaver-server/</link><pubDate>Wed, 06 Dec 2017 14:00:00 +0100</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2017/12/06/how-to-install-sap-cloud-connector-in-sap-netweaver-server/</guid><description>This tutorial will explain how to install SAP Cloud Connector in a NetWeaver Server.
 Requirements You will need the following:
- SAP NetWeaver Server and SAPGUI Download Cloud Connector from SAP Development Tools  Steps  Verify SAP NetWeaver is running Unzip and install Cloud Connector Start and Stop Cloud Connector services Login and change Administrator password in Cloud connector  Verify SAP NetWeaver is running Login with npladm user and check SAP NetWeaver services are runnning.</description>
-    </item>
-    
-    <item>
-      <title>How to install ABAP in Eclipse</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2017/11/18/how-to-install-abap-in-eclipse/</link>
-      <pubDate>Sat, 18 Nov 2017 21:20:00 +0100</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2017/11/18/how-to-install-abap-in-eclipse/</guid>
-      <description>This tutorial will explain how to install ABAP in Eclipse to explore or modify ABAP Development objects.
+SAP NetWeaver Server and SAPGUI Download Cloud Connector from SAP Development Tools Steps Verify SAP NetWeaver is running Unzip and install Cloud Connector Start and Stop Cloud Connector services Login and change Administrator password in Cloud connector Verify SAP NetWeaver is running Login with npladm user and check SAP NetWeaver services are runnning.</description></item><item><title>How to install ABAP in Eclipse</title><link>https://dalanzg.github.io/tips-tutorials/posts/2017/11/18/how-to-install-abap-in-eclipse/</link><pubDate>Sat, 18 Nov 2017 21:20:00 +0100</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2017/11/18/how-to-install-abap-in-eclipse/</guid><description>This tutorial will explain how to install ABAP in Eclipse to explore or modify ABAP Development objects.
 Requirements You will need the following:
- SAP NetWeaver Server and SAPGUI Eclipse (Oxygen)  Steps Run Eclipse and install a new software from the menu.
-Install new software  Add the SAP HANA tools repository:
- https://tools.hana.ondemand.com/oxygen**  Install the following components:
- ABAP Development Tools for SAP NetWeaver SAP Cloud Platform Tools UI Development Toolkit for HTML5  Install Eclipse HANA Tools  Install Eclipse HANA Tools  Install Eclipse HANA Tools  Click on the top right-hand corner to open ABAP perspective.</description>
-    </item>
-    
-    <item>
-      <title>How to install SAP NetWeaver 7.51 as ABAP Developer Edition in openSUSE</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2017/11/09/how-to-install-sap-netweaver-7.51-as-abap-developer-edition-in-opensuse/</link>
-      <pubDate>Thu, 09 Nov 2017 13:44:00 +0100</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2017/11/09/how-to-install-sap-netweaver-7.51-as-abap-developer-edition-in-opensuse/</guid>
-      <description>This tutorial will explain how to install SAP NetWeaver as ABAP server in a virtual machine to develop your own custom ABAP objects.
+SAP NetWeaver Server and SAPGUI Eclipse (Oxygen) Steps Run Eclipse and install a new software from the menu.
+Install new software Add the SAP HANA tools repository:
+https://tools.hana.ondemand.com/oxygen** Install the following components:
+ABAP Development Tools for SAP NetWeaver SAP Cloud Platform Tools UI Development Toolkit for HTML5 Install Eclipse HANA Tools Install Eclipse HANA Tools Install Eclipse HANA Tools Click on the top right-hand corner to open ABAP perspective.</description></item><item><title>How to install SAP NetWeaver 7.51 as ABAP Developer Edition in openSUSE</title><link>https://dalanzg.github.io/tips-tutorials/posts/2017/11/09/how-to-install-sap-netweaver-7.51-as-abap-developer-edition-in-opensuse/</link><pubDate>Thu, 09 Nov 2017 13:44:00 +0100</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2017/11/09/how-to-install-sap-netweaver-7.51-as-abap-developer-edition-in-opensuse/</guid><description>This tutorial will explain how to install SAP NetWeaver as ABAP server in a virtual machine to develop your own custom ABAP objects.
 Requirements You will need the following:
- An openSUSE virtual machine with VirtualBox (Check this link Download SAP NetWeaver compress files from SAP NetWeaver AS ABAP Developer Edition  Steps  Set port forwarding Set hostname and hosts Install uuidd Mount SAP NetWeaver files Install SAP NetWeaver Install SAP GUI in your host machine SAP GUI for JAVA logon Check SAP NetWeaver license Stop SAP NetWeaver Start SAP NetWeaver  Set port forwarding Forward from the Host IP and ports to the following Guest IP and ports in the virtual machine settings:</description>
-    </item>
-    
-    <item>
-      <title>How to install PostgreSQL in openSUSE</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2017/07/31/how-to-install-postgresql-in-opensuse/</link>
-      <pubDate>Mon, 31 Jul 2017 18:15:00 +0200</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2017/07/31/how-to-install-postgresql-in-opensuse/</guid>
-      <description>This tutorial will explain how to install postgreSQL server in openSUSE. A new role and database will be created with the client software.
+An openSUSE virtual machine with VirtualBox (Check this link Download SAP NetWeaver compress files from SAP NetWeaver AS ABAP Developer Edition Steps Set port forwarding Set hostname and hosts Install uuidd Mount SAP NetWeaver files Install SAP NetWeaver Install SAP GUI in your host machine SAP GUI for JAVA logon Check SAP NetWeaver license Stop SAP NetWeaver Start SAP NetWeaver Set port forwarding Forward from the Host IP and ports to the following Guest IP and ports in the virtual machine settings:</description></item><item><title>How to install PostgreSQL in openSUSE</title><link>https://dalanzg.github.io/tips-tutorials/posts/2017/07/31/how-to-install-postgresql-in-opensuse/</link><pubDate>Mon, 31 Jul 2017 18:15:00 +0200</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2017/07/31/how-to-install-postgresql-in-opensuse/</guid><description>This tutorial will explain how to install postgreSQL server in openSUSE. A new role and database will be created with the client software.
 Requirements You will need the following:
- openSUSE Leap 42.3  Steps  Install PostgreSQL Post-installation checks Change postgres role password Create a new role Create a new database  Install PostgreSQL Install PostgreSQL from YAST or zypper command:
- postgresql -&amp;gt; PostgreSQL client postgresql-server -&amp;gt; PostgreSQL server postgresql-contrib -&amp;gt; Contributed extensions and additions</description>
-    </item>
-    
-    <item>
-      <title>Setting mail server with Postfix and Dovecot in openSUSE</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2017/07/30/setting-mail-server-with-postfix-and-dovecot-in-opensuse/</link>
-      <pubDate>Sun, 30 Jul 2017 22:15:00 +0200</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2017/07/30/setting-mail-server-with-postfix-and-dovecot-in-opensuse/</guid>
-      <description>A tutorial to set a mail server for inbound and outgoing mails:
- Postfix for outgoing mails (SMTP) Dovecot for inbound mails (IMAP/POP3)  Requirements You will need the following:
- An openSUSE virtual machine with VirtualBox (Check this link Hostname and domain -&amp;gt; Setting Hostname and domain in openSUSE SMTP server with Postfix running -&amp;gt; Setting Postfix for outgoing mail in openSUSE  In this tutorial, the machine has the following:</description>
-    </item>
-    
-    <item>
-      <title>Error 501 Syntax HELO hostname in postfix</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2017/07/09/error-501-syntax-helo-hostname-in-postfix/</link>
-      <pubDate>Sun, 09 Jul 2017 21:05:00 +0200</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2017/07/09/error-501-syntax-helo-hostname-in-postfix/</guid>
-      <description>Certain SMTP servers require HELO servername in order to allow a request to proceed. Set a command filter to let it work without any arguments.
+openSUSE Leap 42.3 Steps Install PostgreSQL Post-installation checks Change postgres role password Create a new role Create a new database Install PostgreSQL Install PostgreSQL from YAST or zypper command:
+postgresql -&amp;gt; PostgreSQL client postgresql-server -&amp;gt; PostgreSQL server postgresql-contrib -&amp;gt; Contributed extensions and additions</description></item><item><title>Setting mail server with Postfix and Dovecot in openSUSE</title><link>https://dalanzg.github.io/tips-tutorials/posts/2017/07/30/setting-mail-server-with-postfix-and-dovecot-in-opensuse/</link><pubDate>Sun, 30 Jul 2017 22:15:00 +0200</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2017/07/30/setting-mail-server-with-postfix-and-dovecot-in-opensuse/</guid><description>A tutorial to set a mail server for inbound and outgoing mails:
+Postfix for outgoing mails (SMTP) Dovecot for inbound mails (IMAP/POP3) Requirements You will need the following:
+An openSUSE virtual machine with VirtualBox (Check this link Hostname and domain -&amp;gt; Setting Hostname and domain in openSUSE SMTP server with Postfix running -&amp;gt; Setting Postfix for outgoing mail in openSUSE In this tutorial, the machine has the following:</description></item><item><title>Error 501 Syntax HELO hostname in postfix</title><link>https://dalanzg.github.io/tips-tutorials/posts/2017/07/09/error-501-syntax-helo-hostname-in-postfix/</link><pubDate>Sun, 09 Jul 2017 21:05:00 +0200</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2017/07/09/error-501-syntax-helo-hostname-in-postfix/</guid><description>Certain SMTP servers require HELO servername in order to allow a request to proceed. Set a command filter to let it work without any arguments.
 Source
 Requirements You will need the following:
- An openSUSE virtual machine with VirtualBox (Check this link Hostname and domain -&amp;gt; Setting Hostname and domain in openSUSE SMTP server with Postfix running -&amp;gt; Setting Postfix for outgoing mail in openSUSE  In this tutorial, the machine has the following:</description>
-    </item>
-    
-    <item>
-      <title>Setting Postfix for outgoing mail in openSUSE</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2017/04/14/setting-postfix-for-outgoing-mail-in-opensuse/</link>
-      <pubDate>Fri, 14 Apr 2017 12:45:00 +0200</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2017/04/14/setting-postfix-for-outgoing-mail-in-opensuse/</guid>
-      <description>A tutorial to set Postfix to send mails in openSUSE.
+An openSUSE virtual machine with VirtualBox (Check this link Hostname and domain -&amp;gt; Setting Hostname and domain in openSUSE SMTP server with Postfix running -&amp;gt; Setting Postfix for outgoing mail in openSUSE In this tutorial, the machine has the following:</description></item><item><title>Setting Postfix for outgoing mail in openSUSE</title><link>https://dalanzg.github.io/tips-tutorials/posts/2017/04/14/setting-postfix-for-outgoing-mail-in-opensuse/</link><pubDate>Fri, 14 Apr 2017 12:45:00 +0200</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2017/04/14/setting-postfix-for-outgoing-mail-in-opensuse/</guid><description>A tutorial to set Postfix to send mails in openSUSE.
 Requirements You will need the following:
- An openSUSE virtual machine with VirtualBox (Check this link Hostname and domain -&amp;gt; Setting Hostname and domain in openSUSE  In this tutorial, the machine has the following:
- FQDN hostname: mail.dalanzg.com Ethernet IP address: 10.0.2.15  Steps  Install Postfix Change main.cf file Send mail with telnet  Install Postfix By openSUSE installation default, Postfix can be installed.</description>
-    </item>
-    
-    <item>
-      <title>Setting hostname and domain in openSUSE</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2017/04/13/setting-hostname-and-domain-in-opensuse/</link>
-      <pubDate>Thu, 13 Apr 2017 18:00:00 +0200</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2017/04/13/setting-hostname-and-domain-in-opensuse/</guid>
-      <description>A tutorial to set hostname and domain in openSUSE (server.dalanzg.com):
- Hostname -&amp;gt; srvopensuse Domain -&amp;gt; dalanzg.com  Requirements You will need the following:
- An openSUSE virtual machine with VirtualBox (Check this link  Steps  Modify hostname file Modify hosts file Verification  Modify hostname file With root permissions, edit file /etc/hostname.
+An openSUSE virtual machine with VirtualBox (Check this link Hostname and domain -&amp;gt; Setting Hostname and domain in openSUSE In this tutorial, the machine has the following:
+FQDN hostname: mail.dalanzg.com Ethernet IP address: 10.0.2.15 Steps Install Postfix Change main.cf file Send mail with telnet Install Postfix By openSUSE installation default, Postfix can be installed.</description></item><item><title>Setting hostname and domain in openSUSE</title><link>https://dalanzg.github.io/tips-tutorials/posts/2017/04/13/setting-hostname-and-domain-in-opensuse/</link><pubDate>Thu, 13 Apr 2017 18:00:00 +0200</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2017/04/13/setting-hostname-and-domain-in-opensuse/</guid><description>A tutorial to set hostname and domain in openSUSE (server.dalanzg.com):
+Hostname -&amp;gt; srvopensuse Domain -&amp;gt; dalanzg.com Requirements You will need the following:
+An openSUSE virtual machine with VirtualBox (Check this link Steps Modify hostname file Modify hosts file Verification Modify hostname file With root permissions, edit file /etc/hostname.
 dalanz@linux-geij:~&amp;gt; sudo vim /etc/hostname Write the hostname for the server.
-srvopensuse Modify hosts file Check your network interfaces to find out the IP address for your Ethernet network (eth1).</description>
-    </item>
-    
-    <item>
-      <title>Setting SSL or https in Tomcat with openSUSE</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2017/04/07/setting-ssl-or-https-in-tomcat-with-opensuse/</link>
-      <pubDate>Fri, 07 Apr 2017 20:53:00 +0200</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2017/04/07/setting-ssl-or-https-in-tomcat-with-opensuse/</guid>
-      <description>A tutorial to configure Tomcat 8 to support SSL or https connection.
+srvopensuse Modify hosts file Check your network interfaces to find out the IP address for your Ethernet network (eth1).</description></item><item><title>Setting SSL or https in Tomcat with openSUSE</title><link>https://dalanzg.github.io/tips-tutorials/posts/2017/04/07/setting-ssl-or-https-in-tomcat-with-opensuse/</link><pubDate>Fri, 07 Apr 2017 20:53:00 +0200</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2017/04/07/setting-ssl-or-https-in-tomcat-with-opensuse/</guid><description>A tutorial to configure Tomcat 8 to support SSL or https connection.
 Requirements You will need the following:
- An openSUSE virtual machine with VirtualBox (Check this link Java JDK to create Keystores -&amp;gt; Change Java OpenJDK to Oracle JDK Tomcat -&amp;gt; How to install tomcat in openSUSE  This tutorial was created with:
- openSUSE Leap 42.2 Java Version -&amp;gt; jdk1.8.0_121 Tomcat version -&amp;gt; apache-tomcat-8.0.42  Steps  Create a keystore using Java JDK Set keystore in Tomcat Check SSL or https connection  Create a keystore using Java JDK Keystore file is a container for authorization certificates or public key certificates.</description>
-    </item>
-    
-    <item>
-      <title>How to install Tomcat in openSUSE</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2017/03/24/how-to-install-tomcat-in-opensuse/</link>
-      <pubDate>Fri, 24 Mar 2017 22:50:00 +0100</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2017/03/24/how-to-install-tomcat-in-opensuse/</guid>
-      <description>Requirements You will need the following:
- Tomcat 8  Optional -&amp;gt; (Change Java OpenJDK to Oracle JDK to run Tomcat.
-Steps  Download Tomcat 8. This case will be Apache Tomcat 8.0.42 -&amp;gt; Core tar.gz (apache-tomcat-8.0.42.tar.gz).
- Unzip apache-tomcat-8.0.42.tar.gz file and place it in folder /usr/local/tomcat. /usr/local is a folder similar to /usr and remain safe from system software upgrades.
-dalanz@linux-geij:~&amp;gt; tar -xf apache-tomcat-8.0.42.tar.gz dalanz@linux-geij:~&amp;gt; sudo mkdir -p /usr/local/tomcat dalanz@linux-geij:~&amp;gt; sudo mv apache-tomcat-8.</description>
-    </item>
-    
-    <item>
-      <title>Change OpenJDK to Oracle JDK in openSUSE</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2017/03/18/change-openjdk-to-oracle-jdk-in-opensuse/</link>
-      <pubDate>Sat, 18 Mar 2017 14:14:00 +0100</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2017/03/18/change-openjdk-to-oracle-jdk-in-opensuse/</guid>
-      <description>When installing openSUSE, OpenJDK is installed by default. This tutorial will explain how to change to Oracle JDK.
+An openSUSE virtual machine with VirtualBox (Check this link Java JDK to create Keystores -&amp;gt; Change Java OpenJDK to Oracle JDK Tomcat -&amp;gt; How to install tomcat in openSUSE This tutorial was created with:
+openSUSE Leap 42.2 Java Version -&amp;gt; jdk1.8.0_121 Tomcat version -&amp;gt; apache-tomcat-8.0.42 Steps Create a keystore using Java JDK Set keystore in Tomcat Check SSL or https connection Create a keystore using Java JDK Keystore file is a container for authorization certificates or public key certificates.</description></item><item><title>How to install Tomcat in openSUSE</title><link>https://dalanzg.github.io/tips-tutorials/posts/2017/03/24/how-to-install-tomcat-in-opensuse/</link><pubDate>Fri, 24 Mar 2017 22:50:00 +0100</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2017/03/24/how-to-install-tomcat-in-opensuse/</guid><description>Requirements You will need the following:
+Tomcat 8 Optional -&amp;gt; (Change Java OpenJDK to Oracle JDK to run Tomcat.
+Steps Download Tomcat 8. This case will be Apache Tomcat 8.0.42 -&amp;gt; Core tar.gz (apache-tomcat-8.0.42.tar.gz).
+Unzip apache-tomcat-8.0.42.tar.gz file and place it in folder /usr/local/tomcat. /usr/local is a folder similar to /usr and remain safe from system software upgrades.
+dalanz@linux-geij:~&amp;gt; tar -xf apache-tomcat-8.0.42.tar.gz dalanz@linux-geij:~&amp;gt; sudo mkdir -p /usr/local/tomcat dalanz@linux-geij:~&amp;gt; sudo mv apache-tomcat-8.</description></item><item><title>Change OpenJDK to Oracle JDK in openSUSE</title><link>https://dalanzg.github.io/tips-tutorials/posts/2017/03/18/change-openjdk-to-oracle-jdk-in-opensuse/</link><pubDate>Sat, 18 Mar 2017 14:14:00 +0100</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2017/03/18/change-openjdk-to-oracle-jdk-in-opensuse/</guid><description>When installing openSUSE, OpenJDK is installed by default. This tutorial will explain how to change to Oracle JDK.
 dalanz@linux-geij:~&amp;gt; java -version openjdk version &amp;#34;1.8.0_121&amp;#34; OpenJDK Runtime Environment (IcedTea 3.3.0) (suse-8.1-x86_64) OpenJDK 64-Bit Server VM (build 25.121-b13, mixed mode) Requirements You will need the following:
- Oracle JDK 8  Steps  Download Oracle JDK 8. This case will be Linux x64 (jdk-8u121-linux-x64.tar.gz).
- Unzip jdk-8u121-linux-x64.tar.gz file and change the ownership</description>
-    </item>
-    
-    <item>
-      <title>Share transient folder in openSUSE with VirtualBox</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2017/03/17/share-transient-folder-in-opensuse-with-virtualbox/</link>
-      <pubDate>Fri, 17 Mar 2017 19:00:00 +0100</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2017/03/17/share-transient-folder-in-opensuse-with-virtualbox/</guid>
-      <description>This tutorial will explain how to share a host holder into your guest virtual machine.
+Oracle JDK 8 Steps Download Oracle JDK 8. This case will be Linux x64 (jdk-8u121-linux-x64.tar.gz).
+Unzip jdk-8u121-linux-x64.tar.gz file and change the ownership</description></item><item><title>Share transient folder in openSUSE with VirtualBox</title><link>https://dalanzg.github.io/tips-tutorials/posts/2017/03/17/share-transient-folder-in-opensuse-with-virtualbox/</link><pubDate>Fri, 17 Mar 2017 19:00:00 +0100</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2017/03/17/share-transient-folder-in-opensuse-with-virtualbox/</guid><description>This tutorial will explain how to share a host holder into your guest virtual machine.
 Requirements You will need the following:
- An openSUSE virtual machine with VirtualBox (Check this link  Steps  Make transient folder Mount folder Copy and paste files  Make transient folder Go to share folder settings and create a new transient folder.
-Create a new transient folder  Give the name to the transient folder  New transient folder created  It is important to remember the transient folder name.</description>
-    </item>
-    
-    <item>
-      <title>How to install openSUSE Leap 42.2 in VirtualBox</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2017/02/12/how-to-install-opensuse-leap-42.2-in-virtualbox/</link>
-      <pubDate>Sun, 12 Feb 2017 13:00:00 +0100</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2017/02/12/how-to-install-opensuse-leap-42.2-in-virtualbox/</guid>
-      <description>This tutorial will explain how to install openSUSE 42.2 Leap in VirtualBox.
+An openSUSE virtual machine with VirtualBox (Check this link Steps Make transient folder Mount folder Copy and paste files Make transient folder Go to share folder settings and create a new transient folder.
+Create a new transient folder Give the name to the transient folder New transient folder created It is important to remember the transient folder name.</description></item><item><title>How to install openSUSE Leap 42.2 in VirtualBox</title><link>https://dalanzg.github.io/tips-tutorials/posts/2017/02/12/how-to-install-opensuse-leap-42.2-in-virtualbox/</link><pubDate>Sun, 12 Feb 2017 13:00:00 +0100</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2017/02/12/how-to-install-opensuse-leap-42.2-in-virtualbox/</guid><description>This tutorial will explain how to install openSUSE 42.2 Leap in VirtualBox.
 Requirements You will need the following:
- VirtualBox openSUSE Leap 42.2 ISO file  Steps  Preparing the virtual machine Installing openSUSE Post-installation tasks  Preparing the virtual machine Open VirtualBox and create a new virtual machine. Select Linux type and openSUSE version.
-New openSUSE virtual machine  Select the amount of memory RAM. The recommendation is 4096 MB (4 GB).</description>
-    </item>
-    
-    <item>
-      <title>How to renew the MiniSAP License</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2016/10/01/how-to-renew-the-minisap-license/</link>
-      <pubDate>Sat, 01 Oct 2016 16:35:00 +0200</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2016/10/01/how-to-renew-the-minisap-license/</guid>
-      <description>This tutorial will explain how to renew your MiniSAP license. If you want to know how to install MiniSAP, check out this post:
- How to install MiniSAP.  When logging into MiniSAP, we may get two different pop-up windows:
- Warning about our license will expire soon Error about license expired  Expired license warning.  Go to SLICENSE and get your Active Hardware Key.
-Active Hardware Key in SLICENSE transaction  Go to http://www.</description>
-    </item>
-    
-    <item>
-      <title>How to test REST Http Client with SAP report</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2016/09/29/how-to-test-rest-http-client-with-sap-report/</link>
-      <pubDate>Thu, 29 Sep 2016 20:05:00 +0200</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2016/09/29/how-to-test-rest-http-client-with-sap-report/</guid>
-      <description>This tutorial will explain how to check out if our SAP System can consume external or internal Web Services with a SAP report.
-Requirements  External or internal REST service to consume within SAP  Exercise Firstly, find out what is your REST service to test. In this exercise we are going to consume an internal REST Web Service from a SAP Report.
+VirtualBox openSUSE Leap 42.2 ISO file Steps Preparing the virtual machine Installing openSUSE Post-installation tasks Preparing the virtual machine Open VirtualBox and create a new virtual machine. Select Linux type and openSUSE version.
+New openSUSE virtual machine Select the amount of memory RAM. The recommendation is 4096 MB (4 GB).</description></item><item><title>How to renew the MiniSAP License</title><link>https://dalanzg.github.io/tips-tutorials/posts/2016/10/01/how-to-renew-the-minisap-license/</link><pubDate>Sat, 01 Oct 2016 16:35:00 +0200</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2016/10/01/how-to-renew-the-minisap-license/</guid><description>This tutorial will explain how to renew your MiniSAP license. If you want to know how to install MiniSAP, check out this post:
+How to install MiniSAP. When logging into MiniSAP, we may get two different pop-up windows:
+Warning about our license will expire soon Error about license expired Expired license warning. Go to SLICENSE and get your Active Hardware Key.
+Active Hardware Key in SLICENSE transaction Go to http://www.</description></item><item><title>How to test REST Http Client with SAP report</title><link>https://dalanzg.github.io/tips-tutorials/posts/2016/09/29/how-to-test-rest-http-client-with-sap-report/</link><pubDate>Thu, 29 Sep 2016 20:05:00 +0200</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2016/09/29/how-to-test-rest-http-client-with-sap-report/</guid><description>This tutorial will explain how to check out if our SAP System can consume external or internal Web Services with a SAP report.
+Requirements External or internal REST service to consume within SAP Exercise Firstly, find out what is your REST service to test. In this exercise we are going to consume an internal REST Web Service from a SAP Report.
 GET -&amp;gt; http://hostname:port/zrest?myVar=50
 Response:
-{&amp;#34;message&amp;#34;: You have entered myVar=50 as query parameter.</description>
-    </item>
-    
-    <item>
-      <title>How to publish REST Web Service in SAP</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2016/09/25/how-to-publish-rest-web-service-in-sap/</link>
-      <pubDate>Sun, 25 Sep 2016 23:05:00 +0200</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2016/09/25/how-to-publish-rest-web-service-in-sap/</guid>
-      <description>This tutorial will explain how to publish REST Web Service when SAP Netweaver Gateway is not available.
+{&amp;#34;message&amp;#34;: You have entered myVar=50 as query parameter.</description></item><item><title>How to publish REST Web Service in SAP</title><link>https://dalanzg.github.io/tips-tutorials/posts/2016/09/25/how-to-publish-rest-web-service-in-sap/</link><pubDate>Sun, 25 Sep 2016 23:05:00 +0200</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2016/09/25/how-to-publish-rest-web-service-in-sap/</guid><description>This tutorial will explain how to publish REST Web Service when SAP Netweaver Gateway is not available.
 Exercise Go to http://hostname:port/zrest?myVar=50 and the server will respond with the following content:
 {&amp;#34;message&amp;#34;: You have entered myVar=50 as query parameter.&amp;#34;} Be in mind that this content could be JSON or XML format. In this exercise, it is a basic JSON object.
-Create custom class Firstly, create a class object with IF_HTTP_EXTENSION interface.</description>
-    </item>
-    
-    <item>
-      <title>How to fill flight model in SAP Netweaver ABAP Trial 7.03 SP04</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2016/07/16/how-to-fill-flight-model-in-sap-netweaver-abap-trial-7.03-sp04/</link>
-      <pubDate>Sat, 16 Jul 2016 09:00:00 +0200</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2016/07/16/how-to-fill-flight-model-in-sap-netweaver-abap-trial-7.03-sp04/</guid>
-      <description>This tutorial will explain how to fill flight model in SAP Netweaver.
-Flight model    Table Description Keys     T000 Client client   SCURX Currencies currency   SBUSPART Business partner client, partner number   STRAVELAG Travel agencies client, travel agency number   SCUSTOM Customers client, customer number   SCARR Carriers client, carrier ID   SCOUNTER Sales counters client, carrier ID, sales counter number   SPFLI Flight schedule client, carrier ID, connection number   SFLIGHT Flights client, carrier ID, connection number, date of flight   SBOOK Flight bookings client, carrier ID, connection number, date of flight, booking number, customer number    Run the following report in SE38 transaction:</description>
-    </item>
-    
-    <item>
-      <title>How to enable SOAMANAGER in SAP Netweaver ABAP Trial 7.03 SP04</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2016/07/14/how-to-enable-soamanager-in-sap-netweaver-abap-trial-7.03-sp04/</link>
-      <pubDate>Thu, 14 Jul 2016 19:00:00 +0200</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2016/07/14/how-to-enable-soamanager-in-sap-netweaver-abap-trial-7.03-sp04/</guid>
-      <description>This tutorial will explain how to enable SOAMANAGER in SAP Netweaver ABAP Trial 7.03.
+Create custom class Firstly, create a class object with IF_HTTP_EXTENSION interface.</description></item><item><title>How to fill flight model in SAP Netweaver ABAP Trial 7.03 SP04</title><link>https://dalanzg.github.io/tips-tutorials/posts/2016/07/16/how-to-fill-flight-model-in-sap-netweaver-abap-trial-7.03-sp04/</link><pubDate>Sat, 16 Jul 2016 09:00:00 +0200</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2016/07/16/how-to-fill-flight-model-in-sap-netweaver-abap-trial-7.03-sp04/</guid><description>This tutorial will explain how to fill flight model in SAP Netweaver.
+Flight model Table Description Keys T000 Client client SCURX Currencies currency SBUSPART Business partner client, partner number STRAVELAG Travel agencies client, travel agency number SCUSTOM Customers client, customer number SCARR Carriers client, carrier ID SCOUNTER Sales counters client, carrier ID, sales counter number SPFLI Flight schedule client, carrier ID, connection number SFLIGHT Flights client, carrier ID, connection number, date of flight SBOOK Flight bookings client, carrier ID, connection number, date of flight, booking number, customer number Run the following report in SE38 transaction:</description></item><item><title>How to enable SOAMANAGER in SAP Netweaver ABAP Trial 7.03 SP04</title><link>https://dalanzg.github.io/tips-tutorials/posts/2016/07/14/how-to-enable-soamanager-in-sap-netweaver-abap-trial-7.03-sp04/</link><pubDate>Thu, 14 Jul 2016 19:00:00 +0200</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2016/07/14/how-to-enable-soamanager-in-sap-netweaver-abap-trial-7.03-sp04/</guid><description>This tutorial will explain how to enable SOAMANAGER in SAP Netweaver ABAP Trial 7.03.
 Requirements A virtual machine with:
- Windows 7 and SAP Netweaver ABAP Trial Web GUI for SAP Netweaver enabled  Issue When accessing SOAMANAGER, error code 403 turns up.
-Error code 403 SOAMANAGER  If we get error code 500, check Web GUI for Netweaver works properly. It is explained in the installation post
-Solution Go to SICF transaction, and activate the following service:</description>
-    </item>
-    
-    <item>
-      <title>How to install SAP Netweaver ABAP Trial 7.03 SP04 on Windows 7</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2016/07/12/how-to-install-sap-netweaver-abap-trial-7.03-sp04-on-windows-7/</link>
-      <pubDate>Tue, 12 Jul 2016 17:00:00 +0200</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2016/07/12/how-to-install-sap-netweaver-abap-trial-7.03-sp04-on-windows-7/</guid>
-      <description>This tutorial will explain how to install SAP Netweaver ABAP Trial 7.03 in a virtual machine.
+Windows 7 and SAP Netweaver ABAP Trial Web GUI for SAP Netweaver enabled Issue When accessing SOAMANAGER, error code 403 turns up.
+Error code 403 SOAMANAGER If we get error code 500, check Web GUI for Netweaver works properly. It is explained in the installation post
+Solution Go to SICF transaction, and activate the following service:</description></item><item><title>How to install SAP Netweaver ABAP Trial 7.03 SP04 on Windows 7</title><link>https://dalanzg.github.io/tips-tutorials/posts/2016/07/12/how-to-install-sap-netweaver-abap-trial-7.03-sp04-on-windows-7/</link><pubDate>Tue, 12 Jul 2016 17:00:00 +0200</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2016/07/12/how-to-install-sap-netweaver-abap-trial-7.03-sp04-on-windows-7/</guid><description>This tutorial will explain how to install SAP Netweaver ABAP Trial 7.03 in a virtual machine.
 Requirements A virtual machine with:
- Windows 7 At least 4 GB RAM 80 GB hard disk space temporary during installation - 36 GB permanent. The faster the better  Other things:
- Java JRE 1.5 installer A SCN account SAP Netweaver ABAP Trial 7.03 SP04 installer  Steps  Add Microsoft Loopback Adapter Install Java JRE Install SAP Netweaver Install a trial license key Enable Web GUI for SAP Netweaver  Add Microsoft Loopback Adapter A network adapter with static IP address is needed.</description>
-    </item>
-    
-    <item>
-      <title>How to fix warning about ECDSA host key when SSH connection</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2016/06/03/how-to-fix-warning-about-ecdsa-host-key-when-ssh-connection/</link>
-      <pubDate>Fri, 03 Jun 2016 18:00:00 +0200</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2016/06/03/how-to-fix-warning-about-ecdsa-host-key-when-ssh-connection/</guid>
-      <description>This tutorial will explain how to fix warning about ECDSA host key when SSH connection.
+Windows 7 At least 4 GB RAM 80 GB hard disk space temporary during installation - 36 GB permanent. The faster the better Other things:
+Java JRE 1.5 installer A SCN account SAP Netweaver ABAP Trial 7.03 SP04 installer Steps Add Microsoft Loopback Adapter Install Java JRE Install SAP Netweaver Install a trial license key Enable Web GUI for SAP Netweaver Add Microsoft Loopback Adapter A network adapter with static IP address is needed.</description></item><item><title>How to fix warning about ECDSA host key when SSH connection</title><link>https://dalanzg.github.io/tips-tutorials/posts/2016/06/03/how-to-fix-warning-about-ecdsa-host-key-when-ssh-connection/</link><pubDate>Fri, 03 Jun 2016 18:00:00 +0200</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2016/06/03/how-to-fix-warning-about-ecdsa-host-key-when-ssh-connection/</guid><description>This tutorial will explain how to fix warning about ECDSA host key when SSH connection.
 When establishing a new SSH connection, a fingerprint is cached. Hence, if you use the same IP address for several machines, a warning message can turn up.
-$ ssh dalanz@192.168.56.101 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ @ WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED! @ @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY! Someone could be eavesdropping on you right now (man-in-the-middle attack)!</description>
-    </item>
-    
-    <item>
-      <title>How to install Windows Server 2012 R2 on VirtualBox</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2016/05/22/how-to-install-windows-server-2012-r2-on-virtualbox/</link>
-      <pubDate>Sun, 22 May 2016 09:45:00 +0200</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2016/05/22/how-to-install-windows-server-2012-r2-on-virtualbox/</guid>
-      <description>This tutorial will explain how to install Windows Server 2012 R2 in a virtual machine.
+$ ssh dalanz@192.168.56.101 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ @ WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED! @ @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY! Someone could be eavesdropping on you right now (man-in-the-middle attack)!</description></item><item><title>How to install Windows Server 2012 R2 on VirtualBox</title><link>https://dalanzg.github.io/tips-tutorials/posts/2016/05/22/how-to-install-windows-server-2012-r2-on-virtualbox/</link><pubDate>Sun, 22 May 2016 09:45:00 +0200</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2016/05/22/how-to-install-windows-server-2012-r2-on-virtualbox/</guid><description>This tutorial will explain how to install Windows Server 2012 R2 in a virtual machine.
 First, you need to have Windows Server 2012 R2 ISO file and VirtualBox installed.
 Create a new virtual machine on VirtualBox by clicking on New. Select type and version of the virtual machine. In this case, Windows 2012 (64-bits).
-Create new virtual machine  Set the amount of memory (RAM). I selected 4096 MB (4 GB).</description>
-    </item>
-    
-    <item>
-      <title>How to get parameters from XML Properties File</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2016/05/14/how-to-get-parameters-from-xml-properties-file/</link>
-      <pubDate>Sat, 14 May 2016 18:00:00 +0200</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2016/05/14/how-to-get-parameters-from-xml-properties-file/</guid>
-      <description>Parameters are read from XML properties file and printed on console.
+Create new virtual machine Set the amount of memory (RAM). I selected 4096 MB (4 GB).</description></item><item><title>How to get parameters from XML Properties File</title><link>https://dalanzg.github.io/tips-tutorials/posts/2016/05/14/how-to-get-parameters-from-xml-properties-file/</link><pubDate>Sat, 14 May 2016 18:00:00 +0200</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2016/05/14/how-to-get-parameters-from-xml-properties-file/</guid><description>Parameters are read from XML properties file and printed on console.
 XML Properties File The content of XML Properties File is the following:
 &amp;lt;?xml version=&amp;#34;1.0&amp;#34;?&amp;gt; &amp;lt;properties&amp;gt; &amp;lt;name&amp;gt;Daniel&amp;lt;/name&amp;gt; &amp;lt;lastName&amp;gt;Lanza&amp;lt;/lastName&amp;gt; &amp;lt;age&amp;gt;29&amp;lt;/age&amp;gt; &amp;lt;/properties&amp;gt; And the file is located in the desktop:
- /Users/dalanz/Desktop/person.xml  User Java class package com.dalanz.file; import java.io.File; import javax.xml.parsers.DocumentBuilder; import javax.xml.parsers.DocumentBuilderFactory; import org.w3c.dom.Document; import org.w3c.dom.NodeList; public class ReadPropertiesXML { private File fileSource; public ReadPropertiesXML (File fileSource) { this.fileSource = fileSource; } public String getProperty(String key) { try { DocumentBuilderFactory dbFactory = DocumentBuilderFactory.</description>
-    </item>
-    
-    <item>
-      <title>How to get parameters from Java Properties File</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2016/05/13/how-to-get-parameters-from-java-properties-file/</link>
-      <pubDate>Fri, 13 May 2016 21:00:00 +0200</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2016/05/13/how-to-get-parameters-from-java-properties-file/</guid>
-      <description>Parameters are read from Java properties file and printed on console.
+/Users/dalanz/Desktop/person.xml User Java class package com.dalanz.file; import java.io.File; import javax.xml.parsers.DocumentBuilder; import javax.xml.parsers.DocumentBuilderFactory; import org.w3c.dom.Document; import org.w3c.dom.NodeList; public class ReadPropertiesXML { private File fileSource; public ReadPropertiesXML (File fileSource) { this.fileSource = fileSource; } public String getProperty(String key) { try { DocumentBuilderFactory dbFactory = DocumentBuilderFactory.</description></item><item><title>How to get parameters from Java Properties File</title><link>https://dalanzg.github.io/tips-tutorials/posts/2016/05/13/how-to-get-parameters-from-java-properties-file/</link><pubDate>Fri, 13 May 2016 21:00:00 +0200</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2016/05/13/how-to-get-parameters-from-java-properties-file/</guid><description>Parameters are read from Java properties file and printed on console.
 Java Properties File The content of Java Properties File is the following:
 name = Daniel lastName = Lanza age = 29 And the file is located in the desktop:
- /Users/dalanz/Desktop/test.properties  User Java class package com.dalanz.file; import java.io.FileInputStream; import java.io.IOException; import java.io.InputStream; import java.util.Properties; public class ReadProperties { private String fileSource; public ReadProperties (String fileSource) { this.fileSource = fileSource; } public String getProperty(String key) { Properties prop = new Properties(); InputStream input = null; try { input = new FileInputStream(this.</description>
-    </item>
-    
-    <item>
-      <title>How to install Alfresco Community Edition 5.1 in Ubuntu Server 14.04</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2016/05/07/how-to-install-alfresco-community-edition-5.1-in-ubuntu-server-14.04/</link>
-      <pubDate>Sat, 07 May 2016 14:00:00 +0200</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2016/05/07/how-to-install-alfresco-community-edition-5.1-in-ubuntu-server-14.04/</guid>
-      <description>This tutorial will explain how to install Alfresco Community Edition 5.1 in Ubuntu Server 14.04. In this example, Ubuntu Server is a virtual machine made by VirtualBox.
-Requirements  Ubuntu Server virtual machine with:  Two network adapters: NAT adapter (eth0) Host-only adapter (eth1) with a static IP address -&amp;gt; 192.168.56.101 Base memory: 4608 Mb 2 CPUs  Alfresco Community Edition binary file -&amp;gt; alfresco-community-installer-201604-linux-x64.bin  Check out how to install Ubuntu Server on VirtualBox to get ready a virtual machine to install Alfresco Community Edition.</description>
-    </item>
-    
-    <item>
-      <title>How to connect to your MySQL database remotely</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2016/05/02/how-to-connect-to-your-mysql-database-remotely/</link>
-      <pubDate>Mon, 02 May 2016 12:00:00 +0200</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2016/05/02/how-to-connect-to-your-mysql-database-remotely/</guid>
-      <description>This tutorial will explain how to connect remotely to MySQL database. In this example, MySQL server is installed in Ubuntu Server virtual machine with VirtualBox.
-Requirements  Ubuntu Server virtual machine with MySQL:
- Two network adapters: NAT adapter (eth0) Host-only adapter (eth1) with a static IP address -&amp;gt; 192.168.56.101. Database name: mybb  MySQL client:
- Toad World   Expose MySQL server To expose MySQL to anything other than localhost you will have to expose the IP address.</description>
-    </item>
-    
-    <item>
-      <title>Install MyBB on Ubuntu Server</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2016/04/21/install-mybb-on-ubuntu-server/</link>
-      <pubDate>Thu, 21 Apr 2016 15:00:00 +0200</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2016/04/21/install-mybb-on-ubuntu-server/</guid>
-      <description>This tutorial will explain how to install MyBB in Ubuntu Server.
+/Users/dalanz/Desktop/test.properties User Java class package com.dalanz.file; import java.io.FileInputStream; import java.io.IOException; import java.io.InputStream; import java.util.Properties; public class ReadProperties { private String fileSource; public ReadProperties (String fileSource) { this.fileSource = fileSource; } public String getProperty(String key) { Properties prop = new Properties(); InputStream input = null; try { input = new FileInputStream(this.</description></item><item><title>How to install Alfresco Community Edition 5.1 in Ubuntu Server 14.04</title><link>https://dalanzg.github.io/tips-tutorials/posts/2016/05/07/how-to-install-alfresco-community-edition-5.1-in-ubuntu-server-14.04/</link><pubDate>Sat, 07 May 2016 14:00:00 +0200</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2016/05/07/how-to-install-alfresco-community-edition-5.1-in-ubuntu-server-14.04/</guid><description>This tutorial will explain how to install Alfresco Community Edition 5.1 in Ubuntu Server 14.04. In this example, Ubuntu Server is a virtual machine made by VirtualBox.
+Requirements Ubuntu Server virtual machine with: Two network adapters: NAT adapter (eth0) Host-only adapter (eth1) with a static IP address -&amp;gt; 192.168.56.101 Base memory: 4608 Mb 2 CPUs Alfresco Community Edition binary file -&amp;gt; alfresco-community-installer-201604-linux-x64.bin Check out how to install Ubuntu Server on VirtualBox to get ready a virtual machine to install Alfresco Community Edition.</description></item><item><title>How to connect to your MySQL database remotely</title><link>https://dalanzg.github.io/tips-tutorials/posts/2016/05/02/how-to-connect-to-your-mysql-database-remotely/</link><pubDate>Mon, 02 May 2016 12:00:00 +0200</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2016/05/02/how-to-connect-to-your-mysql-database-remotely/</guid><description>This tutorial will explain how to connect remotely to MySQL database. In this example, MySQL server is installed in Ubuntu Server virtual machine with VirtualBox.
+Requirements Ubuntu Server virtual machine with MySQL:
+Two network adapters: NAT adapter (eth0) Host-only adapter (eth1) with a static IP address -&amp;gt; 192.168.56.101. Database name: mybb MySQL client:
+Toad World Expose MySQL server To expose MySQL to anything other than localhost you will have to expose the IP address.</description></item><item><title>Install MyBB on Ubuntu Server</title><link>https://dalanzg.github.io/tips-tutorials/posts/2016/04/21/install-mybb-on-ubuntu-server/</link><pubDate>Thu, 21 Apr 2016 15:00:00 +0200</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2016/04/21/install-mybb-on-ubuntu-server/</guid><description>This tutorial will explain how to install MyBB in Ubuntu Server.
 Requirements A Ubuntu Server virtual machine with:
- MySQL Apache FTP Samba  Check out these posts to get ready:
- How to install Ubuntu Server on VirtualBox Setting up a Virtual Web Server with VirtualBox, Apache, MySQL, FTP, Ubuntu, and Samba  Our virtual machine has two network adapters. The second one (eth1) is a host-only adapter with a static IP address -&amp;gt; 192.</description>
-    </item>
-    
-    <item>
-      <title>Setting up a Virtual Web Server with VirtualBox, Apache, MySQL, FTP, Ubuntu, and Samba</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2016/04/17/setting-up-a-virtual-web-server-with-virtualbox-apache-mysql-ftp-ubuntu-and-samba/</link>
-      <pubDate>Sun, 17 Apr 2016 15:00:00 +0200</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2016/04/17/setting-up-a-virtual-web-server-with-virtualbox-apache-mysql-ftp-ubuntu-and-samba/</guid>
-      <description>This tutorial will explain how to set up a Ubuntu Server virtual machine with:
- Apache FTP Samba  First, check out how to install Ubuntu Server on VirtualBox to get ready a virtual machine to test.
+MySQL Apache FTP Samba Check out these posts to get ready:
+How to install Ubuntu Server on VirtualBox Setting up a Virtual Web Server with VirtualBox, Apache, MySQL, FTP, Ubuntu, and Samba Our virtual machine has two network adapters. The second one (eth1) is a host-only adapter with a static IP address -&amp;gt; 192.</description></item><item><title>Setting up a Virtual Web Server with VirtualBox, Apache, MySQL, FTP, Ubuntu, and Samba</title><link>https://dalanzg.github.io/tips-tutorials/posts/2016/04/17/setting-up-a-virtual-web-server-with-virtualbox-apache-mysql-ftp-ubuntu-and-samba/</link><pubDate>Sun, 17 Apr 2016 15:00:00 +0200</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2016/04/17/setting-up-a-virtual-web-server-with-virtualbox-apache-mysql-ftp-ubuntu-and-samba/</guid><description>This tutorial will explain how to set up a Ubuntu Server virtual machine with:
+Apache FTP Samba First, check out how to install Ubuntu Server on VirtualBox to get ready a virtual machine to test.
 Our virtual machine has two network adapters. The second one (eth1) is a host-only adapter with a static IP address -&amp;gt; 192.168.56.101
-Apache Web Server Apache Web Server needs to be running. The installation and configuration was indicated in the previous post.</description>
-    </item>
-    
-    <item>
-      <title>Install Ubuntu Server 14.04.4 on VirtualBox</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2016/04/15/install-ubuntu-server-14.04.4-on-virtualbox/</link>
-      <pubDate>Fri, 15 Apr 2016 22:45:00 +0200</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2016/04/15/install-ubuntu-server-14.04.4-on-virtualbox/</guid>
-      <description>This tutorial will explain how to install Ubuntu Server on a virtual machine.
+Apache Web Server Apache Web Server needs to be running. The installation and configuration was indicated in the previous post.</description></item><item><title>Install Ubuntu Server 14.04.4 on VirtualBox</title><link>https://dalanzg.github.io/tips-tutorials/posts/2016/04/15/install-ubuntu-server-14.04.4-on-virtualbox/</link><pubDate>Fri, 15 Apr 2016 22:45:00 +0200</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2016/04/15/install-ubuntu-server-14.04.4-on-virtualbox/</guid><description>This tutorial will explain how to install Ubuntu Server on a virtual machine.
 First, you need to have Ubuntu Server ISO file and VirtualBox installed.
- VirtualBox Ubuntu Server  Create a new virtual machine on VirtualBox by clicking on New.
-Create new virtual machine  Select type and version of the virtual machine. In this case, Linux and Ubuntu (64-bits).
-Select type and version of the virtual machine  Select the amount of memory (RAM).</description>
-    </item>
-    
-    <item>
-      <title>How to create .bash_profile file on Mac OS X</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2016/04/09/how-to-create-.bash_profile-file-on-mac-os-x/</link>
-      <pubDate>Sat, 09 Apr 2016 22:00:00 +0200</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2016/04/09/how-to-create-.bash_profile-file-on-mac-os-x/</guid>
-      <description>By default, your system does not have the .bash_profile file for your user. Therefore you will need to create it to set environment variables for your current user when starting new session.
+VirtualBox Ubuntu Server Create a new virtual machine on VirtualBox by clicking on New.
+Create new virtual machine Select type and version of the virtual machine. In this case, Linux and Ubuntu (64-bits).
+Select type and version of the virtual machine Select the amount of memory (RAM).</description></item><item><title>How to create .bash_profile file on Mac OS X</title><link>https://dalanzg.github.io/tips-tutorials/posts/2016/04/09/how-to-create-.bash_profile-file-on-mac-os-x/</link><pubDate>Sat, 09 Apr 2016 22:00:00 +0200</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2016/04/09/how-to-create-.bash_profile-file-on-mac-os-x/</guid><description>By default, your system does not have the .bash_profile file for your user. Therefore you will need to create it to set environment variables for your current user when starting new session.
 In this tutorial, we are going to create a .bash_profile to set $JAVA_HOME environment variable.
- First, we are going to check out that .bash_profile does not exist.
-$ ls ~/.bash_profile The file /Users/dalanz/.bash_profile does not exist. Go to user home and create the .</description>
-    </item>
-    
-    <item>
-      <title>How to use Sass with Jekyll (Bootstrap and Font Awesome example)</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2016/03/25/how-to-use-sass-with-jekyll-bootstrap-and-font-awesome-example/</link>
-      <pubDate>Fri, 25 Mar 2016 10:00:00 +0100</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2016/03/25/how-to-use-sass-with-jekyll-bootstrap-and-font-awesome-example/</guid>
-      <description>This post will explain how to use Bootstrap and Font Awesome Sass files in a Jekyll project.
+First, we are going to check out that .bash_profile does not exist.
+$ ls ~/.bash_profile The file /Users/dalanz/.bash_profile does not exist. Go to user home and create the .</description></item><item><title>How to use Sass with Jekyll (Bootstrap and Font Awesome example)</title><link>https://dalanzg.github.io/tips-tutorials/posts/2016/03/25/how-to-use-sass-with-jekyll-bootstrap-and-font-awesome-example/</link><pubDate>Fri, 25 Mar 2016 10:00:00 +0100</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2016/03/25/how-to-use-sass-with-jekyll-bootstrap-and-font-awesome-example/</guid><description>This post will explain how to use Bootstrap and Font Awesome Sass files in a Jekyll project.
 Download Sass packages Download the Bootstrap and Font Awosome packages from their original website:
- Bootstrap Font Awesome  Jekyll project The packages contain stylesheets, fonts and javascript files. Therefore, these files have to be placed into your Jekyll project.
-The files will be placed in a Jekyll project like this one:</description>
-    </item>
-    
-    <item>
-      <title>How to convert Java object to JSON and JSON to Java object with Gson</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2016/03/23/how-to-convert-java-object-to-json-and-json-to-java-object-with-gson/</link>
-      <pubDate>Wed, 23 Mar 2016 16:00:00 +0100</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2016/03/23/how-to-convert-java-object-to-json-and-json-to-java-object-with-gson/</guid>
-      <description>A simple Java object will become to JSON by using Gson. Besides, this will become into Java object.
-Maven dependencies &amp;lt;dependencies&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;com.google.code.gson/groupId&amp;gt; &amp;lt;artifactId&amp;gt;gson&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.6.2&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;/dependencies&amp;gt; User Java class package com.dalanz.json; import java.util.ArrayList; import java.util.List; public class User { private String firstName; private String lastName; private int age; private List&amp;lt;String&amp;gt; messages; public User(){} public User(String firstName, String lastName, int age, List&amp;lt;String&amp;gt; messages) { this.firstName = firstName; this.lastName = lastName; this.</description>
-    </item>
-    
-    <item>
-      <title>How to zip a folder and unzip a Zip file in Java</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2016/03/22/how-to-zip-a-folder-and-unzip-a-zip-file-in-java/</link>
-      <pubDate>Tue, 22 Mar 2016 16:00:20 +0100</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2016/03/22/how-to-zip-a-folder-and-unzip-a-zip-file-in-java/</guid>
-      <description>A folder with subfolders and files will be zipped. Besides, the zip file will be unzipped.
-Zip directory Java class package com.dalanz.file; import java.io.File; import java.io.FileInputStream; import java.io.FileOutputStream; import java.io.IOException; import java.util.ArrayList; import java.util.zip.ZipEntry; import java.util.zip.ZipInputStream; import java.util.zip.ZipOutputStream; public class ZipDirectory { private String folderPath; private String zipPath; private static ArrayList&amp;lt;String&amp;gt; fileList = null; private static String sourceFolder = null; public String getFolderPath() { return folderPath; } public void setFolderPath(String folderPath) { this.</description>
-    </item>
-    
-    <item>
-      <title>How to convert File into Array of Bytes, and Array of Bytes to File in Java</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2016/03/22/how-to-convert-file-into-array-of-bytes-and-array-of-bytes-to-file-in-java/</link>
-      <pubDate>Tue, 22 Mar 2016 12:00:00 +0100</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2016/03/22/how-to-convert-file-into-array-of-bytes-and-array-of-bytes-to-file-in-java/</guid>
-      <description>Array of bytes will be calculated from a file, and then, that array of bytes will be used to create a file with different filename.
-Array of bytes Java class package com.dalanz.file; import java.io.File; import java.io.FileInputStream; import java.io.FileOutputStream; public class ArrayBytesFile { // Attributes  private File file; private byte[] bFile; // Constructors  public ArrayBytesFile() { this.file = null; this.bFile = null; } public ArrayBytesFile (File file) { this.</description>
-    </item>
-    
-    <item>
-      <title>How to get MD5 checksum for a file in Java</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2016/03/22/how-to-get-md5-checksum-for-a-file-in-java/</link>
-      <pubDate>Tue, 22 Mar 2016 11:00:00 +0100</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2016/03/22/how-to-get-md5-checksum-for-a-file-in-java/</guid>
-      <description>MD5 checksum is a 128-bit hash value (32 digit hexadecimal number). This works as a fingerprint for a file which let us compare together other files to find out duplicate files.
+Bootstrap Font Awesome Jekyll project The packages contain stylesheets, fonts and javascript files. Therefore, these files have to be placed into your Jekyll project.
+The files will be placed in a Jekyll project like this one:</description></item><item><title>How to convert Java object to JSON and JSON to Java object with Gson</title><link>https://dalanzg.github.io/tips-tutorials/posts/2016/03/23/how-to-convert-java-object-to-json-and-json-to-java-object-with-gson/</link><pubDate>Wed, 23 Mar 2016 16:00:00 +0100</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2016/03/23/how-to-convert-java-object-to-json-and-json-to-java-object-with-gson/</guid><description>A simple Java object will become to JSON by using Gson. Besides, this will become into Java object.
+Maven dependencies &amp;lt;dependencies&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;com.google.code.gson/groupId&amp;gt; &amp;lt;artifactId&amp;gt;gson&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.6.2&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;/dependencies&amp;gt; User Java class package com.dalanz.json; import java.util.ArrayList; import java.util.List; public class User { private String firstName; private String lastName; private int age; private List&amp;lt;String&amp;gt; messages; public User(){} public User(String firstName, String lastName, int age, List&amp;lt;String&amp;gt; messages) { this.firstName = firstName; this.lastName = lastName; this.</description></item><item><title>How to zip a folder and unzip a Zip file in Java</title><link>https://dalanzg.github.io/tips-tutorials/posts/2016/03/22/how-to-zip-a-folder-and-unzip-a-zip-file-in-java/</link><pubDate>Tue, 22 Mar 2016 16:00:20 +0100</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2016/03/22/how-to-zip-a-folder-and-unzip-a-zip-file-in-java/</guid><description>A folder with subfolders and files will be zipped. Besides, the zip file will be unzipped.
+Zip directory Java class package com.dalanz.file; import java.io.File; import java.io.FileInputStream; import java.io.FileOutputStream; import java.io.IOException; import java.util.ArrayList; import java.util.zip.ZipEntry; import java.util.zip.ZipInputStream; import java.util.zip.ZipOutputStream; public class ZipDirectory { private String folderPath; private String zipPath; private static ArrayList&amp;lt;String&amp;gt; fileList = null; private static String sourceFolder = null; public String getFolderPath() { return folderPath; } public void setFolderPath(String folderPath) { this.</description></item><item><title>How to convert File into Array of Bytes, and Array of Bytes to File in Java</title><link>https://dalanzg.github.io/tips-tutorials/posts/2016/03/22/how-to-convert-file-into-array-of-bytes-and-array-of-bytes-to-file-in-java/</link><pubDate>Tue, 22 Mar 2016 12:00:00 +0100</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2016/03/22/how-to-convert-file-into-array-of-bytes-and-array-of-bytes-to-file-in-java/</guid><description>Array of bytes will be calculated from a file, and then, that array of bytes will be used to create a file with different filename.
+Array of bytes Java class package com.dalanz.file; import java.io.File; import java.io.FileInputStream; import java.io.FileOutputStream; public class ArrayBytesFile { // Attributes private File file; private byte[] bFile; // Constructors public ArrayBytesFile() { this.file = null; this.bFile = null; } public ArrayBytesFile (File file) { this.</description></item><item><title>How to get MD5 checksum for a file in Java</title><link>https://dalanzg.github.io/tips-tutorials/posts/2016/03/22/how-to-get-md5-checksum-for-a-file-in-java/</link><pubDate>Tue, 22 Mar 2016 11:00:00 +0100</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2016/03/22/how-to-get-md5-checksum-for-a-file-in-java/</guid><description>MD5 checksum is a 128-bit hash value (32 digit hexadecimal number). This works as a fingerprint for a file which let us compare together other files to find out duplicate files.
 These Java classes will let us calculate MD5 checksum for any single file.
-Maven dependencies &amp;lt;dependencies&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;commons-codec&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;commons-codec&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.10&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;commons-io&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;commons-io&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.4&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;/dependencies&amp;gt; MD5 Java class package com.dalanz.file; import java.io.File; import java.io.FileInputStream; import java.io.IOException; import org.</description>
-    </item>
-    
-    <item>
-      <title>How to set JAVA_HOME on Mac OS X</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2016/03/21/how-to-set-java_home-on-mac-os-x/</link>
-      <pubDate>Mon, 21 Mar 2016 18:00:00 +0100</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2016/03/21/how-to-set-java_home-on-mac-os-x/</guid>
-      <description>If you are planing to develop Java Apps on your Mac, you may have to set $JAVA_HOME environment variable.
+Maven dependencies &amp;lt;dependencies&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;commons-codec&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;commons-codec&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.10&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;commons-io&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;commons-io&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.4&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;/dependencies&amp;gt; MD5 Java class package com.dalanz.file; import java.io.File; import java.io.FileInputStream; import java.io.IOException; import org.</description></item><item><title>How to set JAVA_HOME on Mac OS X</title><link>https://dalanzg.github.io/tips-tutorials/posts/2016/03/21/how-to-set-java_home-on-mac-os-x/</link><pubDate>Mon, 21 Mar 2016 18:00:00 +0100</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2016/03/21/how-to-set-java_home-on-mac-os-x/</guid><description>If you are planing to develop Java Apps on your Mac, you may have to set $JAVA_HOME environment variable.
 Install the latest Java Virtual Machine Go to How to install JDK on Mac OS X) to install a new Java Virtual Machine. Download the latest Java JDK package from Oracle.
 Check Java Virtual Machines List directories in the following root -&amp;gt; /Library/Java/JavaVirtualMachines
-$ ls -l /Library/Java/JavaVirtualMachines drwxr-xr-x 3 root wheel 102 23 dic 20:36 jdk1.</description>
-    </item>
-    
-    <item>
-      <title>How to resolve 404 error with Tomcat Server and Eclipse</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2015/11/29/how-to-resolve-404-error-with-tomcat-server-and-eclipse/</link>
-      <pubDate>Sun, 29 Nov 2015 18:00:00 +0200</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2015/11/29/how-to-resolve-404-error-with-tomcat-server-and-eclipse/</guid>
-      <description>If you start Tomcat from Eclipse and get a 404-Error code when you go to http://localhost:8080, there is a easy way to fix the issue.
+$ ls -l /Library/Java/JavaVirtualMachines drwxr-xr-x 3 root wheel 102 23 dic 20:36 jdk1.</description></item><item><title>How to resolve 404 error with Tomcat Server and Eclipse</title><link>https://dalanzg.github.io/tips-tutorials/posts/2015/11/29/how-to-resolve-404-error-with-tomcat-server-and-eclipse/</link><pubDate>Sun, 29 Nov 2015 18:00:00 +0200</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2015/11/29/how-to-resolve-404-error-with-tomcat-server-and-eclipse/</guid><description>If you start Tomcat from Eclipse and get a 404-Error code when you go to http://localhost:8080, there is a easy way to fix the issue.
 Just go to Properties for Tomcat (right click on Tomcat - Servers Tab)
-Switch location Tomcat Properties  Switch location from [workspace metadata] to [/Servers/Tomcat v&amp;hellip;]
+Switch location Tomcat Properties Switch location from [workspace metadata] to [/Servers/Tomcat v&amp;hellip;]
 Restart Tomcat from Eclipse and go back to http://localhost:8080. You will see Tomcat configuration page.
-Tomcat configuration page  </description>
-    </item>
-    
-    <item>
-      <title>How to install JDK 8 on Mac OS X</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2015/11/22/how-to-install-jdk-8-on-mac-os-x/</link>
-      <pubDate>Sun, 22 Nov 2015 18:00:00 +0200</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2015/11/22/how-to-install-jdk-8-on-mac-os-x/</guid>
-      <description>If you are planing to develop Java Apps on your Mac, you have to install the JDK package. You only have to install the binary files provided by Oracle.
- Download JDK 8 from Oracle WebSite. [jdk-8u65-macosx-x64.dmg for Mac]. Double click on jdk-8u65-macosx-x64.dmg and follow the screen instructions. JDK package will have been installed in /Library/Java/JavaVirtualMachines. In my computer, I have both 1.6 and 1.8 JDK package.
-$ ls -l /Library/Java/JavaVirtualMachines drwxr-xr-x 3 root wheel 102 14 jul 23:52 1.</description>
-    </item>
-    
-    <item>
-      <title>How to install Tomcat 7 on Mac OS X</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2015/11/21/how-to-install-tomcat-7-on-mac-os-x/</link>
-      <pubDate>Sat, 21 Nov 2015 18:00:00 +0200</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2015/11/21/how-to-install-tomcat-7-on-mac-os-x/</guid>
-      <description>Requirements: Java (at least 1.6).
+Tomcat configuration page</description></item><item><title>How to install JDK 8 on Mac OS X</title><link>https://dalanzg.github.io/tips-tutorials/posts/2015/11/22/how-to-install-jdk-8-on-mac-os-x/</link><pubDate>Sun, 22 Nov 2015 18:00:00 +0200</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2015/11/22/how-to-install-jdk-8-on-mac-os-x/</guid><description>If you are planing to develop Java Apps on your Mac, you have to install the JDK package. You only have to install the binary files provided by Oracle.
+Download JDK 8 from Oracle WebSite [jdk-8u65-macosx-x64.dmg for Mac] Double click on jdk-8u65-macosx-x64.dmg and follow the screen instructions JDK package will have been installed in /Library/Java/JavaVirtualMachines. In my computer, I have both 1.6 and 1.8 JDK package
+$ ls -l /Library/Java/JavaVirtualMachines drwxr-xr-x 3 root wheel 102 14 jul 23:52 1.</description></item><item><title>How to install Tomcat 7 on Mac OS X</title><link>https://dalanzg.github.io/tips-tutorials/posts/2015/11/21/how-to-install-tomcat-7-on-mac-os-x/</link><pubDate>Sat, 21 Nov 2015 18:00:00 +0100</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2015/11/21/how-to-install-tomcat-7-on-mac-os-x/</guid><description>Requirements: Java (at least 1.6).
 First, check your java version by opening the terminal:
 $ java -version java version &amp;#34;1.8.0_65&amp;#34; Java(TM) SE Runtime Environment (build 1.8.0_65-b17) Java HotSpot(TM) 64-Bit Server VM (build 25.65-b01, mixed mode) Follow these steps:
- Download the binary Core Distribution from the original website (apache-tomcat-7.0.65.tar.gz): Apache Tomcat 7 Unzip the file downloaded Create a Tomcat folder in /Library. There we can leave several Tomcat versions to test</description>
-    </item>
-    
-    <item>
-      <title>Meta Tags for Blogger to share your posts on Facebook and Twitter</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2015/08/30/meta-tags-for-blogger-to-share-your-posts-on-facebook-and-twitter/</link>
-      <pubDate>Sun, 30 Aug 2015 18:00:00 +0200</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2015/08/30/meta-tags-for-blogger-to-share-your-posts-on-facebook-and-twitter/</guid>
-      <description>When it comes to sharing a post on Facebook and Twitter, you would like to customize their contents such as the title, image, summary and so on. This article will explain how to configure your blogger template to share your Blogger posts on Facebook and Twitter.
+Download the binary Core Distribution from the original website (apache-tomcat-7.0.65.tar.gz): Apache Tomcat 7 Unzip the file downloaded Create a Tomcat folder in /Library. There we can leave several Tomcat versions to test</description></item><item><title>Meta Tags for Blogger to share your posts on Facebook and Twitter</title><link>https://dalanzg.github.io/tips-tutorials/posts/2015/08/30/meta-tags-for-blogger-to-share-your-posts-on-facebook-and-twitter/</link><pubDate>Sun, 30 Aug 2015 18:00:00 +0200</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2015/08/30/meta-tags-for-blogger-to-share-your-posts-on-facebook-and-twitter/</guid><description>When it comes to sharing a post on Facebook and Twitter, you would like to customize their contents such as the title, image, summary and so on. This article will explain how to configure your blogger template to share your Blogger posts on Facebook and Twitter.
 To check a preview, please place your post URL in the following websites:
- Facebook Debugger Twitter Card Validator  I would recommend to check the preview before and after this change.</description>
-    </item>
-    
-    <item>
-      <title>How to choose the first image on Blogger</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2015/08/16/how-to-choose-the-first-image-on-blogger/</link>
-      <pubDate>Sun, 16 Aug 2015 18:00:00 +0200</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2015/08/16/how-to-choose-the-first-image-on-blogger/</guid>
-      <description>This article will explain how to customize your Index Page regarding images from posts. It is very common to use the following data tag data:post.firstImageUrl to retrieve an image url for the post, but the drawback is that it is the first image.
+Facebook Debugger Twitter Card Validator I would recommend to check the preview before and after this change.</description></item><item><title>How to choose the first image on Blogger</title><link>https://dalanzg.github.io/tips-tutorials/posts/2015/08/16/how-to-choose-the-first-image-on-blogger/</link><pubDate>Sun, 16 Aug 2015 18:00:00 +0200</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2015/08/16/how-to-choose-the-first-image-on-blogger/</guid><description>This article will explain how to customize your Index Page regarding images from posts. It is very common to use the following data tag data:post.firstImageUrl to retrieve an image url for the post, but the drawback is that it is the first image.
 The HTML code for Index Page to get an image url of the post is the following:
-&amp;lt;img expr:alt=&amp;#39;data:post.title&amp;#39; expr:src=&amp;#39;data:post.firstImageUrl&amp;#39; expr:title=&amp;#39;data:post.title&amp;#39; /&amp;gt; It is possible to select the image that you want for your index, and it is to trick the post entry.</description>
-    </item>
-    
-  </channel>
-</rss>
+&amp;lt;img expr:alt=&amp;#39;data:post.title&amp;#39; expr:src=&amp;#39;data:post.firstImageUrl&amp;#39; expr:title=&amp;#39;data:post.title&amp;#39; /&amp;gt; It is possible to select the image that you want for your index, and it is to trick the post entry.</description></item></channel></rss>

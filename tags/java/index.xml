@@ -1,118 +1,22 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>java on Tips and Tutorials</title>
-    <link>https://dalanzg.github.io/tips-tutorials/tags/java/</link>
-    <description>Recent content in java on Tips and Tutorials</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>Copyright. Tips and Tutorials. All rights reserved.</copyright>
-    <lastBuildDate>Sat, 18 Mar 2017 14:14:00 +0100</lastBuildDate>
-    
-	<atom:link href="https://dalanzg.github.io/tips-tutorials/tags/java/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Change OpenJDK to Oracle JDK in openSUSE</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2017/03/18/change-openjdk-to-oracle-jdk-in-opensuse/</link>
-      <pubDate>Sat, 18 Mar 2017 14:14:00 +0100</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2017/03/18/change-openjdk-to-oracle-jdk-in-opensuse/</guid>
-      <description>When installing openSUSE, OpenJDK is installed by default. This tutorial will explain how to change to Oracle JDK.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>java on Tips and Tutorials</title><link>https://dalanzg.github.io/tips-tutorials/tags/java/</link><description>Recent content in java on Tips and Tutorials</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Copyright. Tips and Tutorials. All rights reserved.</copyright><lastBuildDate>Sat, 18 Mar 2017 14:14:00 +0100</lastBuildDate><atom:link href="https://dalanzg.github.io/tips-tutorials/tags/java/index.xml" rel="self" type="application/rss+xml"/><item><title>Change OpenJDK to Oracle JDK in openSUSE</title><link>https://dalanzg.github.io/tips-tutorials/posts/2017/03/18/change-openjdk-to-oracle-jdk-in-opensuse/</link><pubDate>Sat, 18 Mar 2017 14:14:00 +0100</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2017/03/18/change-openjdk-to-oracle-jdk-in-opensuse/</guid><description>When installing openSUSE, OpenJDK is installed by default. This tutorial will explain how to change to Oracle JDK.
 dalanz@linux-geij:~&amp;gt; java -version openjdk version &amp;#34;1.8.0_121&amp;#34; OpenJDK Runtime Environment (IcedTea 3.3.0) (suse-8.1-x86_64) OpenJDK 64-Bit Server VM (build 25.121-b13, mixed mode) Requirements You will need the following:
- Oracle JDK 8  Steps  Download Oracle JDK 8. This case will be Linux x64 (jdk-8u121-linux-x64.tar.gz).
- Unzip jdk-8u121-linux-x64.tar.gz file and change the ownership</description>
-    </item>
-    
-    <item>
-      <title>How to get parameters from XML Properties File</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2016/05/14/how-to-get-parameters-from-xml-properties-file/</link>
-      <pubDate>Sat, 14 May 2016 18:00:00 +0200</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2016/05/14/how-to-get-parameters-from-xml-properties-file/</guid>
-      <description>Parameters are read from XML properties file and printed on console.
+Oracle JDK 8 Steps Download Oracle JDK 8. This case will be Linux x64 (jdk-8u121-linux-x64.tar.gz).
+Unzip jdk-8u121-linux-x64.tar.gz file and change the ownership</description></item><item><title>How to get parameters from XML Properties File</title><link>https://dalanzg.github.io/tips-tutorials/posts/2016/05/14/how-to-get-parameters-from-xml-properties-file/</link><pubDate>Sat, 14 May 2016 18:00:00 +0200</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2016/05/14/how-to-get-parameters-from-xml-properties-file/</guid><description>Parameters are read from XML properties file and printed on console.
 XML Properties File The content of XML Properties File is the following:
 &amp;lt;?xml version=&amp;#34;1.0&amp;#34;?&amp;gt; &amp;lt;properties&amp;gt; &amp;lt;name&amp;gt;Daniel&amp;lt;/name&amp;gt; &amp;lt;lastName&amp;gt;Lanza&amp;lt;/lastName&amp;gt; &amp;lt;age&amp;gt;29&amp;lt;/age&amp;gt; &amp;lt;/properties&amp;gt; And the file is located in the desktop:
- /Users/dalanz/Desktop/person.xml  User Java class package com.dalanz.file; import java.io.File; import javax.xml.parsers.DocumentBuilder; import javax.xml.parsers.DocumentBuilderFactory; import org.w3c.dom.Document; import org.w3c.dom.NodeList; public class ReadPropertiesXML { private File fileSource; public ReadPropertiesXML (File fileSource) { this.fileSource = fileSource; } public String getProperty(String key) { try { DocumentBuilderFactory dbFactory = DocumentBuilderFactory.</description>
-    </item>
-    
-    <item>
-      <title>How to get parameters from Java Properties File</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2016/05/13/how-to-get-parameters-from-java-properties-file/</link>
-      <pubDate>Fri, 13 May 2016 21:00:00 +0200</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2016/05/13/how-to-get-parameters-from-java-properties-file/</guid>
-      <description>Parameters are read from Java properties file and printed on console.
+/Users/dalanz/Desktop/person.xml User Java class package com.dalanz.file; import java.io.File; import javax.xml.parsers.DocumentBuilder; import javax.xml.parsers.DocumentBuilderFactory; import org.w3c.dom.Document; import org.w3c.dom.NodeList; public class ReadPropertiesXML { private File fileSource; public ReadPropertiesXML (File fileSource) { this.fileSource = fileSource; } public String getProperty(String key) { try { DocumentBuilderFactory dbFactory = DocumentBuilderFactory.</description></item><item><title>How to get parameters from Java Properties File</title><link>https://dalanzg.github.io/tips-tutorials/posts/2016/05/13/how-to-get-parameters-from-java-properties-file/</link><pubDate>Fri, 13 May 2016 21:00:00 +0200</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2016/05/13/how-to-get-parameters-from-java-properties-file/</guid><description>Parameters are read from Java properties file and printed on console.
 Java Properties File The content of Java Properties File is the following:
 name = Daniel lastName = Lanza age = 29 And the file is located in the desktop:
- /Users/dalanz/Desktop/test.properties  User Java class package com.dalanz.file; import java.io.FileInputStream; import java.io.IOException; import java.io.InputStream; import java.util.Properties; public class ReadProperties { private String fileSource; public ReadProperties (String fileSource) { this.fileSource = fileSource; } public String getProperty(String key) { Properties prop = new Properties(); InputStream input = null; try { input = new FileInputStream(this.</description>
-    </item>
-    
-    <item>
-      <title>How to convert Java object to JSON and JSON to Java object with Gson</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2016/03/23/how-to-convert-java-object-to-json-and-json-to-java-object-with-gson/</link>
-      <pubDate>Wed, 23 Mar 2016 16:00:00 +0100</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2016/03/23/how-to-convert-java-object-to-json-and-json-to-java-object-with-gson/</guid>
-      <description>A simple Java object will become to JSON by using Gson. Besides, this will become into Java object.
-Maven dependencies &amp;lt;dependencies&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;com.google.code.gson/groupId&amp;gt; &amp;lt;artifactId&amp;gt;gson&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.6.2&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;/dependencies&amp;gt; User Java class package com.dalanz.json; import java.util.ArrayList; import java.util.List; public class User { private String firstName; private String lastName; private int age; private List&amp;lt;String&amp;gt; messages; public User(){} public User(String firstName, String lastName, int age, List&amp;lt;String&amp;gt; messages) { this.firstName = firstName; this.lastName = lastName; this.</description>
-    </item>
-    
-    <item>
-      <title>How to zip a folder and unzip a Zip file in Java</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2016/03/22/how-to-zip-a-folder-and-unzip-a-zip-file-in-java/</link>
-      <pubDate>Tue, 22 Mar 2016 16:00:20 +0100</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2016/03/22/how-to-zip-a-folder-and-unzip-a-zip-file-in-java/</guid>
-      <description>A folder with subfolders and files will be zipped. Besides, the zip file will be unzipped.
-Zip directory Java class package com.dalanz.file; import java.io.File; import java.io.FileInputStream; import java.io.FileOutputStream; import java.io.IOException; import java.util.ArrayList; import java.util.zip.ZipEntry; import java.util.zip.ZipInputStream; import java.util.zip.ZipOutputStream; public class ZipDirectory { private String folderPath; private String zipPath; private static ArrayList&amp;lt;String&amp;gt; fileList = null; private static String sourceFolder = null; public String getFolderPath() { return folderPath; } public void setFolderPath(String folderPath) { this.</description>
-    </item>
-    
-    <item>
-      <title>How to convert File into Array of Bytes, and Array of Bytes to File in Java</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2016/03/22/how-to-convert-file-into-array-of-bytes-and-array-of-bytes-to-file-in-java/</link>
-      <pubDate>Tue, 22 Mar 2016 12:00:00 +0100</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2016/03/22/how-to-convert-file-into-array-of-bytes-and-array-of-bytes-to-file-in-java/</guid>
-      <description>Array of bytes will be calculated from a file, and then, that array of bytes will be used to create a file with different filename.
-Array of bytes Java class package com.dalanz.file; import java.io.File; import java.io.FileInputStream; import java.io.FileOutputStream; public class ArrayBytesFile { // Attributes  private File file; private byte[] bFile; // Constructors  public ArrayBytesFile() { this.file = null; this.bFile = null; } public ArrayBytesFile (File file) { this.</description>
-    </item>
-    
-    <item>
-      <title>How to get MD5 checksum for a file in Java</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2016/03/22/how-to-get-md5-checksum-for-a-file-in-java/</link>
-      <pubDate>Tue, 22 Mar 2016 11:00:00 +0100</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2016/03/22/how-to-get-md5-checksum-for-a-file-in-java/</guid>
-      <description>MD5 checksum is a 128-bit hash value (32 digit hexadecimal number). This works as a fingerprint for a file which let us compare together other files to find out duplicate files.
+/Users/dalanz/Desktop/test.properties User Java class package com.dalanz.file; import java.io.FileInputStream; import java.io.IOException; import java.io.InputStream; import java.util.Properties; public class ReadProperties { private String fileSource; public ReadProperties (String fileSource) { this.fileSource = fileSource; } public String getProperty(String key) { Properties prop = new Properties(); InputStream input = null; try { input = new FileInputStream(this.</description></item><item><title>How to convert Java object to JSON and JSON to Java object with Gson</title><link>https://dalanzg.github.io/tips-tutorials/posts/2016/03/23/how-to-convert-java-object-to-json-and-json-to-java-object-with-gson/</link><pubDate>Wed, 23 Mar 2016 16:00:00 +0100</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2016/03/23/how-to-convert-java-object-to-json-and-json-to-java-object-with-gson/</guid><description>A simple Java object will become to JSON by using Gson. Besides, this will become into Java object.
+Maven dependencies &amp;lt;dependencies&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;com.google.code.gson/groupId&amp;gt; &amp;lt;artifactId&amp;gt;gson&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.6.2&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;/dependencies&amp;gt; User Java class package com.dalanz.json; import java.util.ArrayList; import java.util.List; public class User { private String firstName; private String lastName; private int age; private List&amp;lt;String&amp;gt; messages; public User(){} public User(String firstName, String lastName, int age, List&amp;lt;String&amp;gt; messages) { this.firstName = firstName; this.lastName = lastName; this.</description></item><item><title>How to zip a folder and unzip a Zip file in Java</title><link>https://dalanzg.github.io/tips-tutorials/posts/2016/03/22/how-to-zip-a-folder-and-unzip-a-zip-file-in-java/</link><pubDate>Tue, 22 Mar 2016 16:00:20 +0100</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2016/03/22/how-to-zip-a-folder-and-unzip-a-zip-file-in-java/</guid><description>A folder with subfolders and files will be zipped. Besides, the zip file will be unzipped.
+Zip directory Java class package com.dalanz.file; import java.io.File; import java.io.FileInputStream; import java.io.FileOutputStream; import java.io.IOException; import java.util.ArrayList; import java.util.zip.ZipEntry; import java.util.zip.ZipInputStream; import java.util.zip.ZipOutputStream; public class ZipDirectory { private String folderPath; private String zipPath; private static ArrayList&amp;lt;String&amp;gt; fileList = null; private static String sourceFolder = null; public String getFolderPath() { return folderPath; } public void setFolderPath(String folderPath) { this.</description></item><item><title>How to convert File into Array of Bytes, and Array of Bytes to File in Java</title><link>https://dalanzg.github.io/tips-tutorials/posts/2016/03/22/how-to-convert-file-into-array-of-bytes-and-array-of-bytes-to-file-in-java/</link><pubDate>Tue, 22 Mar 2016 12:00:00 +0100</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2016/03/22/how-to-convert-file-into-array-of-bytes-and-array-of-bytes-to-file-in-java/</guid><description>Array of bytes will be calculated from a file, and then, that array of bytes will be used to create a file with different filename.
+Array of bytes Java class package com.dalanz.file; import java.io.File; import java.io.FileInputStream; import java.io.FileOutputStream; public class ArrayBytesFile { // Attributes private File file; private byte[] bFile; // Constructors public ArrayBytesFile() { this.file = null; this.bFile = null; } public ArrayBytesFile (File file) { this.</description></item><item><title>How to get MD5 checksum for a file in Java</title><link>https://dalanzg.github.io/tips-tutorials/posts/2016/03/22/how-to-get-md5-checksum-for-a-file-in-java/</link><pubDate>Tue, 22 Mar 2016 11:00:00 +0100</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2016/03/22/how-to-get-md5-checksum-for-a-file-in-java/</guid><description>MD5 checksum is a 128-bit hash value (32 digit hexadecimal number). This works as a fingerprint for a file which let us compare together other files to find out duplicate files.
 These Java classes will let us calculate MD5 checksum for any single file.
-Maven dependencies &amp;lt;dependencies&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;commons-codec&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;commons-codec&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.10&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;commons-io&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;commons-io&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.4&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;/dependencies&amp;gt; MD5 Java class package com.dalanz.file; import java.io.File; import java.io.FileInputStream; import java.io.IOException; import org.</description>
-    </item>
-    
-    <item>
-      <title>How to set JAVA_HOME on Mac OS X</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2016/03/21/how-to-set-java_home-on-mac-os-x/</link>
-      <pubDate>Mon, 21 Mar 2016 18:00:00 +0100</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2016/03/21/how-to-set-java_home-on-mac-os-x/</guid>
-      <description>If you are planing to develop Java Apps on your Mac, you may have to set $JAVA_HOME environment variable.
+Maven dependencies &amp;lt;dependencies&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;commons-codec&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;commons-codec&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.10&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;commons-io&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;commons-io&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.4&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;/dependencies&amp;gt; MD5 Java class package com.dalanz.file; import java.io.File; import java.io.FileInputStream; import java.io.IOException; import org.</description></item><item><title>How to set JAVA_HOME on Mac OS X</title><link>https://dalanzg.github.io/tips-tutorials/posts/2016/03/21/how-to-set-java_home-on-mac-os-x/</link><pubDate>Mon, 21 Mar 2016 18:00:00 +0100</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2016/03/21/how-to-set-java_home-on-mac-os-x/</guid><description>If you are planing to develop Java Apps on your Mac, you may have to set $JAVA_HOME environment variable.
 Install the latest Java Virtual Machine Go to How to install JDK on Mac OS X) to install a new Java Virtual Machine. Download the latest Java JDK package from Oracle.
 Check Java Virtual Machines List directories in the following root -&amp;gt; /Library/Java/JavaVirtualMachines
-$ ls -l /Library/Java/JavaVirtualMachines drwxr-xr-x 3 root wheel 102 23 dic 20:36 jdk1.</description>
-    </item>
-    
-    <item>
-      <title>How to resolve 404 error with Tomcat Server and Eclipse</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2015/11/29/how-to-resolve-404-error-with-tomcat-server-and-eclipse/</link>
-      <pubDate>Sun, 29 Nov 2015 18:00:00 +0200</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2015/11/29/how-to-resolve-404-error-with-tomcat-server-and-eclipse/</guid>
-      <description>If you start Tomcat from Eclipse and get a 404-Error code when you go to http://localhost:8080, there is a easy way to fix the issue.
+$ ls -l /Library/Java/JavaVirtualMachines drwxr-xr-x 3 root wheel 102 23 dic 20:36 jdk1.</description></item><item><title>How to resolve 404 error with Tomcat Server and Eclipse</title><link>https://dalanzg.github.io/tips-tutorials/posts/2015/11/29/how-to-resolve-404-error-with-tomcat-server-and-eclipse/</link><pubDate>Sun, 29 Nov 2015 18:00:00 +0200</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2015/11/29/how-to-resolve-404-error-with-tomcat-server-and-eclipse/</guid><description>If you start Tomcat from Eclipse and get a 404-Error code when you go to http://localhost:8080, there is a easy way to fix the issue.
 Just go to Properties for Tomcat (right click on Tomcat - Servers Tab)
-Switch location Tomcat Properties  Switch location from [workspace metadata] to [/Servers/Tomcat v&amp;hellip;]
+Switch location Tomcat Properties Switch location from [workspace metadata] to [/Servers/Tomcat v&amp;hellip;]
 Restart Tomcat from Eclipse and go back to http://localhost:8080. You will see Tomcat configuration page.
-Tomcat configuration page  </description>
-    </item>
-    
-  </channel>
-</rss>
+Tomcat configuration page</description></item></channel></rss>

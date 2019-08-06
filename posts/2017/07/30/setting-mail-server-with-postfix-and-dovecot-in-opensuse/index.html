@@ -1,204 +1,25 @@
-<!DOCTYPE html>
-<html><head>
-  <title>Setting mail server with Postfix and Dovecot in openSUSE</title>
-  
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="title" content="Setting mail server with Postfix and Dovecot in openSUSE – Tips and Tutorials">
-  <meta name="description" content="A tutorial to set a mail server for inbound and outgoing mails.">
-  
-  <meta name="generator" content="Hugo 0.56.3" />
-  
-  <meta property="og:title" content="Setting mail server with Postfix and Dovecot in openSUSE">
-<meta property="og:description" content="A tutorial to set a mail server for inbound and outgoing mails." />
-<meta property="og:url" content="https://dalanzg.github.io/tips-tutorials/posts/2017/07/30/setting-mail-server-with-postfix-and-dovecot-in-opensuse/">
-<meta property="og:site_name" content="Tips and Tutorials">
-<meta property="og:type" content="article">
-    <meta property="og:image" content="https://dalanzg.github.io/tips-tutorials/android-chrome-512x512.png">
-  <meta property="og:tags" content="opensuse">
-  <meta property="og:tags" content="postfix">
-  <meta property="og:tags" content="dovecot">
-  <meta property="article:published_time" content="2017-07-30">
-  <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:description" content="A tutorial to set a mail server for inbound and outgoing mails." />
-<meta name="twitter:title" content="Setting mail server with Postfix and Dovecot in openSUSE" />
-<meta name="twitter:site" content="Tips and Tutorials" />
-<meta name="twitter:creator" content="@dalanzg" />
-    <meta name="twitter:image" content="https://dalanzg.github.io/tips-tutorials/android-chrome-512x512.png">
-  <script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Setting mail server with Postfix and Dovecot in openSUSE",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https:\/\/dalanzg.github.io\/tips-tutorials\/posts\/2017\/07\/30\/setting-mail-server-with-postfix-and-dovecot-in-opensuse\/"
-  },
-  
-  "image": {
-    "@type": "ImageObject",
-    "url": "https:\/\/dalanzg.github.io\/tips-tutorials\/mstile-150x150.png",
-    "width":  150 ,
-    "height":  150 
-  },
-  "genre": "posts",
-  "keywords": "opensuse, postfix, dovecot",
-  "wordcount":  548 ,
-  "url": "https:\/\/dalanzg.github.io\/tips-tutorials\/posts\/2017\/07\/30\/setting-mail-server-with-postfix-and-dovecot-in-opensuse\/",
-  "datePublished": "2017-07-30",
-  "dateModified": "2017-07-30",
-  "license": "Copyright. Tips and Tutorials. All rights reserved.",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Daniel Lanza",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https:\/\/dalanzg.github.io\/tips-tutorials\/mstile-150x150.png",
-      "width":  150 ,
-      "height":  150 
-    }
-  },
-  "author": {
-    "@type": "Person",
-    "name": "dalanzg"
-  },
-  "description": "A tutorial to set a mail server for inbound and outgoing mails."
-}
-</script>
-  <link rel="apple-touch-icon" sizes="180x180" href="https://dalanzg.github.io/tips-tutorials/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://dalanzg.github.io/tips-tutorials/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="https://dalanzg.github.io/tips-tutorials/favicon-16x16.png">
-<link rel="manifest" href="https://dalanzg.github.io/tips-tutorials/site.webmanifest">
-<link rel="mask-icon" href="https://dalanzg.github.io/tips-tutorials/safari-pinned-tab.svg" color="#5bbad5">
-<meta name="apple-mobile-web-app-title" content="Tips and Tutorials">
-<meta name="application-name" content="Tips and Tutorials">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="theme-color" content="#ffffff">
-  <link rel="canonical" href="https://dalanzg.github.io/tips-tutorials/posts/2017/07/30/setting-mail-server-with-postfix-and-dovecot-in-opensuse/">
-
-  <link rel="stylesheet" href="https://dalanzg.github.io/tips-tutorials/sass/main.min.5f805eac00006ca12f0d48d367bd1bc959826406b3bf3d94a67e3e976d595702.css" integrity="sha256-X4BerAAAbKEvDUjTZ70byVmCZAazvz2Upn4&#43;l21ZVwI=">
-  
-  
-  <link rel="sitemap" href="https://dalanzg.github.io/tips-tutorials/sitemap.xml" title="Sitemap" type="application/xml">
-  <meta name="google-site-verification" content="CeO9J_0wi37-MvDa_F7AmZJYunwDhFGjv8eSlJFPil8" />
-  
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-65400010-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-65400010-1');
-</script><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-8140733006923933",
-    enable_page_level_ads: true
-  });
-</script></head>
-<body>
-    <div class="container"><nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="https://dalanzg.github.io/tips-tutorials/"><strong>Tips and Tutorials</strong></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-    <li class="navbar-item ">
-        <a class="nav-link" href="https://dalanzg.github.io/tips-tutorials/about/" title="">About</a>
-      </li><li class="navbar-item ">
-        <a class="nav-link" href="https://dalanzg.github.io/tips-tutorials/tags/" title="">Tags</a>
-      </li><li class="navbar-item ">
-        <a class="nav-link" href="https://dalanzg.github.io/tips-tutorials/posts/" title="">Posts</a>
-      </li></ul>
-    <form class="form-inline float-xs-right" action="https://dalanzg.github.io/tips-tutorials/search/" method="get" data-search-form>
-      <input class="form-control mr-sm-2" type="text" name="q" placeholder="Search..." data-search-input>
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
-    </form>
-  </div>
-</nav>
-<h1 class="mt-5">Setting mail server with Postfix and Dovecot in openSUSE</h1><p class="text-muted mt-3">
-	<span>Published on July 30, 2017</span>
-	<span>by Daniel Lanza</span>
-</p>
-<p>
-	<a class="text-muted" href="https://dalanzg.github.io/tips-tutorials/tags/opensuse"><i class="fas fa-tags"></i>&nbsp;opensuse</a>
-	<a class="text-muted" href="https://dalanzg.github.io/tips-tutorials/tags/postfix"><i class="fas fa-tags"></i>&nbsp;postfix</a>
-	<a class="text-muted" href="https://dalanzg.github.io/tips-tutorials/tags/dovecot"><i class="fas fa-tags"></i>&nbsp;dovecot</a>
-</p>
-
-<p>A tutorial to set a mail server for inbound and outgoing mails:</p>
-
-<ul>
-<li>Postfix for outgoing mails (SMTP)</li>
-<li>Dovecot for inbound mails (IMAP/POP3)</li>
-</ul>
-
-<h2 id="requirements">Requirements</h2>
-
-<p>You will need the following:</p>
-
-<ul>
-<li>An openSUSE virtual machine with VirtualBox (<a href="https://dalanzg.github.io/tips-tutorials/posts/2017/02/12/how-to-install-opensuse-leap-42.2-in-virtualbox/">Check this link</a></li>
-<li>Hostname and domain -&gt; <a href="https://dalanzg.github.io/tips-tutorials/posts/2017/04/13/setting-hostname-and-domain-in-opensuse/">Setting Hostname and domain in openSUSE</a></li>
-<li>SMTP server with Postfix running -&gt; <a href="https://dalanzg.github.io/tips-tutorials/posts/2017/04/14/setting-postfix-for-outgoing-mail-in-opensuse/">Setting Postfix for outgoing mail in openSUSE</a></li>
-</ul>
-
-<p>In this tutorial, the machine has the following:</p>
-
-<ul>
-<li>FQDN hostname: <strong>mail.dalanzg.com</strong></li>
-<li>Ethernet IP address: <strong>10.0.2.15</strong></li>
-<li>User for inbound emails: <strong>dalanz@dalanzg.com</strong></li>
-</ul>
-
-<h2 id="steps">Steps</h2>
-
-<ul>
-<li><a href="#review-postfix-configuration">Review Postfix configuration</a></li>
-<li><a href="#install-and-setup-dovecot">Install and setup Dovecot</a></li>
-<li><a href="#send-mail-with-telnet">Send mail with telnet</a></li>
-<li><a href="#retrieve-mail-with-dovecot">Retrieve mail with Dovecot</a></li>
-</ul>
-
-<h3 id="review-postfix-configuration">Review Postfix configuration</h3>
-
-<p>Besides setting the initial Postfix configuration, modify <strong>/etc/postfix/main.cf</strong> file to store mails with Maildir format.</p>
-<div class="highlight"><pre class="chroma"><code class="language-terminal" data-lang="terminal">dalanz@mail:~&gt; vim /etc/postfix/main.cf</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">home_mailbox</span> <span class="p">=</span> <span class="nx">Maildir</span>/<span class="err">
-</span><span class="err"></span><span class="nx">inet_interfaces</span> <span class="p">=</span> <span class="nx">localhost</span><span class="p">,</span> <span class="m">10</span>.<span class="m">0</span>.<span class="m">2</span>.<span class="m">15</span><span class="err">
-</span><span class="err"></span><span class="nx">inet_protocols</span> <span class="p">=</span> <span class="nx">all</span><span class="err">
-</span><span class="err"></span><span class="nx">mydestination</span> <span class="p">=</span> $<span class="nx">myhostname</span><span class="p">,</span> <span class="nx">localhost</span>.$<span class="nx">mydomain</span><span class="p">,</span> $<span class="nx">mydomain</span><span class="err">
-</span><span class="err"></span><span class="nx">myhostname</span> <span class="p">=</span> <span class="nx">mail</span>.<span class="nx">dalanzg</span>.<span class="nx">com</span></code></pre></div>
-<p>Restart Postfix service.</p>
-<div class="highlight"><pre class="chroma"><code class="language-terminal" data-lang="terminal">dalanz@mail:~&gt; sudo service postfix restart</code></pre></div>
-<h3 id="install-and-setup-dovecot">Install and setup Dovecot</h3>
-
-<p>Install Dovecot by zypper command.</p>
-<div class="highlight"><pre class="chroma"><code class="language-terminal" data-lang="terminal">dalanz@mail:~&gt; sudo zypper install dovecot</code></pre></div>
-<p>Edit Dovecot main configuration file to allow IMAP, POP3 and LMPT protocols. Edit file <strong>/etc/dovecot/dovecot.conf</strong>.</p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">protocols</span> <span class="p">=</span> <span class="nx">imap</span> <span class="nx">pop3</span> <span class="nx">lmtp</span></code></pre></div>
-<p>Edit Mailbox location for mail users. Edit file <strong>/etc/dovecot/conf.d/10-mail.conf</strong>.</p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">mail_location</span> <span class="p">=</span> <span class="nx">maildir</span>:<span class="p">~</span>/<span class="nx">Maildir</span></code></pre></div>
-<p>Edit authentication process. Edit file <strong>/etc/dovecot/conf.d/10-auth.conf</strong></p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">disable_plaintext_auth</span> <span class="p">=</span> <span class="nx">yes</span><span class="err">
-</span><span class="err">
-</span><span class="err"></span><span class="nx">auth_mechanisms</span> <span class="p">=</span> <span class="nx">plain</span> <span class="nx">login</span></code></pre></div>
-<p>Edit master process. Add an Postfix Unix Listener in service auth. Edit file <strong>/etc/dovecot/conf.d/10-master.conf</strong></p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">service</span> <span class="nx">auth</span> {<span class="err">
-</span><span class="err"></span>  ...<span class="err">
-</span><span class="err"></span>  <span class="nx">unix_listener</span> <span class="sr">/var/</span><span class="nx">spool</span><span class="sr">/postfix/</span><span class="nx">private</span>/<span class="nx">auth</span> {<span class="err">
-</span><span class="err"></span>    <span class="nx">mode</span> <span class="p">=</span> <span class="m">0660</span><span class="err">
-</span><span class="err"></span>    <span class="nx">user</span> <span class="p">=</span> <span class="nx">postfix</span><span class="err">
-</span><span class="err"></span>    <span class="nx">group</span> <span class="p">=</span> <span class="nx">postfix</span><span class="err">
-</span><span class="err"></span>  }<span class="err">
-</span><span class="err"></span>  ...<span class="err">
-</span><span class="err"></span>}</code></pre></div>
-<p>Start Dovecot service.</p>
-<div class="highlight"><pre class="chroma"><code class="language-terminal" data-lang="terminal">dalanz@mail:~&gt; sudo service dovecot start</code></pre></div>
-<h3 id="send-mail-with-telnet">Send mail with telnet</h3>
-
-<p>Let&rsquo;s send an email to my current user, and check that it is stored in ~/Maildir folder for dalanz@dalanzg.com.</p>
-<div class="highlight"><pre class="chroma"><code class="language-terminal" data-lang="terminal">dalanz@mail:~&gt; telnet mail.dalanzg.com smtp
+<!doctype html><html><head><title>Setting mail server with Postfix and Dovecot in openSUSE</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=title content="Setting mail server with Postfix and Dovecot in openSUSE – Tips and Tutorials"><meta name=description content="A tutorial to set a mail server for inbound and outgoing mails."><meta name=generator content="Hugo 0.56.3"><meta property=og:title content="Setting mail server with Postfix and Dovecot in openSUSE"><meta property=og:description content="A tutorial to set a mail server for inbound and outgoing mails."><meta property=og:url content=https://dalanzg.github.io/tips-tutorials/posts/2017/07/30/setting-mail-server-with-postfix-and-dovecot-in-opensuse/><meta property=og:site_name content="Tips and Tutorials"><meta property=og:type content=article><meta property=og:image content=https://dalanzg.github.io/tips-tutorials/android-chrome-512x512.png><meta property=og:tags content=opensuse><meta property=og:tags content=postfix><meta property=og:tags content=dovecot><meta property=article:published_time content=2017-07-30><meta name=twitter:card content=summary_large_image><meta name=twitter:description content="A tutorial to set a mail server for inbound and outgoing mails."><meta name=twitter:title content="Setting mail server with Postfix and Dovecot in openSUSE"><meta name=twitter:site content="Tips and Tutorials"><meta name=twitter:creator content=@dalanzg><meta name=twitter:image content=https://dalanzg.github.io/tips-tutorials/android-chrome-512x512.png><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"Setting mail server with Postfix and Dovecot in openSUSE","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/dalanzg.github.io\/tips-tutorials\/posts\/2017\/07\/30\/setting-mail-server-with-postfix-and-dovecot-in-opensuse\/"},"image":{"@type":"ImageObject","url":"https:\/\/dalanzg.github.io\/tips-tutorials\/mstile-150x150.png","width":150,"height":150},"genre":"posts","keywords":"opensuse, postfix, dovecot","wordcount":548,"url":"https:\/\/dalanzg.github.io\/tips-tutorials\/posts\/2017\/07\/30\/setting-mail-server-with-postfix-and-dovecot-in-opensuse\/","datePublished":"2017-07-30","dateModified":"2017-07-30","license":"Copyright. Tips and Tutorials. All rights reserved.","publisher":{"@type":"Organization","name":"Daniel Lanza","logo":{"@type":"ImageObject","url":"https:\/\/dalanzg.github.io\/tips-tutorials\/mstile-150x150.png","width":150,"height":150}},"author":{"@type":"Person","name":"dalanzg"},"description":"A tutorial to set a mail server for inbound and outgoing mails."}</script><link rel=apple-touch-icon sizes=180x180 href=https://dalanzg.github.io/tips-tutorials/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=https://dalanzg.github.io/tips-tutorials/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=https://dalanzg.github.io/tips-tutorials/favicon-16x16.png><link rel=manifest href=https://dalanzg.github.io/tips-tutorials/site.webmanifest><link rel=mask-icon href=https://dalanzg.github.io/tips-tutorials/safari-pinned-tab.svg color=#5bbad5><meta name=apple-mobile-web-app-title content="Tips and Tutorials"><meta name=application-name content="Tips and Tutorials"><meta name=msapplication-TileColor content=#da532c><meta name=theme-color content=#ffffff><link rel=canonical href=https://dalanzg.github.io/tips-tutorials/posts/2017/07/30/setting-mail-server-with-postfix-and-dovecot-in-opensuse/><link rel=stylesheet href=https://dalanzg.github.io/tips-tutorials/sass/main.min.5f805eac00006ca12f0d48d367bd1bc959826406b3bf3d94a67e3e976d595702.css integrity="sha256-X4BerAAAbKEvDUjTZ70byVmCZAazvz2Upn4&#43;l21ZVwI="><link rel=sitemap href=https://dalanzg.github.io/tips-tutorials/sitemap.xml title=Sitemap type=application/xml><meta name=google-site-verification content=CeO9J_0wi37-MvDa_F7AmZJYunwDhFGjv8eSlJFPil8><script async src="https://www.googletagmanager.com/gtag/js?id=UA-65400010-1"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','UA-65400010-1');</script><script async src=//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js></script><script>(adsbygoogle=window.adsbygoogle||[]).push({google_ad_client:"ca-pub-8140733006923933",enable_page_level_ads:true});</script></head><body><div class=container><nav class="navbar navbar-expand-lg navbar-light bg-light"><a class=navbar-brand href=https://dalanzg.github.io/tips-tutorials/><strong>Tips and Tutorials</strong></a>
+<button class=navbar-toggler type=button data-toggle=collapse data-target=#navbarSupportedContent aria-controls=navbarSupportedContent aria-expanded=false aria-label="Toggle navigation">
+<span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse" id=navbarSupportedContent><ul class="navbar-nav mr-auto"><li class=navbar-item><a class=nav-link href=https://dalanzg.github.io/tips-tutorials/about/>About</a></li><li class=navbar-item><a class=nav-link href=https://dalanzg.github.io/tips-tutorials/tags/>Tags</a></li><li class=navbar-item><a class=nav-link href=https://dalanzg.github.io/tips-tutorials/posts/>Posts</a></li></ul><form class="form-inline float-xs-right" action=https://dalanzg.github.io/tips-tutorials/search/ method=get data-search-form><input class="form-control mr-sm-2" type=text name=q placeholder=Search... data-search-input>
+<button class="btn btn-outline-success my-2 my-sm-0" type=submit><i class="fas fa-search"></i></button></form></div></nav><h1 class=mt-5>Setting mail server with Postfix and Dovecot in openSUSE</h1><p class="text-muted mt-3"><span>Published on July 30, 2017</span>
+<span>by Daniel Lanza</span></p><p><a class=text-muted href=https://dalanzg.github.io/tips-tutorials/tags/opensuse><i class="fas fa-tags"></i>&nbsp;opensuse</a>
+<a class=text-muted href=https://dalanzg.github.io/tips-tutorials/tags/postfix><i class="fas fa-tags"></i>&nbsp;postfix</a>
+<a class=text-muted href=https://dalanzg.github.io/tips-tutorials/tags/dovecot><i class="fas fa-tags"></i>&nbsp;dovecot</a></p><p>A tutorial to set a mail server for inbound and outgoing mails:</p><ul><li>Postfix for outgoing mails (SMTP)</li><li>Dovecot for inbound mails (IMAP/POP3)</li></ul><h2 id=requirements>Requirements</h2><p>You will need the following:</p><ul><li>An openSUSE virtual machine with VirtualBox (<a href=https://dalanzg.github.io/tips-tutorials/posts/2017/02/12/how-to-install-opensuse-leap-42.2-in-virtualbox/>Check this link</a></li><li>Hostname and domain -&gt; <a href=https://dalanzg.github.io/tips-tutorials/posts/2017/04/13/setting-hostname-and-domain-in-opensuse/>Setting Hostname and domain in openSUSE</a></li><li>SMTP server with Postfix running -&gt; <a href=https://dalanzg.github.io/tips-tutorials/posts/2017/04/14/setting-postfix-for-outgoing-mail-in-opensuse/>Setting Postfix for outgoing mail in openSUSE</a></li></ul><p>In this tutorial, the machine has the following:</p><ul><li>FQDN hostname: <strong>mail.dalanzg.com</strong></li><li>Ethernet IP address: <strong>10.0.2.15</strong></li><li>User for inbound emails: <strong>dalanz@dalanzg.com</strong></li></ul><h2 id=steps>Steps</h2><ul><li><a href=#review-postfix-configuration>Review Postfix configuration</a></li><li><a href=#install-and-setup-dovecot>Install and setup Dovecot</a></li><li><a href=#send-mail-with-telnet>Send mail with telnet</a></li><li><a href=#retrieve-mail-with-dovecot>Retrieve mail with Dovecot</a></li></ul><h3 id=review-postfix-configuration>Review Postfix configuration</h3><p>Besides setting the initial Postfix configuration, modify <strong>/etc/postfix/main.cf</strong> file to store mails with Maildir format.</p><div class=highlight><pre class=chroma><code class=language-terminal data-lang=terminal>dalanz@mail:~&gt; vim /etc/postfix/main.cf</code></pre></div><div class=highlight><pre class=chroma><code class=language-vim data-lang=vim><span class=nx>home_mailbox</span> <span class=p>=</span> <span class=nx>Maildir</span>/<span class=err>
+</span><span class=err></span><span class=nx>inet_interfaces</span> <span class=p>=</span> <span class=nx>localhost</span><span class=p>,</span> <span class=m>10</span>.<span class=m>0</span>.<span class=m>2</span>.<span class=m>15</span><span class=err>
+</span><span class=err></span><span class=nx>inet_protocols</span> <span class=p>=</span> <span class=nx>all</span><span class=err>
+</span><span class=err></span><span class=nx>mydestination</span> <span class=p>=</span> $<span class=nx>myhostname</span><span class=p>,</span> <span class=nx>localhost</span>.$<span class=nx>mydomain</span><span class=p>,</span> $<span class=nx>mydomain</span><span class=err>
+</span><span class=err></span><span class=nx>myhostname</span> <span class=p>=</span> <span class=nx>mail</span>.<span class=nx>dalanzg</span>.<span class=nx>com</span></code></pre></div><p>Restart Postfix service.</p><div class=highlight><pre class=chroma><code class=language-terminal data-lang=terminal>dalanz@mail:~&gt; sudo service postfix restart</code></pre></div><h3 id=install-and-setup-dovecot>Install and setup Dovecot</h3><p>Install Dovecot by zypper command.</p><div class=highlight><pre class=chroma><code class=language-terminal data-lang=terminal>dalanz@mail:~&gt; sudo zypper install dovecot</code></pre></div><p>Edit Dovecot main configuration file to allow IMAP, POP3 and LMPT protocols. Edit file <strong>/etc/dovecot/dovecot.conf</strong>.</p><div class=highlight><pre class=chroma><code class=language-vim data-lang=vim><span class=nx>protocols</span> <span class=p>=</span> <span class=nx>imap</span> <span class=nx>pop3</span> <span class=nx>lmtp</span></code></pre></div><p>Edit Mailbox location for mail users. Edit file <strong>/etc/dovecot/conf.d/10-mail.conf</strong>.</p><div class=highlight><pre class=chroma><code class=language-vim data-lang=vim><span class=nx>mail_location</span> <span class=p>=</span> <span class=nx>maildir</span>:<span class=p>~</span>/<span class=nx>Maildir</span></code></pre></div><p>Edit authentication process. Edit file <strong>/etc/dovecot/conf.d/10-auth.conf</strong></p><div class=highlight><pre class=chroma><code class=language-vim data-lang=vim><span class=nx>disable_plaintext_auth</span> <span class=p>=</span> <span class=nx>yes</span><span class=err>
+</span><span class=err>
+</span><span class=err></span><span class=nx>auth_mechanisms</span> <span class=p>=</span> <span class=nx>plain</span> <span class=nx>login</span></code></pre></div><p>Edit master process. Add an Postfix Unix Listener in service auth. Edit file <strong>/etc/dovecot/conf.d/10-master.conf</strong></p><div class=highlight><pre class=chroma><code class=language-vim data-lang=vim><span class=nx>service</span> <span class=nx>auth</span> {<span class=err>
+</span><span class=err></span>  ...<span class=err>
+</span><span class=err></span>  <span class=nx>unix_listener</span> <span class=sr>/var/</span><span class=nx>spool</span><span class=sr>/postfix/</span><span class=nx>private</span>/<span class=nx>auth</span> {<span class=err>
+</span><span class=err></span>    <span class=nx>mode</span> <span class=p>=</span> <span class=m>0660</span><span class=err>
+</span><span class=err></span>    <span class=nx>user</span> <span class=p>=</span> <span class=nx>postfix</span><span class=err>
+</span><span class=err></span>    <span class=nx>group</span> <span class=p>=</span> <span class=nx>postfix</span><span class=err>
+</span><span class=err></span>  }<span class=err>
+</span><span class=err></span>  ...<span class=err>
+</span><span class=err></span>}</code></pre></div><p>Start Dovecot service.</p><div class=highlight><pre class=chroma><code class=language-terminal data-lang=terminal>dalanz@mail:~&gt; sudo service dovecot start</code></pre></div><h3 id=send-mail-with-telnet>Send mail with telnet</h3><p>Let&rsquo;s send an email to my current user, and check that it is stored in ~/Maildir folder for dalanz@dalanzg.com.</p><div class=highlight><pre class=chroma><code class=language-terminal data-lang=terminal>dalanz@mail:~&gt; telnet mail.dalanzg.com smtp
 Trying 10.0.2.15...
 Connected to mail.dalanzg.com.
 Escape character is &#39;^]&#39;.
@@ -229,13 +50,9 @@ Admin
 250 2.0.0 Ok: queued as 9BC141B4
 quit
 221 2.0.0 Bye
-Connection closed by foreign host.</code></pre></div>
-<p>Let&rsquo;s list new dalanz&rsquo;s mails.</p>
-<div class="highlight"><pre class="chroma"><code class="language-terminal" data-lang="terminal">dalanz@mail:~&gt; ll /home/dalanz/Maildir/new
+Connection closed by foreign host.</code></pre></div><p>Let&rsquo;s list new dalanz&rsquo;s mails.</p><div class=highlight><pre class=chroma><code class=language-terminal data-lang=terminal>dalanz@mail:~&gt; ll /home/dalanz/Maildir/new
 total 4
--rw------- 1 dalanz users 474 Jul 30 21:10 1501441859.V34I9c2M448896.mail</code></pre></div>
-<p>Let&rsquo;s see mail content.</p>
-<div class="highlight"><pre class="chroma"><code class="language-terminal" data-lang="terminal">dalanz@mail:~&gt; cat /home/dalanz/Maildir/new/1501441859.V34I9c2M448896.mail
+-rw------- 1 dalanz users 474 Jul 30 21:10 1501441859.V34I9c2M448896.mail</code></pre></div><p>Let&rsquo;s see mail content.</p><div class=highlight><pre class=chroma><code class=language-terminal data-lang=terminal>dalanz@mail:~&gt; cat /home/dalanz/Maildir/new/1501441859.V34I9c2M448896.mail
 Return-Path: &lt;test@dalanzg.com&gt;
 X-Original-To: dalanz@dalanzg.com
 Delivered-To: dalanz@dalanzg.com
@@ -251,11 +68,7 @@ This is a test with Dovecot.
 
 Best regards,
 
-Admin</code></pre></div>
-<h3 id="retrieve-mail-with-dovecot">Retrieve mail with Dovecot</h3>
-
-<p>Let&rsquo;s retrieve the same email with a POP3 account.</p>
-<div class="highlight"><pre class="chroma"><code class="language-terminal" data-lang="terminal">dalanz@mail:~&gt; telnet mail.dalanzg.com pop3
+Admin</code></pre></div><h3 id=retrieve-mail-with-dovecot>Retrieve mail with Dovecot</h3><p>Let&rsquo;s retrieve the same email with a POP3 account.</p><div class=highlight><pre class=chroma><code class=language-terminal data-lang=terminal>dalanz@mail:~&gt; telnet mail.dalanzg.com pop3
 Trying 10.0.2.15...
 Connected to mail.dalanzg.com.
 Escape character is &#39;^]&#39;.
@@ -285,104 +98,20 @@ Admin
 .
 quit
 +OK Logging out.
-Connection closed by foreign host.</code></pre></div>
-<p>Dovecot works!!</p>
-
-<p>And check email was moved from <strong>~/Maildir/new</strong> to <strong>~/Maildir/cur</strong> folder, since it was read by a POP3 account.</p>
-<div class="highlight"><pre class="chroma"><code class="language-terminal" data-lang="terminal">dalanz@mail:~&gt; ll /home/dalanz/Maildir/new
+Connection closed by foreign host.</code></pre></div><p>Dovecot works!!</p><p>And check email was moved from <strong>~/Maildir/new</strong> to <strong>~/Maildir/cur</strong> folder, since it was read by a POP3 account.</p><div class=highlight><pre class=chroma><code class=language-terminal data-lang=terminal>dalanz@mail:~&gt; ll /home/dalanz/Maildir/new
 total 0
 dalanz@mail:~&gt; ll /home/dalanz/Maildir/cur
--rw------- 1 dalanz users 474 Jul 30 21:30 1501441859.V34I9c2M448896.mail</code></pre></div>
-
-<div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "tips-tutorials" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-	<div class="bg-light py-5">
-		<div class="container">
-			<h2 class="text-center">Read next</h2>
-			<div class="row">
-				<div class="col-md-6 text-center">
-						Previous Post:
-						<a href="https://dalanzg.github.io/tips-tutorials/posts/2017/07/09/error-501-syntax-helo-hostname-in-postfix/">Error 501 Syntax HELO hostname in postfix</a>
-				</div>
-				<div class="col-md-6 text-center">
-						Next Post:
-						<a href="https://dalanzg.github.io/tips-tutorials/posts/2017/07/31/how-to-install-postgresql-in-opensuse/">How to install PostgreSQL in openSUSE</a>
-				</div>
-			</div>
-		</div>
-	</div>
-<div class="container mt-5">
-	<h2 class="text-center">See also</h2>
-	<div class="row">
-			<div class="col-md mb-3">
-				<p class="lead mb-0"><a class="text-body" href="https://dalanzg.github.io/tips-tutorials/posts/2017/07/09/error-501-syntax-helo-hostname-in-postfix/">Error 501 Syntax HELO hostname in postfix</a></p>
-				<p class="font-weight-light mt-3">Certain SMTP servers require HELO servername in order to allow a request to proceed. Set a command filter to let it work without any arguments.
+-rw------- 1 dalanz users 474 Jul 30 21:30 1501441859.V34I9c2M448896.mail</code></pre></div><div id=disqus_thread></div><script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return;}
+var d=document,s=d.createElement('script');s.async=true;s.src='//'+"tips-tutorials"+'.disqus.com/embed.js';s.setAttribute('data-timestamp',+new Date());(d.head||d.body).appendChild(s);})();</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a><div class="bg-light py-5"><div class=container><h2 class=text-center>Read next</h2><div class=row><div class="col-md-6 text-center">Previous Post:
+<a href=https://dalanzg.github.io/tips-tutorials/posts/2017/07/09/error-501-syntax-helo-hostname-in-postfix/>Error 501 Syntax HELO hostname in postfix</a></div><div class="col-md-6 text-center">Next Post:
+<a href=https://dalanzg.github.io/tips-tutorials/posts/2017/07/31/how-to-install-postgresql-in-opensuse/>How to install PostgreSQL in openSUSE</a></div></div></div></div><div class="container mt-5"><h2 class=text-center>See also</h2><div class=row><div class="col-md mb-3"><p class="lead mb-0"><a class=text-body href=https://dalanzg.github.io/tips-tutorials/posts/2017/07/09/error-501-syntax-helo-hostname-in-postfix/>Error 501 Syntax HELO hostname in postfix</a></p><p class="font-weight-light mt-3">Certain SMTP servers require HELO servername in order to allow a request to proceed. Set a command filter to let it work without any arguments.
 Source
 Requirements You will need the following:
- An openSUSE virtual machine with VirtualBox (Check this link Hostname and domain -&gt; Setting Hostname and domain in openSUSE SMTP server with Postfix running -&gt; Setting Postfix for outgoing mail in openSUSE  In this tutorial, the machine has the following:</p>
-				<a href="https://dalanzg.github.io/tips-tutorials/posts/2017/07/09/error-501-syntax-helo-hostname-in-postfix/" class="btn btn-primary">Read more</a>
-			</div>
-			<div class="col-md mb-3">
-				<p class="lead mb-0"><a class="text-body" href="https://dalanzg.github.io/tips-tutorials/posts/2017/04/14/setting-postfix-for-outgoing-mail-in-opensuse/">Setting Postfix for outgoing mail in openSUSE</a></p>
-				<p class="font-weight-light mt-3">A tutorial to set Postfix to send mails in openSUSE.
+An openSUSE virtual machine with VirtualBox (Check this link Hostname and domain -&gt; Setting Hostname and domain in openSUSE SMTP server with Postfix running -&gt; Setting Postfix for outgoing mail in openSUSE In this tutorial, the machine has the following:</p><a href=https://dalanzg.github.io/tips-tutorials/posts/2017/07/09/error-501-syntax-helo-hostname-in-postfix/ class="btn btn-primary">Read more</a></div><div class="col-md mb-3"><p class="lead mb-0"><a class=text-body href=https://dalanzg.github.io/tips-tutorials/posts/2017/04/14/setting-postfix-for-outgoing-mail-in-opensuse/>Setting Postfix for outgoing mail in openSUSE</a></p><p class="font-weight-light mt-3">A tutorial to set Postfix to send mails in openSUSE.
 Requirements You will need the following:
- An openSUSE virtual machine with VirtualBox (Check this link Hostname and domain -&gt; Setting Hostname and domain in openSUSE  In this tutorial, the machine has the following:
- FQDN hostname: mail.dalanzg.com Ethernet IP address: 10.0.2.15  Steps  Install Postfix Change main.cf file Send mail with telnet  Install Postfix By openSUSE installation default, Postfix can be installed.</p>
-				<a href="https://dalanzg.github.io/tips-tutorials/posts/2017/04/14/setting-postfix-for-outgoing-mail-in-opensuse/" class="btn btn-primary">Read more</a>
-			</div>
-			<div class="col-md mb-3">
-				<p class="lead mb-0"><a class="text-body" href="https://dalanzg.github.io/tips-tutorials/posts/2017/04/13/setting-hostname-and-domain-in-opensuse/">Setting hostname and domain in openSUSE</a></p>
-				<p class="font-weight-light mt-3">A tutorial to set hostname and domain in openSUSE (server.dalanzg.com):
- Hostname -&gt; srvopensuse Domain -&gt; dalanzg.com  Requirements You will need the following:
- An openSUSE virtual machine with VirtualBox (Check this link  Steps  Modify hostname file Modify hosts file Verification  Modify hostname file With root permissions, edit file /etc/hostname.
+An openSUSE virtual machine with VirtualBox (Check this link Hostname and domain -&gt; Setting Hostname and domain in openSUSE In this tutorial, the machine has the following:
+FQDN hostname: mail.dalanzg.com Ethernet IP address: 10.0.2.15 Steps Install Postfix Change main.cf file Send mail with telnet Install Postfix By openSUSE installation default, Postfix can be installed.</p><a href=https://dalanzg.github.io/tips-tutorials/posts/2017/04/14/setting-postfix-for-outgoing-mail-in-opensuse/ class="btn btn-primary">Read more</a></div><div class="col-md mb-3"><p class="lead mb-0"><a class=text-body href=https://dalanzg.github.io/tips-tutorials/posts/2017/04/13/setting-hostname-and-domain-in-opensuse/>Setting hostname and domain in openSUSE</a></p><p class="font-weight-light mt-3">A tutorial to set hostname and domain in openSUSE (server.dalanzg.com):
+Hostname -&gt; srvopensuse Domain -&gt; dalanzg.com Requirements You will need the following:
+An openSUSE virtual machine with VirtualBox (Check this link Steps Modify hostname file Modify hosts file Verification Modify hostname file With root permissions, edit file /etc/hostname.
 dalanz@linux-geij:~&gt; sudo vim /etc/hostname Write the hostname for the server.
-srvopensuse Modify hosts file Check your network interfaces to find out the IP address for your Ethernet network (eth1).</p>
-				<a href="https://dalanzg.github.io/tips-tutorials/posts/2017/04/13/setting-hostname-and-domain-in-opensuse/" class="btn btn-primary">Read more</a>
-			</div>
-	</div>
-</div></div><footer class="blog-footer">
-  <p>
-    <nav class="nav justify-content-center">
-      <a class="nav-link" href="https://dalanzg.github.io/tips-tutorials/index.xml" target="_blank">
-        <i class="fas fa-rss-square fa-2x"></i>
-      </a>
-      
-      <a class="nav-link" href="https://twitter.com/dalanzg" target="_blank">
-        <i class="fab fa-twitter fa-2x"></i>
-      </a>
-      
-      <a class="nav-link" href="https://github.com/dalanzg" target="_blank">
-        <i class="fab fa-github fa-2x"></i>
-      </a>
-      
-      <a class="nav-link" href="https://www.linkedin.com/in/danilanza" target="_blank">
-        <i class="fab fa-linkedin fa-2x"></i>
-      </a>
-      
-    </nav>
-  </p>
-  <p class="text-muted">Copyright &copy; Tips and Tutorials 2019</p>
-  <p class="text-muted"><small>All rights reserved. Blog powered by <a href="https://gohugo.io/">Hugo</a> and hosted on <a href="https://www.github.com">GitHub.</a></small></p>
-  <p class="text-muted"><small><a href="https://opensource.org/licenses/MIT">MIT License</a></small></p>
-</footer>
-
-<script src="https://dalanzg.github.io/tips-tutorials/js/bundle.min.110d3e1a6c79028aa1899125704a04f056b48a7862c0d9058732b1ab70451559.js"></script></body>
-</html>
+srvopensuse Modify hosts file Check your network interfaces to find out the IP address for your Ethernet network (eth1).</p><a href=https://dalanzg.github.io/tips-tutorials/posts/2017/04/13/setting-hostname-and-domain-in-opensuse/ class="btn btn-primary">Read more</a></div></div></div></div><footer class=blog-footer><p><nav class="nav justify-content-center"><a class=nav-link href=https://dalanzg.github.io/tips-tutorials/index.xml target=_blank><i class="fas fa-rss-square fa-2x"></i></a><a class=nav-link href=https://twitter.com/dalanzg target=_blank><i class="fab fa-twitter fa-2x"></i></a><a class=nav-link href=https://github.com/dalanzg target=_blank><i class="fab fa-github fa-2x"></i></a><a class=nav-link href=https://www.linkedin.com/in/danilanza target=_blank><i class="fab fa-linkedin fa-2x"></i></a></nav></p><p class=text-muted>Copyright &copy; Tips and Tutorials 2019</p><p class=text-muted><small>All rights reserved. Blog powered by <a href=https://gohugo.io/>Hugo</a> and hosted on <a href=https://www.github.com>GitHub.</a></small></p><p class=text-muted><small><a href=https://opensource.org/licenses/MIT>MIT License</a></small></p></footer><script src=https://dalanzg.github.io/tips-tutorials/js/bundle.min.110d3e1a6c79028aa1899125704a04f056b48a7862c0d9058732b1ab70451559.js></script></body></html>

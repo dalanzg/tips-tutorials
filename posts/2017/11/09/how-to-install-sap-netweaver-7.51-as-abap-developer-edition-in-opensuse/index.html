@@ -1,278 +1,32 @@
-<!DOCTYPE html>
-<html><head>
-  <title>How to install SAP NetWeaver 7.51 as ABAP Developer Edition in openSUSE</title>
-  
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="title" content="How to install SAP NetWeaver 7.51 as ABAP Developer Edition in openSUSE – Tips and Tutorials">
-  <meta name="description" content="This tutorial will explain how to install SAP NetWeaver as ABAP server in a virtual machine to develop your own custom ABAP objects">
-  
-  <meta name="generator" content="Hugo 0.56.3" />
-  
-  <meta property="og:title" content="How to install SAP NetWeaver 7.51 as ABAP Developer Edition in openSUSE">
-<meta property="og:description" content="This tutorial will explain how to install SAP NetWeaver as ABAP server in a virtual machine to develop your own custom ABAP objects" />
-<meta property="og:url" content="https://dalanzg.github.io/tips-tutorials/posts/2017/11/09/how-to-install-sap-netweaver-7.51-as-abap-developer-edition-in-opensuse/">
-<meta property="og:site_name" content="Tips and Tutorials">
-<meta property="og:type" content="article">
-  <meta property="og:image" content='https://dalanzg.github.io/tips-tutorials/posts/2017/11/09/how-to-install-sap-netweaver-7.51-as-abap-developer-edition-in-opensuse/img/sap-gui-java-connection-3.png'>
-  <meta property="og:tags" content="opensuse">
-  <meta property="og:tags" content="sap">
-  <meta property="article:published_time" content="2017-11-09">
-  <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:description" content="This tutorial will explain how to install SAP NetWeaver as ABAP server in a virtual machine to develop your own custom ABAP objects" />
-<meta name="twitter:title" content="How to install SAP NetWeaver 7.51 as ABAP Developer Edition in openSUSE" />
-<meta name="twitter:site" content="Tips and Tutorials" />
-<meta name="twitter:creator" content="@dalanzg" />
-  <meta name="twitter:image" content='https://dalanzg.github.io/tips-tutorials/posts/2017/11/09/how-to-install-sap-netweaver-7.51-as-abap-developer-edition-in-opensuse/img/sap-gui-java-connection-3.png'>
-  <script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "BlogPosting",
-  "headline": "How to install SAP NetWeaver 7.51 as ABAP Developer Edition in openSUSE",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https:\/\/dalanzg.github.io\/tips-tutorials\/posts\/2017\/11\/09\/how-to-install-sap-netweaver-7.51-as-abap-developer-edition-in-opensuse\/"
-  },
-  
-  "image": {
-    "@type": "ImageObject",
-    "url": "https:\/\/dalanzg.github.io\/tips-tutorials\/mstile-150x150.png",
-    "width":  150 ,
-    "height":  150 
-  },
-  "genre": "posts",
-  "keywords": "opensuse, sap",
-  "wordcount":  1337 ,
-  "url": "https:\/\/dalanzg.github.io\/tips-tutorials\/posts\/2017\/11\/09\/how-to-install-sap-netweaver-7.51-as-abap-developer-edition-in-opensuse\/",
-  "datePublished": "2017-11-09",
-  "dateModified": "2017-11-09",
-  "license": "Copyright. Tips and Tutorials. All rights reserved.",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Daniel Lanza",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https:\/\/dalanzg.github.io\/tips-tutorials\/mstile-150x150.png",
-      "width":  150 ,
-      "height":  150 
-    }
-  },
-  "author": {
-    "@type": "Person",
-    "name": "dalanzg"
-  },
-  "description": "This tutorial will explain how to install SAP NetWeaver as ABAP server in a virtual machine to develop your own custom ABAP objects"
-}
-</script>
-  <link rel="apple-touch-icon" sizes="180x180" href="https://dalanzg.github.io/tips-tutorials/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://dalanzg.github.io/tips-tutorials/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="https://dalanzg.github.io/tips-tutorials/favicon-16x16.png">
-<link rel="manifest" href="https://dalanzg.github.io/tips-tutorials/site.webmanifest">
-<link rel="mask-icon" href="https://dalanzg.github.io/tips-tutorials/safari-pinned-tab.svg" color="#5bbad5">
-<meta name="apple-mobile-web-app-title" content="Tips and Tutorials">
-<meta name="application-name" content="Tips and Tutorials">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="theme-color" content="#ffffff">
-  <link rel="canonical" href="https://dalanzg.github.io/tips-tutorials/posts/2017/11/09/how-to-install-sap-netweaver-7.51-as-abap-developer-edition-in-opensuse/">
-
-  <link rel="stylesheet" href="https://dalanzg.github.io/tips-tutorials/sass/main.min.5f805eac00006ca12f0d48d367bd1bc959826406b3bf3d94a67e3e976d595702.css" integrity="sha256-X4BerAAAbKEvDUjTZ70byVmCZAazvz2Upn4&#43;l21ZVwI=">
-  
-  
-  <link rel="sitemap" href="https://dalanzg.github.io/tips-tutorials/sitemap.xml" title="Sitemap" type="application/xml">
-  <meta name="google-site-verification" content="CeO9J_0wi37-MvDa_F7AmZJYunwDhFGjv8eSlJFPil8" />
-  
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-65400010-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-65400010-1');
-</script><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-8140733006923933",
-    enable_page_level_ads: true
-  });
-</script></head>
-<body>
-    <div class="container"><nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="https://dalanzg.github.io/tips-tutorials/"><strong>Tips and Tutorials</strong></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-    <li class="navbar-item ">
-        <a class="nav-link" href="https://dalanzg.github.io/tips-tutorials/about/" title="">About</a>
-      </li><li class="navbar-item ">
-        <a class="nav-link" href="https://dalanzg.github.io/tips-tutorials/tags/" title="">Tags</a>
-      </li><li class="navbar-item ">
-        <a class="nav-link" href="https://dalanzg.github.io/tips-tutorials/posts/" title="">Posts</a>
-      </li></ul>
-    <form class="form-inline float-xs-right" action="https://dalanzg.github.io/tips-tutorials/search/" method="get" data-search-form>
-      <input class="form-control mr-sm-2" type="text" name="q" placeholder="Search..." data-search-input>
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
-    </form>
-  </div>
-</nav>
-<h1 class="mt-5">How to install SAP NetWeaver 7.51 as ABAP Developer Edition in openSUSE</h1><p class="text-muted mt-3">
-	<span>Published on November 9, 2017</span>
-	<span>by Daniel Lanza</span>
-</p>
-<p>
-	<a class="text-muted" href="https://dalanzg.github.io/tips-tutorials/tags/opensuse"><i class="fas fa-tags"></i>&nbsp;opensuse</a>
-	<a class="text-muted" href="https://dalanzg.github.io/tips-tutorials/tags/sap"><i class="fas fa-tags"></i>&nbsp;sap</a>
-</p>
-
-<p>This tutorial will explain how to install SAP NetWeaver as ABAP server in a virtual machine to develop your own custom ABAP objects.</p>
-
-<h2 id="requirements">Requirements</h2>
-
-<p>You will need the following:</p>
-
-<ul>
-<li>An openSUSE virtual machine with VirtualBox (<a href="https://dalanzg.github.io/tips-tutorials/posts/2017/02/12/how-to-install-opensuse-leap-42.2-in-virtualbox/">Check this link</a></li>
-<li>Download SAP NetWeaver compress files from <a href="https://tools.hana.ondemand.com/#abap">SAP NetWeaver AS ABAP Developer Edition</a></li>
-</ul>
-
-<h2 id="steps">Steps</h2>
-
-<ul>
-<li><a href="#set-port-forwarding">Set port forwarding</a></li>
-<li><a href="#set-hostname-and-hosts">Set hostname and hosts</a></li>
-<li><a href="#install-uuidd">Install uuidd</a></li>
-<li><a href="#mount-sap-netweaver-files">Mount SAP NetWeaver files</a></li>
-<li><a href="#install-sap-netweaver">Install SAP NetWeaver</a></li>
-<li><a href="#install-sap-gui-in-your-host-machine">Install SAP GUI in your host machine</a></li>
-<li><a href="#sap-gui-for-java-logon">SAP GUI for JAVA logon</a></li>
-<li><a href="#check-sap-netweaver-license">Check SAP NetWeaver license</a></li>
-<li><a href="#stop-sap-netweaver">Stop SAP NetWeaver</a></li>
-<li><a href="#start-sap-netweaver">Start SAP NetWeaver</a></li>
-</ul>
-
-<h3 id="set-port-forwarding">Set port forwarding</h3>
-
-<p>Forward from the Host IP and ports to the following Guest IP and ports in the virtual machine settings:</p>
-
-<table class="table table-bordered-striped">
-<thead>
-<tr>
-<th>Name</th>
-<th>Protocol</th>
-<th>Host IP</th>
-<th>Host Port</th>
-<th>Guest IP</th>
-<th>Guest Port</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>HTTP</td>
-<td>TCP</td>
-<td>127.0.0.1</td>
-<td>8000</td>
-<td>10.0.2.15</td>
-<td>8000</td>
-</tr>
-
-<tr>
-<td>HTTPS</td>
-<td>TCP</td>
-<td>127.0.0.1</td>
-<td>44300</td>
-<td>10.0.2.15</td>
-<td>44300</td>
-</tr>
-
-<tr>
-<td>SAP Cloud Connector</td>
-<td>TCP</td>
-<td>127.0.0.1</td>
-<td>8443</td>
-<td>10.0.2.15</td>
-<td>8443</td>
-</tr>
-
-<tr>
-<td>SAP GUI</td>
-<td>TCP</td>
-<td>127.0.0.1</td>
-<td>3200</td>
-<td>10.0.2.15</td>
-<td>3200</td>
-</tr>
-
-<tr>
-<td>ABAP in Eclipse</td>
-<td>TCP</td>
-<td>127.0.0.1</td>
-<td>3300</td>
-<td>10.0.2.15</td>
-<td>3300</td>
-</tr>
-
-<tr>
-<td>SSH</td>
-<td>TCP</td>
-<td>127.0.0.1</td>
-<td>22</td>
-<td>10.0.2.15</td>
-<td>22</td>
-</tr>
-</tbody>
-</table>
-
-<figure class="text-center">
-  <img src="img/port-forwarding.png" class="figure-img img-fluid rounded" alt="Port forwarding" width="500">
-  <figcaption class="figure-caption">Port forwarding</figcaption>
-</figure>
-
-<p>Restart <strong>rcnetwork</strong> service.</p>
-<div class="highlight"><pre class="chroma"><code class="language-terminal" data-lang="terminal">dlanza@linux-fd61:~&gt; sudo rcnetwork restart</code></pre></div>
-<h3 id="set-hostname-and-hosts">Set hostname and hosts</h3>
-
-<p>If the virtual machine only has network NAT adapter, the static <strong>10.0.2.15</strong> is assigned (eth0). Change hostname and hosts for this static IP address:</p>
-
-<ul>
-<li>Hostname: <strong>vhcalnplci</strong></li>
-<li>Full-Qualified-Hostname: <strong>vhcalnplci</strong></li>
-</ul>
-
-<p>Change hostname in <strong>/etc/hostname</strong>.</p>
-<div class="highlight"><pre class="chroma"><code class="language-terminal" data-lang="terminal">dlanza@linux-fd61:~&gt; sudo vim /etc/hostname</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">vhcalnplci</span></code></pre></div>
-<p>Add the following line in <strong>/etc/hosts</strong>:</p>
-
-<ul>
-<li><p>10.0.2.15       vhcalnplci      vhcalnplci.dummy.nodomain</p>
-<div class="highlight"><pre class="chroma"><code class="language-terminal" data-lang="terminal">dlanza@linux-fd61:~&gt; sudo vim /etc/hosts</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim">#<span class="err">
-</span><span class="err"></span># <span class="nx">hosts</span>         <span class="nx">This</span> <span class="nx">file</span> <span class="nx">describes</span> <span class="nx">a</span> <span class="nx">number</span> <span class="nx">of</span> <span class="nx">hostname</span><span class="p">-</span><span class="nx">to</span><span class="p">-</span><span class="nx">address</span><span class="err">
-</span><span class="err"></span>#               <span class="nx">mappings</span> <span class="nx">for</span> <span class="nx">the</span> <span class="nx">TCP</span>/<span class="nx">IP</span> <span class="nx">subsystem</span>.  <span class="nx">It</span> <span class="nx">is</span> <span class="nx">mostly</span><span class="err">
-</span><span class="err"></span>#               <span class="nx">used</span> <span class="nx">at</span> <span class="nx">boot</span> <span class="nx">time</span><span class="p">,</span> <span class="nx">when</span> <span class="nx">no</span> <span class="nx">name</span> <span class="nx">servers</span> <span class="nx">are</span> <span class="nx">running</span>.<span class="err">
-</span><span class="err"></span>#               <span class="nx">On</span> <span class="nx">small</span> <span class="nx">systems</span><span class="p">,</span> <span class="nx">this</span> <span class="nx">file</span> <span class="nx">can</span> <span class="nx">be</span> <span class="nx">used</span> <span class="nx">instead</span> <span class="nx">of</span> <span class="nx">a</span><span class="err">
-</span><span class="err"></span>#               <span class="s2">&#34;named&#34;</span> <span class="nx">name</span> <span class="nx">server</span>.<span class="err">
-</span><span class="err"></span># <span class="nx">Syntax</span>:<span class="err">
-</span><span class="err"></span>#<span class="err">
-</span><span class="err"></span># <span class="nx">IP</span><span class="p">-</span><span class="nx">Address</span>  <span class="nx">Full</span><span class="p">-</span><span class="nx">Qualified</span><span class="p">-</span><span class="nx">Hostname</span>  <span class="nx">Short</span><span class="p">-</span><span class="nx">Hostname</span><span class="err">
-</span><span class="err"></span>#<span class="err">
-</span><span class="err">
-</span><span class="err"></span><span class="m">127</span>.<span class="m">0</span>.<span class="m">0</span>.<span class="m">1</span>       <span class="nx">localhost</span><span class="err">
-</span><span class="err"></span><span class="m">10</span>.<span class="m">0</span>.<span class="m">2</span>.<span class="m">15</span>       <span class="nx">vhcalnplci</span>      <span class="nx">vhcalnplci</span>.<span class="nx">dummy</span>.<span class="nx">nodomain</span><span class="err">
-</span><span class="err">
-</span><span class="err"></span># <span class="nx">special</span> <span class="nx">IPv6</span> <span class="nx">addresses</span><span class="err">
-</span><span class="err"></span><span class="p">:</span>:<span class="m">1</span>             <span class="nx">localhost</span> <span class="nx">ipv6</span><span class="p">-</span><span class="nx">localhost</span> <span class="nx">ipv6</span><span class="p">-</span><span class="nx">loopback</span><span class="err">
-</span><span class="err">
-</span><span class="err"></span><span class="nx">fe00</span>::<span class="m">0</span>         <span class="nx">ipv6</span><span class="p">-</span><span class="nx">localnet</span><span class="err">
-</span><span class="err">
-</span><span class="err"></span><span class="nx">ff00</span>::<span class="m">0</span>         <span class="nx">ipv6</span><span class="p">-</span><span class="nx">mcastprefix</span><span class="err">
-</span><span class="err"></span><span class="nx">ff02</span>::<span class="m">1</span>         <span class="nx">ipv6</span><span class="p">-</span><span class="nx">allnodes</span><span class="err">
-</span><span class="err"></span><span class="nx">ff02</span>::<span class="m">2</span>         <span class="nx">ipv6</span><span class="p">-</span><span class="nx">allrouters</span><span class="err">
-</span><span class="err"></span><span class="nx">ff02</span>::<span class="m">3</span>         <span class="nx">ipv6</span><span class="p">-</span><span class="nx">allhosts</span></code></pre></div></li>
-</ul>
-
-<p>Restart <strong>rcnetwork</strong> service. Check values and connections:</p>
-<div class="highlight"><pre class="chroma"><code class="language-terminal" data-lang="terminal">dlanza@vhcalnplci:~&gt; sudo rcnetwork restart
+<!doctype html><html><head><title>How to install SAP NetWeaver 7.51 as ABAP Developer Edition in openSUSE</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=title content="How to install SAP NetWeaver 7.51 as ABAP Developer Edition in openSUSE – Tips and Tutorials"><meta name=description content="This tutorial will explain how to install SAP NetWeaver as ABAP server in a virtual machine to develop your own custom ABAP objects"><meta name=generator content="Hugo 0.56.3"><meta property=og:title content="How to install SAP NetWeaver 7.51 as ABAP Developer Edition in openSUSE"><meta property=og:description content="This tutorial will explain how to install SAP NetWeaver as ABAP server in a virtual machine to develop your own custom ABAP objects"><meta property=og:url content=https://dalanzg.github.io/tips-tutorials/posts/2017/11/09/how-to-install-sap-netweaver-7.51-as-abap-developer-edition-in-opensuse/><meta property=og:site_name content="Tips and Tutorials"><meta property=og:type content=article><meta property=og:image content=https://dalanzg.github.io/tips-tutorials/posts/2017/11/09/how-to-install-sap-netweaver-7.51-as-abap-developer-edition-in-opensuse/img/sap-gui-java-connection-3.png><meta property=og:tags content=opensuse><meta property=og:tags content=sap><meta property=article:published_time content=2017-11-09><meta name=twitter:card content=summary_large_image><meta name=twitter:description content="This tutorial will explain how to install SAP NetWeaver as ABAP server in a virtual machine to develop your own custom ABAP objects"><meta name=twitter:title content="How to install SAP NetWeaver 7.51 as ABAP Developer Edition in openSUSE"><meta name=twitter:site content="Tips and Tutorials"><meta name=twitter:creator content=@dalanzg><meta name=twitter:image content=https://dalanzg.github.io/tips-tutorials/posts/2017/11/09/how-to-install-sap-netweaver-7.51-as-abap-developer-edition-in-opensuse/img/sap-gui-java-connection-3.png><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"How to install SAP NetWeaver 7.51 as ABAP Developer Edition in openSUSE","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/dalanzg.github.io\/tips-tutorials\/posts\/2017\/11\/09\/how-to-install-sap-netweaver-7.51-as-abap-developer-edition-in-opensuse\/"},"image":{"@type":"ImageObject","url":"https:\/\/dalanzg.github.io\/tips-tutorials\/mstile-150x150.png","width":150,"height":150},"genre":"posts","keywords":"opensuse, sap","wordcount":1337,"url":"https:\/\/dalanzg.github.io\/tips-tutorials\/posts\/2017\/11\/09\/how-to-install-sap-netweaver-7.51-as-abap-developer-edition-in-opensuse\/","datePublished":"2017-11-09","dateModified":"2017-11-09","license":"Copyright. Tips and Tutorials. All rights reserved.","publisher":{"@type":"Organization","name":"Daniel Lanza","logo":{"@type":"ImageObject","url":"https:\/\/dalanzg.github.io\/tips-tutorials\/mstile-150x150.png","width":150,"height":150}},"author":{"@type":"Person","name":"dalanzg"},"description":"This tutorial will explain how to install SAP NetWeaver as ABAP server in a virtual machine to develop your own custom ABAP objects"}</script><link rel=apple-touch-icon sizes=180x180 href=https://dalanzg.github.io/tips-tutorials/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=https://dalanzg.github.io/tips-tutorials/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=https://dalanzg.github.io/tips-tutorials/favicon-16x16.png><link rel=manifest href=https://dalanzg.github.io/tips-tutorials/site.webmanifest><link rel=mask-icon href=https://dalanzg.github.io/tips-tutorials/safari-pinned-tab.svg color=#5bbad5><meta name=apple-mobile-web-app-title content="Tips and Tutorials"><meta name=application-name content="Tips and Tutorials"><meta name=msapplication-TileColor content=#da532c><meta name=theme-color content=#ffffff><link rel=canonical href=https://dalanzg.github.io/tips-tutorials/posts/2017/11/09/how-to-install-sap-netweaver-7.51-as-abap-developer-edition-in-opensuse/><link rel=stylesheet href=https://dalanzg.github.io/tips-tutorials/sass/main.min.5f805eac00006ca12f0d48d367bd1bc959826406b3bf3d94a67e3e976d595702.css integrity="sha256-X4BerAAAbKEvDUjTZ70byVmCZAazvz2Upn4&#43;l21ZVwI="><link rel=sitemap href=https://dalanzg.github.io/tips-tutorials/sitemap.xml title=Sitemap type=application/xml><meta name=google-site-verification content=CeO9J_0wi37-MvDa_F7AmZJYunwDhFGjv8eSlJFPil8><script async src="https://www.googletagmanager.com/gtag/js?id=UA-65400010-1"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','UA-65400010-1');</script><script async src=//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js></script><script>(adsbygoogle=window.adsbygoogle||[]).push({google_ad_client:"ca-pub-8140733006923933",enable_page_level_ads:true});</script></head><body><div class=container><nav class="navbar navbar-expand-lg navbar-light bg-light"><a class=navbar-brand href=https://dalanzg.github.io/tips-tutorials/><strong>Tips and Tutorials</strong></a>
+<button class=navbar-toggler type=button data-toggle=collapse data-target=#navbarSupportedContent aria-controls=navbarSupportedContent aria-expanded=false aria-label="Toggle navigation">
+<span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse" id=navbarSupportedContent><ul class="navbar-nav mr-auto"><li class=navbar-item><a class=nav-link href=https://dalanzg.github.io/tips-tutorials/about/>About</a></li><li class=navbar-item><a class=nav-link href=https://dalanzg.github.io/tips-tutorials/tags/>Tags</a></li><li class=navbar-item><a class=nav-link href=https://dalanzg.github.io/tips-tutorials/posts/>Posts</a></li></ul><form class="form-inline float-xs-right" action=https://dalanzg.github.io/tips-tutorials/search/ method=get data-search-form><input class="form-control mr-sm-2" type=text name=q placeholder=Search... data-search-input>
+<button class="btn btn-outline-success my-2 my-sm-0" type=submit><i class="fas fa-search"></i></button></form></div></nav><h1 class=mt-5>How to install SAP NetWeaver 7.51 as ABAP Developer Edition in openSUSE</h1><p class="text-muted mt-3"><span>Published on November 9, 2017</span>
+<span>by Daniel Lanza</span></p><p><a class=text-muted href=https://dalanzg.github.io/tips-tutorials/tags/opensuse><i class="fas fa-tags"></i>&nbsp;opensuse</a>
+<a class=text-muted href=https://dalanzg.github.io/tips-tutorials/tags/sap><i class="fas fa-tags"></i>&nbsp;sap</a></p><p>This tutorial will explain how to install SAP NetWeaver as ABAP server in a virtual machine to develop your own custom ABAP objects.</p><h2 id=requirements>Requirements</h2><p>You will need the following:</p><ul><li>An openSUSE virtual machine with VirtualBox (<a href=https://dalanzg.github.io/tips-tutorials/posts/2017/02/12/how-to-install-opensuse-leap-42.2-in-virtualbox/>Check this link</a></li><li>Download SAP NetWeaver compress files from <a href=https://tools.hana.ondemand.com/#abap>SAP NetWeaver AS ABAP Developer Edition</a></li></ul><h2 id=steps>Steps</h2><ul><li><a href=#set-port-forwarding>Set port forwarding</a></li><li><a href=#set-hostname-and-hosts>Set hostname and hosts</a></li><li><a href=#install-uuidd>Install uuidd</a></li><li><a href=#mount-sap-netweaver-files>Mount SAP NetWeaver files</a></li><li><a href=#install-sap-netweaver>Install SAP NetWeaver</a></li><li><a href=#install-sap-gui-in-your-host-machine>Install SAP GUI in your host machine</a></li><li><a href=#sap-gui-for-java-logon>SAP GUI for JAVA logon</a></li><li><a href=#check-sap-netweaver-license>Check SAP NetWeaver license</a></li><li><a href=#stop-sap-netweaver>Stop SAP NetWeaver</a></li><li><a href=#start-sap-netweaver>Start SAP NetWeaver</a></li></ul><h3 id=set-port-forwarding>Set port forwarding</h3><p>Forward from the Host IP and ports to the following Guest IP and ports in the virtual machine settings:</p><table class="table table-bordered-striped"><thead><tr><th>Name</th><th>Protocol</th><th>Host IP</th><th>Host Port</th><th>Guest IP</th><th>Guest Port</th></tr></thead><tbody><tr><td>HTTP</td><td>TCP</td><td>127.0.0.1</td><td>8000</td><td>10.0.2.15</td><td>8000</td></tr><tr><td>HTTPS</td><td>TCP</td><td>127.0.0.1</td><td>44300</td><td>10.0.2.15</td><td>44300</td></tr><tr><td>SAP Cloud Connector</td><td>TCP</td><td>127.0.0.1</td><td>8443</td><td>10.0.2.15</td><td>8443</td></tr><tr><td>SAP GUI</td><td>TCP</td><td>127.0.0.1</td><td>3200</td><td>10.0.2.15</td><td>3200</td></tr><tr><td>ABAP in Eclipse</td><td>TCP</td><td>127.0.0.1</td><td>3300</td><td>10.0.2.15</td><td>3300</td></tr><tr><td>SSH</td><td>TCP</td><td>127.0.0.1</td><td>22</td><td>10.0.2.15</td><td>22</td></tr></tbody></table><figure class=text-center><img src=img/port-forwarding.png class="figure-img img-fluid rounded" alt="Port forwarding" width=500><figcaption class=figure-caption>Port forwarding</figcaption></figure><p>Restart <strong>rcnetwork</strong> service.</p><div class=highlight><pre class=chroma><code class=language-terminal data-lang=terminal>dlanza@linux-fd61:~&gt; sudo rcnetwork restart</code></pre></div><h3 id=set-hostname-and-hosts>Set hostname and hosts</h3><p>If the virtual machine only has network NAT adapter, the static <strong>10.0.2.15</strong> is assigned (eth0). Change hostname and hosts for this static IP address:</p><ul><li>Hostname: <strong>vhcalnplci</strong></li><li>Full-Qualified-Hostname: <strong>vhcalnplci</strong></li></ul><p>Change hostname in <strong>/etc/hostname</strong>.</p><div class=highlight><pre class=chroma><code class=language-terminal data-lang=terminal>dlanza@linux-fd61:~&gt; sudo vim /etc/hostname</code></pre></div><div class=highlight><pre class=chroma><code class=language-vim data-lang=vim><span class=nx>vhcalnplci</span></code></pre></div><p>Add the following line in <strong>/etc/hosts</strong>:</p><ul><li><p>10.0.2.15 vhcalnplci vhcalnplci.dummy.nodomain</p><div class=highlight><pre class=chroma><code class=language-terminal data-lang=terminal>dlanza@linux-fd61:~&gt; sudo vim /etc/hosts</code></pre></div><div class=highlight><pre class=chroma><code class=language-vim data-lang=vim>#<span class=err>
+</span><span class=err></span># <span class=nx>hosts</span>         <span class=nx>This</span> <span class=nx>file</span> <span class=nx>describes</span> <span class=nx>a</span> <span class=nx>number</span> <span class=nx>of</span> <span class=nx>hostname</span><span class=p>-</span><span class=nx>to</span><span class=p>-</span><span class=nx>address</span><span class=err>
+</span><span class=err></span>#               <span class=nx>mappings</span> <span class=nx>for</span> <span class=nx>the</span> <span class=nx>TCP</span>/<span class=nx>IP</span> <span class=nx>subsystem</span>.  <span class=nx>It</span> <span class=nx>is</span> <span class=nx>mostly</span><span class=err>
+</span><span class=err></span>#               <span class=nx>used</span> <span class=nx>at</span> <span class=nx>boot</span> <span class=nx>time</span><span class=p>,</span> <span class=nx>when</span> <span class=nx>no</span> <span class=nx>name</span> <span class=nx>servers</span> <span class=nx>are</span> <span class=nx>running</span>.<span class=err>
+</span><span class=err></span>#               <span class=nx>On</span> <span class=nx>small</span> <span class=nx>systems</span><span class=p>,</span> <span class=nx>this</span> <span class=nx>file</span> <span class=nx>can</span> <span class=nx>be</span> <span class=nx>used</span> <span class=nx>instead</span> <span class=nx>of</span> <span class=nx>a</span><span class=err>
+</span><span class=err></span>#               <span class=s2>&#34;named&#34;</span> <span class=nx>name</span> <span class=nx>server</span>.<span class=err>
+</span><span class=err></span># <span class=nx>Syntax</span>:<span class=err>
+</span><span class=err></span>#<span class=err>
+</span><span class=err></span># <span class=nx>IP</span><span class=p>-</span><span class=nx>Address</span>  <span class=nx>Full</span><span class=p>-</span><span class=nx>Qualified</span><span class=p>-</span><span class=nx>Hostname</span>  <span class=nx>Short</span><span class=p>-</span><span class=nx>Hostname</span><span class=err>
+</span><span class=err></span>#<span class=err>
+</span><span class=err>
+</span><span class=err></span><span class=m>127</span>.<span class=m>0</span>.<span class=m>0</span>.<span class=m>1</span>       <span class=nx>localhost</span><span class=err>
+</span><span class=err></span><span class=m>10</span>.<span class=m>0</span>.<span class=m>2</span>.<span class=m>15</span>       <span class=nx>vhcalnplci</span>      <span class=nx>vhcalnplci</span>.<span class=nx>dummy</span>.<span class=nx>nodomain</span><span class=err>
+</span><span class=err>
+</span><span class=err></span># <span class=nx>special</span> <span class=nx>IPv6</span> <span class=nx>addresses</span><span class=err>
+</span><span class=err></span><span class=p>:</span>:<span class=m>1</span>             <span class=nx>localhost</span> <span class=nx>ipv6</span><span class=p>-</span><span class=nx>localhost</span> <span class=nx>ipv6</span><span class=p>-</span><span class=nx>loopback</span><span class=err>
+</span><span class=err>
+</span><span class=err></span><span class=nx>fe00</span>::<span class=m>0</span>         <span class=nx>ipv6</span><span class=p>-</span><span class=nx>localnet</span><span class=err>
+</span><span class=err>
+</span><span class=err></span><span class=nx>ff00</span>::<span class=m>0</span>         <span class=nx>ipv6</span><span class=p>-</span><span class=nx>mcastprefix</span><span class=err>
+</span><span class=err></span><span class=nx>ff02</span>::<span class=m>1</span>         <span class=nx>ipv6</span><span class=p>-</span><span class=nx>allnodes</span><span class=err>
+</span><span class=err></span><span class=nx>ff02</span>::<span class=m>2</span>         <span class=nx>ipv6</span><span class=p>-</span><span class=nx>allrouters</span><span class=err>
+</span><span class=err></span><span class=nx>ff02</span>::<span class=m>3</span>         <span class=nx>ipv6</span><span class=p>-</span><span class=nx>allhosts</span></code></pre></div></li></ul><p>Restart <strong>rcnetwork</strong> service. Check values and connections:</p><div class=highlight><pre class=chroma><code class=language-terminal data-lang=terminal>dlanza@vhcalnplci:~&gt; sudo rcnetwork restart
 dlanza@vhcalnplci:~&gt; hostname
 vhcalnplci
 dlanza@vhcalnplci:~&gt; hostname -f
@@ -284,21 +38,8 @@ PING vhcalnplci (10.0.2.15) 56(84) bytes of data.
 ^C
 --- vhcalnplci ping statistics ---
 2 packets transmitted, 2 received, 0% packet loss, time 999ms
-rtt min/avg/max/mdev = 0.028/0.040/0.052/0.012 ms</code></pre></div>
-<h3 id="install-uuidd">Install uuidd</h3>
-
-<p>Install <strong>uuidd</strong> service with YaST or Zypper, and start the service.</p>
-<div class="highlight"><pre class="chroma"><code class="language-terminal" data-lang="terminal">dlanza@vhcalnplci:~&gt; sudo zypper install uuidd
-dlanza@vhcalnplci:~&gt; sudo service uuidd start</code></pre></div>
-<h3 id="mount-sap-netweaver-files">Mount SAP NetWeaver files</h3>
-
-<p>Uncompress SAP NetWeaver files in a folder called <strong>netweaver</strong> in your host machine, and mount a transient folder.</p>
-
-<figure class="text-center">
-  <img src="img/netweaver-virtualbox-transition-folder.png" class="figure-img img-fluid rounded" alt="NetWeaver transient folder" width="500">
-  <figcaption class="figure-caption">NetWeaver transient folder</figcaption>
-</figure>
-<div class="highlight"><pre class="chroma"><code class="language-terminal" data-lang="terminal">dlanza@vhcalnplci:~&gt; mkdir netweaver
+rtt min/avg/max/mdev = 0.028/0.040/0.052/0.012 ms</code></pre></div><h3 id=install-uuidd>Install uuidd</h3><p>Install <strong>uuidd</strong> service with YaST or Zypper, and start the service.</p><div class=highlight><pre class=chroma><code class=language-terminal data-lang=terminal>dlanza@vhcalnplci:~&gt; sudo zypper install uuidd
+dlanza@vhcalnplci:~&gt; sudo service uuidd start</code></pre></div><h3 id=mount-sap-netweaver-files>Mount SAP NetWeaver files</h3><p>Uncompress SAP NetWeaver files in a folder called <strong>netweaver</strong> in your host machine, and mount a transient folder.</p><figure class=text-center><img src=img/netweaver-virtualbox-transition-folder.png class="figure-img img-fluid rounded" alt="NetWeaver transient folder" width=500><figcaption class=figure-caption>NetWeaver transient folder</figcaption></figure><div class=highlight><pre class=chroma><code class=language-terminal data-lang=terminal>dlanza@vhcalnplci:~&gt; mkdir netweaver
 dlanza@vhcalnplci:~&gt; sudo mount -t vboxsf netweaver netweaver
 dlanza@vhcalnplci:~&gt; ll netweaver/
 total 64
@@ -307,14 +48,8 @@ drwxr-xr-x 1 root root   374 jul 27 15:50 img
 -rw-r--r-- 1 root root 12751 sep  2  2016 install.sh
 -rw-r--r-- 1 root root 11434 ago  3 12:02 readme.html
 -rw-r--r-- 1 root root 36270 sep  9  2016 SAP_COMMUNITY_DEVELOPER_License
-drwxr-xr-x 1 root root   102 jul 27 15:50 server</code></pre></div>
-<h3 id="install-sap-netweaver">Install SAP NetWeaver</h3>
-
-<p>Go to mounted folder, and change file permissions for <strong>install.sh</strong> to execute.</p>
-<div class="highlight"><pre class="chroma"><code class="language-terminal" data-lang="terminal">dlanza@vhcalnplci:~&gt; cd netweaver/
-dlanza@vhcalnplci:~/netweaver&gt; sudo chmod 755 install.sh</code></pre></div>
-<p>Execute <strong>install.sh</strong> script to start the installation. Accept License Agreement (press many times <strong>SPACE</strong> key), enter password for UNIX SAP users (<strong>npladm</strong>) and wait.</p>
-<div class="highlight"><pre class="chroma"><code class="language-terminal" data-lang="terminal">dlanza@vhcalnplci:~/netweaver&gt; sudo ./install.sh
+drwxr-xr-x 1 root root   102 jul 27 15:50 server</code></pre></div><h3 id=install-sap-netweaver>Install SAP NetWeaver</h3><p>Go to mounted folder, and change file permissions for <strong>install.sh</strong> to execute.</p><div class=highlight><pre class=chroma><code class=language-terminal data-lang=terminal>dlanza@vhcalnplci:~&gt; cd netweaver/
+dlanza@vhcalnplci:~/netweaver&gt; sudo chmod 755 install.sh</code></pre></div><p>Execute <strong>install.sh</strong> script to start the installation. Accept License Agreement (press many times <strong>SPACE</strong> key), enter password for UNIX SAP users (<strong>npladm</strong>) and wait.</p><div class=highlight><pre class=chroma><code class=language-terminal data-lang=terminal>dlanza@vhcalnplci:~/netweaver&gt; sudo ./install.sh
 Hostname vhcalnplci assumed to be SAP compliant
 Hit enter to continue!
 
@@ -339,9 +74,7 @@ Be patient, this will take a while ...
 extracting data archives...
 extracting /home/dlanza/netweaver/server/TAR/x86_64/dbdata.tgz-*
 sybase/NPL/sapdata_1/
-sybase/NPL/sapdata_1/NPL_data_001.dat</code></pre></div>
-<p>After a long time&hellip;</p>
-<div class="highlight"><pre class="chroma"><code class="language-terminal" data-lang="terminal">Checking syb Database
+sybase/NPL/sapdata_1/NPL_data_001.dat</code></pre></div><p>After a long time&hellip;</p><div class=highlight><pre class=chroma><code class=language-terminal data-lang=terminal>Checking syb Database
 Database is running
 -------------------------------------------
 Starting Startup Agent sapstartsrv
@@ -362,143 +95,7 @@ Startup-Log is written to /home/npladm/startsap_D00.log
 -------------------------------------------
 /usr/sap/NPL/D00/exe/sapcontrol -prot NI_HTTP -nr 00 -function Start
 Instance on host vhcalnplci started
-Installation of NPL successful</code></pre></div>
-<h3 id="install-sap-gui-in-your-host-machine">Install SAP GUI in your host machine</h3>
-
-<p>Go to client &gt; JavaGUI (if you use UNIX), and execute the first jar file to install the client.</p>
-
-<figure class="text-center">
-  <img src="img/sap-gui-installation-1.png" class="figure-img img-fluid rounded" alt="SAP GUI installation" width="500">
-  <figcaption class="figure-caption">SAP GUI installation</figcaption>
-</figure>
-
-<p>Click on next to finish the installation.</p>
-
-<figure class="text-center">
-  <img src="img/sap-gui-installation-2.png" class="figure-img img-fluid rounded" alt="SAP GUI installation" width="500">
-  <figcaption class="figure-caption">SAP GUI installation</figcaption>
-</figure>
-
-<figure class="text-center">
-  <img src="img/sap-gui-installation-3.png" class="figure-img img-fluid rounded" alt="SAP GUI installation" width="500">
-  <figcaption class="figure-caption">SAP GUI installation</figcaption>
-</figure>
-
-<figure class="text-center">
-  <img src="img/sap-gui-installation-4.png" class="figure-img img-fluid rounded" alt="SAP GUI installation" width="500">
-  <figcaption class="figure-caption">SAP GUI installation</figcaption>
-</figure>
-
-<figure class="text-center">
-  <img src="img/sap-gui-installation-5.png" class="figure-img img-fluid rounded" alt="SAP GUI installation" width="500">
-  <figcaption class="figure-caption">SAP GUI installation</figcaption>
-</figure>
-
-<h3 id="sap-gui-for-java-logon">SAP GUI for JAVA logon</h3>
-
-<p>When connecting with <strong>127.0.0.1:3200</strong> in Host machine, there is a port forwarding in VirtualBox to <strong>10.0.2.15:3200</strong> in Guest machine (SAP NetWeaver server). Therefore, open SAP GUI for JAVA, and add the following connection in expert mode:</p>
-
-<ul>
-<li><strong>conn=/H/127.0.0.1/S/3200</strong></li>
-</ul>
-
-<figure class="text-center">
-  <img src="img/sap-gui-java-connection-1.png" class="figure-img img-fluid rounded" alt="SAP GUI Java connection" width="500">
-  <figcaption class="figure-caption">SAP GUI Java connection</figcaption>
-</figure>
-
-<p>These are the SAP users available:</p>
-
-<table class="table table-bordered-striped">
-<thead>
-<tr>
-<th>Username</th>
-<th>Password</th>
-<th>Description</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>DDIC</td>
-<td>Appl1ance</td>
-<td>Data Dictionary User</td>
-</tr>
-
-<tr>
-<td>DEVELOPER</td>
-<td>Appl1ance</td>
-<td>Developer User</td>
-</tr>
-
-<tr>
-<td>SAP*</td>
-<td>Appl1ance</td>
-<td>SAP Administrator</td>
-</tr>
-</tbody>
-</table>
-
-<p>Logon with:</p>
-
-<ul>
-<li>User: <strong>Developer</strong></li>
-<li>Pass: <strong>Appl1ance</strong></li>
-<li>Language: <strong>EN</strong></li>
-</ul>
-
-<figure class="text-center">
-  <img src="img/sap-gui-java-connection-2.png" class="figure-img img-fluid rounded" alt="SAP GUI Java connection" width="500">
-  <figcaption class="figure-caption">SAP GUI Java connection</figcaption>
-</figure>
-
-<figure class="text-center">
-  <img src="img/sap-gui-java-connection-3.png" class="figure-img img-fluid rounded" alt="SAP GUI Java connection" width="500">
-  <figcaption class="figure-caption">SAP GUI Java connection</figcaption>
-</figure>
-
-<h3 id="check-sap-netweaver-license">Check SAP NetWeaver license</h3>
-
-<p>Go to <strong>SLICENSE</strong> transaction to check the license:</p>
-
-<figure class="text-center">
-  <img src="img/slicense.png" class="figure-img img-fluid rounded" alt="SAP GUI Java connection" width="500">
-  <figcaption class="figure-caption">SAP GUI Java connection</figcaption>
-</figure>
-
-<p>Request a new one in <a href="https://go.support.sap.com/minisap/#/minisap">SAP License Keys for Preview, Evaluation and Developer Versions</a>. Select <strong>NPL - SAP NetWeaver 7.x (Sybase ASE)</strong> and fill up your data (Hardware Key is available in <strong>SLICENSE</strong> transaction).</p>
-
-<figure class="text-center">
-  <img src="img/sap-netweaver-license.png" class="figure-img img-fluid rounded" alt="SAP NetWeaver License" width="500">
-  <figcaption class="figure-caption">SAP NetWeaver License</figcaption>
-</figure>
-
-<p>Download <strong>NPL.txt</strong> file and uploaded it in <strong>SLICENSE</strong> transaction.</p>
-
-<figure class="text-center">
-  <img src="img/NPL-file.png" class="figure-img img-fluid rounded" alt="SAP NetWeaver License" width="500">
-  <figcaption class="figure-caption">SAP NetWeaver License</figcaption>
-</figure>
-
-<figure class="text-center">
-  <img src="img/install-license-1.png" class="figure-img img-fluid rounded" alt="SAP NetWeaver License" width="500">
-  <figcaption class="figure-caption">SAP NetWeaver License</figcaption>
-</figure>
-
-<figure class="text-center">
-  <img src="img/install-license-2.png" class="figure-img img-fluid rounded" alt="SAP NetWeaver License" width="500">
-  <figcaption class="figure-caption">SAP NetWeaver License</figcaption>
-</figure>
-
-<figure class="text-center">
-  <img src="img/install-license-3.png" class="figure-img img-fluid rounded" alt="SAP NetWeaver License" width="500">
-  <figcaption class="figure-caption">SAP NetWeaver License</figcaption>
-</figure>
-
-<h3 id="stop-sap-netweaver">Stop SAP NetWeaver</h3>
-
-<p>Run <strong>stopsap ALL</strong> with <strong>npladm</strong> user to stop SAP NetWeaver.</p>
-<div class="highlight"><pre class="chroma"><code class="language-terminal" data-lang="terminal">vhcalnplci:npladm 3&gt; stopsap ALL
+Installation of NPL successful</code></pre></div><h3 id=install-sap-gui-in-your-host-machine>Install SAP GUI in your host machine</h3><p>Go to client &gt; JavaGUI (if you use UNIX), and execute the first jar file to install the client.</p><figure class=text-center><img src=img/sap-gui-installation-1.png class="figure-img img-fluid rounded" alt="SAP GUI installation" width=500><figcaption class=figure-caption>SAP GUI installation</figcaption></figure><p>Click on next to finish the installation.</p><figure class=text-center><img src=img/sap-gui-installation-2.png class="figure-img img-fluid rounded" alt="SAP GUI installation" width=500><figcaption class=figure-caption>SAP GUI installation</figcaption></figure><figure class=text-center><img src=img/sap-gui-installation-3.png class="figure-img img-fluid rounded" alt="SAP GUI installation" width=500><figcaption class=figure-caption>SAP GUI installation</figcaption></figure><figure class=text-center><img src=img/sap-gui-installation-4.png class="figure-img img-fluid rounded" alt="SAP GUI installation" width=500><figcaption class=figure-caption>SAP GUI installation</figcaption></figure><figure class=text-center><img src=img/sap-gui-installation-5.png class="figure-img img-fluid rounded" alt="SAP GUI installation" width=500><figcaption class=figure-caption>SAP GUI installation</figcaption></figure><h3 id=sap-gui-for-java-logon>SAP GUI for JAVA logon</h3><p>When connecting with <strong>127.0.0.1:3200</strong> in Host machine, there is a port forwarding in VirtualBox to <strong>10.0.2.15:3200</strong> in Guest machine (SAP NetWeaver server). Therefore, open SAP GUI for JAVA, and add the following connection in expert mode:</p><ul><li><strong>conn=/H/127.0.0.1/S/3200</strong></li></ul><figure class=text-center><img src=img/sap-gui-java-connection-1.png class="figure-img img-fluid rounded" alt="SAP GUI Java connection" width=500><figcaption class=figure-caption>SAP GUI Java connection</figcaption></figure><p>These are the SAP users available:</p><table class="table table-bordered-striped"><thead><tr><th>Username</th><th>Password</th><th>Description</th></tr></thead><tbody><tr><td>DDIC</td><td>Appl1ance</td><td>Data Dictionary User</td></tr><tr><td>DEVELOPER</td><td>Appl1ance</td><td>Developer User</td></tr><tr><td>SAP*</td><td>Appl1ance</td><td>SAP Administrator</td></tr></tbody></table><p>Logon with:</p><ul><li>User: <strong>Developer</strong></li><li>Pass: <strong>Appl1ance</strong></li><li>Language: <strong>EN</strong></li></ul><figure class=text-center><img src=img/sap-gui-java-connection-2.png class="figure-img img-fluid rounded" alt="SAP GUI Java connection" width=500><figcaption class=figure-caption>SAP GUI Java connection</figcaption></figure><figure class=text-center><img src=img/sap-gui-java-connection-3.png class="figure-img img-fluid rounded" alt="SAP GUI Java connection" width=500><figcaption class=figure-caption>SAP GUI Java connection</figcaption></figure><h3 id=check-sap-netweaver-license>Check SAP NetWeaver license</h3><p>Go to <strong>SLICENSE</strong> transaction to check the license:</p><figure class=text-center><img src=img/slicense.png class="figure-img img-fluid rounded" alt="SAP GUI Java connection" width=500><figcaption class=figure-caption>SAP GUI Java connection</figcaption></figure><p>Request a new one in <a href=https://go.support.sap.com/minisap/#/minisap>SAP License Keys for Preview, Evaluation and Developer Versions</a>. Select <strong>NPL - SAP NetWeaver 7.x (Sybase ASE)</strong> and fill up your data (Hardware Key is available in <strong>SLICENSE</strong> transaction).</p><figure class=text-center><img src=img/sap-netweaver-license.png class="figure-img img-fluid rounded" alt="SAP NetWeaver License" width=500><figcaption class=figure-caption>SAP NetWeaver License</figcaption></figure><p>Download <strong>NPL.txt</strong> file and uploaded it in <strong>SLICENSE</strong> transaction.</p><figure class=text-center><img src=img/NPL-file.png class="figure-img img-fluid rounded" alt="SAP NetWeaver License" width=500><figcaption class=figure-caption>SAP NetWeaver License</figcaption></figure><figure class=text-center><img src=img/install-license-1.png class="figure-img img-fluid rounded" alt="SAP NetWeaver License" width=500><figcaption class=figure-caption>SAP NetWeaver License</figcaption></figure><figure class=text-center><img src=img/install-license-2.png class="figure-img img-fluid rounded" alt="SAP NetWeaver License" width=500><figcaption class=figure-caption>SAP NetWeaver License</figcaption></figure><figure class=text-center><img src=img/install-license-3.png class="figure-img img-fluid rounded" alt="SAP NetWeaver License" width=500><figcaption class=figure-caption>SAP NetWeaver License</figcaption></figure><h3 id=stop-sap-netweaver>Stop SAP NetWeaver</h3><p>Run <strong>stopsap ALL</strong> with <strong>npladm</strong> user to stop SAP NetWeaver.</p><div class=highlight><pre class=chroma><code class=language-terminal data-lang=terminal>vhcalnplci:npladm 3&gt; stopsap ALL
 Checking syb Database
 Database is running
 -------------------------------------------
@@ -520,11 +117,7 @@ stopping database NPL ...
 stop database completed successfully
 Checking syb Database
 Database is not available via R3trans
--------------------------------------------</code></pre></div>
-<h3 id="start-sap-netweaver">Start SAP NetWeaver</h3>
-
-<p>Check the static IP address is <strong>10.0.2.15</strong>, and ping <strong>vhcalnplci</strong>.</p>
-<div class="highlight"><pre class="chroma"><code class="language-terminal" data-lang="terminal">dlanza@vhcalnplci:~&gt; sudo ifconfig
+-------------------------------------------</code></pre></div><h3 id=start-sap-netweaver>Start SAP NetWeaver</h3><p>Check the static IP address is <strong>10.0.2.15</strong>, and ping <strong>vhcalnplci</strong>.</p><div class=highlight><pre class=chroma><code class=language-terminal data-lang=terminal>dlanza@vhcalnplci:~&gt; sudo ifconfig
 [sudo] password for root:
 eth0      Link encap:Ethernet  HWaddr 08:00:27:D5:EC:A1
           inet addr:10.0.2.15  Bcast:10.0.2.255  Mask:255.255.255.0
@@ -551,9 +144,7 @@ PING vhcalnplci (10.0.2.15) 56(84) bytes of data.
 ^C
 --- vhcalnplci ping statistics ---
 2 packets transmitted, 2 received, 0% packet loss, time 999ms
-rtt min/avg/max/mdev = 0.022/0.031/0.040/0.009 ms</code></pre></div>
-<p>Run <strong>startsap ALL</strong> with <strong>npladm</strong> user to start SAP NetWeaver.</p>
-<div class="highlight"><pre class="chroma"><code class="language-terminal" data-lang="terminal">dlanza@vhcalnplci:~&gt; sudo su - npladm
+rtt min/avg/max/mdev = 0.022/0.031/0.040/0.009 ms</code></pre></div><p>Run <strong>startsap ALL</strong> with <strong>npladm</strong> user to start SAP NetWeaver.</p><div class=highlight><pre class=chroma><code class=language-terminal data-lang=terminal>dlanza@vhcalnplci:~&gt; sudo su - npladm
 vhcalnplci:npladm 2&gt; startsap ALL
 Checking syb Database
 Database is not available via R3trans
@@ -583,9 +174,7 @@ starting SAP Instance D00
 Startup-Log is written to /home/npladm/startsap_D00.log
 -------------------------------------------
 /usr/sap/NPL/D00/exe/sapcontrol -prot NI_HTTP -nr 00 -function Start
-Instance on host vhcalnplci started</code></pre></div>
-<p>And check all services are green.</p>
-<div class="highlight"><pre class="chroma"><code class="language-terminal" data-lang="terminal">vhcalnplci:npladm 3&gt; sapcontrol -nr 00 -function GetProcessList
+Instance on host vhcalnplci started</code></pre></div><p>And check all services are green.</p><div class=highlight><pre class=chroma><code class=language-terminal data-lang=terminal>vhcalnplci:npladm 3&gt; sapcontrol -nr 00 -function GetProcessList
 
 09.11.2017 12:58:41
 GetProcessList
@@ -594,95 +183,15 @@ name, description, dispstatus, textstatus, starttime, elapsedtime, pid
 igswd_mt, IGS Watchdog, GREEN, Running, 2017 11 09 12:57:47, 0:00:54, 23988
 disp+work, Dispatcher, GREEN, Running, 2017 11 09 12:57:47, 0:00:54, 23987
 gwrd, Gateway, GREEN, Running, 2017 11 09 12:57:52, 0:00:49, 24006
-icman, ICM, GREEN, Running, 2017 11 09 12:57:52, 0:00:49, 24007</code></pre></div>
-
-<div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "tips-tutorials" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-	<div class="bg-light py-5">
-		<div class="container">
-			<h2 class="text-center">Read next</h2>
-			<div class="row">
-				<div class="col-md-6 text-center">
-						Previous Post:
-						<a href="https://dalanzg.github.io/tips-tutorials/posts/2017/07/31/how-to-install-postgresql-in-opensuse/">How to install PostgreSQL in openSUSE</a>
-				</div>
-				<div class="col-md-6 text-center">
-						Next Post:
-						<a href="https://dalanzg.github.io/tips-tutorials/posts/2017/11/18/how-to-install-abap-in-eclipse/">How to install ABAP in Eclipse</a>
-				</div>
-			</div>
-		</div>
-	</div>
-<div class="container mt-5">
-	<h2 class="text-center">See also</h2>
-	<div class="row">
-			<div class="col-md mb-3">
-				<p class="lead mb-0"><a class="text-body" href="https://dalanzg.github.io/tips-tutorials/posts/2017/07/31/how-to-install-postgresql-in-opensuse/">How to install PostgreSQL in openSUSE</a></p>
-				<p class="font-weight-light mt-3">This tutorial will explain how to install postgreSQL server in openSUSE. A new role and database will be created with the client software.
+icman, ICM, GREEN, Running, 2017 11 09 12:57:52, 0:00:49, 24007</code></pre></div><div id=disqus_thread></div><script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return;}
+var d=document,s=d.createElement('script');s.async=true;s.src='//'+"tips-tutorials"+'.disqus.com/embed.js';s.setAttribute('data-timestamp',+new Date());(d.head||d.body).appendChild(s);})();</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a><div class="bg-light py-5"><div class=container><h2 class=text-center>Read next</h2><div class=row><div class="col-md-6 text-center">Previous Post:
+<a href=https://dalanzg.github.io/tips-tutorials/posts/2017/07/31/how-to-install-postgresql-in-opensuse/>How to install PostgreSQL in openSUSE</a></div><div class="col-md-6 text-center">Next Post:
+<a href=https://dalanzg.github.io/tips-tutorials/posts/2017/11/18/how-to-install-abap-in-eclipse/>How to install ABAP in Eclipse</a></div></div></div></div><div class="container mt-5"><h2 class=text-center>See also</h2><div class=row><div class="col-md mb-3"><p class="lead mb-0"><a class=text-body href=https://dalanzg.github.io/tips-tutorials/posts/2017/07/31/how-to-install-postgresql-in-opensuse/>How to install PostgreSQL in openSUSE</a></p><p class="font-weight-light mt-3">This tutorial will explain how to install postgreSQL server in openSUSE. A new role and database will be created with the client software.
 Requirements You will need the following:
- openSUSE Leap 42.3  Steps  Install PostgreSQL Post-installation checks Change postgres role password Create a new role Create a new database  Install PostgreSQL Install PostgreSQL from YAST or zypper command:
- postgresql -&gt; PostgreSQL client postgresql-server -&gt; PostgreSQL server postgresql-contrib -&gt; Contributed extensions and additions</p>
-				<a href="https://dalanzg.github.io/tips-tutorials/posts/2017/07/31/how-to-install-postgresql-in-opensuse/" class="btn btn-primary">Read more</a>
-			</div>
-			<div class="col-md mb-3">
-				<p class="lead mb-0"><a class="text-body" href="https://dalanzg.github.io/tips-tutorials/posts/2017/07/30/setting-mail-server-with-postfix-and-dovecot-in-opensuse/">Setting mail server with Postfix and Dovecot in openSUSE</a></p>
-				<p class="font-weight-light mt-3">A tutorial to set a mail server for inbound and outgoing mails:
- Postfix for outgoing mails (SMTP) Dovecot for inbound mails (IMAP/POP3)  Requirements You will need the following:
- An openSUSE virtual machine with VirtualBox (Check this link Hostname and domain -&gt; Setting Hostname and domain in openSUSE SMTP server with Postfix running -&gt; Setting Postfix for outgoing mail in openSUSE  In this tutorial, the machine has the following:</p>
-				<a href="https://dalanzg.github.io/tips-tutorials/posts/2017/07/30/setting-mail-server-with-postfix-and-dovecot-in-opensuse/" class="btn btn-primary">Read more</a>
-			</div>
-			<div class="col-md mb-3">
-				<p class="lead mb-0"><a class="text-body" href="https://dalanzg.github.io/tips-tutorials/posts/2017/07/09/error-501-syntax-helo-hostname-in-postfix/">Error 501 Syntax HELO hostname in postfix</a></p>
-				<p class="font-weight-light mt-3">Certain SMTP servers require HELO servername in order to allow a request to proceed. Set a command filter to let it work without any arguments.
+openSUSE Leap 42.3 Steps Install PostgreSQL Post-installation checks Change postgres role password Create a new role Create a new database Install PostgreSQL Install PostgreSQL from YAST or zypper command:
+postgresql -&gt; PostgreSQL client postgresql-server -&gt; PostgreSQL server postgresql-contrib -&gt; Contributed extensions and additions</p><a href=https://dalanzg.github.io/tips-tutorials/posts/2017/07/31/how-to-install-postgresql-in-opensuse/ class="btn btn-primary">Read more</a></div><div class="col-md mb-3"><p class="lead mb-0"><a class=text-body href=https://dalanzg.github.io/tips-tutorials/posts/2017/07/30/setting-mail-server-with-postfix-and-dovecot-in-opensuse/>Setting mail server with Postfix and Dovecot in openSUSE</a></p><p class="font-weight-light mt-3">A tutorial to set a mail server for inbound and outgoing mails:
+Postfix for outgoing mails (SMTP) Dovecot for inbound mails (IMAP/POP3) Requirements You will need the following:
+An openSUSE virtual machine with VirtualBox (Check this link Hostname and domain -&gt; Setting Hostname and domain in openSUSE SMTP server with Postfix running -&gt; Setting Postfix for outgoing mail in openSUSE In this tutorial, the machine has the following:</p><a href=https://dalanzg.github.io/tips-tutorials/posts/2017/07/30/setting-mail-server-with-postfix-and-dovecot-in-opensuse/ class="btn btn-primary">Read more</a></div><div class="col-md mb-3"><p class="lead mb-0"><a class=text-body href=https://dalanzg.github.io/tips-tutorials/posts/2017/07/09/error-501-syntax-helo-hostname-in-postfix/>Error 501 Syntax HELO hostname in postfix</a></p><p class="font-weight-light mt-3">Certain SMTP servers require HELO servername in order to allow a request to proceed. Set a command filter to let it work without any arguments.
 Source
 Requirements You will need the following:
- An openSUSE virtual machine with VirtualBox (Check this link Hostname and domain -&gt; Setting Hostname and domain in openSUSE SMTP server with Postfix running -&gt; Setting Postfix for outgoing mail in openSUSE  In this tutorial, the machine has the following:</p>
-				<a href="https://dalanzg.github.io/tips-tutorials/posts/2017/07/09/error-501-syntax-helo-hostname-in-postfix/" class="btn btn-primary">Read more</a>
-			</div>
-	</div>
-</div></div><footer class="blog-footer">
-  <p>
-    <nav class="nav justify-content-center">
-      <a class="nav-link" href="https://dalanzg.github.io/tips-tutorials/index.xml" target="_blank">
-        <i class="fas fa-rss-square fa-2x"></i>
-      </a>
-      
-      <a class="nav-link" href="https://twitter.com/dalanzg" target="_blank">
-        <i class="fab fa-twitter fa-2x"></i>
-      </a>
-      
-      <a class="nav-link" href="https://github.com/dalanzg" target="_blank">
-        <i class="fab fa-github fa-2x"></i>
-      </a>
-      
-      <a class="nav-link" href="https://www.linkedin.com/in/danilanza" target="_blank">
-        <i class="fab fa-linkedin fa-2x"></i>
-      </a>
-      
-    </nav>
-  </p>
-  <p class="text-muted">Copyright &copy; Tips and Tutorials 2019</p>
-  <p class="text-muted"><small>All rights reserved. Blog powered by <a href="https://gohugo.io/">Hugo</a> and hosted on <a href="https://www.github.com">GitHub.</a></small></p>
-  <p class="text-muted"><small><a href="https://opensource.org/licenses/MIT">MIT License</a></small></p>
-</footer>
-
-<script src="https://dalanzg.github.io/tips-tutorials/js/bundle.min.110d3e1a6c79028aa1899125704a04f056b48a7862c0d9058732b1ab70451559.js"></script></body>
-</html>
+An openSUSE virtual machine with VirtualBox (Check this link Hostname and domain -&gt; Setting Hostname and domain in openSUSE SMTP server with Postfix running -&gt; Setting Postfix for outgoing mail in openSUSE In this tutorial, the machine has the following:</p><a href=https://dalanzg.github.io/tips-tutorials/posts/2017/07/09/error-501-syntax-helo-hostname-in-postfix/ class="btn btn-primary">Read more</a></div></div></div></div><footer class=blog-footer><p><nav class="nav justify-content-center"><a class=nav-link href=https://dalanzg.github.io/tips-tutorials/index.xml target=_blank><i class="fas fa-rss-square fa-2x"></i></a><a class=nav-link href=https://twitter.com/dalanzg target=_blank><i class="fab fa-twitter fa-2x"></i></a><a class=nav-link href=https://github.com/dalanzg target=_blank><i class="fab fa-github fa-2x"></i></a><a class=nav-link href=https://www.linkedin.com/in/danilanza target=_blank><i class="fab fa-linkedin fa-2x"></i></a></nav></p><p class=text-muted>Copyright &copy; Tips and Tutorials 2019</p><p class=text-muted><small>All rights reserved. Blog powered by <a href=https://gohugo.io/>Hugo</a> and hosted on <a href=https://www.github.com>GitHub.</a></small></p><p class=text-muted><small><a href=https://opensource.org/licenses/MIT>MIT License</a></small></p></footer><script src=https://dalanzg.github.io/tips-tutorials/js/bundle.min.110d3e1a6c79028aa1899125704a04f056b48a7862c0d9058732b1ab70451559.js></script></body></html>

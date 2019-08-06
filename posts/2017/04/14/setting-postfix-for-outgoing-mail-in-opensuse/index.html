@@ -1,162 +1,10 @@
-<!DOCTYPE html>
-<html><head>
-  <title>Setting Postfix for outgoing mail in openSUSE</title>
-  
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="title" content="Setting Postfix for outgoing mail in openSUSE – Tips and Tutorials">
-  <meta name="description" content="A tutorial to set Postfix to send mails in openSUSE.">
-  
-  <meta name="generator" content="Hugo 0.56.3" />
-  
-  <meta property="og:title" content="Setting Postfix for outgoing mail in openSUSE">
-<meta property="og:description" content="A tutorial to set Postfix to send mails in openSUSE." />
-<meta property="og:url" content="https://dalanzg.github.io/tips-tutorials/posts/2017/04/14/setting-postfix-for-outgoing-mail-in-opensuse/">
-<meta property="og:site_name" content="Tips and Tutorials">
-<meta property="og:type" content="article">
-  <meta property="og:image" content='https://dalanzg.github.io/tips-tutorials/posts/2017/04/14/setting-postfix-for-outgoing-mail-in-opensuse/img/mail-sent-by-telnet.png'>
-  <meta property="og:tags" content="opensuse">
-  <meta property="og:tags" content="postfix">
-  <meta property="article:published_time" content="2017-04-14">
-  <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:description" content="A tutorial to set Postfix to send mails in openSUSE." />
-<meta name="twitter:title" content="Setting Postfix for outgoing mail in openSUSE" />
-<meta name="twitter:site" content="Tips and Tutorials" />
-<meta name="twitter:creator" content="@dalanzg" />
-  <meta name="twitter:image" content='https://dalanzg.github.io/tips-tutorials/posts/2017/04/14/setting-postfix-for-outgoing-mail-in-opensuse/img/mail-sent-by-telnet.png'>
-  <script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Setting Postfix for outgoing mail in openSUSE",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https:\/\/dalanzg.github.io\/tips-tutorials\/posts\/2017\/04\/14\/setting-postfix-for-outgoing-mail-in-opensuse\/"
-  },
-  
-  "image": {
-    "@type": "ImageObject",
-    "url": "https:\/\/dalanzg.github.io\/tips-tutorials\/mstile-150x150.png",
-    "width":  150 ,
-    "height":  150 
-  },
-  "genre": "posts",
-  "keywords": "opensuse, postfix",
-  "wordcount":  444 ,
-  "url": "https:\/\/dalanzg.github.io\/tips-tutorials\/posts\/2017\/04\/14\/setting-postfix-for-outgoing-mail-in-opensuse\/",
-  "datePublished": "2017-04-14",
-  "dateModified": "2017-07-30",
-  "license": "Copyright. Tips and Tutorials. All rights reserved.",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Daniel Lanza",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https:\/\/dalanzg.github.io\/tips-tutorials\/mstile-150x150.png",
-      "width":  150 ,
-      "height":  150 
-    }
-  },
-  "author": {
-    "@type": "Person",
-    "name": "dalanzg"
-  },
-  "description": "A tutorial to set Postfix to send mails in openSUSE."
-}
-</script>
-  <link rel="apple-touch-icon" sizes="180x180" href="https://dalanzg.github.io/tips-tutorials/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://dalanzg.github.io/tips-tutorials/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="https://dalanzg.github.io/tips-tutorials/favicon-16x16.png">
-<link rel="manifest" href="https://dalanzg.github.io/tips-tutorials/site.webmanifest">
-<link rel="mask-icon" href="https://dalanzg.github.io/tips-tutorials/safari-pinned-tab.svg" color="#5bbad5">
-<meta name="apple-mobile-web-app-title" content="Tips and Tutorials">
-<meta name="application-name" content="Tips and Tutorials">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="theme-color" content="#ffffff">
-  <link rel="canonical" href="https://dalanzg.github.io/tips-tutorials/posts/2017/04/14/setting-postfix-for-outgoing-mail-in-opensuse/">
-
-  <link rel="stylesheet" href="https://dalanzg.github.io/tips-tutorials/sass/main.min.5f805eac00006ca12f0d48d367bd1bc959826406b3bf3d94a67e3e976d595702.css" integrity="sha256-X4BerAAAbKEvDUjTZ70byVmCZAazvz2Upn4&#43;l21ZVwI=">
-  
-  
-  <link rel="sitemap" href="https://dalanzg.github.io/tips-tutorials/sitemap.xml" title="Sitemap" type="application/xml">
-  <meta name="google-site-verification" content="CeO9J_0wi37-MvDa_F7AmZJYunwDhFGjv8eSlJFPil8" />
-  
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-65400010-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-65400010-1');
-</script><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-8140733006923933",
-    enable_page_level_ads: true
-  });
-</script></head>
-<body>
-    <div class="container"><nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="https://dalanzg.github.io/tips-tutorials/"><strong>Tips and Tutorials</strong></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-    <li class="navbar-item ">
-        <a class="nav-link" href="https://dalanzg.github.io/tips-tutorials/about/" title="">About</a>
-      </li><li class="navbar-item ">
-        <a class="nav-link" href="https://dalanzg.github.io/tips-tutorials/tags/" title="">Tags</a>
-      </li><li class="navbar-item ">
-        <a class="nav-link" href="https://dalanzg.github.io/tips-tutorials/posts/" title="">Posts</a>
-      </li></ul>
-    <form class="form-inline float-xs-right" action="https://dalanzg.github.io/tips-tutorials/search/" method="get" data-search-form>
-      <input class="form-control mr-sm-2" type="text" name="q" placeholder="Search..." data-search-input>
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
-    </form>
-  </div>
-</nav>
-<h1 class="mt-5">Setting Postfix for outgoing mail in openSUSE</h1><p class="text-muted mt-3">
-	<span>Published on April 14, 2017</span>
-	<span>by Daniel Lanza</span>
-</p>
-<p>
-	<a class="text-muted" href="https://dalanzg.github.io/tips-tutorials/tags/opensuse"><i class="fas fa-tags"></i>&nbsp;opensuse</a>
-	<a class="text-muted" href="https://dalanzg.github.io/tips-tutorials/tags/postfix"><i class="fas fa-tags"></i>&nbsp;postfix</a>
-</p>
-
-<p>A tutorial to set Postfix to send mails in openSUSE.</p>
-
-<h2 id="requirements">Requirements</h2>
-
-<p>You will need the following:</p>
-
-<ul>
-<li>An openSUSE virtual machine with VirtualBox (<a href="https://dalanzg.github.io/tips-tutorials/posts/2017/02/12/how-to-install-opensuse-leap-42.2-in-virtualbox/">Check this link</a></li>
-<li>Hostname and domain -&gt; <a href="https://dalanzg.github.io/tips-tutorials/posts/2017/04/13/setting-hostname-and-domain-in-opensuse/">Setting Hostname and domain in openSUSE</a></li>
-</ul>
-
-<p>In this tutorial, the machine has the following:</p>
-
-<ul>
-<li>FQDN hostname: <strong>mail.dalanzg.com</strong></li>
-<li>Ethernet IP address: 10.0.2.15</li>
-</ul>
-
-<h2 id="steps">Steps</h2>
-
-<ul>
-<li><a href="#install-postfix">Install Postfix</a></li>
-<li><a href="#change-main.cf-file">Change main.cf file</a></li>
-<li><a href="#send-mail-with-telnet">Send mail with telnet</a></li>
-</ul>
-
-<h3 id="install-postfix">Install Postfix</h3>
-
-<p>By openSUSE installation default, Postfix can be installed. If not, install it with YaST or zypper.</p>
-<div class="highlight"><pre class="chroma"><code class="language-terminal" data-lang="terminal">dalanz@mail:~&gt; sudo zypper install postfix</code></pre></div>
-<p>Check that postfix service is running.</p>
-<div class="highlight"><pre class="chroma"><code class="language-terminal" data-lang="terminal">dalanz@mail:~&gt; sudo service postfix status
+<!doctype html><html><head><title>Setting Postfix for outgoing mail in openSUSE</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=title content="Setting Postfix for outgoing mail in openSUSE – Tips and Tutorials"><meta name=description content="A tutorial to set Postfix to send mails in openSUSE."><meta name=generator content="Hugo 0.56.3"><meta property=og:title content="Setting Postfix for outgoing mail in openSUSE"><meta property=og:description content="A tutorial to set Postfix to send mails in openSUSE."><meta property=og:url content=https://dalanzg.github.io/tips-tutorials/posts/2017/04/14/setting-postfix-for-outgoing-mail-in-opensuse/><meta property=og:site_name content="Tips and Tutorials"><meta property=og:type content=article><meta property=og:image content=https://dalanzg.github.io/tips-tutorials/posts/2017/04/14/setting-postfix-for-outgoing-mail-in-opensuse/img/mail-sent-by-telnet.png><meta property=og:tags content=opensuse><meta property=og:tags content=postfix><meta property=article:published_time content=2017-04-14><meta name=twitter:card content=summary_large_image><meta name=twitter:description content="A tutorial to set Postfix to send mails in openSUSE."><meta name=twitter:title content="Setting Postfix for outgoing mail in openSUSE"><meta name=twitter:site content="Tips and Tutorials"><meta name=twitter:creator content=@dalanzg><meta name=twitter:image content=https://dalanzg.github.io/tips-tutorials/posts/2017/04/14/setting-postfix-for-outgoing-mail-in-opensuse/img/mail-sent-by-telnet.png><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"Setting Postfix for outgoing mail in openSUSE","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/dalanzg.github.io\/tips-tutorials\/posts\/2017\/04\/14\/setting-postfix-for-outgoing-mail-in-opensuse\/"},"image":{"@type":"ImageObject","url":"https:\/\/dalanzg.github.io\/tips-tutorials\/mstile-150x150.png","width":150,"height":150},"genre":"posts","keywords":"opensuse, postfix","wordcount":444,"url":"https:\/\/dalanzg.github.io\/tips-tutorials\/posts\/2017\/04\/14\/setting-postfix-for-outgoing-mail-in-opensuse\/","datePublished":"2017-04-14","dateModified":"2017-07-30","license":"Copyright. Tips and Tutorials. All rights reserved.","publisher":{"@type":"Organization","name":"Daniel Lanza","logo":{"@type":"ImageObject","url":"https:\/\/dalanzg.github.io\/tips-tutorials\/mstile-150x150.png","width":150,"height":150}},"author":{"@type":"Person","name":"dalanzg"},"description":"A tutorial to set Postfix to send mails in openSUSE."}</script><link rel=apple-touch-icon sizes=180x180 href=https://dalanzg.github.io/tips-tutorials/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=https://dalanzg.github.io/tips-tutorials/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=https://dalanzg.github.io/tips-tutorials/favicon-16x16.png><link rel=manifest href=https://dalanzg.github.io/tips-tutorials/site.webmanifest><link rel=mask-icon href=https://dalanzg.github.io/tips-tutorials/safari-pinned-tab.svg color=#5bbad5><meta name=apple-mobile-web-app-title content="Tips and Tutorials"><meta name=application-name content="Tips and Tutorials"><meta name=msapplication-TileColor content=#da532c><meta name=theme-color content=#ffffff><link rel=canonical href=https://dalanzg.github.io/tips-tutorials/posts/2017/04/14/setting-postfix-for-outgoing-mail-in-opensuse/><link rel=stylesheet href=https://dalanzg.github.io/tips-tutorials/sass/main.min.5f805eac00006ca12f0d48d367bd1bc959826406b3bf3d94a67e3e976d595702.css integrity="sha256-X4BerAAAbKEvDUjTZ70byVmCZAazvz2Upn4&#43;l21ZVwI="><link rel=sitemap href=https://dalanzg.github.io/tips-tutorials/sitemap.xml title=Sitemap type=application/xml><meta name=google-site-verification content=CeO9J_0wi37-MvDa_F7AmZJYunwDhFGjv8eSlJFPil8><script async src="https://www.googletagmanager.com/gtag/js?id=UA-65400010-1"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','UA-65400010-1');</script><script async src=//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js></script><script>(adsbygoogle=window.adsbygoogle||[]).push({google_ad_client:"ca-pub-8140733006923933",enable_page_level_ads:true});</script></head><body><div class=container><nav class="navbar navbar-expand-lg navbar-light bg-light"><a class=navbar-brand href=https://dalanzg.github.io/tips-tutorials/><strong>Tips and Tutorials</strong></a>
+<button class=navbar-toggler type=button data-toggle=collapse data-target=#navbarSupportedContent aria-controls=navbarSupportedContent aria-expanded=false aria-label="Toggle navigation">
+<span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse" id=navbarSupportedContent><ul class="navbar-nav mr-auto"><li class=navbar-item><a class=nav-link href=https://dalanzg.github.io/tips-tutorials/about/>About</a></li><li class=navbar-item><a class=nav-link href=https://dalanzg.github.io/tips-tutorials/tags/>Tags</a></li><li class=navbar-item><a class=nav-link href=https://dalanzg.github.io/tips-tutorials/posts/>Posts</a></li></ul><form class="form-inline float-xs-right" action=https://dalanzg.github.io/tips-tutorials/search/ method=get data-search-form><input class="form-control mr-sm-2" type=text name=q placeholder=Search... data-search-input>
+<button class="btn btn-outline-success my-2 my-sm-0" type=submit><i class="fas fa-search"></i></button></form></div></nav><h1 class=mt-5>Setting Postfix for outgoing mail in openSUSE</h1><p class="text-muted mt-3"><span>Published on April 14, 2017</span>
+<span>by Daniel Lanza</span></p><p><a class=text-muted href=https://dalanzg.github.io/tips-tutorials/tags/opensuse><i class="fas fa-tags"></i>&nbsp;opensuse</a>
+<a class=text-muted href=https://dalanzg.github.io/tips-tutorials/tags/postfix><i class="fas fa-tags"></i>&nbsp;postfix</a></p><p>A tutorial to set Postfix to send mails in openSUSE.</p><h2 id=requirements>Requirements</h2><p>You will need the following:</p><ul><li>An openSUSE virtual machine with VirtualBox (<a href=https://dalanzg.github.io/tips-tutorials/posts/2017/02/12/how-to-install-opensuse-leap-42.2-in-virtualbox/>Check this link</a></li><li>Hostname and domain -&gt; <a href=https://dalanzg.github.io/tips-tutorials/posts/2017/04/13/setting-hostname-and-domain-in-opensuse/>Setting Hostname and domain in openSUSE</a></li></ul><p>In this tutorial, the machine has the following:</p><ul><li>FQDN hostname: <strong>mail.dalanzg.com</strong></li><li>Ethernet IP address: 10.0.2.15</li></ul><h2 id=steps>Steps</h2><ul><li><a href=#install-postfix>Install Postfix</a></li><li><a href=#change-main.cf-file>Change main.cf file</a></li><li><a href=#send-mail-with-telnet>Send mail with telnet</a></li></ul><h3 id=install-postfix>Install Postfix</h3><p>By openSUSE installation default, Postfix can be installed. If not, install it with YaST or zypper.</p><div class=highlight><pre class=chroma><code class=language-terminal data-lang=terminal>dalanz@mail:~&gt; sudo zypper install postfix</code></pre></div><p>Check that postfix service is running.</p><div class=highlight><pre class=chroma><code class=language-terminal data-lang=terminal>dalanz@mail:~&gt; sudo service postfix status
 * postfix.service - Postfix Mail Transport Agent
    Loaded: loaded (/usr/lib/systemd/system/postfix.service; enabled; vendor preset: enabled)
    Active: active (running) since Fri 2017-04-14 11:02:21 CEST; 2min 27s ago
@@ -177,40 +25,10 @@
 Apr 14 11:02:19 mail systemd[1]: Starting Postfix Mail Transport Agent...
 Apr 14 11:02:20 mail echo[1009]: Starting mail service (Postfix)
 Apr 14 11:02:21 mail postfix/master[1141]: daemon started -- version 2.11.8, configuration /etc/postfix
-Apr 14 11:02:21 mail systemd[1]: Started Postfix Mail Transport Agent.</code></pre></div>
-<h3 id="change-main-cf-file">Change main.cf file</h3>
-
-<p>With root permissions, modify <strong>/etc/postfix/main.cf</strong> file.</p>
-<div class="highlight"><pre class="chroma"><code class="language-terminal" data-lang="terminal">dalanz@mail:~&gt; sudo vim /etc/postfix/main.cf</code></pre></div>
-<p>At the end of the file, modify or add the following parameters:</p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">inet_interfaces</span> <span class="p">=</span> <span class="nx">localhost</span><span class="p">,</span> <span class="m">10</span>.<span class="m">0</span>.<span class="m">2</span>.<span class="m">15</span><span class="err">
-</span><span class="err"></span><span class="nx">inet_protocols</span> <span class="p">=</span> <span class="nx">all</span><span class="err">
-</span><span class="err"></span><span class="nx">mydestination</span> <span class="p">=</span> $<span class="nx">myhostname</span><span class="p">,</span> <span class="nx">localhost</span>.$<span class="nx">mydomain</span><span class="p">,</span> $<span class="nx">mydomain</span><span class="err">
-</span><span class="err"></span><span class="nx">myhostname</span> <span class="p">=</span> <span class="nx">mail</span>.<span class="nx">dalanzg</span>.<span class="nx">com</span></code></pre></div>
-<p>Restart Postfix service.</p>
-<div class="highlight"><pre class="chroma"><code class="language-terminal" data-lang="terminal">dalanz@mail:~&gt; sudo service postfix restart</code></pre></div>
-<h3 id="send-mail-with-telnet">Send mail with telnet</h3>
-
-<p>Send an email with Telnet. This is the procedure:</p>
-
-<ul>
-<li><p>Connect with telnet:</p>
-<div class="highlight"><pre class="chroma"><code class="language-terminal" data-lang="terminal">dalanz@mail:~&gt; telnet mail.dalanzg.com 25</code></pre></div></li>
-
-<li><p>Type ehlo or helo followed by your domain (dalanzg.com)</p>
-<div class="highlight"><pre class="chroma"><code class="language-terminal" data-lang="terminal">ehlo dalanzg.com</code></pre></div></li>
-
-<li><p>Type sender mail. The user must be in your domain (dalanzg.com)</p>
-<div class="highlight"><pre class="chroma"><code class="language-terminal" data-lang="terminal">mail from: admin@dalanzg.com</code></pre></div></li>
-
-<li><p>Type recipients separated by comma</p>
-<div class="highlight"><pre class="chroma"><code class="language-terminal" data-lang="terminal">rcpt to: user1@gmail.com, user2@yahoo.com</code></pre></div></li>
-
-<li><p>Write the message. Type <strong>data</strong>, followed by your subject and message. End with <strong>.</strong> and <strong>quit</strong> to close the connection.</p></li>
-</ul>
-
-<p>This is the complete process:</p>
-<div class="highlight"><pre class="chroma"><code class="language-terminal" data-lang="terminal">dalanz@mail:~&gt; telnet mail.dalanzg.com 25
+Apr 14 11:02:21 mail systemd[1]: Started Postfix Mail Transport Agent.</code></pre></div><h3 id=change-main-cf-file>Change main.cf file</h3><p>With root permissions, modify <strong>/etc/postfix/main.cf</strong> file.</p><div class=highlight><pre class=chroma><code class=language-terminal data-lang=terminal>dalanz@mail:~&gt; sudo vim /etc/postfix/main.cf</code></pre></div><p>At the end of the file, modify or add the following parameters:</p><div class=highlight><pre class=chroma><code class=language-vim data-lang=vim><span class=nx>inet_interfaces</span> <span class=p>=</span> <span class=nx>localhost</span><span class=p>,</span> <span class=m>10</span>.<span class=m>0</span>.<span class=m>2</span>.<span class=m>15</span><span class=err>
+</span><span class=err></span><span class=nx>inet_protocols</span> <span class=p>=</span> <span class=nx>all</span><span class=err>
+</span><span class=err></span><span class=nx>mydestination</span> <span class=p>=</span> $<span class=nx>myhostname</span><span class=p>,</span> <span class=nx>localhost</span>.$<span class=nx>mydomain</span><span class=p>,</span> $<span class=nx>mydomain</span><span class=err>
+</span><span class=err></span><span class=nx>myhostname</span> <span class=p>=</span> <span class=nx>mail</span>.<span class=nx>dalanzg</span>.<span class=nx>com</span></code></pre></div><p>Restart Postfix service.</p><div class=highlight><pre class=chroma><code class=language-terminal data-lang=terminal>dalanz@mail:~&gt; sudo service postfix restart</code></pre></div><h3 id=send-mail-with-telnet>Send mail with telnet</h3><p>Send an email with Telnet. This is the procedure:</p><ul><li><p>Connect with telnet:</p><div class=highlight><pre class=chroma><code class=language-terminal data-lang=terminal>dalanz@mail:~&gt; telnet mail.dalanzg.com 25</code></pre></div></li><li><p>Type ehlo or helo followed by your domain (dalanzg.com)</p><div class=highlight><pre class=chroma><code class=language-terminal data-lang=terminal>ehlo dalanzg.com</code></pre></div></li><li><p>Type sender mail. The user must be in your domain (dalanzg.com)</p><div class=highlight><pre class=chroma><code class=language-terminal data-lang=terminal>mail from: admin@dalanzg.com</code></pre></div></li><li><p>Type recipients separated by comma</p><div class=highlight><pre class=chroma><code class=language-terminal data-lang=terminal>rcpt to: user1@gmail.com, user2@yahoo.com</code></pre></div></li><li><p>Write the message. Type <strong>data</strong>, followed by your subject and message. End with <strong>.</strong> and <strong>quit</strong> to close the connection.</p></li></ul><p>This is the complete process:</p><div class=highlight><pre class=chroma><code class=language-terminal data-lang=terminal>dalanz@mail:~&gt; telnet mail.dalanzg.com 25
 Trying 10.0.2.15...
 Connected to mail.dalanzg.com.
 Escape character is &#39;^]&#39;.
@@ -243,105 +61,18 @@ Admin
 250 2.0.0 Ok: queued as E57AA60775
 quit
 221 2.0.0 Bye
-Connection closed by foreign host.</code></pre></div>
-<p>And check your inbox.</p>
-
-<figure class="text-center">
-  <img src="img/mail-sent-by-telnet.png" class="figure-img img-fluid rounded" alt="Email sent by telnet" width="500">
-  <figcaption class="figure-caption">Email sent by telnet</figcaption>
-</figure>
-
-
-<div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "tips-tutorials" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-	<div class="bg-light py-5">
-		<div class="container">
-			<h2 class="text-center">Read next</h2>
-			<div class="row">
-				<div class="col-md-6 text-center">
-						Previous Post:
-						<a href="https://dalanzg.github.io/tips-tutorials/posts/2017/04/13/setting-hostname-and-domain-in-opensuse/">Setting hostname and domain in openSUSE</a>
-				</div>
-				<div class="col-md-6 text-center">
-						Next Post:
-						<a href="https://dalanzg.github.io/tips-tutorials/posts/2017/07/09/error-501-syntax-helo-hostname-in-postfix/">Error 501 Syntax HELO hostname in postfix</a>
-				</div>
-			</div>
-		</div>
-	</div>
-<div class="container mt-5">
-	<h2 class="text-center">See also</h2>
-	<div class="row">
-			<div class="col-md mb-3">
-				<p class="lead mb-0"><a class="text-body" href="https://dalanzg.github.io/tips-tutorials/posts/2017/04/13/setting-hostname-and-domain-in-opensuse/">Setting hostname and domain in openSUSE</a></p>
-				<p class="font-weight-light mt-3">A tutorial to set hostname and domain in openSUSE (server.dalanzg.com):
- Hostname -&gt; srvopensuse Domain -&gt; dalanzg.com  Requirements You will need the following:
- An openSUSE virtual machine with VirtualBox (Check this link  Steps  Modify hostname file Modify hosts file Verification  Modify hostname file With root permissions, edit file /etc/hostname.
+Connection closed by foreign host.</code></pre></div><p>And check your inbox.</p><figure class=text-center><img src=img/mail-sent-by-telnet.png class="figure-img img-fluid rounded" alt="Email sent by telnet" width=500><figcaption class=figure-caption>Email sent by telnet</figcaption></figure><div id=disqus_thread></div><script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return;}
+var d=document,s=d.createElement('script');s.async=true;s.src='//'+"tips-tutorials"+'.disqus.com/embed.js';s.setAttribute('data-timestamp',+new Date());(d.head||d.body).appendChild(s);})();</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a><div class="bg-light py-5"><div class=container><h2 class=text-center>Read next</h2><div class=row><div class="col-md-6 text-center">Previous Post:
+<a href=https://dalanzg.github.io/tips-tutorials/posts/2017/04/13/setting-hostname-and-domain-in-opensuse/>Setting hostname and domain in openSUSE</a></div><div class="col-md-6 text-center">Next Post:
+<a href=https://dalanzg.github.io/tips-tutorials/posts/2017/07/09/error-501-syntax-helo-hostname-in-postfix/>Error 501 Syntax HELO hostname in postfix</a></div></div></div></div><div class="container mt-5"><h2 class=text-center>See also</h2><div class=row><div class="col-md mb-3"><p class="lead mb-0"><a class=text-body href=https://dalanzg.github.io/tips-tutorials/posts/2017/04/13/setting-hostname-and-domain-in-opensuse/>Setting hostname and domain in openSUSE</a></p><p class="font-weight-light mt-3">A tutorial to set hostname and domain in openSUSE (server.dalanzg.com):
+Hostname -&gt; srvopensuse Domain -&gt; dalanzg.com Requirements You will need the following:
+An openSUSE virtual machine with VirtualBox (Check this link Steps Modify hostname file Modify hosts file Verification Modify hostname file With root permissions, edit file /etc/hostname.
 dalanz@linux-geij:~&gt; sudo vim /etc/hostname Write the hostname for the server.
-srvopensuse Modify hosts file Check your network interfaces to find out the IP address for your Ethernet network (eth1).</p>
-				<a href="https://dalanzg.github.io/tips-tutorials/posts/2017/04/13/setting-hostname-and-domain-in-opensuse/" class="btn btn-primary">Read more</a>
-			</div>
-			<div class="col-md mb-3">
-				<p class="lead mb-0"><a class="text-body" href="https://dalanzg.github.io/tips-tutorials/posts/2017/04/07/setting-ssl-or-https-in-tomcat-with-opensuse/">Setting SSL or https in Tomcat with openSUSE</a></p>
-				<p class="font-weight-light mt-3">A tutorial to configure Tomcat 8 to support SSL or https connection.
+srvopensuse Modify hosts file Check your network interfaces to find out the IP address for your Ethernet network (eth1).</p><a href=https://dalanzg.github.io/tips-tutorials/posts/2017/04/13/setting-hostname-and-domain-in-opensuse/ class="btn btn-primary">Read more</a></div><div class="col-md mb-3"><p class="lead mb-0"><a class=text-body href=https://dalanzg.github.io/tips-tutorials/posts/2017/04/07/setting-ssl-or-https-in-tomcat-with-opensuse/>Setting SSL or https in Tomcat with openSUSE</a></p><p class="font-weight-light mt-3">A tutorial to configure Tomcat 8 to support SSL or https connection.
 Requirements You will need the following:
- An openSUSE virtual machine with VirtualBox (Check this link Java JDK to create Keystores -&gt; Change Java OpenJDK to Oracle JDK Tomcat -&gt; How to install tomcat in openSUSE  This tutorial was created with:
- openSUSE Leap 42.2 Java Version -&gt; jdk1.8.0_121 Tomcat version -&gt; apache-tomcat-8.0.42  Steps  Create a keystore using Java JDK Set keystore in Tomcat Check SSL or https connection  Create a keystore using Java JDK Keystore file is a container for authorization certificates or public key certificates.</p>
-				<a href="https://dalanzg.github.io/tips-tutorials/posts/2017/04/07/setting-ssl-or-https-in-tomcat-with-opensuse/" class="btn btn-primary">Read more</a>
-			</div>
-			<div class="col-md mb-3">
-				<p class="lead mb-0"><a class="text-body" href="https://dalanzg.github.io/tips-tutorials/posts/2017/03/24/how-to-install-tomcat-in-opensuse/">How to install Tomcat in openSUSE</a></p>
-				<p class="font-weight-light mt-3">Requirements You will need the following:
- Tomcat 8  Optional -&gt; (Change Java OpenJDK to Oracle JDK to run Tomcat.
-Steps  Download Tomcat 8. This case will be Apache Tomcat 8.0.42 -&gt; Core tar.gz (apache-tomcat-8.0.42.tar.gz).
- Unzip apache-tomcat-8.0.42.tar.gz file and place it in folder /usr/local/tomcat. /usr/local is a folder similar to /usr and remain safe from system software upgrades.
-dalanz@linux-geij:~&gt; tar -xf apache-tomcat-8.0.42.tar.gz dalanz@linux-geij:~&gt; sudo mkdir -p /usr/local/tomcat dalanz@linux-geij:~&gt; sudo mv apache-tomcat-8.</p>
-				<a href="https://dalanzg.github.io/tips-tutorials/posts/2017/03/24/how-to-install-tomcat-in-opensuse/" class="btn btn-primary">Read more</a>
-			</div>
-	</div>
-</div></div><footer class="blog-footer">
-  <p>
-    <nav class="nav justify-content-center">
-      <a class="nav-link" href="https://dalanzg.github.io/tips-tutorials/index.xml" target="_blank">
-        <i class="fas fa-rss-square fa-2x"></i>
-      </a>
-      
-      <a class="nav-link" href="https://twitter.com/dalanzg" target="_blank">
-        <i class="fab fa-twitter fa-2x"></i>
-      </a>
-      
-      <a class="nav-link" href="https://github.com/dalanzg" target="_blank">
-        <i class="fab fa-github fa-2x"></i>
-      </a>
-      
-      <a class="nav-link" href="https://www.linkedin.com/in/danilanza" target="_blank">
-        <i class="fab fa-linkedin fa-2x"></i>
-      </a>
-      
-    </nav>
-  </p>
-  <p class="text-muted">Copyright &copy; Tips and Tutorials 2019</p>
-  <p class="text-muted"><small>All rights reserved. Blog powered by <a href="https://gohugo.io/">Hugo</a> and hosted on <a href="https://www.github.com">GitHub.</a></small></p>
-  <p class="text-muted"><small><a href="https://opensource.org/licenses/MIT">MIT License</a></small></p>
-</footer>
-
-<script src="https://dalanzg.github.io/tips-tutorials/js/bundle.min.110d3e1a6c79028aa1899125704a04f056b48a7862c0d9058732b1ab70451559.js"></script></body>
-</html>
+An openSUSE virtual machine with VirtualBox (Check this link Java JDK to create Keystores -&gt; Change Java OpenJDK to Oracle JDK Tomcat -&gt; How to install tomcat in openSUSE This tutorial was created with:
+openSUSE Leap 42.2 Java Version -&gt; jdk1.8.0_121 Tomcat version -&gt; apache-tomcat-8.0.42 Steps Create a keystore using Java JDK Set keystore in Tomcat Check SSL or https connection Create a keystore using Java JDK Keystore file is a container for authorization certificates or public key certificates.</p><a href=https://dalanzg.github.io/tips-tutorials/posts/2017/04/07/setting-ssl-or-https-in-tomcat-with-opensuse/ class="btn btn-primary">Read more</a></div><div class="col-md mb-3"><p class="lead mb-0"><a class=text-body href=https://dalanzg.github.io/tips-tutorials/posts/2017/03/24/how-to-install-tomcat-in-opensuse/>How to install Tomcat in openSUSE</a></p><p class="font-weight-light mt-3">Requirements You will need the following:
+Tomcat 8 Optional -&gt; (Change Java OpenJDK to Oracle JDK to run Tomcat.
+Steps Download Tomcat 8. This case will be Apache Tomcat 8.0.42 -&gt; Core tar.gz (apache-tomcat-8.0.42.tar.gz).
+Unzip apache-tomcat-8.0.42.tar.gz file and place it in folder /usr/local/tomcat. /usr/local is a folder similar to /usr and remain safe from system software upgrades.
+dalanz@linux-geij:~&gt; tar -xf apache-tomcat-8.0.42.tar.gz dalanz@linux-geij:~&gt; sudo mkdir -p /usr/local/tomcat dalanz@linux-geij:~&gt; sudo mv apache-tomcat-8.</p><a href=https://dalanzg.github.io/tips-tutorials/posts/2017/03/24/how-to-install-tomcat-in-opensuse/ class="btn btn-primary">Read more</a></div></div></div></div><footer class=blog-footer><p><nav class="nav justify-content-center"><a class=nav-link href=https://dalanzg.github.io/tips-tutorials/index.xml target=_blank><i class="fas fa-rss-square fa-2x"></i></a><a class=nav-link href=https://twitter.com/dalanzg target=_blank><i class="fab fa-twitter fa-2x"></i></a><a class=nav-link href=https://github.com/dalanzg target=_blank><i class="fab fa-github fa-2x"></i></a><a class=nav-link href=https://www.linkedin.com/in/danilanza target=_blank><i class="fab fa-linkedin fa-2x"></i></a></nav></p><p class=text-muted>Copyright &copy; Tips and Tutorials 2019</p><p class=text-muted><small>All rights reserved. Blog powered by <a href=https://gohugo.io/>Hugo</a> and hosted on <a href=https://www.github.com>GitHub.</a></small></p><p class=text-muted><small><a href=https://opensource.org/licenses/MIT>MIT License</a></small></p></footer><script src=https://dalanzg.github.io/tips-tutorials/js/bundle.min.110d3e1a6c79028aa1899125704a04f056b48a7862c0d9058732b1ab70451559.js></script></body></html>

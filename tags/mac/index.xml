@@ -1,63 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>mac on Tips and Tutorials</title>
-    <link>https://dalanzg.github.io/tips-tutorials/tags/mac/</link>
-    <description>Recent content in mac on Tips and Tutorials</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>Copyright. Tips and Tutorials. All rights reserved.</copyright>
-    <lastBuildDate>Sat, 09 Apr 2016 22:00:00 +0200</lastBuildDate>
-    
-	<atom:link href="https://dalanzg.github.io/tips-tutorials/tags/mac/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>How to create .bash_profile file on Mac OS X</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2016/04/09/how-to-create-.bash_profile-file-on-mac-os-x/</link>
-      <pubDate>Sat, 09 Apr 2016 22:00:00 +0200</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2016/04/09/how-to-create-.bash_profile-file-on-mac-os-x/</guid>
-      <description>By default, your system does not have the .bash_profile file for your user. Therefore you will need to create it to set environment variables for your current user when starting new session.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>mac on Tips and Tutorials</title><link>https://dalanzg.github.io/tips-tutorials/tags/mac/</link><description>Recent content in mac on Tips and Tutorials</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Copyright. Tips and Tutorials. All rights reserved.</copyright><lastBuildDate>Sat, 09 Apr 2016 22:00:00 +0200</lastBuildDate><atom:link href="https://dalanzg.github.io/tips-tutorials/tags/mac/index.xml" rel="self" type="application/rss+xml"/><item><title>How to create .bash_profile file on Mac OS X</title><link>https://dalanzg.github.io/tips-tutorials/posts/2016/04/09/how-to-create-.bash_profile-file-on-mac-os-x/</link><pubDate>Sat, 09 Apr 2016 22:00:00 +0200</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2016/04/09/how-to-create-.bash_profile-file-on-mac-os-x/</guid><description>By default, your system does not have the .bash_profile file for your user. Therefore you will need to create it to set environment variables for your current user when starting new session.
 In this tutorial, we are going to create a .bash_profile to set $JAVA_HOME environment variable.
- First, we are going to check out that .bash_profile does not exist.
-$ ls ~/.bash_profile The file /Users/dalanz/.bash_profile does not exist. Go to user home and create the .</description>
-    </item>
-    
-    <item>
-      <title>How to set JAVA_HOME on Mac OS X</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2016/03/21/how-to-set-java_home-on-mac-os-x/</link>
-      <pubDate>Mon, 21 Mar 2016 18:00:00 +0100</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2016/03/21/how-to-set-java_home-on-mac-os-x/</guid>
-      <description>If you are planing to develop Java Apps on your Mac, you may have to set $JAVA_HOME environment variable.
+First, we are going to check out that .bash_profile does not exist.
+$ ls ~/.bash_profile The file /Users/dalanz/.bash_profile does not exist. Go to user home and create the .</description></item><item><title>How to set JAVA_HOME on Mac OS X</title><link>https://dalanzg.github.io/tips-tutorials/posts/2016/03/21/how-to-set-java_home-on-mac-os-x/</link><pubDate>Mon, 21 Mar 2016 18:00:00 +0100</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2016/03/21/how-to-set-java_home-on-mac-os-x/</guid><description>If you are planing to develop Java Apps on your Mac, you may have to set $JAVA_HOME environment variable.
 Install the latest Java Virtual Machine Go to How to install JDK on Mac OS X) to install a new Java Virtual Machine. Download the latest Java JDK package from Oracle.
 Check Java Virtual Machines List directories in the following root -&amp;gt; /Library/Java/JavaVirtualMachines
-$ ls -l /Library/Java/JavaVirtualMachines drwxr-xr-x 3 root wheel 102 23 dic 20:36 jdk1.</description>
-    </item>
-    
-    <item>
-      <title>How to install JDK 8 on Mac OS X</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2015/11/22/how-to-install-jdk-8-on-mac-os-x/</link>
-      <pubDate>Sun, 22 Nov 2015 18:00:00 +0200</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2015/11/22/how-to-install-jdk-8-on-mac-os-x/</guid>
-      <description>If you are planing to develop Java Apps on your Mac, you have to install the JDK package. You only have to install the binary files provided by Oracle.
- Download JDK 8 from Oracle WebSite. [jdk-8u65-macosx-x64.dmg for Mac]. Double click on jdk-8u65-macosx-x64.dmg and follow the screen instructions. JDK package will have been installed in /Library/Java/JavaVirtualMachines. In my computer, I have both 1.6 and 1.8 JDK package.
-$ ls -l /Library/Java/JavaVirtualMachines drwxr-xr-x 3 root wheel 102 14 jul 23:52 1.</description>
-    </item>
-    
-    <item>
-      <title>How to install Tomcat 7 on Mac OS X</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2015/11/21/how-to-install-tomcat-7-on-mac-os-x/</link>
-      <pubDate>Sat, 21 Nov 2015 18:00:00 +0200</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2015/11/21/how-to-install-tomcat-7-on-mac-os-x/</guid>
-      <description>Requirements: Java (at least 1.6).
+$ ls -l /Library/Java/JavaVirtualMachines drwxr-xr-x 3 root wheel 102 23 dic 20:36 jdk1.</description></item><item><title>How to install JDK 8 on Mac OS X</title><link>https://dalanzg.github.io/tips-tutorials/posts/2015/11/22/how-to-install-jdk-8-on-mac-os-x/</link><pubDate>Sun, 22 Nov 2015 18:00:00 +0200</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2015/11/22/how-to-install-jdk-8-on-mac-os-x/</guid><description>If you are planing to develop Java Apps on your Mac, you have to install the JDK package. You only have to install the binary files provided by Oracle.
+Download JDK 8 from Oracle WebSite [jdk-8u65-macosx-x64.dmg for Mac] Double click on jdk-8u65-macosx-x64.dmg and follow the screen instructions JDK package will have been installed in /Library/Java/JavaVirtualMachines. In my computer, I have both 1.6 and 1.8 JDK package
+$ ls -l /Library/Java/JavaVirtualMachines drwxr-xr-x 3 root wheel 102 14 jul 23:52 1.</description></item><item><title>How to install Tomcat 7 on Mac OS X</title><link>https://dalanzg.github.io/tips-tutorials/posts/2015/11/21/how-to-install-tomcat-7-on-mac-os-x/</link><pubDate>Sat, 21 Nov 2015 18:00:00 +0100</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2015/11/21/how-to-install-tomcat-7-on-mac-os-x/</guid><description>Requirements: Java (at least 1.6).
 First, check your java version by opening the terminal:
 $ java -version java version &amp;#34;1.8.0_65&amp;#34; Java(TM) SE Runtime Environment (build 1.8.0_65-b17) Java HotSpot(TM) 64-Bit Server VM (build 25.65-b01, mixed mode) Follow these steps:
- Download the binary Core Distribution from the original website (apache-tomcat-7.0.65.tar.gz): Apache Tomcat 7 Unzip the file downloaded Create a Tomcat folder in /Library. There we can leave several Tomcat versions to test</description>
-    </item>
-    
-  </channel>
-</rss>
+Download the binary Core Distribution from the original website (apache-tomcat-7.0.65.tar.gz): Apache Tomcat 7 Unzip the file downloaded Create a Tomcat folder in /Library. There we can leave several Tomcat versions to test</description></item></channel></rss>

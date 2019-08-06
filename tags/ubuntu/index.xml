@@ -1,75 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>ubuntu on Tips and Tutorials</title>
-    <link>https://dalanzg.github.io/tips-tutorials/tags/ubuntu/</link>
-    <description>Recent content in ubuntu on Tips and Tutorials</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>Copyright. Tips and Tutorials. All rights reserved.</copyright>
-    <lastBuildDate>Sat, 07 May 2016 14:00:00 +0200</lastBuildDate>
-    
-	<atom:link href="https://dalanzg.github.io/tips-tutorials/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>How to install Alfresco Community Edition 5.1 in Ubuntu Server 14.04</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2016/05/07/how-to-install-alfresco-community-edition-5.1-in-ubuntu-server-14.04/</link>
-      <pubDate>Sat, 07 May 2016 14:00:00 +0200</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2016/05/07/how-to-install-alfresco-community-edition-5.1-in-ubuntu-server-14.04/</guid>
-      <description>This tutorial will explain how to install Alfresco Community Edition 5.1 in Ubuntu Server 14.04. In this example, Ubuntu Server is a virtual machine made by VirtualBox.
-Requirements  Ubuntu Server virtual machine with:  Two network adapters: NAT adapter (eth0) Host-only adapter (eth1) with a static IP address -&amp;gt; 192.168.56.101 Base memory: 4608 Mb 2 CPUs  Alfresco Community Edition binary file -&amp;gt; alfresco-community-installer-201604-linux-x64.bin  Check out how to install Ubuntu Server on VirtualBox to get ready a virtual machine to install Alfresco Community Edition.</description>
-    </item>
-    
-    <item>
-      <title>How to connect to your MySQL database remotely</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2016/05/02/how-to-connect-to-your-mysql-database-remotely/</link>
-      <pubDate>Mon, 02 May 2016 12:00:00 +0200</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2016/05/02/how-to-connect-to-your-mysql-database-remotely/</guid>
-      <description>This tutorial will explain how to connect remotely to MySQL database. In this example, MySQL server is installed in Ubuntu Server virtual machine with VirtualBox.
-Requirements  Ubuntu Server virtual machine with MySQL:
- Two network adapters: NAT adapter (eth0) Host-only adapter (eth1) with a static IP address -&amp;gt; 192.168.56.101. Database name: mybb  MySQL client:
- Toad World   Expose MySQL server To expose MySQL to anything other than localhost you will have to expose the IP address.</description>
-    </item>
-    
-    <item>
-      <title>Install MyBB on Ubuntu Server</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2016/04/21/install-mybb-on-ubuntu-server/</link>
-      <pubDate>Thu, 21 Apr 2016 15:00:00 +0200</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2016/04/21/install-mybb-on-ubuntu-server/</guid>
-      <description>This tutorial will explain how to install MyBB in Ubuntu Server.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ubuntu on Tips and Tutorials</title><link>https://dalanzg.github.io/tips-tutorials/tags/ubuntu/</link><description>Recent content in ubuntu on Tips and Tutorials</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>Copyright. Tips and Tutorials. All rights reserved.</copyright><lastBuildDate>Sat, 07 May 2016 14:00:00 +0200</lastBuildDate><atom:link href="https://dalanzg.github.io/tips-tutorials/tags/ubuntu/index.xml" rel="self" type="application/rss+xml"/><item><title>How to install Alfresco Community Edition 5.1 in Ubuntu Server 14.04</title><link>https://dalanzg.github.io/tips-tutorials/posts/2016/05/07/how-to-install-alfresco-community-edition-5.1-in-ubuntu-server-14.04/</link><pubDate>Sat, 07 May 2016 14:00:00 +0200</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2016/05/07/how-to-install-alfresco-community-edition-5.1-in-ubuntu-server-14.04/</guid><description>This tutorial will explain how to install Alfresco Community Edition 5.1 in Ubuntu Server 14.04. In this example, Ubuntu Server is a virtual machine made by VirtualBox.
+Requirements Ubuntu Server virtual machine with: Two network adapters: NAT adapter (eth0) Host-only adapter (eth1) with a static IP address -&amp;gt; 192.168.56.101 Base memory: 4608 Mb 2 CPUs Alfresco Community Edition binary file -&amp;gt; alfresco-community-installer-201604-linux-x64.bin Check out how to install Ubuntu Server on VirtualBox to get ready a virtual machine to install Alfresco Community Edition.</description></item><item><title>How to connect to your MySQL database remotely</title><link>https://dalanzg.github.io/tips-tutorials/posts/2016/05/02/how-to-connect-to-your-mysql-database-remotely/</link><pubDate>Mon, 02 May 2016 12:00:00 +0200</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2016/05/02/how-to-connect-to-your-mysql-database-remotely/</guid><description>This tutorial will explain how to connect remotely to MySQL database. In this example, MySQL server is installed in Ubuntu Server virtual machine with VirtualBox.
+Requirements Ubuntu Server virtual machine with MySQL:
+Two network adapters: NAT adapter (eth0) Host-only adapter (eth1) with a static IP address -&amp;gt; 192.168.56.101. Database name: mybb MySQL client:
+Toad World Expose MySQL server To expose MySQL to anything other than localhost you will have to expose the IP address.</description></item><item><title>Install MyBB on Ubuntu Server</title><link>https://dalanzg.github.io/tips-tutorials/posts/2016/04/21/install-mybb-on-ubuntu-server/</link><pubDate>Thu, 21 Apr 2016 15:00:00 +0200</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2016/04/21/install-mybb-on-ubuntu-server/</guid><description>This tutorial will explain how to install MyBB in Ubuntu Server.
 Requirements A Ubuntu Server virtual machine with:
- MySQL Apache FTP Samba  Check out these posts to get ready:
- How to install Ubuntu Server on VirtualBox Setting up a Virtual Web Server with VirtualBox, Apache, MySQL, FTP, Ubuntu, and Samba  Our virtual machine has two network adapters. The second one (eth1) is a host-only adapter with a static IP address -&amp;gt; 192.</description>
-    </item>
-    
-    <item>
-      <title>Setting up a Virtual Web Server with VirtualBox, Apache, MySQL, FTP, Ubuntu, and Samba</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2016/04/17/setting-up-a-virtual-web-server-with-virtualbox-apache-mysql-ftp-ubuntu-and-samba/</link>
-      <pubDate>Sun, 17 Apr 2016 15:00:00 +0200</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2016/04/17/setting-up-a-virtual-web-server-with-virtualbox-apache-mysql-ftp-ubuntu-and-samba/</guid>
-      <description>This tutorial will explain how to set up a Ubuntu Server virtual machine with:
- Apache FTP Samba  First, check out how to install Ubuntu Server on VirtualBox to get ready a virtual machine to test.
+MySQL Apache FTP Samba Check out these posts to get ready:
+How to install Ubuntu Server on VirtualBox Setting up a Virtual Web Server with VirtualBox, Apache, MySQL, FTP, Ubuntu, and Samba Our virtual machine has two network adapters. The second one (eth1) is a host-only adapter with a static IP address -&amp;gt; 192.</description></item><item><title>Setting up a Virtual Web Server with VirtualBox, Apache, MySQL, FTP, Ubuntu, and Samba</title><link>https://dalanzg.github.io/tips-tutorials/posts/2016/04/17/setting-up-a-virtual-web-server-with-virtualbox-apache-mysql-ftp-ubuntu-and-samba/</link><pubDate>Sun, 17 Apr 2016 15:00:00 +0200</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2016/04/17/setting-up-a-virtual-web-server-with-virtualbox-apache-mysql-ftp-ubuntu-and-samba/</guid><description>This tutorial will explain how to set up a Ubuntu Server virtual machine with:
+Apache FTP Samba First, check out how to install Ubuntu Server on VirtualBox to get ready a virtual machine to test.
 Our virtual machine has two network adapters. The second one (eth1) is a host-only adapter with a static IP address -&amp;gt; 192.168.56.101
-Apache Web Server Apache Web Server needs to be running. The installation and configuration was indicated in the previous post.</description>
-    </item>
-    
-    <item>
-      <title>Install Ubuntu Server 14.04.4 on VirtualBox</title>
-      <link>https://dalanzg.github.io/tips-tutorials/posts/2016/04/15/install-ubuntu-server-14.04.4-on-virtualbox/</link>
-      <pubDate>Fri, 15 Apr 2016 22:45:00 +0200</pubDate>
-      
-      <guid>https://dalanzg.github.io/tips-tutorials/posts/2016/04/15/install-ubuntu-server-14.04.4-on-virtualbox/</guid>
-      <description>This tutorial will explain how to install Ubuntu Server on a virtual machine.
+Apache Web Server Apache Web Server needs to be running. The installation and configuration was indicated in the previous post.</description></item><item><title>Install Ubuntu Server 14.04.4 on VirtualBox</title><link>https://dalanzg.github.io/tips-tutorials/posts/2016/04/15/install-ubuntu-server-14.04.4-on-virtualbox/</link><pubDate>Fri, 15 Apr 2016 22:45:00 +0200</pubDate><guid>https://dalanzg.github.io/tips-tutorials/posts/2016/04/15/install-ubuntu-server-14.04.4-on-virtualbox/</guid><description>This tutorial will explain how to install Ubuntu Server on a virtual machine.
 First, you need to have Ubuntu Server ISO file and VirtualBox installed.
- VirtualBox Ubuntu Server  Create a new virtual machine on VirtualBox by clicking on New.
-Create new virtual machine  Select type and version of the virtual machine. In this case, Linux and Ubuntu (64-bits).
-Select type and version of the virtual machine  Select the amount of memory (RAM).</description>
-    </item>
-    
-  </channel>
-</rss>
+VirtualBox Ubuntu Server Create a new virtual machine on VirtualBox by clicking on New.
+Create new virtual machine Select type and version of the virtual machine. In this case, Linux and Ubuntu (64-bits).
+Select type and version of the virtual machine Select the amount of memory (RAM).</description></item></channel></rss>

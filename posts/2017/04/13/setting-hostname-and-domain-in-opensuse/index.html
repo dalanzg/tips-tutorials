@@ -1,161 +1,9 @@
-<!DOCTYPE html>
-<html><head>
-  <title>Setting hostname and domain in openSUSE</title>
-  
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="title" content="Setting hostname and domain in openSUSE – Tips and Tutorials">
-  <meta name="description" content="A tutorial to set hostname and domain in openSUSE.">
-  
-  <meta name="generator" content="Hugo 0.56.3" />
-  
-  <meta property="og:title" content="Setting hostname and domain in openSUSE">
-<meta property="og:description" content="A tutorial to set hostname and domain in openSUSE." />
-<meta property="og:url" content="https://dalanzg.github.io/tips-tutorials/posts/2017/04/13/setting-hostname-and-domain-in-opensuse/">
-<meta property="og:site_name" content="Tips and Tutorials">
-<meta property="og:type" content="article">
-    <meta property="og:image" content="https://dalanzg.github.io/tips-tutorials/android-chrome-512x512.png">
-  <meta property="og:tags" content="opensuse">
-  <meta property="article:published_time" content="2017-04-13">
-  <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:description" content="A tutorial to set hostname and domain in openSUSE." />
-<meta name="twitter:title" content="Setting hostname and domain in openSUSE" />
-<meta name="twitter:site" content="Tips and Tutorials" />
-<meta name="twitter:creator" content="@dalanzg" />
-    <meta name="twitter:image" content="https://dalanzg.github.io/tips-tutorials/android-chrome-512x512.png">
-  <script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Setting hostname and domain in openSUSE",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https:\/\/dalanzg.github.io\/tips-tutorials\/posts\/2017\/04\/13\/setting-hostname-and-domain-in-opensuse\/"
-  },
-  
-  "image": {
-    "@type": "ImageObject",
-    "url": "https:\/\/dalanzg.github.io\/tips-tutorials\/mstile-150x150.png",
-    "width":  150 ,
-    "height":  150 
-  },
-  "genre": "posts",
-  "keywords": "opensuse",
-  "wordcount":  268 ,
-  "url": "https:\/\/dalanzg.github.io\/tips-tutorials\/posts\/2017\/04\/13\/setting-hostname-and-domain-in-opensuse\/",
-  "datePublished": "2017-04-13",
-  "dateModified": "2018-03-17",
-  "license": "Copyright. Tips and Tutorials. All rights reserved.",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Daniel Lanza",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https:\/\/dalanzg.github.io\/tips-tutorials\/mstile-150x150.png",
-      "width":  150 ,
-      "height":  150 
-    }
-  },
-  "author": {
-    "@type": "Person",
-    "name": "dalanzg"
-  },
-  "description": "A tutorial to set hostname and domain in openSUSE."
-}
-</script>
-  <link rel="apple-touch-icon" sizes="180x180" href="https://dalanzg.github.io/tips-tutorials/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://dalanzg.github.io/tips-tutorials/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="https://dalanzg.github.io/tips-tutorials/favicon-16x16.png">
-<link rel="manifest" href="https://dalanzg.github.io/tips-tutorials/site.webmanifest">
-<link rel="mask-icon" href="https://dalanzg.github.io/tips-tutorials/safari-pinned-tab.svg" color="#5bbad5">
-<meta name="apple-mobile-web-app-title" content="Tips and Tutorials">
-<meta name="application-name" content="Tips and Tutorials">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="theme-color" content="#ffffff">
-  <link rel="canonical" href="https://dalanzg.github.io/tips-tutorials/posts/2017/04/13/setting-hostname-and-domain-in-opensuse/">
-
-  <link rel="stylesheet" href="https://dalanzg.github.io/tips-tutorials/sass/main.min.5f805eac00006ca12f0d48d367bd1bc959826406b3bf3d94a67e3e976d595702.css" integrity="sha256-X4BerAAAbKEvDUjTZ70byVmCZAazvz2Upn4&#43;l21ZVwI=">
-  
-  
-  <link rel="sitemap" href="https://dalanzg.github.io/tips-tutorials/sitemap.xml" title="Sitemap" type="application/xml">
-  <meta name="google-site-verification" content="CeO9J_0wi37-MvDa_F7AmZJYunwDhFGjv8eSlJFPil8" />
-  
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-65400010-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-65400010-1');
-</script><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-8140733006923933",
-    enable_page_level_ads: true
-  });
-</script></head>
-<body>
-    <div class="container"><nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="https://dalanzg.github.io/tips-tutorials/"><strong>Tips and Tutorials</strong></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-    <li class="navbar-item ">
-        <a class="nav-link" href="https://dalanzg.github.io/tips-tutorials/about/" title="">About</a>
-      </li><li class="navbar-item ">
-        <a class="nav-link" href="https://dalanzg.github.io/tips-tutorials/tags/" title="">Tags</a>
-      </li><li class="navbar-item ">
-        <a class="nav-link" href="https://dalanzg.github.io/tips-tutorials/posts/" title="">Posts</a>
-      </li></ul>
-    <form class="form-inline float-xs-right" action="https://dalanzg.github.io/tips-tutorials/search/" method="get" data-search-form>
-      <input class="form-control mr-sm-2" type="text" name="q" placeholder="Search..." data-search-input>
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
-    </form>
-  </div>
-</nav>
-<h1 class="mt-5">Setting hostname and domain in openSUSE</h1><p class="text-muted mt-3">
-	<span>Published on April 13, 2017</span>
-	<span>by Daniel Lanza</span>
-</p>
-<p>
-	<a class="text-muted" href="https://dalanzg.github.io/tips-tutorials/tags/opensuse"><i class="fas fa-tags"></i>&nbsp;opensuse</a>
-</p>
-
-<p>A tutorial to set hostname and domain in openSUSE (server.dalanzg.com):</p>
-
-<ul>
-<li><strong>Hostname</strong> -&gt; srvopensuse</li>
-<li><strong>Domain</strong> -&gt; dalanzg.com</li>
-</ul>
-
-<h2 id="requirements">Requirements</h2>
-
-<p>You will need the following:</p>
-
-<ul>
-<li>An openSUSE virtual machine with VirtualBox (<a href="https://dalanzg.github.io/tips-tutorials/posts/2017/02/12/how-to-install-opensuse-leap-42.2-in-virtualbox/">Check this link</a></li>
-</ul>
-
-<h2 id="steps">Steps</h2>
-
-<ul>
-<li><a href="#modify-hostname-file">Modify hostname file</a></li>
-<li><a href="#modify-hosts-file">Modify hosts file</a></li>
-<li><a href="#verification">Verification</a></li>
-</ul>
-
-<h3 id="modify-hostname-file">Modify hostname file</h3>
-
-<p>With root permissions, edit file <strong>/etc/hostname</strong>.</p>
-<div class="highlight"><pre class="chroma"><code class="language-terminal" data-lang="terminal">dalanz@linux-geij:~&gt; sudo vim /etc/hostname</code></pre></div>
-<p>Write the <strong>hostname</strong> for the server.</p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim"><span class="nx">srvopensuse</span></code></pre></div>
-<h3 id="modify-hosts-file">Modify hosts file</h3>
-
-<p>Check your network interfaces to find out the IP address for your Ethernet network (eth1).</p>
-<div class="highlight"><pre class="chroma"><code class="language-terminal" data-lang="terminal">dalanz@linux-geij:~&gt; sudo ifconfig
+<!doctype html><html><head><title>Setting hostname and domain in openSUSE</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=title content="Setting hostname and domain in openSUSE – Tips and Tutorials"><meta name=description content="A tutorial to set hostname and domain in openSUSE."><meta name=generator content="Hugo 0.56.3"><meta property=og:title content="Setting hostname and domain in openSUSE"><meta property=og:description content="A tutorial to set hostname and domain in openSUSE."><meta property=og:url content=https://dalanzg.github.io/tips-tutorials/posts/2017/04/13/setting-hostname-and-domain-in-opensuse/><meta property=og:site_name content="Tips and Tutorials"><meta property=og:type content=article><meta property=og:image content=https://dalanzg.github.io/tips-tutorials/android-chrome-512x512.png><meta property=og:tags content=opensuse><meta property=article:published_time content=2017-04-13><meta name=twitter:card content=summary_large_image><meta name=twitter:description content="A tutorial to set hostname and domain in openSUSE."><meta name=twitter:title content="Setting hostname and domain in openSUSE"><meta name=twitter:site content="Tips and Tutorials"><meta name=twitter:creator content=@dalanzg><meta name=twitter:image content=https://dalanzg.github.io/tips-tutorials/android-chrome-512x512.png><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"Setting hostname and domain in openSUSE","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/dalanzg.github.io\/tips-tutorials\/posts\/2017\/04\/13\/setting-hostname-and-domain-in-opensuse\/"},"image":{"@type":"ImageObject","url":"https:\/\/dalanzg.github.io\/tips-tutorials\/mstile-150x150.png","width":150,"height":150},"genre":"posts","keywords":"opensuse","wordcount":268,"url":"https:\/\/dalanzg.github.io\/tips-tutorials\/posts\/2017\/04\/13\/setting-hostname-and-domain-in-opensuse\/","datePublished":"2017-04-13","dateModified":"2018-03-17","license":"Copyright. Tips and Tutorials. All rights reserved.","publisher":{"@type":"Organization","name":"Daniel Lanza","logo":{"@type":"ImageObject","url":"https:\/\/dalanzg.github.io\/tips-tutorials\/mstile-150x150.png","width":150,"height":150}},"author":{"@type":"Person","name":"dalanzg"},"description":"A tutorial to set hostname and domain in openSUSE."}</script><link rel=apple-touch-icon sizes=180x180 href=https://dalanzg.github.io/tips-tutorials/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=https://dalanzg.github.io/tips-tutorials/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=https://dalanzg.github.io/tips-tutorials/favicon-16x16.png><link rel=manifest href=https://dalanzg.github.io/tips-tutorials/site.webmanifest><link rel=mask-icon href=https://dalanzg.github.io/tips-tutorials/safari-pinned-tab.svg color=#5bbad5><meta name=apple-mobile-web-app-title content="Tips and Tutorials"><meta name=application-name content="Tips and Tutorials"><meta name=msapplication-TileColor content=#da532c><meta name=theme-color content=#ffffff><link rel=canonical href=https://dalanzg.github.io/tips-tutorials/posts/2017/04/13/setting-hostname-and-domain-in-opensuse/><link rel=stylesheet href=https://dalanzg.github.io/tips-tutorials/sass/main.min.5f805eac00006ca12f0d48d367bd1bc959826406b3bf3d94a67e3e976d595702.css integrity="sha256-X4BerAAAbKEvDUjTZ70byVmCZAazvz2Upn4&#43;l21ZVwI="><link rel=sitemap href=https://dalanzg.github.io/tips-tutorials/sitemap.xml title=Sitemap type=application/xml><meta name=google-site-verification content=CeO9J_0wi37-MvDa_F7AmZJYunwDhFGjv8eSlJFPil8><script async src="https://www.googletagmanager.com/gtag/js?id=UA-65400010-1"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','UA-65400010-1');</script><script async src=//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js></script><script>(adsbygoogle=window.adsbygoogle||[]).push({google_ad_client:"ca-pub-8140733006923933",enable_page_level_ads:true});</script></head><body><div class=container><nav class="navbar navbar-expand-lg navbar-light bg-light"><a class=navbar-brand href=https://dalanzg.github.io/tips-tutorials/><strong>Tips and Tutorials</strong></a>
+<button class=navbar-toggler type=button data-toggle=collapse data-target=#navbarSupportedContent aria-controls=navbarSupportedContent aria-expanded=false aria-label="Toggle navigation">
+<span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse" id=navbarSupportedContent><ul class="navbar-nav mr-auto"><li class=navbar-item><a class=nav-link href=https://dalanzg.github.io/tips-tutorials/about/>About</a></li><li class=navbar-item><a class=nav-link href=https://dalanzg.github.io/tips-tutorials/tags/>Tags</a></li><li class=navbar-item><a class=nav-link href=https://dalanzg.github.io/tips-tutorials/posts/>Posts</a></li></ul><form class="form-inline float-xs-right" action=https://dalanzg.github.io/tips-tutorials/search/ method=get data-search-form><input class="form-control mr-sm-2" type=text name=q placeholder=Search... data-search-input>
+<button class="btn btn-outline-success my-2 my-sm-0" type=submit><i class="fas fa-search"></i></button></form></div></nav><h1 class=mt-5>Setting hostname and domain in openSUSE</h1><p class="text-muted mt-3"><span>Published on April 13, 2017</span>
+<span>by Daniel Lanza</span></p><p><a class=text-muted href=https://dalanzg.github.io/tips-tutorials/tags/opensuse><i class="fas fa-tags"></i>&nbsp;opensuse</a></p><p>A tutorial to set hostname and domain in openSUSE (server.dalanzg.com):</p><ul><li><strong>Hostname</strong> -&gt; srvopensuse</li><li><strong>Domain</strong> -&gt; dalanzg.com</li></ul><h2 id=requirements>Requirements</h2><p>You will need the following:</p><ul><li>An openSUSE virtual machine with VirtualBox (<a href=https://dalanzg.github.io/tips-tutorials/posts/2017/02/12/how-to-install-opensuse-leap-42.2-in-virtualbox/>Check this link</a></li></ul><h2 id=steps>Steps</h2><ul><li><a href=#modify-hostname-file>Modify hostname file</a></li><li><a href=#modify-hosts-file>Modify hosts file</a></li><li><a href=#verification>Verification</a></li></ul><h3 id=modify-hostname-file>Modify hostname file</h3><p>With root permissions, edit file <strong>/etc/hostname</strong>.</p><div class=highlight><pre class=chroma><code class=language-terminal data-lang=terminal>dalanz@linux-geij:~&gt; sudo vim /etc/hostname</code></pre></div><p>Write the <strong>hostname</strong> for the server.</p><div class=highlight><pre class=chroma><code class=language-vim data-lang=vim><span class=nx>srvopensuse</span></code></pre></div><h3 id=modify-hosts-file>Modify hosts file</h3><p>Check your network interfaces to find out the IP address for your Ethernet network (eth1).</p><div class=highlight><pre class=chroma><code class=language-terminal data-lang=terminal>dalanz@linux-geij:~&gt; sudo ifconfig
 eth1      Link encap:Ethernet  HWaddr 08:00:27:91:22:4E
           inet addr:10.0.2.15  Bcast:10.0.2.255  Mask:255.255.255.0
           inet6 addr: fe80::a00:27ff:fe91:224e/64 Scope:Link
@@ -172,141 +20,46 @@ lo        Link encap:Local Loopback
           RX packets:69 errors:0 dropped:0 overruns:0 frame:0
           TX packets:69 errors:0 dropped:0 overruns:0 carrier:0
           collisions:0 txqueuelen:1
-          RX bytes:4630 (4.5 Kb)  TX bytes:4630 (4.5 Kb)</code></pre></div>
-<p>With root permissions, edit file <strong>/etc/hosts</strong>.</p>
-<div class="highlight"><pre class="chroma"><code class="language-terminal" data-lang="terminal">dalanz@linux-geij:~&gt; sudo vim /etc/hosts</code></pre></div>
-<p>Set your IP address for Ethernet network with your FQDN:</p>
-
-<ul>
-<li><p>10.0.2.15       srvopensuse.dalanzg.com       srvopensuse</p>
-<div class="highlight"><pre class="chroma"><code class="language-vim" data-lang="vim">#<span class="err">
-</span><span class="err"></span># <span class="nx">hosts</span>         <span class="nx">This</span> <span class="nx">file</span> <span class="nx">describes</span> <span class="nx">a</span> <span class="nx">number</span> <span class="nx">of</span> <span class="nx">hostname</span><span class="p">-</span><span class="nx">to</span><span class="p">-</span><span class="nx">address</span><span class="err">
-</span><span class="err"></span>#               <span class="nx">mappings</span> <span class="nx">for</span> <span class="nx">the</span> <span class="nx">TCP</span>/<span class="nx">IP</span> <span class="nx">subsystem</span>.  <span class="nx">It</span> <span class="nx">is</span> <span class="nx">mostly</span><span class="err">
-</span><span class="err"></span>#               <span class="nx">used</span> <span class="nx">at</span> <span class="nx">boot</span> <span class="nx">time</span><span class="p">,</span> <span class="nx">when</span> <span class="nx">no</span> <span class="nx">name</span> <span class="nx">servers</span> <span class="nx">are</span> <span class="nx">running</span>.<span class="err">
-</span><span class="err"></span>#               <span class="nx">On</span> <span class="nx">small</span> <span class="nx">systems</span><span class="p">,</span> <span class="nx">this</span> <span class="nx">file</span> <span class="nx">can</span> <span class="nx">be</span> <span class="nx">used</span> <span class="nx">instead</span> <span class="nx">of</span> <span class="nx">a</span><span class="err">
-</span><span class="err"></span>#               <span class="s2">&#34;named&#34;</span> <span class="nx">name</span> <span class="nx">server</span>.<span class="err">
-</span><span class="err"></span># <span class="nx">Syntax</span>:<span class="err">
-</span><span class="err"></span>#<span class="err">
-</span><span class="err"></span># <span class="nx">IP</span><span class="p">-</span><span class="nx">Address</span>  <span class="nx">Full</span><span class="p">-</span><span class="nx">Qualified</span><span class="p">-</span><span class="nx">Hostname</span>  <span class="nx">Short</span><span class="p">-</span><span class="nx">Hostname</span><span class="err">
-</span><span class="err"></span>#<span class="err">
-</span><span class="err">
-</span><span class="err"></span><span class="m">127</span>.<span class="m">0</span>.<span class="m">0</span>.<span class="m">1</span>       <span class="nx">localhost</span><span class="err">
-</span><span class="err"></span><span class="m">10</span>.<span class="m">0</span>.<span class="m">2</span>.<span class="m">15</span>       <span class="nx">srvopensuse</span>.<span class="nx">dalanzg</span>.<span class="nx">com</span>       <span class="nx">srvopensuse</span><span class="err">
-</span><span class="err">
-</span><span class="err"></span># <span class="nx">special</span> <span class="nx">IPv6</span> <span class="nx">addresses</span><span class="err">
-</span><span class="err"></span><span class="p">:</span>:<span class="m">1</span>             <span class="nx">localhost</span> <span class="nx">ipv6</span><span class="p">-</span><span class="nx">localhost</span> <span class="nx">ipv6</span><span class="p">-</span><span class="nx">loopback</span><span class="err">
-</span><span class="err">
-</span><span class="err"></span><span class="nx">fe00</span>::<span class="m">0</span>         <span class="nx">ipv6</span><span class="p">-</span><span class="nx">localnet</span><span class="err">
-</span><span class="err">
-</span><span class="err"></span><span class="nx">ff00</span>::<span class="m">0</span>         <span class="nx">ipv6</span><span class="p">-</span><span class="nx">mcastprefix</span><span class="err">
-</span><span class="err"></span><span class="nx">ff02</span>::<span class="m">1</span>         <span class="nx">ipv6</span><span class="p">-</span><span class="nx">allnodes</span><span class="err">
-</span><span class="err"></span><span class="nx">ff02</span>::<span class="m">2</span>         <span class="nx">ipv6</span><span class="p">-</span><span class="nx">allrouters</span><span class="err">
-</span><span class="err"></span><span class="nx">ff02</span>::<span class="m">3</span>         <span class="nx">ipv6</span><span class="p">-</span><span class="nx">allhosts</span></code></pre></div></li>
-</ul>
-
-<p>Restart rcnetwork services.</p>
-<div class="highlight"><pre class="chroma"><code class="language-terminal" data-lang="terminal">dalanz@linux-geij:~&gt; sudo rcnetwork restart</code></pre></div>
-<h3 id="verification">Verification</h3>
-
-<p>Check your parameters.</p>
-<div class="highlight"><pre class="chroma"><code class="language-terminal" data-lang="terminal">dalanz@linux-geij:~&gt; hostname --short
+          RX bytes:4630 (4.5 Kb)  TX bytes:4630 (4.5 Kb)</code></pre></div><p>With root permissions, edit file <strong>/etc/hosts</strong>.</p><div class=highlight><pre class=chroma><code class=language-terminal data-lang=terminal>dalanz@linux-geij:~&gt; sudo vim /etc/hosts</code></pre></div><p>Set your IP address for Ethernet network with your FQDN:</p><ul><li><p>10.0.2.15 srvopensuse.dalanzg.com srvopensuse</p><div class=highlight><pre class=chroma><code class=language-vim data-lang=vim>#<span class=err>
+</span><span class=err></span># <span class=nx>hosts</span>         <span class=nx>This</span> <span class=nx>file</span> <span class=nx>describes</span> <span class=nx>a</span> <span class=nx>number</span> <span class=nx>of</span> <span class=nx>hostname</span><span class=p>-</span><span class=nx>to</span><span class=p>-</span><span class=nx>address</span><span class=err>
+</span><span class=err></span>#               <span class=nx>mappings</span> <span class=nx>for</span> <span class=nx>the</span> <span class=nx>TCP</span>/<span class=nx>IP</span> <span class=nx>subsystem</span>.  <span class=nx>It</span> <span class=nx>is</span> <span class=nx>mostly</span><span class=err>
+</span><span class=err></span>#               <span class=nx>used</span> <span class=nx>at</span> <span class=nx>boot</span> <span class=nx>time</span><span class=p>,</span> <span class=nx>when</span> <span class=nx>no</span> <span class=nx>name</span> <span class=nx>servers</span> <span class=nx>are</span> <span class=nx>running</span>.<span class=err>
+</span><span class=err></span>#               <span class=nx>On</span> <span class=nx>small</span> <span class=nx>systems</span><span class=p>,</span> <span class=nx>this</span> <span class=nx>file</span> <span class=nx>can</span> <span class=nx>be</span> <span class=nx>used</span> <span class=nx>instead</span> <span class=nx>of</span> <span class=nx>a</span><span class=err>
+</span><span class=err></span>#               <span class=s2>&#34;named&#34;</span> <span class=nx>name</span> <span class=nx>server</span>.<span class=err>
+</span><span class=err></span># <span class=nx>Syntax</span>:<span class=err>
+</span><span class=err></span>#<span class=err>
+</span><span class=err></span># <span class=nx>IP</span><span class=p>-</span><span class=nx>Address</span>  <span class=nx>Full</span><span class=p>-</span><span class=nx>Qualified</span><span class=p>-</span><span class=nx>Hostname</span>  <span class=nx>Short</span><span class=p>-</span><span class=nx>Hostname</span><span class=err>
+</span><span class=err></span>#<span class=err>
+</span><span class=err>
+</span><span class=err></span><span class=m>127</span>.<span class=m>0</span>.<span class=m>0</span>.<span class=m>1</span>       <span class=nx>localhost</span><span class=err>
+</span><span class=err></span><span class=m>10</span>.<span class=m>0</span>.<span class=m>2</span>.<span class=m>15</span>       <span class=nx>srvopensuse</span>.<span class=nx>dalanzg</span>.<span class=nx>com</span>       <span class=nx>srvopensuse</span><span class=err>
+</span><span class=err>
+</span><span class=err></span># <span class=nx>special</span> <span class=nx>IPv6</span> <span class=nx>addresses</span><span class=err>
+</span><span class=err></span><span class=p>:</span>:<span class=m>1</span>             <span class=nx>localhost</span> <span class=nx>ipv6</span><span class=p>-</span><span class=nx>localhost</span> <span class=nx>ipv6</span><span class=p>-</span><span class=nx>loopback</span><span class=err>
+</span><span class=err>
+</span><span class=err></span><span class=nx>fe00</span>::<span class=m>0</span>         <span class=nx>ipv6</span><span class=p>-</span><span class=nx>localnet</span><span class=err>
+</span><span class=err>
+</span><span class=err></span><span class=nx>ff00</span>::<span class=m>0</span>         <span class=nx>ipv6</span><span class=p>-</span><span class=nx>mcastprefix</span><span class=err>
+</span><span class=err></span><span class=nx>ff02</span>::<span class=m>1</span>         <span class=nx>ipv6</span><span class=p>-</span><span class=nx>allnodes</span><span class=err>
+</span><span class=err></span><span class=nx>ff02</span>::<span class=m>2</span>         <span class=nx>ipv6</span><span class=p>-</span><span class=nx>allrouters</span><span class=err>
+</span><span class=err></span><span class=nx>ff02</span>::<span class=m>3</span>         <span class=nx>ipv6</span><span class=p>-</span><span class=nx>allhosts</span></code></pre></div></li></ul><p>Restart rcnetwork services.</p><div class=highlight><pre class=chroma><code class=language-terminal data-lang=terminal>dalanz@linux-geij:~&gt; sudo rcnetwork restart</code></pre></div><h3 id=verification>Verification</h3><p>Check your parameters.</p><div class=highlight><pre class=chroma><code class=language-terminal data-lang=terminal>dalanz@linux-geij:~&gt; hostname --short
 srvopensuse
 dalanz@linux-geij:~&gt; hostname --domain
 dalanzg.com
 dalanz@linux-geij:~&gt; hostname --fqdn
 srvopensuse.dalanzg.com
 dalanz@linux-geij:~&gt; hostname --ip-address
-10.0.2.15</code></pre></div>
-
-<div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "tips-tutorials" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-	<div class="bg-light py-5">
-		<div class="container">
-			<h2 class="text-center">Read next</h2>
-			<div class="row">
-				<div class="col-md-6 text-center">
-						Previous Post:
-						<a href="https://dalanzg.github.io/tips-tutorials/posts/2017/04/07/setting-ssl-or-https-in-tomcat-with-opensuse/">Setting SSL or https in Tomcat with openSUSE</a>
-				</div>
-				<div class="col-md-6 text-center">
-						Next Post:
-						<a href="https://dalanzg.github.io/tips-tutorials/posts/2017/04/14/setting-postfix-for-outgoing-mail-in-opensuse/">Setting Postfix for outgoing mail in openSUSE</a>
-				</div>
-			</div>
-		</div>
-	</div>
-<div class="container mt-5">
-	<h2 class="text-center">See also</h2>
-	<div class="row">
-			<div class="col-md mb-3">
-				<p class="lead mb-0"><a class="text-body" href="https://dalanzg.github.io/tips-tutorials/posts/2017/04/07/setting-ssl-or-https-in-tomcat-with-opensuse/">Setting SSL or https in Tomcat with openSUSE</a></p>
-				<p class="font-weight-light mt-3">A tutorial to configure Tomcat 8 to support SSL or https connection.
+10.0.2.15</code></pre></div><div id=disqus_thread></div><script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return;}
+var d=document,s=d.createElement('script');s.async=true;s.src='//'+"tips-tutorials"+'.disqus.com/embed.js';s.setAttribute('data-timestamp',+new Date());(d.head||d.body).appendChild(s);})();</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a><div class="bg-light py-5"><div class=container><h2 class=text-center>Read next</h2><div class=row><div class="col-md-6 text-center">Previous Post:
+<a href=https://dalanzg.github.io/tips-tutorials/posts/2017/04/07/setting-ssl-or-https-in-tomcat-with-opensuse/>Setting SSL or https in Tomcat with openSUSE</a></div><div class="col-md-6 text-center">Next Post:
+<a href=https://dalanzg.github.io/tips-tutorials/posts/2017/04/14/setting-postfix-for-outgoing-mail-in-opensuse/>Setting Postfix for outgoing mail in openSUSE</a></div></div></div></div><div class="container mt-5"><h2 class=text-center>See also</h2><div class=row><div class="col-md mb-3"><p class="lead mb-0"><a class=text-body href=https://dalanzg.github.io/tips-tutorials/posts/2017/04/07/setting-ssl-or-https-in-tomcat-with-opensuse/>Setting SSL or https in Tomcat with openSUSE</a></p><p class="font-weight-light mt-3">A tutorial to configure Tomcat 8 to support SSL or https connection.
 Requirements You will need the following:
- An openSUSE virtual machine with VirtualBox (Check this link Java JDK to create Keystores -&gt; Change Java OpenJDK to Oracle JDK Tomcat -&gt; How to install tomcat in openSUSE  This tutorial was created with:
- openSUSE Leap 42.2 Java Version -&gt; jdk1.8.0_121 Tomcat version -&gt; apache-tomcat-8.0.42  Steps  Create a keystore using Java JDK Set keystore in Tomcat Check SSL or https connection  Create a keystore using Java JDK Keystore file is a container for authorization certificates or public key certificates.</p>
-				<a href="https://dalanzg.github.io/tips-tutorials/posts/2017/04/07/setting-ssl-or-https-in-tomcat-with-opensuse/" class="btn btn-primary">Read more</a>
-			</div>
-			<div class="col-md mb-3">
-				<p class="lead mb-0"><a class="text-body" href="https://dalanzg.github.io/tips-tutorials/posts/2017/03/24/how-to-install-tomcat-in-opensuse/">How to install Tomcat in openSUSE</a></p>
-				<p class="font-weight-light mt-3">Requirements You will need the following:
- Tomcat 8  Optional -&gt; (Change Java OpenJDK to Oracle JDK to run Tomcat.
-Steps  Download Tomcat 8. This case will be Apache Tomcat 8.0.42 -&gt; Core tar.gz (apache-tomcat-8.0.42.tar.gz).
- Unzip apache-tomcat-8.0.42.tar.gz file and place it in folder /usr/local/tomcat. /usr/local is a folder similar to /usr and remain safe from system software upgrades.
-dalanz@linux-geij:~&gt; tar -xf apache-tomcat-8.0.42.tar.gz dalanz@linux-geij:~&gt; sudo mkdir -p /usr/local/tomcat dalanz@linux-geij:~&gt; sudo mv apache-tomcat-8.</p>
-				<a href="https://dalanzg.github.io/tips-tutorials/posts/2017/03/24/how-to-install-tomcat-in-opensuse/" class="btn btn-primary">Read more</a>
-			</div>
-			<div class="col-md mb-3">
-				<p class="lead mb-0"><a class="text-body" href="https://dalanzg.github.io/tips-tutorials/posts/2017/03/18/change-openjdk-to-oracle-jdk-in-opensuse/">Change OpenJDK to Oracle JDK in openSUSE</a></p>
-				<p class="font-weight-light mt-3">When installing openSUSE, OpenJDK is installed by default. This tutorial will explain how to change to Oracle JDK.
+An openSUSE virtual machine with VirtualBox (Check this link Java JDK to create Keystores -&gt; Change Java OpenJDK to Oracle JDK Tomcat -&gt; How to install tomcat in openSUSE This tutorial was created with:
+openSUSE Leap 42.2 Java Version -&gt; jdk1.8.0_121 Tomcat version -&gt; apache-tomcat-8.0.42 Steps Create a keystore using Java JDK Set keystore in Tomcat Check SSL or https connection Create a keystore using Java JDK Keystore file is a container for authorization certificates or public key certificates.</p><a href=https://dalanzg.github.io/tips-tutorials/posts/2017/04/07/setting-ssl-or-https-in-tomcat-with-opensuse/ class="btn btn-primary">Read more</a></div><div class="col-md mb-3"><p class="lead mb-0"><a class=text-body href=https://dalanzg.github.io/tips-tutorials/posts/2017/03/24/how-to-install-tomcat-in-opensuse/>How to install Tomcat in openSUSE</a></p><p class="font-weight-light mt-3">Requirements You will need the following:
+Tomcat 8 Optional -&gt; (Change Java OpenJDK to Oracle JDK to run Tomcat.
+Steps Download Tomcat 8. This case will be Apache Tomcat 8.0.42 -&gt; Core tar.gz (apache-tomcat-8.0.42.tar.gz).
+Unzip apache-tomcat-8.0.42.tar.gz file and place it in folder /usr/local/tomcat. /usr/local is a folder similar to /usr and remain safe from system software upgrades.
+dalanz@linux-geij:~&gt; tar -xf apache-tomcat-8.0.42.tar.gz dalanz@linux-geij:~&gt; sudo mkdir -p /usr/local/tomcat dalanz@linux-geij:~&gt; sudo mv apache-tomcat-8.</p><a href=https://dalanzg.github.io/tips-tutorials/posts/2017/03/24/how-to-install-tomcat-in-opensuse/ class="btn btn-primary">Read more</a></div><div class="col-md mb-3"><p class="lead mb-0"><a class=text-body href=https://dalanzg.github.io/tips-tutorials/posts/2017/03/18/change-openjdk-to-oracle-jdk-in-opensuse/>Change OpenJDK to Oracle JDK in openSUSE</a></p><p class="font-weight-light mt-3">When installing openSUSE, OpenJDK is installed by default. This tutorial will explain how to change to Oracle JDK.
 dalanz@linux-geij:~&gt; java -version openjdk version &#34;1.8.0_121&#34; OpenJDK Runtime Environment (IcedTea 3.3.0) (suse-8.1-x86_64) OpenJDK 64-Bit Server VM (build 25.121-b13, mixed mode) Requirements You will need the following:
- Oracle JDK 8  Steps  Download Oracle JDK 8. This case will be Linux x64 (jdk-8u121-linux-x64.tar.gz).
- Unzip jdk-8u121-linux-x64.tar.gz file and change the ownership</p>
-				<a href="https://dalanzg.github.io/tips-tutorials/posts/2017/03/18/change-openjdk-to-oracle-jdk-in-opensuse/" class="btn btn-primary">Read more</a>
-			</div>
-	</div>
-</div></div><footer class="blog-footer">
-  <p>
-    <nav class="nav justify-content-center">
-      <a class="nav-link" href="https://dalanzg.github.io/tips-tutorials/index.xml" target="_blank">
-        <i class="fas fa-rss-square fa-2x"></i>
-      </a>
-      
-      <a class="nav-link" href="https://twitter.com/dalanzg" target="_blank">
-        <i class="fab fa-twitter fa-2x"></i>
-      </a>
-      
-      <a class="nav-link" href="https://github.com/dalanzg" target="_blank">
-        <i class="fab fa-github fa-2x"></i>
-      </a>
-      
-      <a class="nav-link" href="https://www.linkedin.com/in/danilanza" target="_blank">
-        <i class="fab fa-linkedin fa-2x"></i>
-      </a>
-      
-    </nav>
-  </p>
-  <p class="text-muted">Copyright &copy; Tips and Tutorials 2019</p>
-  <p class="text-muted"><small>All rights reserved. Blog powered by <a href="https://gohugo.io/">Hugo</a> and hosted on <a href="https://www.github.com">GitHub.</a></small></p>
-  <p class="text-muted"><small><a href="https://opensource.org/licenses/MIT">MIT License</a></small></p>
-</footer>
-
-<script src="https://dalanzg.github.io/tips-tutorials/js/bundle.min.110d3e1a6c79028aa1899125704a04f056b48a7862c0d9058732b1ab70451559.js"></script></body>
-</html>
+Oracle JDK 8 Steps Download Oracle JDK 8. This case will be Linux x64 (jdk-8u121-linux-x64.tar.gz).
+Unzip jdk-8u121-linux-x64.tar.gz file and change the ownership</p><a href=https://dalanzg.github.io/tips-tutorials/posts/2017/03/18/change-openjdk-to-oracle-jdk-in-opensuse/ class="btn btn-primary">Read more</a></div></div></div></div><footer class=blog-footer><p><nav class="nav justify-content-center"><a class=nav-link href=https://dalanzg.github.io/tips-tutorials/index.xml target=_blank><i class="fas fa-rss-square fa-2x"></i></a><a class=nav-link href=https://twitter.com/dalanzg target=_blank><i class="fab fa-twitter fa-2x"></i></a><a class=nav-link href=https://github.com/dalanzg target=_blank><i class="fab fa-github fa-2x"></i></a><a class=nav-link href=https://www.linkedin.com/in/danilanza target=_blank><i class="fab fa-linkedin fa-2x"></i></a></nav></p><p class=text-muted>Copyright &copy; Tips and Tutorials 2019</p><p class=text-muted><small>All rights reserved. Blog powered by <a href=https://gohugo.io/>Hugo</a> and hosted on <a href=https://www.github.com>GitHub.</a></small></p><p class=text-muted><small><a href=https://opensource.org/licenses/MIT>MIT License</a></small></p></footer><script src=https://dalanzg.github.io/tips-tutorials/js/bundle.min.110d3e1a6c79028aa1899125704a04f056b48a7862c0d9058732b1ab70451559.js></script></body></html>
