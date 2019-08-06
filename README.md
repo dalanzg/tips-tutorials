@@ -22,13 +22,13 @@ Install the following dependencies in your local machine:
 - **nodejs**
 - **hugo**
 
-Install **node_modules**:
+Install node_modules:
 
 ```terminal
 $ npm install
 ```
 
-And run the following scripts to build hugo site:
+Run the following scripts to build and serve hugo site:
 
 - `run npm build`: Copy files from node_modules and build hugo project (build **public** folder)
 - `run npm serve`: Serve Hugo project
