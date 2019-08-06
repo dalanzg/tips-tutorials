@@ -10,7 +10,7 @@
   },
   "scripts": {
     "test": "echo \"Test script\"",
-    "clean": "rm -rdf public resources $npm_package_config_JS_VENDOR $npm_package_config_SASS_VENDOR $npm_package_config_FONTS_VENDOR",
+    "clean": "rm -rdf public/* resources $npm_package_config_JS_VENDOR $npm_package_config_SASS_VENDOR $npm_package_config_FONTS_VENDOR",
     "build": "npm run clean && npm run build:folder && npm run build:js && npm run build:sass && npm run build:fonts && hugo --minify",
     "build:folder": "mkdir -p $npm_package_config_JS_VENDOR $npm_package_config_SASS_VENDOR $npm_package_config_FONTS_VENDOR",
     "build:js": "npm run build:js:jquery && npm run build:js:popper && npm run build:js:bootstrap && npm run build:js:lunr",
