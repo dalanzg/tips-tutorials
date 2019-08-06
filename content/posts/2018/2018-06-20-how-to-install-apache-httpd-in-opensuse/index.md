@@ -2,10 +2,10 @@
 title: How to install Apache HTTPD in openSUSE
 description: This tutorial will explain how to install Apache HTTPD in openSUSE 15.
 date: 2018-06-20T12:00:00+02:00
-lastmod: 2018-06-20T12:00:00+02:00
+lastmod: 2019-08-06T14:30:00+02:00
 tags: [opensuse, httpd]
 author: dalanzg
-image:  
+image:
   url: "img/it-works-apache2.png"
   width: 597
   height: 263
@@ -25,6 +25,7 @@ You will need the following:
 ## Steps
 
 - [Set hostname and domain](#set-hostname-and-domain)
+- [Install Apache HTTPD](#install-apache-httpd)
 - [Start and stop Apache](#start-and-stop-apache)
 - [Start Apache automatically at boot time](#start-apache-automatically-at-boot-time)
 

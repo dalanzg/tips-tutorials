@@ -2,10 +2,10 @@
 title: Tomcat load balancing with mod_proxy and mod_proxy_balancer
 description: This tutorial will explain how to load balancing two Tomcat instances with Apache HTTPD server with mod_proxy and mod_proxy_balancer modules.
 date: 2018-11-01T13:00:00+01:00
-lastmod: 2018-11-03T20:10:00+01:00
+lastmod: 2019-08-06T14:30:00+02:00
 tags: [opensuse, httpd]
 author: dalanzg
-image:  
+image:
   url: "img/balancer-manager.png"
   width: 718
   height: 482
@@ -28,13 +28,13 @@ Check the following post to configure [openSUSE with Internet and statick IP add
 
 ## Steps
 
-- [Install Apache HTTP](#install-apache-httpd)
+- [Install Apache HTTPD](#install-apache-httpd)
 - [Install Apache Tomcat](#install-apache-tomcat)
 - [Load apache modules](#load-apache-modules)
-- [Example 1 - Reverse Proxying a Single Backend Server](#example-1---reverse-proxying-a-single-backend-server)
-- [Example 2 - Load Balancing Across Multiple Backend Servers](#example-2---load-balancing-across-multiple-backend-servers)
+- [Example 1 - Reverse Proxying a Single Backend Server](#example-1-reverse-proxying-a-single-backend-server)
+- [Example 2 - Load Balancing Across Multiple Backend Servers](#example-2-load-balancing-across-multiple-backend-servers)
 
-### Install Apache HTTP
+### Install Apache HTTPD
 
 Install Apache HTTP in server #1
 
@@ -63,7 +63,7 @@ Steps for servers #2 and #3:
 dlanza@tomcat-server1:~> wget http://apache.uvigo.es/tomcat/tomcat-8/v8.5.34/bin/apache-tomcat-8.5.34.tar.gz
 dlanza@tomcat-server1:~> sudo mv apache-tomcat-8.5.34.tar.gz /opt/
 dlanza@tomcat-server1:~> cd /opt/
-dlanza@tomcat-server1:/opt> sudo tar -xf apache-tomcat-8.5.34.tar.gz 
+dlanza@tomcat-server1:/opt> sudo tar -xf apache-tomcat-8.5.34.tar.gz
 dlanza@tomcat-server1:/opt> sudo chown -R dlanza:users apache-tomcat-8.5.34
 dlanza@tomcat-server1:/opt> sudo rm apache-tomcat-8.5.34.tar.gz
 Using CATALINA_BASE:   /opt/apache-tomcat-8.5.34
@@ -85,8 +85,8 @@ dlanza@tomcat-server1:/opt> vim /opt/apache-tomcat-8.5.34/webapps/dalanzg/index.
 <html>
   <body>
     <h3>Tomcat server #1</h3>
-  </body> 
-</html> 
+  </body>
+</html>
 ```
 
 Check you can reach the index page from servers #2 and #3:
@@ -275,7 +275,7 @@ If Tomcat 2 (server #3) were down, the URL http://192.168.56.101/dalanzg would b
 Shutdown Tomcat 2 in server #3.
 
 ```terminal
-dlanza@tomcat-server2:~> /opt/apache-tomcat-8.5.34/bin/shutdown.sh 
+dlanza@tomcat-server2:~> /opt/apache-tomcat-8.5.34/bin/shutdown.sh
 Using CATALINA_BASE:   /opt/apache-tomcat-8.5.34
 Using CATALINA_HOME:   /opt/apache-tomcat-8.5.34
 Using CATALINA_TMPDIR: /opt/apache-tomcat-8.5.34/temp
