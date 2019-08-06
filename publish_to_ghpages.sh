@@ -23,8 +23,7 @@ echo "Removing existing files"
 rm -rf public/*
 
 echo "Generating site"
-#hugo
-npm run build
+hugo --minify
 
 echo "Updating gh-pages branch"
 cd public && git add --all && git commit -m "Publishing to gh-pages" && cd ..
