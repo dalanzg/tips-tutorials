@@ -1,0 +1,24 @@
+<footer class="blog-footer">
+  <p>
+    <nav class="nav justify-content-center">
+      <a class="nav-link" href="{{ "/index.xml" }}" target="_blank">
+        <i class="fas fa-rss-square fa-2x"></i>
+      </a>
+      {{ range .Site.Data.social_media }}
+      <a class="nav-link" href="{{ .url }}" target="_blank">
+        <i class="fab {{ .font_awesome }} fa-2x"></i>
+      </a>
+      {{ end }}
+    </nav>
+  </p>
+  <p class="text-muted">Copyright &copy; {{ .Site.Title }} {{ now.Format "2006" }}</p>
+  <p class="text-muted"><small>All rights reserved. Blog powered by <a href="https://gohugo.io/">Hugo</a> and hosted on <a href="https://www.github.com">GitHub.</a></small></p>
+  <p class="text-muted"><small><a href="https://opensource.org/licenses/MIT">MIT License</a></small></p>
+</footer>
+
+<!-- Javascript -->
+{{- $jquery := resources.Get "js/vendor/jquery.min.js" -}}
+{{- $popper := resources.Get "js/vendor/popper.min.js" -}}
+{{- $bootstrap := resources.Get "js/vendor/bootstrap.min.js" -}}
+{{- $js := slice $jquery $popper $bootstrap | resources.Concat "js/bundle.js" | minify | fingerprint -}}
+<script src="{{ $js.RelPermalink | relURL }}"></script>

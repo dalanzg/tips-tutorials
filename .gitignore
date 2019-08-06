@@ -1,0 +1,20 @@
+# Hugo default output directory
+/public
+/resources
+
+# NPM
+/node_modules
+
+# Vendor files
+assets/js/vendor/
+assets/sass/vendor/
+
+## OS Files
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# OSX
+.DS_Store

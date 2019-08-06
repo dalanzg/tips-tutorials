@@ -1,0 +1,25 @@
+<div class="card">
+  <!-- Top Image -->
+  {{- if isset .Params "image" -}}
+  {{- $title := .Title -}}     
+  {{- with .Resources.GetMatch (.Params.image.url) -}}
+  <img class="card-img-top" src="{{ .RelPermalink }}" alt="{{ $title }}" title="{{ $title }}" >
+  {{- end -}}
+  {{- end }}
+  <div class="card-body">
+    <!-- Title -->
+    <a href="{{ .RelPermalink }}"><h4 class="card-title">{{ .Title }}</h4></a>
+    <!-- Summary -->
+    <p class="card-text">{{ .Description }}</p>
+    <p class="text-center"><a href="{{ .RelPermalink }}" class="btn btn-primary">Read more</a></p>
+    <!-- Tags -->
+    <nav class="nav">
+      <div class="nav-link"><i class="far fa-calendar-alt"></i><small class="text-muted">&nbsp;{{ .Date.Format "January 2, 2006" }}</small></div>
+      {{- if isset .Params "tags" -}}
+      <div class="nav-link">
+        <i class="fas fa-tags"></i>&nbsp;<small class="text-muted">{{- delimit .Params.tags ", " -}}</small>
+      </div>
+      {{- end -}}
+    </nav>
+  </div>
+</div>

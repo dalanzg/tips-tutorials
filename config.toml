@@ -1,0 +1,67 @@
+baseURL = "https://dalanzg.github.io/tips-tutorials/"
+languageCode = "en-us"
+title = "Tips and Tutorials"
+copyright = "Copyright. Tips and Tutorials. All rights reserved."
+disqusShortname = "tips-tutorials"
+canonifyURLs = true
+paginate = 10
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+enableRobotsTXT = true
+#publishDir = "docs"
+
+[author]
+  name = "Daniel Lanza"
+
+[sitemap]
+    changefreq = "weekly"
+    priority = 0.5
+
+[permalinks]
+    posts = "/:section/:year/:month/:day/:slug/"
+    page = "/:slug/"
+
+# Custom parameters
+[params]
+  description = "Useful tips and tutorials for blogging and other sections such as Photography, SAP, HTML, etc."
+  googleSearchConsole = "CeO9J_0wi37-MvDa_F7AmZJYunwDhFGjv8eSlJFPil8"
+  googleAnalytics = "UA-65400010-1"
+  googleAdsense = "ca-pub-8140733006923933"
+
+[params.publisher]
+  name = "Daniel Lanza"
+  twitter = "@dalanzg"
+
+  [params.publisher.logo]
+    url = "https://dalanzg.github.io/tips-tutorials/mstile-150x150.png"
+    width = 150
+    height = 150
+
+[params.logo]
+  url = "https://dalanzg.github.io/tips-tutorials/mstile-150x150.png"
+  width = 150
+  height = 150
+
+[params.image]
+  url = "https://dalanzg.github.io/tips-tutorials/android-chrome-512x512.png"
+  width = 512
+  height = 512
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 100
+
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 110
+
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    weight = 120

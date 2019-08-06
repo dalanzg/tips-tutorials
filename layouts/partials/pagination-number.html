@@ -1,0 +1,59 @@
+<nav aria-label="Page navigation">
+  {{- if gt .p.TotalPages 1 -}}
+  <ul class="pagination justify-content-center">
+
+    <!-- First Page. -->
+    {{- if not (eq .p.PageNumber 1) -}}
+      <li class="page-item">
+        <a class="page-link" href="{{ .p.First.URL }}" 
+           rel="first">First</a>
+      </li>
+    {{- else -}}
+      <li class="page-item disabled">
+      <span class="page-link">First</span>
+    {{- end -}}
+
+    <!-- Previous Page. -->
+    {{- if .p.HasPrev -}}
+      <li class="page-item">
+        <a class="page-link" href="{{ .p.Prev.URL }}" 
+           rel="prev">Previous</a>
+      </li>
+    {{- else -}}
+      <li class="page-item disabled">
+        <span class="page-link">Previous</span>
+      </li>
+    {{- end -}}
+
+    <!-- Indicator Number. -->
+    <li class="page-item disabled">
+      <span class="page-link">
+        Page: {{ .p.PageNumber }} of {{ .p.TotalPages }}</span>
+    </li>
+
+    <!-- Next Page. -->
+    {{- if .p.HasNext -}}
+      <li class="page-item">
+        <a class="page-link" href="{{ .p.Next.URL }}" 
+           rel="next">Next</a>
+      </li>
+    {{- else -}}
+      <li class="page-item disabled">
+        <span class="page-link">Next</span>
+      </li>
+    {{- end -}}
+
+    <!-- Last Page. -->
+    {{- if not (eq .p.PageNumber .p.TotalPages) -}}
+      <li class="page-item">
+        <a class="page-link" href="{{ .p.Last.URL }}" 
+           rel="last">Last</a>
+      </li>
+    {{- else -}}
+      <li class="page-item disabled">
+        <span class="page-link">Last</span>
+      </li>
+    {{- end -}}
+  </ul>
+  {{- end -}}
+</nav>

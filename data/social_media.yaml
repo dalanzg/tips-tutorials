@@ -1,0 +1,9 @@
+- name: Twitter
+  url: https://twitter.com/dalanzg
+  font_awesome: fa-twitter
+- name: Gitgub
+  url: https://github.com/dalanzg
+  font_awesome: fa-github
+- name: LinkedIn
+  url: https://www.linkedin.com/in/danilanza
+  font_awesome: fa-linkedin

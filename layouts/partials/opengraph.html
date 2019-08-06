@@ -1,0 +1,24 @@
+<meta property="og:title" content="{{ .Title }}">
+<meta property="og:description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Description }}{{ end }}" />
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ .Site.Title }}">
+<meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
+
+{{- if .IsHome }}
+  {{- with .Site.Params.image }}
+  <meta property="og:image" content="{{ .url | absURL }}">
+  {{- end }}
+{{- else }}
+  {{- if isset .Params "image"}}
+  <meta property="og:image" content='{{ .Permalink }}{{ .Params.image.url }}'>
+  {{- else }}
+    {{- with .Site.Params.image }}
+    <meta property="og:image" content="{{ .url | absURL }}">
+    {{- end }}
+  {{- end }}
+
+  {{- range .Params.tags }}
+  <meta property="og:tags" content="{{ . }}">
+  {{- end }}
+  <meta property="article:published_time" content="{{ .Date.Format "2006-01-02" }}">
+{{- end }}

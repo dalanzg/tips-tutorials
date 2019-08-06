@@ -1,0 +1,71 @@
+{{ define "main" }}
+<h1 class="mt-5">{{ .Title | markdownify }}</h1>
+
+{{- if .Params.Subtitle -}}
+	<h2 class="font-weight-light font-italic mb-3">{{ .Params.Subtitle | markdownify }}</h2>
+{{- end -}}
+
+<p class="text-muted mt-3">
+	<span>Published on {{ .Date.Format "January 2, 2006"  }}</span>
+	{{- if isset .Params "author" }}
+		{{- $author := index .Site.Data.authors .Params.author }}
+	<span>by {{ $author.name }}</span>
+	{{- else }}
+	<span>by {{ .Params.name }}</span>
+	{{- end }}
+</p>
+
+{{- if isset .Params "tags" }}
+<p>
+	{{- range .Params.tags }}
+	<a class="text-muted" href="{{ "/tags/" }}{{ . | urlize }}"><i class="fas fa-tags"></i>&nbsp;{{ . }}</a>
+	{{- end }}
+</p>
+{{- end -}}
+
+{{ .Content }}
+
+{{ template "_internal/disqus.html" . }}
+
+{{- if or .NextPage .PrevPage }}
+	<div class="bg-light py-5">
+		<div class="container">
+			<h2 class="text-center">Read next</h2>
+			<div class="row">
+				<div class="col-md-6 text-center">
+					{{- if .PrevPage }}
+						Previous Post:
+						<a href="{{ .PrevPage.RelPermalink }}">{{ .PrevPage.Title | markdownify }}</a>
+					{{- end }}
+				</div>
+				<div class="col-md-6 text-center">
+					{{- if .NextPage }}
+						Next Post:
+						<a href="{{ .NextPage.RelPermalink }}">{{ .NextPage.Title | markdownify }}</a>
+					{{- end }}
+				</div>
+			</div>
+		</div>
+	</div>
+{{- end -}}
+
+{{- $related := .Site.RegularPages.Related . | first 3 }}
+{{- with $related }}
+<div class="container mt-5">
+	<h2 class="text-center">See also</h2>
+	<div class="row">
+		{{- range . }}
+			<div class="col-md mb-3">
+				<p class="lead mb-0"><a class="text-body" href="{{ .RelPermalink }}">{{ .Title | markdownify}}</a></p>
+				{{- if .Params.Subtitle }}
+					<p class="lead font-italic mb-0">{{ .Params.Subtitle | markdownify }}</p>
+				{{- end }}
+				<p class="font-weight-light mt-3">{{ .Summary }}</p>
+				<a href="{{ .RelPermalink }}" class="btn btn-primary">Read more</a>
+			</div>
+		{{- end }}
+	</div>
+</div>
+{{- end -}}
+
+{{- end -}}

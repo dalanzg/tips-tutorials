@@ -1,0 +1,49 @@
+{
+  "name": "tips-tutorials",
+  "version": "1.0.0",
+  "description": "Tips and Tutorials",
+  "main": "index.js",
+  "config": {
+    "JS_VENDOR": "assets/js/vendor",
+    "SASS_VENDOR": "assets/sass/vendor",
+    "FONTS_VENDOR": "static/fonts/vendor"
+  },
+  "scripts": {
+    "test": "echo \"Test script\"",
+    "clean": "rm -rdf public resources $npm_package_config_JS_VENDOR $npm_package_config_SASS_VENDOR $npm_package_config_FONTS_VENDOR",
+    "build": "npm run clean && npm run build:folder && npm run build:js && npm run build:sass && npm run build:fonts && hugo --minify",
+    "build:folder": "mkdir -p $npm_package_config_JS_VENDOR $npm_package_config_SASS_VENDOR $npm_package_config_FONTS_VENDOR",
+    "build:js": "npm run build:js:jquery && npm run build:js:popper && npm run build:js:bootstrap && npm run build:js:lunr",
+    "build:js:jquery": "cp node_modules/jquery/dist/jquery.min.js $npm_package_config_JS_VENDOR",
+    "build:js:popper": "cp node_modules/popper.js/dist/umd/popper.min.js $npm_package_config_JS_VENDOR",
+    "build:js:bootstrap": "cp node_modules/bootstrap/dist/js/bootstrap.min.js $npm_package_config_JS_VENDOR",
+    "build:js:lunr": "cp node_modules/lunr/lunr.min.js $npm_package_config_JS_VENDOR",
+    "build:sass": "npm run build:sass:fontawesome && npm run build:sass:bootstrap",
+    "build:sass:fontawesome": "cp -r node_modules/@fortawesome/fontawesome-free/scss $npm_package_config_SASS_VENDOR/fontawesome",
+    "build:sass:bootstrap": "cp -r node_modules/bootstrap/scss $npm_package_config_SASS_VENDOR/bootstrap",
+    "build:fonts": "npm run build:fonts:fontawesome",
+    "build:fonts:fontawesome": "mkdir -p $npm_package_config_FONTS_VENDOR/fontawesome && cp -r node_modules/@fortawesome/fontawesome-free/webfonts/* $npm_package_config_FONTS_VENDOR/fontawesome",
+    "serve": "hugo serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dalanzg/tips-tutorials.git"
+  },
+  "keywords": [
+    "tips",
+    "tutorials"
+  ],
+  "author": "Daniel Lanza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dalanzg/tips-tutorials/issues"
+  },
+  "homepage": "https://github.com/dalanzg/tips-tutorials#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.9.0",
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "lunr": "^2.3.6",
+    "popper.js": "^1.15.0"
+  }
+}

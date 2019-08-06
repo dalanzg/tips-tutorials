@@ -1,0 +1,18 @@
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Description }}{{ end }}" />
+<meta name="twitter:title" content="{{ .Title }}" />
+<meta name="twitter:site" content="{{ .Site.Title }}" />
+<meta name="twitter:creator" content="{{ .Site.Params.publisher.twitter }}" />
+{{- if .IsHome -}}
+  {{- with .Site.Params.image }}
+  <meta name="twitter:image" content="{{ .url | absURL }}">
+  {{- end }}
+{{- else -}}
+  {{- if isset .Params "image" }}
+  <meta name="twitter:image" content='{{ .Permalink }}{{ .Params.image.url }}'>
+  {{- else }}
+    {{- with .Site.Params.image }}
+    <meta name="twitter:image" content="{{ .url | absURL }}">
+    {{- end -}}
+  {{- end -}}
+{{- end -}}

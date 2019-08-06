@@ -1,0 +1,26 @@
+{{- define "main" -}}
+  <!-- Search results placeholder -->
+  <div class="alert alert-success" role="alert" data-search-found>
+    <strong><span data-search-found-count></span></strong> result(s) found for <strong>&ldquo;<span data-search-found-term></span>&rdquo;</strong>.
+  </div>
+  
+  <div data-search-results></div>
+  
+  <!-- Search result template -->
+  <script type="text/x-template" id="search-result">
+    <h4><a href="##url##">##title##</a></h4>
+    <p class="card-text">##description##</p>
+    <nav class="nav">
+        <div class="nav-link"><i class="far fa-calendar-alt"></i><small class="text-muted"> ##date##</small></div>
+        <div class="nav-link"><i class="fas fa-tags"></i><small class="text-muted"> ##tags##</small></div>
+      </nav>
+    <p class="text-center"><a href="##url##" class="btn btn-primary">Read more</a></p>
+  </script>
+  
+  {{- $jquery := resources.Get "js/vendor/jquery.min.js" -}}
+  {{- $lunr := resources.Get "js/vendor/lunr.min.js" -}}
+  {{- $search := resources.Get "js/custom/search.js" -}}
+  {{- $js_search := slice $jquery $lunr $search | resources.Concat "js/bundle_search.js" | minify | fingerprint -}}
+  <script src="{{ $js_search.RelPermalink | relURL }}"></script>
+
+{{- end -}}

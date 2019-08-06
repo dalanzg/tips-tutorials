@@ -1,0 +1,14 @@
+{{- define "main" }}
+  {{- $paginator := .Paginate (where .Site.Pages "Type" "posts") -}}
+
+  <div class="card-columns">
+    {{- range $paginator.Pages -}}
+      {{- if ne .Title "Posts" -}}
+        {{- partial "card-post.html" . -}}
+      {{- end -}}
+    {{- end -}}
+  </div>
+
+  {{- partial "pagination-number.html" (dict "p" $paginator) -}}
+
+{{- end -}}
