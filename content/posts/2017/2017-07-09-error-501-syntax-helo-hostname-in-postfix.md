@@ -1,8 +1,8 @@
 ---
 title: Error 501 Syntax HELO hostname in postfix
-description: Certain SMTP servers require HELO &#60;servername&#62; in order to allow a request to proceed. Set a command filter to let it work without any arguments.
+description: Certain SMTP servers require HELO servername in order to allow a request to proceed. Set a command filter to let it work without any arguments.
 date: 2017-07-09T21:05:00+02:00
-lastmod: 2017-07-10T21:34:00+02:00
+lastmod: 2019-08-26T17:30:00+02:00
 tags: [opensuse, postfix]
 author: dalanzg
 comments: true
