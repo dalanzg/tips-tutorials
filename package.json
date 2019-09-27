@@ -40,7 +40,7 @@
   },
   "homepage": "https://github.com/dalanzg/tips-tutorials#readme",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.10.2",
+    "@fortawesome/fontawesome-free": "^5.11.2",
     "bootstrap": "^4.3.1",
     "jquery": "^3.4.1",
     "lunr": "^2.3.6",
