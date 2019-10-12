@@ -18,7 +18,7 @@
   </script>
   
   {{- $jquery := resources.Get "js/vendor/jquery.min.js" -}}
-  {{- $lunr := resources.Get "js/vendor/lunr.min.js" -}}
+  {{- $lunr := resources.Get "js/vendor/lunr.js" -}}
   {{- $search := resources.Get "js/custom/search.js" -}}
   {{- $js_search := slice $jquery $lunr $search | resources.Concat "js/bundle_search.js" | minify | fingerprint -}}
   <script src="{{ $js_search.RelPermalink | relURL }}"></script>

@@ -17,7 +17,7 @@
     "build:js:jquery": "cp node_modules/jquery/dist/jquery.min.js $npm_package_config_JS_VENDOR",
     "build:js:popper": "cp node_modules/popper.js/dist/umd/popper.min.js $npm_package_config_JS_VENDOR",
     "build:js:bootstrap": "cp node_modules/bootstrap/dist/js/bootstrap.min.js $npm_package_config_JS_VENDOR",
-    "build:js:lunr": "cp node_modules/lunr/lunr.min.js $npm_package_config_JS_VENDOR",
+    "build:js:lunr": "cp node_modules/lunr/lunr.js $npm_package_config_JS_VENDOR",
     "build:sass": "npm run build:sass:fontawesome && npm run build:sass:bootstrap",
     "build:sass:fontawesome": "cp -r node_modules/@fortawesome/fontawesome-free/scss $npm_package_config_SASS_VENDOR/fontawesome",
     "build:sass:bootstrap": "cp -r node_modules/bootstrap/scss $npm_package_config_SASS_VENDOR/bootstrap",
@@ -43,7 +43,7 @@
     "@fortawesome/fontawesome-free": "^5.11.2",
     "bootstrap": "^4.3.1",
     "jquery": "^3.4.1",
-    "lunr": "^2.3.6",
+    "lunr": "^2.3.7",
     "popper.js": "^1.15.0"
   }
 }
