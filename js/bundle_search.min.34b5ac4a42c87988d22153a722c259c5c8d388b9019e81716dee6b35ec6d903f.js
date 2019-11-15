@@ -3,7 +3,7 @@ builder.pipeline.add(lunr.trimmer,lunr.stopWordFilter,lunr.stemmer)
 builder.searchPipeline.add(lunr.stemmer)
 config.call(builder,builder)
 return builder.build()}
-lunr.version="2.3.7"/*!
+lunr.version="2.3.8"/*!
 * lunr.utils
 * Copyright (C) 2019 Oliver Nightingale
 */
@@ -110,7 +110,7 @@ lunr.Pipeline.prototype.run=function(tokens){var stackLength=this._stack.length
 for(var i=0;i<stackLength;i++){var fn=this._stack[i]
 var memo=[]
 for(var j=0;j<tokens.length;j++){var result=fn(tokens[j],j,tokens)
-if(result===void 0||result==='')continue
+if(result===null||result===void 0||result==='')continue
 if(Array.isArray(result)){for(var k=0;k<result.length;k++){memo.push(result[k])}}else{memo.push(result)}}
 tokens=memo}
 return tokens}

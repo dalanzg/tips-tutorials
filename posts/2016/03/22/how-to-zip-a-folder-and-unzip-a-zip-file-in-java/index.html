@@ -1,60 +1,60 @@
-<!doctype html><html><head><title>How to zip a folder and unzip a Zip file in Java</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=title content="How to zip a folder and unzip a Zip file in Java – Tips and Tutorials"><meta name=description content="A folder with subfolders and files will be zipped. Besides, the zip file will be unzipped. All of this by Java."><meta name=generator content="Hugo 0.58.3"><meta property=og:title content="How to zip a folder and unzip a Zip file in Java"><meta property=og:description content="A folder with subfolders and files will be zipped. Besides, the zip file will be unzipped. All of this by Java."><meta property=og:url content=https://dalanzg.github.io/tips-tutorials/posts/2016/03/22/how-to-zip-a-folder-and-unzip-a-zip-file-in-java/><meta property=og:site_name content="Tips and Tutorials"><meta property=og:type content=article><meta property=og:image content=https://dalanzg.github.io/tips-tutorials/android-chrome-512x512.png><meta property=og:tags content=java><meta property=article:published_time content=2016-03-22><meta name=twitter:card content=summary_large_image><meta name=twitter:description content="A folder with subfolders and files will be zipped. Besides, the zip file will be unzipped. All of this by Java."><meta name=twitter:title content="How to zip a folder and unzip a Zip file in Java"><meta name=twitter:site content="Tips and Tutorials"><meta name=twitter:creator content=@dalanzg><meta name=twitter:image content=https://dalanzg.github.io/tips-tutorials/android-chrome-512x512.png><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"How to zip a folder and unzip a Zip file in Java","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/dalanzg.github.io\/tips-tutorials\/posts\/2016\/03\/22\/how-to-zip-a-folder-and-unzip-a-zip-file-in-java\/"},"image":{"@type":"ImageObject","url":"https:\/\/dalanzg.github.io\/tips-tutorials\/mstile-150x150.png","width":150,"height":150},"genre":"posts","keywords":"java","wordcount":588,"url":"https:\/\/dalanzg.github.io\/tips-tutorials\/posts\/2016\/03\/22\/how-to-zip-a-folder-and-unzip-a-zip-file-in-java\/","datePublished":"2016-03-22","dateModified":"2016-12-27","license":"Copyright. Tips and Tutorials. All rights reserved.","publisher":{"@type":"Organization","name":"Daniel Lanza","logo":{"@type":"ImageObject","url":"https:\/\/dalanzg.github.io\/tips-tutorials\/mstile-150x150.png","width":150,"height":150}},"author":{"@type":"Person","name":"dalanzg"},"description":"A folder with subfolders and files will be zipped. Besides, the zip file will be unzipped. All of this by Java."}</script><link rel=apple-touch-icon sizes=180x180 href=https://dalanzg.github.io/tips-tutorials/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=https://dalanzg.github.io/tips-tutorials/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=https://dalanzg.github.io/tips-tutorials/favicon-16x16.png><link rel=manifest href=https://dalanzg.github.io/tips-tutorials/site.webmanifest><link rel=mask-icon href=https://dalanzg.github.io/tips-tutorials/safari-pinned-tab.svg color=#5bbad5><meta name=apple-mobile-web-app-title content="Tips and Tutorials"><meta name=application-name content="Tips and Tutorials"><meta name=msapplication-TileColor content=#da532c><meta name=theme-color content=#ffffff><link rel=canonical href=https://dalanzg.github.io/tips-tutorials/posts/2016/03/22/how-to-zip-a-folder-and-unzip-a-zip-file-in-java/><link rel=stylesheet href=https://dalanzg.github.io/tips-tutorials/sass/main.min.77de4b0ccb06580f914fbfb467b5f48b84c67d5e08d8a80deda7ebbeb6b30b81.css integrity="sha256-d95LDMsGWA&#43;RT7&#43;0Z7X0i4TGfV4I2KgN7afrvrazC4E="><link rel=sitemap href=https://dalanzg.github.io/tips-tutorials/sitemap.xml title=Sitemap type=application/xml><meta name=google-site-verification content=CeO9J_0wi37-MvDa_F7AmZJYunwDhFGjv8eSlJFPil8><script async src="https://www.googletagmanager.com/gtag/js?id=UA-65400010-1"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+<!doctype html><html><head><title>How to zip a folder and unzip a Zip file in Java</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=title content="How to zip a folder and unzip a Zip file in Java – Tips and Tutorials"><meta name=description content="A folder with subfolders and files will be zipped. Besides, the zip file will be unzipped. All of this by Java."><meta name=generator content="Hugo 0.59.1"><meta property="og:title" content="How to zip a folder and unzip a Zip file in Java"><meta property="og:description" content="A folder with subfolders and files will be zipped. Besides, the zip file will be unzipped. All of this by Java."><meta property="og:url" content="https://dalanzg.github.io/tips-tutorials/posts/2016/03/22/how-to-zip-a-folder-and-unzip-a-zip-file-in-java/"><meta property="og:site_name" content="Tips and Tutorials"><meta property="og:type" content="article"><meta property="og:image" content="https://dalanzg.github.io/tips-tutorials/android-chrome-512x512.png"><meta property="og:tags" content="java"><meta property="article:published_time" content="2016-03-22"><meta name=twitter:card content="summary_large_image"><meta name=twitter:description content="A folder with subfolders and files will be zipped. Besides, the zip file will be unzipped. All of this by Java."><meta name=twitter:title content="How to zip a folder and unzip a Zip file in Java"><meta name=twitter:site content="Tips and Tutorials"><meta name=twitter:creator content="@dalanzg"><meta name=twitter:image content="https://dalanzg.github.io/tips-tutorials/android-chrome-512x512.png"><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"How to zip a folder and unzip a Zip file in Java","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/dalanzg.github.io\/tips-tutorials\/posts\/2016\/03\/22\/how-to-zip-a-folder-and-unzip-a-zip-file-in-java\/"},"image":{"@type":"ImageObject","url":"https:\/\/dalanzg.github.io\/tips-tutorials\/mstile-150x150.png","width":150,"height":150},"genre":"posts","keywords":"java","wordcount":588,"url":"https:\/\/dalanzg.github.io\/tips-tutorials\/posts\/2016\/03\/22\/how-to-zip-a-folder-and-unzip-a-zip-file-in-java\/","datePublished":"2016-03-22","dateModified":"2016-12-27","license":"Copyright. Tips and Tutorials. All rights reserved.","publisher":{"@type":"Organization","name":"Daniel Lanza","logo":{"@type":"ImageObject","url":"https:\/\/dalanzg.github.io\/tips-tutorials\/mstile-150x150.png","width":150,"height":150}},"author":{"@type":"Person","name":"dalanzg"},"description":"A folder with subfolders and files will be zipped. Besides, the zip file will be unzipped. All of this by Java."}</script><link rel=apple-touch-icon sizes=180x180 href=https://dalanzg.github.io/tips-tutorials/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=https://dalanzg.github.io/tips-tutorials/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=https://dalanzg.github.io/tips-tutorials/favicon-16x16.png><link rel=manifest href=https://dalanzg.github.io/tips-tutorials/site.webmanifest><link rel=mask-icon href=https://dalanzg.github.io/tips-tutorials/safari-pinned-tab.svg color=#5bbad5><meta name=apple-mobile-web-app-title content="Tips and Tutorials"><meta name=application-name content="Tips and Tutorials"><meta name=msapplication-TileColor content="#da532c"><meta name=theme-color content="#ffffff"><link rel=canonical href=https://dalanzg.github.io/tips-tutorials/posts/2016/03/22/how-to-zip-a-folder-and-unzip-a-zip-file-in-java/><link rel=stylesheet href=https://dalanzg.github.io/tips-tutorials/sass/main.min.480650421ae9f985080a0d4cf20432a1d4e6611a21592f3add65fd675bc7e908.css integrity="sha256-SAZQQhrp&#43;YUICg1M8gQyodTmYRohWS863WX9Z1vH6Qg="><link rel=sitemap href=https://dalanzg.github.io/tips-tutorials/sitemap.xml title=Sitemap type=application/xml><meta name=google-site-verification content="CeO9J_0wi37-MvDa_F7AmZJYunwDhFGjv8eSlJFPil8"><script async src="https://www.googletagmanager.com/gtag/js?id=UA-65400010-1"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
 gtag('js',new Date());gtag('config','UA-65400010-1');</script><script data-ad-client=ca-pub-8140733006923933 async src=https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js></script></head><body><div class=container><nav class="navbar navbar-expand-lg navbar-light bg-light"><a class=navbar-brand href=https://dalanzg.github.io/tips-tutorials/><strong>Tips and Tutorials</strong></a>
 <button class=navbar-toggler type=button data-toggle=collapse data-target=#navbarSupportedContent aria-controls=navbarSupportedContent aria-expanded=false aria-label="Toggle navigation">
 <span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse" id=navbarSupportedContent><ul class="navbar-nav mr-auto"><li class=navbar-item><a class=nav-link href=https://dalanzg.github.io/tips-tutorials/about/>About</a></li><li class=navbar-item><a class=nav-link href=https://dalanzg.github.io/tips-tutorials/tags/>Tags</a></li><li class=navbar-item><a class=nav-link href=https://dalanzg.github.io/tips-tutorials/posts/>Posts</a></li></ul><form class="form-inline float-xs-right" action=https://dalanzg.github.io/tips-tutorials/search/ method=get data-search-form><input class="form-control mr-sm-2" type=text name=q placeholder=Search... data-search-input>
 <button class="btn btn-outline-success my-2 my-sm-0" type=submit><i class="fas fa-search"></i></button></form></div></nav><h1 class=mt-5>How to zip a folder and unzip a Zip file in Java</h1><p class="text-muted mt-3"><span>Published on March 22, 2016</span>
-<span>by Daniel Lanza</span></p><p><a class=text-muted href=https://dalanzg.github.io/tips-tutorials/tags/java><i class="fas fa-tags"></i>&nbsp;java</a></p><p>A folder with subfolders and files will be zipped. Besides, the zip file will be unzipped.</p><h2 id=zip-directory-java-class>Zip directory Java class</h2><div class=highlight><pre class=chroma><code class=language-java data-lang=java><span class=kn>package</span> <span class=nf>com</span><span class=p>.</span><span class=na>dalanz</span><span class=p>.</span><span class=na>file</span><span class=p>;</span>
+<span>by Daniel Lanza</span></p><p><a class=text-muted href=https://dalanzg.github.io/tips-tutorials/tags/java><i class="fas fa-tags"></i>&nbsp;java</a></p><p>A folder with subfolders and files will be zipped. Besides, the zip file will be unzipped.</p><h2 id=zip-directory-java-class>Zip directory Java class</h2><div class=highlight><pre class=chroma><code class=language-java data-lang=java><span class=err>package com</span><span class=p>.</span><span class=na>dalanz</span><span class=p>.</span><span class=na>file</span><span class=p>;</span>
 
-<span class=kn>import</span> <span class=nf>java</span><span class=p>.</span><span class=na>io</span><span class=p>.</span><span class=na>File</span><span class=p>;</span>
-<span class=kn>import</span> <span class=nf>java</span><span class=p>.</span><span class=na>io</span><span class=p>.</span><span class=na>FileInputStream</span><span class=p>;</span>
-<span class=kn>import</span> <span class=nf>java</span><span class=p>.</span><span class=na>io</span><span class=p>.</span><span class=na>FileOutputStream</span><span class=p>;</span>
-<span class=kn>import</span> <span class=nf>java</span><span class=p>.</span><span class=na>io</span><span class=p>.</span><span class=na>IOException</span><span class=p>;</span>
-<span class=kn>import</span> <span class=nf>java</span><span class=p>.</span><span class=na>util</span><span class=p>.</span><span class=na>ArrayList</span><span class=p>;</span>
-<span class=kn>import</span> <span class=nf>java</span><span class=p>.</span><span class=na>util</span><span class=p>.</span><span class=na>zip</span><span class=p>.</span><span class=na>ZipEntry</span><span class=p>;</span>
-<span class=kn>import</span> <span class=nf>java</span><span class=p>.</span><span class=na>util</span><span class=p>.</span><span class=na>zip</span><span class=p>.</span><span class=na>ZipInputStream</span><span class=p>;</span>
-<span class=kn>import</span> <span class=nf>java</span><span class=p>.</span><span class=na>util</span><span class=p>.</span><span class=na>zip</span><span class=p>.</span><span class=na>ZipOutputStream</span><span class=p>;</span>
+<span class=err>import java</span><span class=p>.</span><span class=na>io</span><span class=p>.</span><span class=na>File</span><span class=p>;</span>
+<span class=err>import java</span><span class=p>.</span><span class=na>io</span><span class=p>.</span><span class=na>FileInputStream</span><span class=p>;</span>
+<span class=err>import java</span><span class=p>.</span><span class=na>io</span><span class=p>.</span><span class=na>FileOutputStream</span><span class=p>;</span>
+<span class=err>import java</span><span class=p>.</span><span class=na>io</span><span class=p>.</span><span class=na>IOException</span><span class=p>;</span>
+<span class=err>import java</span><span class=p>.</span><span class=na>util</span><span class=p>.</span><span class=na>ArrayList</span><span class=p>;</span>
+<span class=err>import java</span><span class=p>.</span><span class=na>util</span><span class=p>.</span><span class=na>zip</span><span class=p>.</span><span class=na>ZipEntry</span><span class=p>;</span>
+<span class=err>import java</span><span class=p>.</span><span class=na>util</span><span class=p>.</span><span class=na>zip</span><span class=p>.</span><span class=na>ZipInputStream</span><span class=p>;</span>
+<span class=err>import java</span><span class=p>.</span><span class=na>util</span><span class=p>.</span><span class=na>zip</span><span class=p>.</span><span class=na>ZipOutputStream</span><span class=p>;</span>
 
-<span class=kd>public</span> <span class=nf>class</span> <span class=n>ZipDirectory</span> <span class=p>{</span>
+<span class=err>public class </span><span class=n>ZipDirectory</span> <span class=p>{</span>
 
-    <span class=kd>private</span> <span class=nf>String</span> <span class=n>folderPath</span><span class=p>;</span>
-    <span class=kd>private</span> <span class=nf>String</span> <span class=n>zipPath</span><span class=p>;</span>
+    <span class=err>private String </span><span class=n>folderPath</span><span class=p>;</span>
+    <span class=err>private String </span><span class=n>zipPath</span><span class=p>;</span>
 
-    <span class=kd>private</span> <span class=nf>static</span> <span class=n>ArrayList</span><span class=o>&lt;</span><span class=n>String</span><span class=o>&gt;</span> <span class=nf>fileList</span> <span class=o>=</span> <span class=kc>null</span><span class=p>;</span>
-    <span class=kd>private</span> <span class=nf>static</span> <span class=n>String</span> <span class=nf>sourceFolder</span> <span class=o>=</span> <span class=kc>null</span><span class=p>;</span>
+    <span class=err>private static ArrayList&lt;String&gt; fileList </span><span class=o>=</span> <span class=kc>null</span><span class=p>;</span>
+    <span class=err>private static String sourceFolder </span><span class=o>=</span> <span class=kc>null</span><span class=p>;</span>
 
-    <span class=kd>public</span> <span class=nf>String</span> <span class=n>getFolderPath</span><span class=p>()</span> <span class=p>{</span>
+    <span class=err>public String </span><span class=n>getFolderPath</span><span class=p>()</span> <span class=p>{</span>
         <span class=k>return</span> <span class=n>folderPath</span><span class=p>;</span>
     <span class=p>}</span>
 
-    <span class=kd>public</span> <span class=nf>void</span> <span class=n>setFolderPath</span><span class=p>(</span><span class=n>String</span> <span class=nf>folderPath</span><span class=p>)</span> <span class=p>{</span>
+    <span class=err>public void </span><span class=n>setFolderPath</span><span class=p>(</span><span class=err>String folderPath</span><span class=p>)</span> <span class=p>{</span>
         <span class=k>this</span><span class=p>.</span><span class=na>folderPath</span> <span class=o>=</span> <span class=n>folderPath</span><span class=p>;</span>
     <span class=p>}</span>
 
-    <span class=kd>public</span> <span class=nf>String</span> <span class=n>getZipPath</span><span class=p>()</span> <span class=p>{</span>
+    <span class=err>public String </span><span class=n>getZipPath</span><span class=p>()</span> <span class=p>{</span>
         <span class=k>return</span> <span class=n>zipPath</span><span class=p>;</span>
     <span class=p>}</span>
 
-    <span class=kd>public</span> <span class=nf>void</span> <span class=n>setZipPath</span><span class=p>(</span><span class=n>String</span> <span class=nf>zipPath</span><span class=p>)</span> <span class=p>{</span>
+    <span class=err>public void </span><span class=n>setZipPath</span><span class=p>(</span><span class=err>String zipPath</span><span class=p>)</span> <span class=p>{</span>
         <span class=k>this</span><span class=p>.</span><span class=na>zipPath</span> <span class=o>=</span> <span class=n>zipPath</span><span class=p>;</span>
     <span class=p>}</span>
 
-    <span class=kd>public</span> <span class=nf>ZipDirectory</span><span class=p>(){}</span>
+    <span class=err>public ZipDirectory</span><span class=p>(){}</span>
 
-    <span class=kd>public</span> <span class=nf>ZipDirectory</span><span class=p>(</span><span class=n>String</span> <span class=nf>folderPath</span><span class=p>,</span> <span class=n>String</span> <span class=nf>zipPath</span><span class=p>){</span>
+    <span class=err>public ZipDirectory</span><span class=p>(</span><span class=err>String folderPath</span><span class=p>,</span> <span class=err>String zipPath</span><span class=p>){</span>
         <span class=k>this</span><span class=p>.</span><span class=na>folderPath</span> <span class=o>=</span> <span class=n>folderPath</span><span class=p>;</span>
         <span class=k>this</span><span class=p>.</span><span class=na>zipPath</span> <span class=o>=</span> <span class=n>zipPath</span><span class=p>;</span>
     <span class=p>}</span>
 
-    <span class=kd>public</span> <span class=nf>ZipDirectory</span><span class=p>(</span><span class=n>String</span> <span class=nf>zipPath</span><span class=p>){</span>
+    <span class=err>public ZipDirectory</span><span class=p>(</span><span class=err>String zipPath</span><span class=p>){</span>
         <span class=k>this</span><span class=p>.</span><span class=na>zipPath</span> <span class=o>=</span> <span class=n>zipPath</span><span class=p>;</span>
     <span class=p>}</span>
 
-    <span class=kd>public</span> <span class=nf>boolean</span> <span class=n>zip</span><span class=p>()</span> <span class=kd>throws</span> <span class=nf>IOException</span><span class=p>{</span>
+    <span class=err>public boolean </span><span class=n>zip</span><span class=p>()</span> <span class=err>throws IOException</span><span class=p>{</span>
 
-        <span class=kt>byte</span><span class=p>[]</span> <span class=nf>buffer</span> <span class=o>=</span> <span class=k>new</span> <span class=kt>byte</span><span class=p>[</span><span class=n>1024</span><span class=p>];</span>
+        <span class=err>byte[] buffer </span><span class=o>=</span> <span class=k>new</span> <span class=kt>byte</span><span class=p>[</span><span class=n>1024</span><span class=p>];</span>
 
-        <span class=n>FileInputStream</span> <span class=nf>fis</span> <span class=o>=</span> <span class=kc>null</span><span class=p>;</span>
-        <span class=n>ZipOutputStream</span> <span class=nf>zos</span> <span class=o>=</span> <span class=kc>null</span><span class=p>;</span>
+        <span class=err>FileInputStream fis </span><span class=o>=</span> <span class=kc>null</span><span class=p>;</span>
+        <span class=err>ZipOutputStream zos </span><span class=o>=</span> <span class=kc>null</span><span class=p>;</span>
 
         <span class=n>fileList</span> <span class=o>=</span> <span class=k>new</span> <span class=n>ArrayList</span><span class=o>&lt;</span><span class=n>String</span><span class=o>&gt;</span><span class=p>();</span>
 
@@ -69,11 +69,11 @@ gtag('js',new Date());gtag('config','UA-65400010-1');</script><script data-ad-cl
 
             <span class=n>generateFileAndFolderList</span><span class=p>(</span><span class=k>new</span> <span class=n>File</span><span class=p>(</span><span class=k>this</span><span class=p>.</span><span class=na>folderPath</span><span class=p>));</span>
 
-            <span class=k>for</span> <span class=p>(</span><span class=n>String</span> <span class=nf>unzippedFile</span><span class=o>:</span> <span class=n>fileList</span><span class=p>)</span> <span class=p>{</span>
+            <span class=k>for</span> <span class=p>(</span><span class=err>String unzippedFile</span><span class=o>:</span> <span class=n>fileList</span><span class=p>)</span> <span class=p>{</span>
 
                 <span class=n>System</span><span class=p>.</span><span class=na>out</span><span class=p>.</span><span class=na>println</span><span class=p>(</span><span class=n>sourceFolder</span> <span class=o>+</span> <span class=n>unzippedFile</span><span class=p>);</span>
 
-                <span class=n>ZipEntry</span> <span class=nf>entry</span> <span class=o>=</span> <span class=k>new</span> <span class=n>ZipEntry</span><span class=p>(</span><span class=n>unzippedFile</span><span class=p>);</span>
+                <span class=err>ZipEntry entry </span><span class=o>=</span> <span class=k>new</span> <span class=n>ZipEntry</span><span class=p>(</span><span class=n>unzippedFile</span><span class=p>);</span>
                 <span class=n>zos</span><span class=p>.</span><span class=na>putNextEntry</span><span class=p>(</span><span class=n>entry</span><span class=p>);</span>
 
                 <span class=k>if</span> <span class=p>((</span><span class=n>unzippedFile</span><span class=p>.</span><span class=na>substring</span><span class=p>(</span><span class=n>unzippedFile</span><span class=p>.</span><span class=na>length</span><span class=p>()</span><span class=o>-</span><span class=n>1</span><span class=p>)).</span><span class=na>equals</span><span class=p>(</span><span class=n>File</span><span class=p>.</span><span class=na>separator</span><span class=p>))</span>
@@ -82,11 +82,11 @@ gtag('js',new Date());gtag('config','UA-65400010-1');</script><script data-ad-cl
                 <span class=k>try</span><span class=p>{</span>
                     <span class=n>fis</span> <span class=o>=</span> <span class=k>new</span> <span class=n>FileInputStream</span><span class=p>(</span><span class=n>sourceFolder</span> <span class=o>+</span> <span class=n>unzippedFile</span><span class=p>);</span>
 
-                    <span class=kt>int</span> <span class=nf>len</span><span class=o>=</span><span class=n>0</span><span class=p>;</span>
+                    <span class=err>int len</span><span class=o>=</span><span class=n>0</span><span class=p>;</span>
                     <span class=k>while</span> <span class=p>((</span><span class=n>len</span> <span class=o>=</span> <span class=n>fis</span><span class=p>.</span><span class=na>read</span><span class=p>(</span><span class=n>buffer</span><span class=p>))</span><span class=o>&gt;</span><span class=n>0</span><span class=p>)</span> <span class=p>{</span>
                         <span class=n>zos</span><span class=p>.</span><span class=na>write</span><span class=p>(</span><span class=n>buffer</span><span class=p>,</span><span class=n>0</span><span class=p>,</span><span class=n>len</span><span class=p>);</span>
                     <span class=p>}</span>
-                <span class=p>}</span><span class=k>catch</span><span class=p>(</span><span class=n>IOException</span> <span class=nf>e</span><span class=p>){</span>
+                <span class=p>}</span><span class=k>catch</span><span class=p>(</span><span class=err>IOException e</span><span class=p>){</span>
 
                     <span class=n>e</span><span class=p>.</span><span class=na>printStackTrace</span><span class=p>();</span>
                     <span class=k>return</span> <span class=kc>false</span><span class=p>;</span>
@@ -100,7 +100,7 @@ gtag('js',new Date());gtag('config','UA-65400010-1');</script><script data-ad-cl
 
             <span class=n>zos</span><span class=p>.</span><span class=na>closeEntry</span><span class=p>();</span>
 
-        <span class=p>}</span><span class=k>catch</span><span class=p>(</span><span class=n>IOException</span> <span class=nf>e</span><span class=p>){</span>
+        <span class=p>}</span><span class=k>catch</span><span class=p>(</span><span class=err>IOException e</span><span class=p>){</span>
 
             <span class=n>e</span><span class=p>.</span><span class=na>printStackTrace</span><span class=p>();</span>
             <span class=k>return</span> <span class=kc>false</span><span class=p>;</span>
@@ -115,30 +115,30 @@ gtag('js',new Date());gtag('config','UA-65400010-1');</script><script data-ad-cl
         <span class=k>return</span> <span class=kc>true</span><span class=p>;</span>
     <span class=p>}</span>
 
-    <span class=kd>public</span> <span class=nf>boolean</span> <span class=n>unzip</span><span class=p>()</span> <span class=kd>throws</span> <span class=nf>IOException</span><span class=p>{</span>
+    <span class=err>public boolean </span><span class=n>unzip</span><span class=p>()</span> <span class=err>throws IOException</span><span class=p>{</span>
 
-        <span class=kt>byte</span><span class=p>[]</span> <span class=nf>buffer</span> <span class=o>=</span> <span class=k>new</span> <span class=kt>byte</span><span class=p>[</span><span class=n>1024</span><span class=p>];</span>
+        <span class=err>byte[] buffer </span><span class=o>=</span> <span class=k>new</span> <span class=kt>byte</span><span class=p>[</span><span class=n>1024</span><span class=p>];</span>
 
-        <span class=n>ZipInputStream</span> <span class=nf>zis</span> <span class=o>=</span> <span class=kc>null</span><span class=p>;</span>
-        <span class=n>ZipEntry</span> <span class=nf>entry</span> <span class=o>=</span> <span class=kc>null</span><span class=p>;</span>
-        <span class=n>FileOutputStream</span> <span class=nf>fos</span> <span class=o>=</span> <span class=kc>null</span><span class=p>;</span>
+        <span class=err>ZipInputStream zis </span><span class=o>=</span> <span class=kc>null</span><span class=p>;</span>
+        <span class=err>ZipEntry entry </span><span class=o>=</span> <span class=kc>null</span><span class=p>;</span>
+        <span class=err>FileOutputStream fos </span><span class=o>=</span> <span class=kc>null</span><span class=p>;</span>
 
         <span class=n>fileList</span> <span class=o>=</span> <span class=k>new</span> <span class=n>ArrayList</span><span class=o>&lt;</span><span class=n>String</span><span class=o>&gt;</span><span class=p>();</span>
 
         <span class=k>try</span> <span class=p>{</span>
 
-            <span class=n>File</span> <span class=nf>file</span> <span class=o>=</span> <span class=k>new</span> <span class=n>File</span><span class=p>(</span><span class=k>this</span><span class=p>.</span><span class=na>zipPath</span><span class=p>);</span>
+            <span class=err>File file </span><span class=o>=</span> <span class=k>new</span> <span class=n>File</span><span class=p>(</span><span class=k>this</span><span class=p>.</span><span class=na>zipPath</span><span class=p>);</span>
             <span class=n>zis</span> <span class=o>=</span> <span class=k>new</span> <span class=n>ZipInputStream</span><span class=p>(</span><span class=k>new</span> <span class=n>FileInputStream</span><span class=p>(</span><span class=n>file</span><span class=p>));</span>
 
             <span class=k>while</span><span class=p>((</span><span class=n>entry</span> <span class=o>=</span> <span class=n>zis</span><span class=p>.</span><span class=na>getNextEntry</span><span class=p>())</span><span class=o>!=</span> <span class=kc>null</span><span class=p>){</span>
 
-                <span class=n>String</span> <span class=nf>dir</span> <span class=o>=</span> <span class=n>entry</span><span class=p>.</span><span class=na>getName</span><span class=p>();</span>
+                <span class=err>String dir </span><span class=o>=</span> <span class=n>entry</span><span class=p>.</span><span class=na>getName</span><span class=p>();</span>
 
                 <span class=k>try</span><span class=p>{</span>
 
-                    <span class=n>String</span> <span class=nf>fileSeparator</span> <span class=o>=</span> <span class=n>dir</span><span class=p>.</span><span class=na>substring</span><span class=p>(</span><span class=n>dir</span><span class=p>.</span><span class=na>length</span><span class=p>()</span><span class=o>-</span><span class=n>1</span><span class=p>);</span>
+                    <span class=err>String fileSeparator </span><span class=o>=</span> <span class=n>dir</span><span class=p>.</span><span class=na>substring</span><span class=p>(</span><span class=n>dir</span><span class=p>.</span><span class=na>length</span><span class=p>()</span><span class=o>-</span><span class=n>1</span><span class=p>);</span>
 
-                    <span class=kt>boolean</span> <span class=nf>isFolder</span><span class=o>=</span><span class=p>(</span><span class=n>fileSeparator</span><span class=p>.</span><span class=na>equals</span><span class=p>(</span><span class=s>&#34;/&#34;</span><span class=p>)</span> <span class=o>||</span> <span class=n>fileSeparator</span><span class=p>.</span><span class=na>equals</span><span class=p>(</span><span class=s>&#34;\\&#34;</span><span class=p>));</span>
+                    <span class=err>boolean isFolder</span><span class=o>=</span><span class=p>(</span><span class=n>fileSeparator</span><span class=p>.</span><span class=na>equals</span><span class=p>(</span><span class=s>&#34;/&#34;</span><span class=p>)</span> <span class=o>||</span> <span class=n>fileSeparator</span><span class=p>.</span><span class=na>equals</span><span class=p>(</span><span class=s>&#34;\\&#34;</span><span class=p>));</span>
 
                     <span class=k>if</span> <span class=p>(</span><span class=n>isFolder</span><span class=p>){</span>
 
@@ -151,13 +151,13 @@ gtag('js',new Date());gtag('config','UA-65400010-1');</script><script data-ad-cl
 
                     <span class=p>}</span>
 
-                <span class=p>}</span><span class=k>catch</span><span class=p>(</span><span class=n>Exception</span> <span class=nf>e</span><span class=p>){}</span><span class=k>finally</span><span class=p>{}</span>
+                <span class=p>}</span><span class=k>catch</span><span class=p>(</span><span class=err>Exception e</span><span class=p>){}</span><span class=k>finally</span><span class=p>{}</span>
 
                 <span class=n>System</span><span class=p>.</span><span class=na>out</span><span class=p>.</span><span class=na>println</span><span class=p>(</span><span class=s>&#34;dir:&#34;</span> <span class=o>+</span> <span class=n>dir</span><span class=p>);</span>
 
                 <span class=n>fos</span> <span class=o>=</span> <span class=k>new</span> <span class=n>FileOutputStream</span><span class=p>((</span><span class=n>file</span><span class=p>.</span><span class=na>getParent</span><span class=p>()</span> <span class=o>==</span> <span class=kc>null</span><span class=o>?</span> <span class=s>&#34;&#34;</span><span class=o>:</span><span class=n>file</span><span class=p>.</span><span class=na>getParent</span><span class=p>()</span><span class=o>+</span> <span class=n>File</span><span class=p>.</span><span class=na>separator</span><span class=p>)</span> <span class=o>+</span> <span class=n>entry</span><span class=p>.</span><span class=na>getName</span><span class=p>());</span>
 
-                <span class=kt>int</span> <span class=nf>len</span><span class=o>=</span><span class=n>0</span><span class=p>;</span>
+                <span class=err>int len</span><span class=o>=</span><span class=n>0</span><span class=p>;</span>
                 <span class=k>while</span> <span class=p>((</span><span class=n>len</span> <span class=o>=</span> <span class=n>zis</span><span class=p>.</span><span class=na>read</span><span class=p>(</span><span class=n>buffer</span><span class=p>))</span><span class=o>&gt;</span><span class=n>0</span><span class=p>)</span> <span class=p>{</span>
                     <span class=n>fos</span><span class=p>.</span><span class=na>write</span><span class=p>(</span><span class=n>buffer</span><span class=p>,</span><span class=n>0</span><span class=p>,</span><span class=n>len</span><span class=p>);</span>
                 <span class=p>}</span>
@@ -168,7 +168,7 @@ gtag('js',new Date());gtag('config','UA-65400010-1');</script><script data-ad-cl
 
             <span class=k>return</span> <span class=kc>true</span><span class=p>;</span>
 
-        <span class=p>}</span><span class=k>catch</span> <span class=p>(</span><span class=n>IOException</span> <span class=nf>ioe</span><span class=p>){</span>
+        <span class=p>}</span><span class=k>catch</span> <span class=p>(</span><span class=err>IOException ioe</span><span class=p>){</span>
 
             <span class=n>ioe</span><span class=p>.</span><span class=na>printStackTrace</span><span class=p>();</span>
             <span class=k>return</span> <span class=kc>false</span><span class=p>;</span>
@@ -181,7 +181,7 @@ gtag('js',new Date());gtag('config','UA-65400010-1');</script><script data-ad-cl
     <span class=p>}</span>
 
     <span class=c1>//Fills filesList with file name and their paths
-</span><span class=c1></span>    <span class=kd>private</span> <span class=nf>void</span> <span class=n>generateFileAndFolderList</span><span class=p>(</span><span class=n>File</span> <span class=nf>node</span><span class=p>){</span>
+</span><span class=c1></span>    <span class=err>private void </span><span class=n>generateFileAndFolderList</span><span class=p>(</span><span class=err>File node</span><span class=p>){</span>
 
         <span class=c1>// Add file only
 </span><span class=c1></span>        <span class=k>if</span> <span class=p>(</span><span class=n>node</span><span class=p>.</span><span class=na>isFile</span><span class=p>()){</span>
@@ -191,11 +191,11 @@ gtag('js',new Date());gtag('config','UA-65400010-1');</script><script data-ad-cl
 
         <span class=k>if</span> <span class=p>(</span><span class=n>node</span><span class=p>.</span><span class=na>isDirectory</span><span class=p>()){</span>
 
-            <span class=n>String</span> <span class=nf>dir</span> <span class=o>=</span> <span class=n>node</span><span class=p>.</span><span class=na>getAbsoluteFile</span><span class=p>().</span><span class=na>toString</span><span class=p>();</span>
+            <span class=err>String dir </span><span class=o>=</span> <span class=n>node</span><span class=p>.</span><span class=na>getAbsoluteFile</span><span class=p>().</span><span class=na>toString</span><span class=p>();</span>
             <span class=n>fileList</span><span class=p>.</span><span class=na>add</span><span class=p>(</span><span class=n>dir</span><span class=p>.</span><span class=na>substring</span><span class=p>(</span><span class=n>sourceFolder</span><span class=p>.</span><span class=na>length</span><span class=p>(),</span> <span class=n>dir</span><span class=p>.</span><span class=na>length</span><span class=p>())</span> <span class=o>+</span> <span class=n>File</span><span class=p>.</span><span class=na>separator</span><span class=p>);</span>
 
-            <span class=n>String</span><span class=p>[]</span> <span class=nf>subNode</span> <span class=o>=</span> <span class=n>node</span><span class=p>.</span><span class=na>list</span><span class=p>();</span>
-            <span class=k>for</span> <span class=p>(</span><span class=n>String</span> <span class=nf>fileOrFolderName</span> <span class=o>:</span> <span class=n>subNode</span><span class=p>){</span>
+            <span class=err>String[] subNode </span><span class=o>=</span> <span class=n>node</span><span class=p>.</span><span class=na>list</span><span class=p>();</span>
+            <span class=k>for</span> <span class=p>(</span><span class=err>String fileOrFolderName </span><span class=o>:</span> <span class=n>subNode</span><span class=p>){</span>
 
                 <span class=n>generateFileAndFolderList</span><span class=p>(</span><span class=k>new</span> <span class=n>File</span><span class=p>(</span><span class=n>node</span><span class=p>,</span> <span class=n>fileOrFolderName</span><span class=p>));</span>
             <span class=p>}</span>
@@ -203,17 +203,17 @@ gtag('js',new Date());gtag('config','UA-65400010-1');</script><script data-ad-cl
     <span class=p>}</span>
 
     <span class=c1>//Generate file name based on source folder
-</span><span class=c1></span>    <span class=kd>private</span> <span class=nf>String</span> <span class=n>generateZipEntry</span><span class=p>(</span><span class=n>String</span> <span class=nf>file</span><span class=p>){</span>
+</span><span class=c1></span>    <span class=err>private String </span><span class=n>generateZipEntry</span><span class=p>(</span><span class=err>String file</span><span class=p>){</span>
 
         <span class=k>return</span> <span class=n>file</span><span class=p>.</span><span class=na>substring</span><span class=p>(</span><span class=n>sourceFolder</span><span class=p>.</span><span class=na>length</span><span class=p>(),</span> <span class=n>file</span><span class=p>.</span><span class=na>length</span><span class=p>());</span>
     <span class=p>}</span>
 
     <span class=c1>//Updates source folder based on source type: File or Folder
-</span><span class=c1></span>    <span class=kd>private</span> <span class=nf>void</span> <span class=n>updateSourceFolder</span><span class=p>(</span><span class=n>File</span> <span class=nf>node</span><span class=p>){</span>
+</span><span class=c1></span>    <span class=err>private void </span><span class=n>updateSourceFolder</span><span class=p>(</span><span class=err>File node</span><span class=p>){</span>
 
         <span class=k>if</span> <span class=p>(</span><span class=n>node</span><span class=p>.</span><span class=na>isFile</span><span class=p>()</span> <span class=o>||</span> <span class=n>node</span><span class=p>.</span><span class=na>isDirectory</span><span class=p>()){</span>
 
-            <span class=n>String</span> <span class=nf>sf</span> <span class=o>=</span> <span class=n>node</span><span class=p>.</span><span class=na>getAbsoluteFile</span><span class=p>().</span><span class=na>toString</span><span class=p>();</span>
+            <span class=err>String sf </span><span class=o>=</span> <span class=n>node</span><span class=p>.</span><span class=na>getAbsoluteFile</span><span class=p>().</span><span class=na>toString</span><span class=p>();</span>
 
             <span class=n>sourceFolder</span> <span class=o>=</span> <span class=n>sf</span><span class=p>.</span><span class=na>substring</span><span class=p>(</span><span class=n>0</span><span class=p>,(</span><span class=n>sf</span><span class=p>.</span><span class=na>lastIndexOf</span><span class=p>(</span><span class=s>&#34;/&#34;</span><span class=p>)</span><span class=o>&gt;</span><span class=n>0</span><span class=o>?</span><span class=n>sf</span><span class=p>.</span><span class=na>lastIndexOf</span><span class=p>(</span><span class=s>&#34;/&#34;</span><span class=p>)</span><span class=o>:</span><span class=n>sf</span><span class=p>.</span><span class=na>lastIndexOf</span><span class=p>(</span><span class=s>&#34;\\&#34;</span><span class=p>)));</span>
             <span class=n>sourceFolder</span> <span class=o>+=</span> <span class=n>File</span><span class=p>.</span><span class=na>separator</span><span class=p>;</span>
@@ -221,24 +221,24 @@ gtag('js',new Date());gtag('config','UA-65400010-1');</script><script data-ad-cl
         <span class=p>}</span> <span class=k>else</span>
             <span class=n>sourceFolder</span><span class=o>=</span><span class=kc>null</span><span class=p>;</span><span class=c1>//the file does not exists
 </span><span class=c1></span>    <span class=p>}</span>
-<span class=p>}</span></code></pre></div><h2 id=main-class-to-zip-a-folder>Main class to zip a folder</h2><div class=highlight><pre class=chroma><code class=language-java data-lang=java><span class=kn>package</span> <span class=nf>test</span><span class=p>.</span><span class=na>com</span><span class=p>.</span><span class=na>dalanz</span><span class=p>;</span>
+<span class=p>}</span></code></pre></div><h2 id=main-class-to-zip-a-folder>Main class to zip a folder</h2><div class=highlight><pre class=chroma><code class=language-java data-lang=java><span class=err>package test</span><span class=p>.</span><span class=na>com</span><span class=p>.</span><span class=na>dalanz</span><span class=p>;</span>
 
-<span class=kn>import</span> <span class=nf>java</span><span class=p>.</span><span class=na>io</span><span class=p>.</span><span class=na>IOException</span><span class=p>;</span>
+<span class=err>import java</span><span class=p>.</span><span class=na>io</span><span class=p>.</span><span class=na>IOException</span><span class=p>;</span>
 
-<span class=kn>import</span> <span class=nf>com</span><span class=p>.</span><span class=na>dalanz</span><span class=p>.</span><span class=na>file</span><span class=p>.</span><span class=o>*</span><span class=p>;</span>
+<span class=err>import com</span><span class=p>.</span><span class=na>dalanz</span><span class=p>.</span><span class=na>file</span><span class=p>.</span><span class=o>*</span><span class=p>;</span>
 
-<span class=kd>public</span> <span class=nf>class</span> <span class=n>test</span> <span class=p>{</span>
+<span class=err>public class </span><span class=n>test</span> <span class=p>{</span>
 
-    <span class=kd>public</span> <span class=nf>static</span> <span class=kt>void</span> <span class=nf>main</span><span class=p>(</span><span class=n>String</span><span class=p>[]</span> <span class=nf>args</span><span class=p>)</span> <span class=p>{</span>
+    <span class=err>public static void main</span><span class=p>(</span><span class=err>String[] args</span><span class=p>)</span> <span class=p>{</span>
 
-        <span class=n>String</span> <span class=nf>fileDirectory</span> <span class=o>=</span> <span class=s>&#34;/Users/dlanza/Desktop/Test&#34;</span><span class=p>;</span>
-        <span class=n>String</span> <span class=nf>zipDirectory</span> <span class=o>=</span> <span class=s>&#34;/Users/dlanza/Desktop/Test.zip&#34;</span><span class=p>;</span>
+        <span class=err>String fileDirectory </span><span class=o>=</span> <span class=s>&#34;/Users/dlanza/Desktop/Test&#34;</span><span class=p>;</span>
+        <span class=err>String zipDirectory </span><span class=o>=</span> <span class=s>&#34;/Users/dlanza/Desktop/Test.zip&#34;</span><span class=p>;</span>
 
-        <span class=n>ZipDirectory</span> <span class=nf>zip</span> <span class=o>=</span> <span class=k>new</span> <span class=n>ZipDirectory</span> <span class=p>(</span><span class=n>fileDirectory</span><span class=p>,</span> <span class=n>zipDirectory</span><span class=p>);</span>
+        <span class=err>ZipDirectory zip </span><span class=o>=</span> <span class=k>new</span> <span class=n>ZipDirectory</span> <span class=p>(</span><span class=n>fileDirectory</span><span class=p>,</span> <span class=n>zipDirectory</span><span class=p>);</span>
 
         <span class=k>try</span> <span class=p>{</span>
             <span class=n>zip</span><span class=p>.</span><span class=na>zip</span><span class=p>();</span>
-        <span class=p>}</span> <span class=k>catch</span> <span class=p>(</span><span class=n>IOException</span> <span class=nf>e</span><span class=p>)</span> <span class=p>{</span>
+        <span class=p>}</span> <span class=k>catch</span> <span class=p>(</span><span class=err>IOException e</span><span class=p>)</span> <span class=p>{</span>
             <span class=n>e</span><span class=p>.</span><span class=na>printStackTrace</span><span class=p>();</span>
         <span class=p>}</span>
     <span class=p>}</span>
@@ -257,23 +257,23 @@ gtag('js',new Date());gtag('config','UA-65400010-1');</script><script data-ad-cl
 /Users/dlanza/Desktop/Test/Folder 2/Folder 2.2/
 /Users/dlanza/Desktop/Test/Folder 2/Folder 2.2/.DS_Store
 /Users/dlanza/Desktop/Test/Folder 2/Folder 2.2/Test.rtf
-/Users/dlanza/Desktop/Test/Test.rtf</code></pre></div><h2 id=main-class-to-unzip-a-zip-file>Main class to unzip a zip file</h2><div class=highlight><pre class=chroma><code class=language-java data-lang=java><span class=kn>package</span> <span class=nf>test</span><span class=p>.</span><span class=na>com</span><span class=p>.</span><span class=na>dalanz</span><span class=p>;</span>
+/Users/dlanza/Desktop/Test/Test.rtf</code></pre></div><h2 id=main-class-to-unzip-a-zip-file>Main class to unzip a zip file</h2><div class=highlight><pre class=chroma><code class=language-java data-lang=java><span class=err>package test</span><span class=p>.</span><span class=na>com</span><span class=p>.</span><span class=na>dalanz</span><span class=p>;</span>
 
-<span class=kn>import</span> <span class=nf>java</span><span class=p>.</span><span class=na>io</span><span class=p>.</span><span class=na>IOException</span><span class=p>;</span>
+<span class=err>import java</span><span class=p>.</span><span class=na>io</span><span class=p>.</span><span class=na>IOException</span><span class=p>;</span>
 
-<span class=kn>import</span> <span class=nf>com</span><span class=p>.</span><span class=na>dalanz</span><span class=p>.</span><span class=na>file</span><span class=p>.</span><span class=o>*</span><span class=p>;</span>
+<span class=err>import com</span><span class=p>.</span><span class=na>dalanz</span><span class=p>.</span><span class=na>file</span><span class=p>.</span><span class=o>*</span><span class=p>;</span>
 
-<span class=kd>public</span> <span class=nf>class</span> <span class=n>test</span> <span class=p>{</span>
+<span class=err>public class </span><span class=n>test</span> <span class=p>{</span>
 
-    <span class=kd>public</span> <span class=nf>static</span> <span class=kt>void</span> <span class=nf>main</span><span class=p>(</span><span class=n>String</span><span class=p>[]</span> <span class=nf>args</span><span class=p>)</span> <span class=p>{</span>
+    <span class=err>public static void main</span><span class=p>(</span><span class=err>String[] args</span><span class=p>)</span> <span class=p>{</span>
 
-        <span class=n>String</span> <span class=nf>zipDirectory</span> <span class=o>=</span> <span class=s>&#34;/Users/dlanza/Desktop/Test.zip&#34;</span><span class=p>;</span>
+        <span class=err>String zipDirectory </span><span class=o>=</span> <span class=s>&#34;/Users/dlanza/Desktop/Test.zip&#34;</span><span class=p>;</span>
 
-        <span class=n>ZipDirectory</span> <span class=nf>zip</span> <span class=o>=</span> <span class=k>new</span> <span class=n>ZipDirectory</span> <span class=p>(</span><span class=n>zipDirectory</span><span class=p>);</span>
+        <span class=err>ZipDirectory zip </span><span class=o>=</span> <span class=k>new</span> <span class=n>ZipDirectory</span> <span class=p>(</span><span class=n>zipDirectory</span><span class=p>);</span>
 
         <span class=k>try</span> <span class=p>{</span>
             <span class=n>zip</span><span class=p>.</span><span class=na>unzip</span><span class=p>();</span>
-        <span class=p>}</span> <span class=k>catch</span> <span class=p>(</span><span class=n>IOException</span> <span class=nf>e</span><span class=p>)</span> <span class=p>{</span>
+        <span class=p>}</span> <span class=k>catch</span> <span class=p>(</span><span class=err>IOException e</span><span class=p>)</span> <span class=p>{</span>
             <span class=n>e</span><span class=p>.</span><span class=na>printStackTrace</span><span class=p>();</span>
         <span class=p>}</span>
     <span class=p>}</span>
