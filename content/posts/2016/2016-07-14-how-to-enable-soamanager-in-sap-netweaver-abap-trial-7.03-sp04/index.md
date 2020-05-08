@@ -27,7 +27,7 @@ When accessing **SOAMANAGER**, error code 403 turns up.
 
 {{< bootstrap-figure src="img/error-code-403-soamanager.png" title="Error code 403 SOAMANAGER" width="500">}}
 
-If we get error code 500, check Web GUI for Netweaver works properly. It is explained in [the installation post]({{< ref "/posts/2016/2016-07-12-how-to-install-sap-netweaver-abap-trial-7.03-sp04-on-windows-7" >}})
+If we get error code 500, check Web GUI for Netweaver works properly. It is explained in [the installation post]({{< ref "/posts/2016/2016-07-12-how-to-install-sap-netweaver-abap-trial-7.03-sp04-on-windows-7/index.md" >}})
 
 ## Solution
 

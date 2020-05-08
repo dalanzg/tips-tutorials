@@ -18,7 +18,7 @@ This tutorial will explain how to share a host holder into your guest virtual ma
 
 You will need the following:
 
-- An openSUSE virtual machine with VirtualBox ([Check this link]({{< ref "/posts/2017/2017-02-12-how-to-install-opensuse-leap-42.2-in-virtualbox" >}})
+- An openSUSE virtual machine with VirtualBox ([Check this link]({{< ref "/posts/2017/2017-02-12-how-to-install-opensuse-leap-42.2-in-virtualbox/index.md" >}})
 
 ## Steps
 

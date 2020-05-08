@@ -14,7 +14,7 @@ comments: true
 
 This tutorial will explain how to renew your MiniSAP license. If you want to know how to install MiniSAP, check out this post:
 
-- [How to install MiniSAP]({{< ref "/posts/2016/2016-07-12-how-to-install-sap-netweaver-abap-trial-7.03-sp04-on-windows-7" >}}).
+- [How to install MiniSAP]({{< ref "/posts/2016/2016-07-12-how-to-install-sap-netweaver-abap-trial-7.03-sp04-on-windows-7/index.md" >}}).
 
 When logging into MiniSAP, we may get two different pop-up windows:
 

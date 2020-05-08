@@ -18,7 +18,7 @@ This tutorial will explain how to install Oracle Database 12c R2 in openSUSE Lea
 
 You will need the following:
 
-- openSUSE Leap 42.3 -> [Install openSUSE virtual machine with VirtualBox]({{< ref "/posts/2017/2017-02-12-how-to-install-opensuse-leap-42.2-in-virtualbox" >}})
+- openSUSE Leap 42.3 -> [Install openSUSE virtual machine with VirtualBox]({{< ref "/posts/2017/2017-02-12-how-to-install-opensuse-leap-42.2-in-virtualbox/index.md" >}})
 - Oracle 12c R2 database installation file ->  [linuxx64_12201_database.zip](http://www.oracle.com/technetwork/database/enterprise-edition/downloads/index.html)
 
 ## Steps

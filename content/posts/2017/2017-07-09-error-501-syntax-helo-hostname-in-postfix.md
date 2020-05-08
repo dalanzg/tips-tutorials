@@ -16,7 +16,7 @@ Certain SMTP servers require HELO **servername** in order to allow a request to 
 
 You will need the following:
 
-- An openSUSE virtual machine with VirtualBox ([Check this link]({{< ref "/posts/2017/2017-02-12-how-to-install-opensuse-leap-42.2-in-virtualbox" >}})
+- An openSUSE virtual machine with VirtualBox ([Check this link]({{< ref "/posts/2017/2017-02-12-how-to-install-opensuse-leap-42.2-in-virtualbox/index.md" >}})
 - Hostname and domain -> [Setting Hostname and domain in openSUSE]({{< ref "/posts/2017/2017-04-13-setting-hostname-and-domain-in-opensuse" >}})
 - SMTP server with Postfix running -> [Setting Postfix for outgoing mail in openSUSE]({{< ref "/posts/2017/2017-04-14-setting-postfix-for-outgoing-mail-in-opensuse" >}})
 

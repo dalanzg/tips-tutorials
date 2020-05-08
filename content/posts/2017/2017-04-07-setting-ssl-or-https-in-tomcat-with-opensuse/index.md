@@ -18,7 +18,7 @@ A tutorial to configure Tomcat 8 to support SSL or https connection.
 
 You will need the following:
 
-- An openSUSE virtual machine with VirtualBox ([Check this link]({{< ref "/posts/2017/2017-02-12-how-to-install-opensuse-leap-42.2-in-virtualbox" >}})
+- An openSUSE virtual machine with VirtualBox ([Check this link]({{< ref "/posts/2017/2017-02-12-how-to-install-opensuse-leap-42.2-in-virtualbox/index.md" >}})
 - Java JDK to create Keystores -> [Change Java OpenJDK to Oracle JDK]({{< ref "/posts/2017/2017-03-18-change-openjdk-to-oracle-jdk-in-opensuse" >}})
 - Tomcat -> [How to install tomcat in openSUSE]({{< ref "/posts/2017/2017-03-24-how-to-install-tomcat-in-opensuse" >}})
 
