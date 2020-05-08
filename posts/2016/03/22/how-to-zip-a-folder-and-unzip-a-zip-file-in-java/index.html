@@ -1,4 +1,4 @@
-<!doctype html><html><head><title>How to zip a folder and unzip a Zip file in Java</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=title content="How to zip a folder and unzip a Zip file in Java – Tips and Tutorials"><meta name=description content="A folder with subfolders and files will be zipped. Besides, the zip file will be unzipped. All of this by Java."><meta name=generator content="Hugo 0.64.0"><meta property="og:title" content="How to zip a folder and unzip a Zip file in Java"><meta property="og:description" content="A folder with subfolders and files will be zipped. Besides, the zip file will be unzipped. All of this by Java."><meta property="og:url" content="https://dalanzg.github.io/tips-tutorials/posts/2016/03/22/how-to-zip-a-folder-and-unzip-a-zip-file-in-java/"><meta property="og:site_name" content="Tips and Tutorials"><meta property="og:type" content="article"><meta property="og:image" content="https://dalanzg.github.io/tips-tutorials/android-chrome-512x512.png"><meta property="og:tags" content="java"><meta property="article:published_time" content="2016-03-22"><meta name=twitter:card content="summary_large_image"><meta name=twitter:description content="A folder with subfolders and files will be zipped. Besides, the zip file will be unzipped. All of this by Java."><meta name=twitter:title content="How to zip a folder and unzip a Zip file in Java"><meta name=twitter:site content="Tips and Tutorials"><meta name=twitter:creator content="@dalanzg"><meta name=twitter:image content="https://dalanzg.github.io/tips-tutorials/android-chrome-512x512.png"><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"How to zip a folder and unzip a Zip file in Java","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/dalanzg.github.io\/tips-tutorials\/posts\/2016\/03\/22\/how-to-zip-a-folder-and-unzip-a-zip-file-in-java\/"},"image":{"@type":"ImageObject","url":"https:\/\/dalanzg.github.io\/tips-tutorials\/mstile-150x150.png","width":150,"height":150},"genre":"posts","keywords":"java","wordcount":588,"url":"https:\/\/dalanzg.github.io\/tips-tutorials\/posts\/2016\/03\/22\/how-to-zip-a-folder-and-unzip-a-zip-file-in-java\/","datePublished":"2016-03-22","dateModified":"2016-12-27","license":"Copyright. Tips and Tutorials. All rights reserved.","publisher":{"@type":"Organization","name":"Daniel Lanza","logo":{"@type":"ImageObject","url":"https:\/\/dalanzg.github.io\/tips-tutorials\/mstile-150x150.png","width":150,"height":150}},"author":{"@type":"Person","name":"dalanzg"},"description":"A folder with subfolders and files will be zipped. Besides, the zip file will be unzipped. All of this by Java."}</script><link rel=apple-touch-icon sizes=180x180 href=https://dalanzg.github.io/tips-tutorials/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=https://dalanzg.github.io/tips-tutorials/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=https://dalanzg.github.io/tips-tutorials/favicon-16x16.png><link rel=manifest href=https://dalanzg.github.io/tips-tutorials/site.webmanifest><link rel=mask-icon href=https://dalanzg.github.io/tips-tutorials/safari-pinned-tab.svg color=#5bbad5><meta name=apple-mobile-web-app-title content="Tips and Tutorials"><meta name=application-name content="Tips and Tutorials"><meta name=msapplication-TileColor content="#da532c"><meta name=theme-color content="#ffffff"><link rel=canonical href=https://dalanzg.github.io/tips-tutorials/posts/2016/03/22/how-to-zip-a-folder-and-unzip-a-zip-file-in-java/><link rel=stylesheet href=https://dalanzg.github.io/tips-tutorials/sass/main.min.63032542716eb584e7a575578462e980a78b8d0bf5e19eeaed14534435f3c7b8.css integrity="sha256-YwMlQnFutYTnpXVXhGLpgKeLjQv14Z7q7RRTRDXzx7g="><link rel=sitemap href=https://dalanzg.github.io/tips-tutorials/sitemap.xml title=Sitemap type=application/xml><meta name=google-site-verification content="CeO9J_0wi37-MvDa_F7AmZJYunwDhFGjv8eSlJFPil8"><script async src="https://www.googletagmanager.com/gtag/js?id=UA-65400010-1"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+<!doctype html><html><head><title>How to zip a folder and unzip a Zip file in Java</title><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=title content="How to zip a folder and unzip a Zip file in Java – Tips and Tutorials"><meta name=description content="A folder with subfolders and files will be zipped. Besides, the zip file will be unzipped. All of this by Java."><meta name=generator content="Hugo 0.70.0"><meta property="og:title" content="How to zip a folder and unzip a Zip file in Java"><meta property="og:description" content="A folder with subfolders and files will be zipped. Besides, the zip file will be unzipped. All of this by Java."><meta property="og:url" content="https://dalanzg.github.io/tips-tutorials/posts/2016/03/22/how-to-zip-a-folder-and-unzip-a-zip-file-in-java/"><meta property="og:site_name" content="Tips and Tutorials"><meta property="og:type" content="article"><meta property="og:image" content="https://dalanzg.github.io/tips-tutorials/android-chrome-512x512.png"><meta property="og:tags" content="java"><meta property="article:published_time" content="2016-03-22"><meta name=twitter:card content="summary_large_image"><meta name=twitter:description content="A folder with subfolders and files will be zipped. Besides, the zip file will be unzipped. All of this by Java."><meta name=twitter:title content="How to zip a folder and unzip a Zip file in Java"><meta name=twitter:site content="Tips and Tutorials"><meta name=twitter:creator content="@dalanzg"><meta name=twitter:image content="https://dalanzg.github.io/tips-tutorials/android-chrome-512x512.png"><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"How to zip a folder and unzip a Zip file in Java","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/dalanzg.github.io\/tips-tutorials\/posts\/2016\/03\/22\/how-to-zip-a-folder-and-unzip-a-zip-file-in-java\/"},"image":{"@type":"ImageObject","url":"https:\/\/dalanzg.github.io\/tips-tutorials\/mstile-150x150.png","width":150,"height":150},"genre":"posts","keywords":"java","wordcount":588,"url":"https:\/\/dalanzg.github.io\/tips-tutorials\/posts\/2016\/03\/22\/how-to-zip-a-folder-and-unzip-a-zip-file-in-java\/","datePublished":"2016-03-22","dateModified":"2016-12-27","license":"Copyright. Tips and Tutorials. All rights reserved.","publisher":{"@type":"Organization","name":"Daniel Lanza","logo":{"@type":"ImageObject","url":"https:\/\/dalanzg.github.io\/tips-tutorials\/mstile-150x150.png","width":150,"height":150}},"author":{"@type":"Person","name":"dalanzg"},"description":"A folder with subfolders and files will be zipped. Besides, the zip file will be unzipped. All of this by Java."}</script><link rel=apple-touch-icon sizes=180x180 href=https://dalanzg.github.io/tips-tutorials/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=https://dalanzg.github.io/tips-tutorials/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=https://dalanzg.github.io/tips-tutorials/favicon-16x16.png><link rel=manifest href=https://dalanzg.github.io/tips-tutorials/site.webmanifest><link rel=mask-icon href=https://dalanzg.github.io/tips-tutorials/safari-pinned-tab.svg color=#5bbad5><meta name=apple-mobile-web-app-title content="Tips and Tutorials"><meta name=application-name content="Tips and Tutorials"><meta name=msapplication-TileColor content="#da532c"><meta name=theme-color content="#ffffff"><link rel=canonical href=https://dalanzg.github.io/tips-tutorials/posts/2016/03/22/how-to-zip-a-folder-and-unzip-a-zip-file-in-java/><link rel=stylesheet href=https://dalanzg.github.io/tips-tutorials/sass/main.min.ec5df45360ab59445a8c512ab2338493a49ce34f0f465c4a229a935f4e573e48.css integrity="sha256-7F30U2CrWURajFEqsjOEk6Sc408PRlxKIpqTX05XPkg="><link rel=sitemap href=https://dalanzg.github.io/tips-tutorials/sitemap.xml title=Sitemap type=application/xml><meta name=google-site-verification content="CeO9J_0wi37-MvDa_F7AmZJYunwDhFGjv8eSlJFPil8"><script async src="https://www.googletagmanager.com/gtag/js?id=UA-65400010-1"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
 gtag('js',new Date());gtag('config','UA-65400010-1');</script><script data-ad-client=ca-pub-8140733006923933 async src=https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js></script></head><body><div class=container><nav class="navbar navbar-expand-lg navbar-light bg-light"><a class=navbar-brand href=https://dalanzg.github.io/tips-tutorials/><strong>Tips and Tutorials</strong></a>
 <button class=navbar-toggler type=button data-toggle=collapse data-target=#navbarSupportedContent aria-controls=navbarSupportedContent aria-expanded=false aria-label="Toggle navigation">
 <span class=navbar-toggler-icon></span></button><div class="collapse navbar-collapse" id=navbarSupportedContent><ul class="navbar-nav mr-auto"><li class=navbar-item><a class=nav-link href=https://dalanzg.github.io/tips-tutorials/about/>About</a></li><li class=navbar-item><a class=nav-link href=https://dalanzg.github.io/tips-tutorials/tags/>Tags</a></li><li class=navbar-item><a class=nav-link href=https://dalanzg.github.io/tips-tutorials/posts/>Posts</a></li></ul><form class="form-inline float-xs-right" action=https://dalanzg.github.io/tips-tutorials/search/ method=get data-search-form><input class="form-control mr-sm-2" type=text name=q placeholder=Search... data-search-input>
@@ -22,7 +22,7 @@ gtag('js',new Date());gtag('config','UA-65400010-1');</script><script data-ad-cl
     <span class=kd>private</span> <span class=kd>static</span> <span class=n>ArrayList</span><span class=o>&lt;</span><span class=n>String</span><span class=o>&gt;</span> <span class=n>fileList</span> <span class=o>=</span> <span class=kc>null</span><span class=o>;</span>
     <span class=kd>private</span> <span class=kd>static</span> <span class=n>String</span> <span class=n>sourceFolder</span> <span class=o>=</span> <span class=kc>null</span><span class=o>;</span>
 
-    <span class=kd>public</span> <span class=n>String</span> <span class=nf>getFolderPath</span><span class=o>(</span><span class=o>)</span> <span class=o>{</span>
+    <span class=kd>public</span> <span class=n>String</span> <span class=nf>getFolderPath</span><span class=o>()</span> <span class=o>{</span>
         <span class=k>return</span> <span class=n>folderPath</span><span class=o>;</span>
     <span class=o>}</span>
 
@@ -30,7 +30,7 @@ gtag('js',new Date());gtag('config','UA-65400010-1');</script><script data-ad-cl
         <span class=k>this</span><span class=o>.</span><span class=na>folderPath</span> <span class=o>=</span> <span class=n>folderPath</span><span class=o>;</span>
     <span class=o>}</span>
 
-    <span class=kd>public</span> <span class=n>String</span> <span class=nf>getZipPath</span><span class=o>(</span><span class=o>)</span> <span class=o>{</span>
+    <span class=kd>public</span> <span class=n>String</span> <span class=nf>getZipPath</span><span class=o>()</span> <span class=o>{</span>
         <span class=k>return</span> <span class=n>zipPath</span><span class=o>;</span>
     <span class=o>}</span>
 
@@ -38,76 +38,76 @@ gtag('js',new Date());gtag('config','UA-65400010-1');</script><script data-ad-cl
         <span class=k>this</span><span class=o>.</span><span class=na>zipPath</span> <span class=o>=</span> <span class=n>zipPath</span><span class=o>;</span>
     <span class=o>}</span>
 
-    <span class=kd>public</span> <span class=nf>ZipDirectory</span><span class=o>(</span><span class=o>)</span><span class=o>{</span><span class=o>}</span>
+    <span class=kd>public</span> <span class=nf>ZipDirectory</span><span class=o>(){}</span>
 
-    <span class=kd>public</span> <span class=nf>ZipDirectory</span><span class=o>(</span><span class=n>String</span> <span class=n>folderPath</span><span class=o>,</span> <span class=n>String</span> <span class=n>zipPath</span><span class=o>)</span><span class=o>{</span>
+    <span class=kd>public</span> <span class=nf>ZipDirectory</span><span class=o>(</span><span class=n>String</span> <span class=n>folderPath</span><span class=o>,</span> <span class=n>String</span> <span class=n>zipPath</span><span class=o>){</span>
         <span class=k>this</span><span class=o>.</span><span class=na>folderPath</span> <span class=o>=</span> <span class=n>folderPath</span><span class=o>;</span>
         <span class=k>this</span><span class=o>.</span><span class=na>zipPath</span> <span class=o>=</span> <span class=n>zipPath</span><span class=o>;</span>
     <span class=o>}</span>
 
-    <span class=kd>public</span> <span class=nf>ZipDirectory</span><span class=o>(</span><span class=n>String</span> <span class=n>zipPath</span><span class=o>)</span><span class=o>{</span>
+    <span class=kd>public</span> <span class=nf>ZipDirectory</span><span class=o>(</span><span class=n>String</span> <span class=n>zipPath</span><span class=o>){</span>
         <span class=k>this</span><span class=o>.</span><span class=na>zipPath</span> <span class=o>=</span> <span class=n>zipPath</span><span class=o>;</span>
     <span class=o>}</span>
 
-    <span class=kd>public</span> <span class=kt>boolean</span> <span class=nf>zip</span><span class=o>(</span><span class=o>)</span> <span class=kd>throws</span> <span class=n>IOException</span><span class=o>{</span>
+    <span class=kd>public</span> <span class=kt>boolean</span> <span class=nf>zip</span><span class=o>()</span> <span class=kd>throws</span> <span class=n>IOException</span><span class=o>{</span>
 
-        <span class=kt>byte</span><span class=o>[</span><span class=o>]</span> <span class=n>buffer</span> <span class=o>=</span> <span class=k>new</span> <span class=kt>byte</span><span class=o>[</span><span class=n>1024</span><span class=o>]</span><span class=o>;</span>
+        <span class=kt>byte</span><span class=o>[]</span> <span class=n>buffer</span> <span class=o>=</span> <span class=k>new</span> <span class=kt>byte</span><span class=o>[</span><span class=n>1024</span><span class=o>];</span>
 
         <span class=n>FileInputStream</span> <span class=n>fis</span> <span class=o>=</span> <span class=kc>null</span><span class=o>;</span>
         <span class=n>ZipOutputStream</span> <span class=n>zos</span> <span class=o>=</span> <span class=kc>null</span><span class=o>;</span>
 
-        <span class=n>fileList</span> <span class=o>=</span> <span class=k>new</span> <span class=n>ArrayList</span><span class=o>&lt;</span><span class=n>String</span><span class=o>&gt;</span><span class=o>(</span><span class=o>)</span><span class=o>;</span>
+        <span class=n>fileList</span> <span class=o>=</span> <span class=k>new</span> <span class=n>ArrayList</span><span class=o>&lt;</span><span class=n>String</span><span class=o>&gt;();</span>
 
         <span class=k>try</span><span class=o>{</span>
-            <span class=n>zos</span> <span class=o>=</span> <span class=k>new</span> <span class=n>ZipOutputStream</span><span class=o>(</span><span class=k>new</span> <span class=n>FileOutputStream</span><span class=o>(</span><span class=k>this</span><span class=o>.</span><span class=na>zipPath</span><span class=o>)</span><span class=o>)</span><span class=o>;</span>
-            <span class=n>updateSourceFolder</span><span class=o>(</span><span class=k>new</span> <span class=n>File</span><span class=o>(</span><span class=k>this</span><span class=o>.</span><span class=na>folderPath</span><span class=o>)</span><span class=o>)</span><span class=o>;</span>
+            <span class=n>zos</span> <span class=o>=</span> <span class=k>new</span> <span class=n>ZipOutputStream</span><span class=o>(</span><span class=k>new</span> <span class=n>FileOutputStream</span><span class=o>(</span><span class=k>this</span><span class=o>.</span><span class=na>zipPath</span><span class=o>));</span>
+            <span class=n>updateSourceFolder</span><span class=o>(</span><span class=k>new</span> <span class=n>File</span><span class=o>(</span><span class=k>this</span><span class=o>.</span><span class=na>folderPath</span><span class=o>));</span>
 
-            <span class=k>if</span> <span class=o>(</span><span class=n>sourceFolder</span> <span class=o>=</span><span class=o>=</span> <span class=kc>null</span><span class=o>)</span> <span class=o>{</span>
-                <span class=n>zos</span><span class=o>.</span><span class=na>close</span><span class=o>(</span><span class=o>)</span><span class=o>;</span>
+            <span class=k>if</span> <span class=o>(</span><span class=n>sourceFolder</span> <span class=o>==</span> <span class=kc>null</span><span class=o>)</span> <span class=o>{</span>
+                <span class=n>zos</span><span class=o>.</span><span class=na>close</span><span class=o>();</span>
                 <span class=k>return</span> <span class=kc>false</span><span class=o>;</span>
             <span class=o>}</span>
 
-            <span class=n>generateFileAndFolderList</span><span class=o>(</span><span class=k>new</span> <span class=n>File</span><span class=o>(</span><span class=k>this</span><span class=o>.</span><span class=na>folderPath</span><span class=o>)</span><span class=o>)</span><span class=o>;</span>
+            <span class=n>generateFileAndFolderList</span><span class=o>(</span><span class=k>new</span> <span class=n>File</span><span class=o>(</span><span class=k>this</span><span class=o>.</span><span class=na>folderPath</span><span class=o>));</span>
 
             <span class=k>for</span> <span class=o>(</span><span class=n>String</span> <span class=n>unzippedFile</span><span class=o>:</span> <span class=n>fileList</span><span class=o>)</span> <span class=o>{</span>
 
-                <span class=n>System</span><span class=o>.</span><span class=na>out</span><span class=o>.</span><span class=na>println</span><span class=o>(</span><span class=n>sourceFolder</span> <span class=o>+</span> <span class=n>unzippedFile</span><span class=o>)</span><span class=o>;</span>
+                <span class=n>System</span><span class=o>.</span><span class=na>out</span><span class=o>.</span><span class=na>println</span><span class=o>(</span><span class=n>sourceFolder</span> <span class=o>+</span> <span class=n>unzippedFile</span><span class=o>);</span>
 
-                <span class=n>ZipEntry</span> <span class=n>entry</span> <span class=o>=</span> <span class=k>new</span> <span class=n>ZipEntry</span><span class=o>(</span><span class=n>unzippedFile</span><span class=o>)</span><span class=o>;</span>
-                <span class=n>zos</span><span class=o>.</span><span class=na>putNextEntry</span><span class=o>(</span><span class=n>entry</span><span class=o>)</span><span class=o>;</span>
+                <span class=n>ZipEntry</span> <span class=n>entry</span> <span class=o>=</span> <span class=k>new</span> <span class=n>ZipEntry</span><span class=o>(</span><span class=n>unzippedFile</span><span class=o>);</span>
+                <span class=n>zos</span><span class=o>.</span><span class=na>putNextEntry</span><span class=o>(</span><span class=n>entry</span><span class=o>);</span>
 
-                <span class=k>if</span> <span class=o>(</span><span class=o>(</span><span class=n>unzippedFile</span><span class=o>.</span><span class=na>substring</span><span class=o>(</span><span class=n>unzippedFile</span><span class=o>.</span><span class=na>length</span><span class=o>(</span><span class=o>)</span><span class=o>-</span><span class=n>1</span><span class=o>)</span><span class=o>)</span><span class=o>.</span><span class=na>equals</span><span class=o>(</span><span class=n>File</span><span class=o>.</span><span class=na>separator</span><span class=o>)</span><span class=o>)</span>
+                <span class=k>if</span> <span class=o>((</span><span class=n>unzippedFile</span><span class=o>.</span><span class=na>substring</span><span class=o>(</span><span class=n>unzippedFile</span><span class=o>.</span><span class=na>length</span><span class=o>()-</span><span class=n>1</span><span class=o>)).</span><span class=na>equals</span><span class=o>(</span><span class=n>File</span><span class=o>.</span><span class=na>separator</span><span class=o>))</span>
                     <span class=k>continue</span><span class=o>;</span>
 
                 <span class=k>try</span><span class=o>{</span>
-                    <span class=n>fis</span> <span class=o>=</span> <span class=k>new</span> <span class=n>FileInputStream</span><span class=o>(</span><span class=n>sourceFolder</span> <span class=o>+</span> <span class=n>unzippedFile</span><span class=o>)</span><span class=o>;</span>
+                    <span class=n>fis</span> <span class=o>=</span> <span class=k>new</span> <span class=n>FileInputStream</span><span class=o>(</span><span class=n>sourceFolder</span> <span class=o>+</span> <span class=n>unzippedFile</span><span class=o>);</span>
 
                     <span class=kt>int</span> <span class=n>len</span><span class=o>=</span><span class=n>0</span><span class=o>;</span>
-                    <span class=k>while</span> <span class=o>(</span><span class=o>(</span><span class=n>len</span> <span class=o>=</span> <span class=n>fis</span><span class=o>.</span><span class=na>read</span><span class=o>(</span><span class=n>buffer</span><span class=o>)</span><span class=o>)</span><span class=o>&gt;</span><span class=n>0</span><span class=o>)</span> <span class=o>{</span>
-                        <span class=n>zos</span><span class=o>.</span><span class=na>write</span><span class=o>(</span><span class=n>buffer</span><span class=o>,</span><span class=n>0</span><span class=o>,</span><span class=n>len</span><span class=o>)</span><span class=o>;</span>
+                    <span class=k>while</span> <span class=o>((</span><span class=n>len</span> <span class=o>=</span> <span class=n>fis</span><span class=o>.</span><span class=na>read</span><span class=o>(</span><span class=n>buffer</span><span class=o>))&gt;</span><span class=n>0</span><span class=o>)</span> <span class=o>{</span>
+                        <span class=n>zos</span><span class=o>.</span><span class=na>write</span><span class=o>(</span><span class=n>buffer</span><span class=o>,</span><span class=n>0</span><span class=o>,</span><span class=n>len</span><span class=o>);</span>
                     <span class=o>}</span>
-                <span class=o>}</span><span class=k>catch</span><span class=o>(</span><span class=n>IOException</span> <span class=n>e</span><span class=o>)</span><span class=o>{</span>
+                <span class=o>}</span><span class=k>catch</span><span class=o>(</span><span class=n>IOException</span> <span class=n>e</span><span class=o>){</span>
 
-                    <span class=n>e</span><span class=o>.</span><span class=na>printStackTrace</span><span class=o>(</span><span class=o>)</span><span class=o>;</span>
+                    <span class=n>e</span><span class=o>.</span><span class=na>printStackTrace</span><span class=o>();</span>
                     <span class=k>return</span> <span class=kc>false</span><span class=o>;</span>
 
                 <span class=o>}</span><span class=k>finally</span><span class=o>{</span>
 
-                    <span class=k>if</span> <span class=o>(</span><span class=n>fis</span><span class=o>!</span><span class=o>=</span><span class=kc>null</span><span class=o>)</span>
-                        <span class=n>fis</span><span class=o>.</span><span class=na>close</span><span class=o>(</span><span class=o>)</span><span class=o>;</span>
+                    <span class=k>if</span> <span class=o>(</span><span class=n>fis</span><span class=o>!=</span><span class=kc>null</span><span class=o>)</span>
+                        <span class=n>fis</span><span class=o>.</span><span class=na>close</span><span class=o>();</span>
                 <span class=o>}</span>
             <span class=o>}</span>
 
-            <span class=n>zos</span><span class=o>.</span><span class=na>closeEntry</span><span class=o>(</span><span class=o>)</span><span class=o>;</span>
+            <span class=n>zos</span><span class=o>.</span><span class=na>closeEntry</span><span class=o>();</span>
 
-        <span class=o>}</span><span class=k>catch</span><span class=o>(</span><span class=n>IOException</span> <span class=n>e</span><span class=o>)</span><span class=o>{</span>
+        <span class=o>}</span><span class=k>catch</span><span class=o>(</span><span class=n>IOException</span> <span class=n>e</span><span class=o>){</span>
 
-            <span class=n>e</span><span class=o>.</span><span class=na>printStackTrace</span><span class=o>(</span><span class=o>)</span><span class=o>;</span>
+            <span class=n>e</span><span class=o>.</span><span class=na>printStackTrace</span><span class=o>();</span>
             <span class=k>return</span> <span class=kc>false</span><span class=o>;</span>
 
         <span class=o>}</span><span class=k>finally</span><span class=o>{</span>
 
-            <span class=n>zos</span><span class=o>.</span><span class=na>close</span><span class=o>(</span><span class=o>)</span><span class=o>;</span>
+            <span class=n>zos</span><span class=o>.</span><span class=na>close</span><span class=o>();</span>
             <span class=n>fileList</span> <span class=o>=</span> <span class=kc>null</span><span class=o>;</span>
             <span class=n>sourceFolder</span> <span class=o>=</span> <span class=kc>null</span><span class=o>;</span>
         <span class=o>}</span>
@@ -115,62 +115,62 @@ gtag('js',new Date());gtag('config','UA-65400010-1');</script><script data-ad-cl
         <span class=k>return</span> <span class=kc>true</span><span class=o>;</span>
     <span class=o>}</span>
 
-    <span class=kd>public</span> <span class=kt>boolean</span> <span class=nf>unzip</span><span class=o>(</span><span class=o>)</span> <span class=kd>throws</span> <span class=n>IOException</span><span class=o>{</span>
+    <span class=kd>public</span> <span class=kt>boolean</span> <span class=nf>unzip</span><span class=o>()</span> <span class=kd>throws</span> <span class=n>IOException</span><span class=o>{</span>
 
-        <span class=kt>byte</span><span class=o>[</span><span class=o>]</span> <span class=n>buffer</span> <span class=o>=</span> <span class=k>new</span> <span class=kt>byte</span><span class=o>[</span><span class=n>1024</span><span class=o>]</span><span class=o>;</span>
+        <span class=kt>byte</span><span class=o>[]</span> <span class=n>buffer</span> <span class=o>=</span> <span class=k>new</span> <span class=kt>byte</span><span class=o>[</span><span class=n>1024</span><span class=o>];</span>
 
         <span class=n>ZipInputStream</span> <span class=n>zis</span> <span class=o>=</span> <span class=kc>null</span><span class=o>;</span>
         <span class=n>ZipEntry</span> <span class=n>entry</span> <span class=o>=</span> <span class=kc>null</span><span class=o>;</span>
         <span class=n>FileOutputStream</span> <span class=n>fos</span> <span class=o>=</span> <span class=kc>null</span><span class=o>;</span>
 
-        <span class=n>fileList</span> <span class=o>=</span> <span class=k>new</span> <span class=n>ArrayList</span><span class=o>&lt;</span><span class=n>String</span><span class=o>&gt;</span><span class=o>(</span><span class=o>)</span><span class=o>;</span>
+        <span class=n>fileList</span> <span class=o>=</span> <span class=k>new</span> <span class=n>ArrayList</span><span class=o>&lt;</span><span class=n>String</span><span class=o>&gt;();</span>
 
         <span class=k>try</span> <span class=o>{</span>
 
-            <span class=n>File</span> <span class=n>file</span> <span class=o>=</span> <span class=k>new</span> <span class=n>File</span><span class=o>(</span><span class=k>this</span><span class=o>.</span><span class=na>zipPath</span><span class=o>)</span><span class=o>;</span>
-            <span class=n>zis</span> <span class=o>=</span> <span class=k>new</span> <span class=n>ZipInputStream</span><span class=o>(</span><span class=k>new</span> <span class=n>FileInputStream</span><span class=o>(</span><span class=n>file</span><span class=o>)</span><span class=o>)</span><span class=o>;</span>
+            <span class=n>File</span> <span class=n>file</span> <span class=o>=</span> <span class=k>new</span> <span class=n>File</span><span class=o>(</span><span class=k>this</span><span class=o>.</span><span class=na>zipPath</span><span class=o>);</span>
+            <span class=n>zis</span> <span class=o>=</span> <span class=k>new</span> <span class=n>ZipInputStream</span><span class=o>(</span><span class=k>new</span> <span class=n>FileInputStream</span><span class=o>(</span><span class=n>file</span><span class=o>));</span>
 
-            <span class=k>while</span><span class=o>(</span><span class=o>(</span><span class=n>entry</span> <span class=o>=</span> <span class=n>zis</span><span class=o>.</span><span class=na>getNextEntry</span><span class=o>(</span><span class=o>)</span><span class=o>)</span><span class=o>!</span><span class=o>=</span> <span class=kc>null</span><span class=o>)</span><span class=o>{</span>
+            <span class=k>while</span><span class=o>((</span><span class=n>entry</span> <span class=o>=</span> <span class=n>zis</span><span class=o>.</span><span class=na>getNextEntry</span><span class=o>())!=</span> <span class=kc>null</span><span class=o>){</span>
 
-                <span class=n>String</span> <span class=n>dir</span> <span class=o>=</span> <span class=n>entry</span><span class=o>.</span><span class=na>getName</span><span class=o>(</span><span class=o>)</span><span class=o>;</span>
+                <span class=n>String</span> <span class=n>dir</span> <span class=o>=</span> <span class=n>entry</span><span class=o>.</span><span class=na>getName</span><span class=o>();</span>
 
                 <span class=k>try</span><span class=o>{</span>
 
-                    <span class=n>String</span> <span class=n>fileSeparator</span> <span class=o>=</span> <span class=n>dir</span><span class=o>.</span><span class=na>substring</span><span class=o>(</span><span class=n>dir</span><span class=o>.</span><span class=na>length</span><span class=o>(</span><span class=o>)</span><span class=o>-</span><span class=n>1</span><span class=o>)</span><span class=o>;</span>
+                    <span class=n>String</span> <span class=n>fileSeparator</span> <span class=o>=</span> <span class=n>dir</span><span class=o>.</span><span class=na>substring</span><span class=o>(</span><span class=n>dir</span><span class=o>.</span><span class=na>length</span><span class=o>()-</span><span class=n>1</span><span class=o>);</span>
 
-                    <span class=kt>boolean</span> <span class=n>isFolder</span><span class=o>=</span><span class=o>(</span><span class=n>fileSeparator</span><span class=o>.</span><span class=na>equals</span><span class=o>(</span><span class=s>&#34;/&#34;</span><span class=o>)</span> <span class=o>|</span><span class=o>|</span> <span class=n>fileSeparator</span><span class=o>.</span><span class=na>equals</span><span class=o>(</span><span class=s>&#34;\\&#34;</span><span class=o>)</span><span class=o>)</span><span class=o>;</span>
+                    <span class=kt>boolean</span> <span class=n>isFolder</span><span class=o>=(</span><span class=n>fileSeparator</span><span class=o>.</span><span class=na>equals</span><span class=o>(</span><span class=s>&#34;/&#34;</span><span class=o>)</span> <span class=o>||</span> <span class=n>fileSeparator</span><span class=o>.</span><span class=na>equals</span><span class=o>(</span><span class=s>&#34;\\&#34;</span><span class=o>));</span>
 
-                    <span class=k>if</span> <span class=o>(</span><span class=n>isFolder</span><span class=o>)</span><span class=o>{</span>
+                    <span class=k>if</span> <span class=o>(</span><span class=n>isFolder</span><span class=o>){</span>
 
-                        <span class=n>dir</span> <span class=o>=</span> <span class=n>dir</span><span class=o>.</span><span class=na>substring</span><span class=o>(</span><span class=n>0</span><span class=o>,</span><span class=n>dir</span><span class=o>.</span><span class=na>lastIndexOf</span><span class=o>(</span><span class=n>fileSeparator</span><span class=o>)</span><span class=o>+</span><span class=n>1</span><span class=o>)</span><span class=o>;</span>
-                        <span class=n>dir</span> <span class=o>=</span> <span class=o>(</span><span class=n>file</span><span class=o>.</span><span class=na>getParent</span><span class=o>(</span><span class=o>)</span> <span class=o>=</span><span class=o>=</span> <span class=kc>null</span><span class=o>?</span> <span class=s>&#34;&#34;</span><span class=o>:</span><span class=n>file</span><span class=o>.</span><span class=na>getParent</span><span class=o>(</span><span class=o>)</span><span class=o>+</span> <span class=n>File</span><span class=o>.</span><span class=na>separator</span><span class=o>)</span> <span class=o>+</span> <span class=n>dir</span><span class=o>;</span>
+                        <span class=n>dir</span> <span class=o>=</span> <span class=n>dir</span><span class=o>.</span><span class=na>substring</span><span class=o>(</span><span class=n>0</span><span class=o>,</span><span class=n>dir</span><span class=o>.</span><span class=na>lastIndexOf</span><span class=o>(</span><span class=n>fileSeparator</span><span class=o>)+</span><span class=n>1</span><span class=o>);</span>
+                        <span class=n>dir</span> <span class=o>=</span> <span class=o>(</span><span class=n>file</span><span class=o>.</span><span class=na>getParent</span><span class=o>()</span> <span class=o>==</span> <span class=kc>null</span><span class=o>?</span> <span class=s>&#34;&#34;</span><span class=o>:</span><span class=n>file</span><span class=o>.</span><span class=na>getParent</span><span class=o>()+</span> <span class=n>File</span><span class=o>.</span><span class=na>separator</span><span class=o>)</span> <span class=o>+</span> <span class=n>dir</span><span class=o>;</span>
 
-                        <span class=o>(</span><span class=k>new</span> <span class=n>File</span><span class=o>(</span><span class=n>dir</span><span class=o>)</span><span class=o>)</span><span class=o>.</span><span class=na>mkdirs</span><span class=o>(</span><span class=o>)</span><span class=o>;</span>
+                        <span class=o>(</span><span class=k>new</span> <span class=n>File</span><span class=o>(</span><span class=n>dir</span><span class=o>)).</span><span class=na>mkdirs</span><span class=o>();</span>
 
                         <span class=k>continue</span><span class=o>;</span>
 
                     <span class=o>}</span>
 
-                <span class=o>}</span><span class=k>catch</span><span class=o>(</span><span class=n>Exception</span> <span class=n>e</span><span class=o>)</span><span class=o>{</span><span class=o>}</span><span class=k>finally</span><span class=o>{</span><span class=o>}</span>
+                <span class=o>}</span><span class=k>catch</span><span class=o>(</span><span class=n>Exception</span> <span class=n>e</span><span class=o>){}</span><span class=k>finally</span><span class=o>{}</span>
 
-                <span class=n>System</span><span class=o>.</span><span class=na>out</span><span class=o>.</span><span class=na>println</span><span class=o>(</span><span class=s>&#34;dir:&#34;</span> <span class=o>+</span> <span class=n>dir</span><span class=o>)</span><span class=o>;</span>
+                <span class=n>System</span><span class=o>.</span><span class=na>out</span><span class=o>.</span><span class=na>println</span><span class=o>(</span><span class=s>&#34;dir:&#34;</span> <span class=o>+</span> <span class=n>dir</span><span class=o>);</span>
 
-                <span class=n>fos</span> <span class=o>=</span> <span class=k>new</span> <span class=n>FileOutputStream</span><span class=o>(</span><span class=o>(</span><span class=n>file</span><span class=o>.</span><span class=na>getParent</span><span class=o>(</span><span class=o>)</span> <span class=o>=</span><span class=o>=</span> <span class=kc>null</span><span class=o>?</span> <span class=s>&#34;&#34;</span><span class=o>:</span><span class=n>file</span><span class=o>.</span><span class=na>getParent</span><span class=o>(</span><span class=o>)</span><span class=o>+</span> <span class=n>File</span><span class=o>.</span><span class=na>separator</span><span class=o>)</span> <span class=o>+</span> <span class=n>entry</span><span class=o>.</span><span class=na>getName</span><span class=o>(</span><span class=o>)</span><span class=o>)</span><span class=o>;</span>
+                <span class=n>fos</span> <span class=o>=</span> <span class=k>new</span> <span class=n>FileOutputStream</span><span class=o>((</span><span class=n>file</span><span class=o>.</span><span class=na>getParent</span><span class=o>()</span> <span class=o>==</span> <span class=kc>null</span><span class=o>?</span> <span class=s>&#34;&#34;</span><span class=o>:</span><span class=n>file</span><span class=o>.</span><span class=na>getParent</span><span class=o>()+</span> <span class=n>File</span><span class=o>.</span><span class=na>separator</span><span class=o>)</span> <span class=o>+</span> <span class=n>entry</span><span class=o>.</span><span class=na>getName</span><span class=o>());</span>
 
                 <span class=kt>int</span> <span class=n>len</span><span class=o>=</span><span class=n>0</span><span class=o>;</span>
-                <span class=k>while</span> <span class=o>(</span><span class=o>(</span><span class=n>len</span> <span class=o>=</span> <span class=n>zis</span><span class=o>.</span><span class=na>read</span><span class=o>(</span><span class=n>buffer</span><span class=o>)</span><span class=o>)</span><span class=o>&gt;</span><span class=n>0</span><span class=o>)</span> <span class=o>{</span>
-                    <span class=n>fos</span><span class=o>.</span><span class=na>write</span><span class=o>(</span><span class=n>buffer</span><span class=o>,</span><span class=n>0</span><span class=o>,</span><span class=n>len</span><span class=o>)</span><span class=o>;</span>
+                <span class=k>while</span> <span class=o>((</span><span class=n>len</span> <span class=o>=</span> <span class=n>zis</span><span class=o>.</span><span class=na>read</span><span class=o>(</span><span class=n>buffer</span><span class=o>))&gt;</span><span class=n>0</span><span class=o>)</span> <span class=o>{</span>
+                    <span class=n>fos</span><span class=o>.</span><span class=na>write</span><span class=o>(</span><span class=n>buffer</span><span class=o>,</span><span class=n>0</span><span class=o>,</span><span class=n>len</span><span class=o>);</span>
                 <span class=o>}</span>
-                <span class=n>fos</span><span class=o>.</span><span class=na>close</span><span class=o>(</span><span class=o>)</span><span class=o>;</span>
+                <span class=n>fos</span><span class=o>.</span><span class=na>close</span><span class=o>();</span>
             <span class=o>}</span>
 
-            <span class=n>zis</span><span class=o>.</span><span class=na>close</span><span class=o>(</span><span class=o>)</span><span class=o>;</span>
+            <span class=n>zis</span><span class=o>.</span><span class=na>close</span><span class=o>();</span>
 
             <span class=k>return</span> <span class=kc>true</span><span class=o>;</span>
 
-        <span class=o>}</span><span class=k>catch</span> <span class=o>(</span><span class=n>IOException</span> <span class=n>ioe</span><span class=o>)</span><span class=o>{</span>
+        <span class=o>}</span><span class=k>catch</span> <span class=o>(</span><span class=n>IOException</span> <span class=n>ioe</span><span class=o>){</span>
 
-            <span class=n>ioe</span><span class=o>.</span><span class=na>printStackTrace</span><span class=o>(</span><span class=o>)</span><span class=o>;</span>
+            <span class=n>ioe</span><span class=o>.</span><span class=na>printStackTrace</span><span class=o>();</span>
             <span class=k>return</span> <span class=kc>false</span><span class=o>;</span>
 
         <span class=o>}</span><span class=k>finally</span><span class=o>{</span>
@@ -181,42 +181,42 @@ gtag('js',new Date());gtag('config','UA-65400010-1');</script><script data-ad-cl
     <span class=o>}</span>
 
     <span class=c1>//Fills filesList with file name and their paths
-</span><span class=c1></span>    <span class=kd>private</span> <span class=kt>void</span> <span class=nf>generateFileAndFolderList</span><span class=o>(</span><span class=n>File</span> <span class=n>node</span><span class=o>)</span><span class=o>{</span>
+</span><span class=c1></span>    <span class=kd>private</span> <span class=kt>void</span> <span class=nf>generateFileAndFolderList</span><span class=o>(</span><span class=n>File</span> <span class=n>node</span><span class=o>){</span>
 
         <span class=c1>// Add file only
-</span><span class=c1></span>        <span class=k>if</span> <span class=o>(</span><span class=n>node</span><span class=o>.</span><span class=na>isFile</span><span class=o>(</span><span class=o>)</span><span class=o>)</span><span class=o>{</span>
+</span><span class=c1></span>        <span class=k>if</span> <span class=o>(</span><span class=n>node</span><span class=o>.</span><span class=na>isFile</span><span class=o>()){</span>
 
-            <span class=n>fileList</span><span class=o>.</span><span class=na>add</span><span class=o>(</span><span class=n>generateZipEntry</span><span class=o>(</span><span class=n>node</span><span class=o>.</span><span class=na>getAbsoluteFile</span><span class=o>(</span><span class=o>)</span><span class=o>.</span><span class=na>toString</span><span class=o>(</span><span class=o>)</span><span class=o>)</span><span class=o>)</span><span class=o>;</span>
+            <span class=n>fileList</span><span class=o>.</span><span class=na>add</span><span class=o>(</span><span class=n>generateZipEntry</span><span class=o>(</span><span class=n>node</span><span class=o>.</span><span class=na>getAbsoluteFile</span><span class=o>().</span><span class=na>toString</span><span class=o>()));</span>
         <span class=o>}</span>
 
-        <span class=k>if</span> <span class=o>(</span><span class=n>node</span><span class=o>.</span><span class=na>isDirectory</span><span class=o>(</span><span class=o>)</span><span class=o>)</span><span class=o>{</span>
+        <span class=k>if</span> <span class=o>(</span><span class=n>node</span><span class=o>.</span><span class=na>isDirectory</span><span class=o>()){</span>
 
-            <span class=n>String</span> <span class=n>dir</span> <span class=o>=</span> <span class=n>node</span><span class=o>.</span><span class=na>getAbsoluteFile</span><span class=o>(</span><span class=o>)</span><span class=o>.</span><span class=na>toString</span><span class=o>(</span><span class=o>)</span><span class=o>;</span>
-            <span class=n>fileList</span><span class=o>.</span><span class=na>add</span><span class=o>(</span><span class=n>dir</span><span class=o>.</span><span class=na>substring</span><span class=o>(</span><span class=n>sourceFolder</span><span class=o>.</span><span class=na>length</span><span class=o>(</span><span class=o>)</span><span class=o>,</span> <span class=n>dir</span><span class=o>.</span><span class=na>length</span><span class=o>(</span><span class=o>)</span><span class=o>)</span> <span class=o>+</span> <span class=n>File</span><span class=o>.</span><span class=na>separator</span><span class=o>)</span><span class=o>;</span>
+            <span class=n>String</span> <span class=n>dir</span> <span class=o>=</span> <span class=n>node</span><span class=o>.</span><span class=na>getAbsoluteFile</span><span class=o>().</span><span class=na>toString</span><span class=o>();</span>
+            <span class=n>fileList</span><span class=o>.</span><span class=na>add</span><span class=o>(</span><span class=n>dir</span><span class=o>.</span><span class=na>substring</span><span class=o>(</span><span class=n>sourceFolder</span><span class=o>.</span><span class=na>length</span><span class=o>(),</span> <span class=n>dir</span><span class=o>.</span><span class=na>length</span><span class=o>())</span> <span class=o>+</span> <span class=n>File</span><span class=o>.</span><span class=na>separator</span><span class=o>);</span>
 
-            <span class=n>String</span><span class=o>[</span><span class=o>]</span> <span class=n>subNode</span> <span class=o>=</span> <span class=n>node</span><span class=o>.</span><span class=na>list</span><span class=o>(</span><span class=o>)</span><span class=o>;</span>
-            <span class=k>for</span> <span class=o>(</span><span class=n>String</span> <span class=n>fileOrFolderName</span> <span class=o>:</span> <span class=n>subNode</span><span class=o>)</span><span class=o>{</span>
+            <span class=n>String</span><span class=o>[]</span> <span class=n>subNode</span> <span class=o>=</span> <span class=n>node</span><span class=o>.</span><span class=na>list</span><span class=o>();</span>
+            <span class=k>for</span> <span class=o>(</span><span class=n>String</span> <span class=n>fileOrFolderName</span> <span class=o>:</span> <span class=n>subNode</span><span class=o>){</span>
 
-                <span class=n>generateFileAndFolderList</span><span class=o>(</span><span class=k>new</span> <span class=n>File</span><span class=o>(</span><span class=n>node</span><span class=o>,</span> <span class=n>fileOrFolderName</span><span class=o>)</span><span class=o>)</span><span class=o>;</span>
+                <span class=n>generateFileAndFolderList</span><span class=o>(</span><span class=k>new</span> <span class=n>File</span><span class=o>(</span><span class=n>node</span><span class=o>,</span> <span class=n>fileOrFolderName</span><span class=o>));</span>
             <span class=o>}</span>
         <span class=o>}</span>
     <span class=o>}</span>
 
     <span class=c1>//Generate file name based on source folder
-</span><span class=c1></span>    <span class=kd>private</span> <span class=n>String</span> <span class=nf>generateZipEntry</span><span class=o>(</span><span class=n>String</span> <span class=n>file</span><span class=o>)</span><span class=o>{</span>
+</span><span class=c1></span>    <span class=kd>private</span> <span class=n>String</span> <span class=nf>generateZipEntry</span><span class=o>(</span><span class=n>String</span> <span class=n>file</span><span class=o>){</span>
 
-        <span class=k>return</span> <span class=n>file</span><span class=o>.</span><span class=na>substring</span><span class=o>(</span><span class=n>sourceFolder</span><span class=o>.</span><span class=na>length</span><span class=o>(</span><span class=o>)</span><span class=o>,</span> <span class=n>file</span><span class=o>.</span><span class=na>length</span><span class=o>(</span><span class=o>)</span><span class=o>)</span><span class=o>;</span>
+        <span class=k>return</span> <span class=n>file</span><span class=o>.</span><span class=na>substring</span><span class=o>(</span><span class=n>sourceFolder</span><span class=o>.</span><span class=na>length</span><span class=o>(),</span> <span class=n>file</span><span class=o>.</span><span class=na>length</span><span class=o>());</span>
     <span class=o>}</span>
 
     <span class=c1>//Updates source folder based on source type: File or Folder
-</span><span class=c1></span>    <span class=kd>private</span> <span class=kt>void</span> <span class=nf>updateSourceFolder</span><span class=o>(</span><span class=n>File</span> <span class=n>node</span><span class=o>)</span><span class=o>{</span>
+</span><span class=c1></span>    <span class=kd>private</span> <span class=kt>void</span> <span class=nf>updateSourceFolder</span><span class=o>(</span><span class=n>File</span> <span class=n>node</span><span class=o>){</span>
 
-        <span class=k>if</span> <span class=o>(</span><span class=n>node</span><span class=o>.</span><span class=na>isFile</span><span class=o>(</span><span class=o>)</span> <span class=o>|</span><span class=o>|</span> <span class=n>node</span><span class=o>.</span><span class=na>isDirectory</span><span class=o>(</span><span class=o>)</span><span class=o>)</span><span class=o>{</span>
+        <span class=k>if</span> <span class=o>(</span><span class=n>node</span><span class=o>.</span><span class=na>isFile</span><span class=o>()</span> <span class=o>||</span> <span class=n>node</span><span class=o>.</span><span class=na>isDirectory</span><span class=o>()){</span>
 
-            <span class=n>String</span> <span class=n>sf</span> <span class=o>=</span> <span class=n>node</span><span class=o>.</span><span class=na>getAbsoluteFile</span><span class=o>(</span><span class=o>)</span><span class=o>.</span><span class=na>toString</span><span class=o>(</span><span class=o>)</span><span class=o>;</span>
+            <span class=n>String</span> <span class=n>sf</span> <span class=o>=</span> <span class=n>node</span><span class=o>.</span><span class=na>getAbsoluteFile</span><span class=o>().</span><span class=na>toString</span><span class=o>();</span>
 
-            <span class=n>sourceFolder</span> <span class=o>=</span> <span class=n>sf</span><span class=o>.</span><span class=na>substring</span><span class=o>(</span><span class=n>0</span><span class=o>,</span><span class=o>(</span><span class=n>sf</span><span class=o>.</span><span class=na>lastIndexOf</span><span class=o>(</span><span class=s>&#34;/&#34;</span><span class=o>)</span><span class=o>&gt;</span><span class=n>0</span><span class=o>?</span><span class=n>sf</span><span class=o>.</span><span class=na>lastIndexOf</span><span class=o>(</span><span class=s>&#34;/&#34;</span><span class=o>)</span><span class=o>:</span><span class=n>sf</span><span class=o>.</span><span class=na>lastIndexOf</span><span class=o>(</span><span class=s>&#34;\\&#34;</span><span class=o>)</span><span class=o>)</span><span class=o>)</span><span class=o>;</span>
-            <span class=n>sourceFolder</span> <span class=o>+</span><span class=o>=</span> <span class=n>File</span><span class=o>.</span><span class=na>separator</span><span class=o>;</span>
+            <span class=n>sourceFolder</span> <span class=o>=</span> <span class=n>sf</span><span class=o>.</span><span class=na>substring</span><span class=o>(</span><span class=n>0</span><span class=o>,(</span><span class=n>sf</span><span class=o>.</span><span class=na>lastIndexOf</span><span class=o>(</span><span class=s>&#34;/&#34;</span><span class=o>)&gt;</span><span class=n>0</span><span class=o>?</span><span class=n>sf</span><span class=o>.</span><span class=na>lastIndexOf</span><span class=o>(</span><span class=s>&#34;/&#34;</span><span class=o>):</span><span class=n>sf</span><span class=o>.</span><span class=na>lastIndexOf</span><span class=o>(</span><span class=s>&#34;\\&#34;</span><span class=o>)));</span>
+            <span class=n>sourceFolder</span> <span class=o>+=</span> <span class=n>File</span><span class=o>.</span><span class=na>separator</span><span class=o>;</span>
 
         <span class=o>}</span> <span class=k>else</span>
             <span class=n>sourceFolder</span><span class=o>=</span><span class=kc>null</span><span class=o>;</span><span class=c1>//the file does not exists
@@ -231,17 +231,17 @@ gtag('js',new Date());gtag('config','UA-65400010-1');</script><script data-ad-cl
 
 <span class=kd>public</span> <span class=kd>class</span> <span class=nc>test</span> <span class=o>{</span>
 
-    <span class=kd>public</span> <span class=kd>static</span> <span class=kt>void</span> <span class=nf>main</span><span class=o>(</span><span class=n>String</span><span class=o>[</span><span class=o>]</span> <span class=n>args</span><span class=o>)</span> <span class=o>{</span>
+    <span class=kd>public</span> <span class=kd>static</span> <span class=kt>void</span> <span class=nf>main</span><span class=o>(</span><span class=n>String</span><span class=o>[]</span> <span class=n>args</span><span class=o>)</span> <span class=o>{</span>
 
         <span class=n>String</span> <span class=n>fileDirectory</span> <span class=o>=</span> <span class=s>&#34;/Users/dlanza/Desktop/Test&#34;</span><span class=o>;</span>
         <span class=n>String</span> <span class=n>zipDirectory</span> <span class=o>=</span> <span class=s>&#34;/Users/dlanza/Desktop/Test.zip&#34;</span><span class=o>;</span>
 
-        <span class=n>ZipDirectory</span> <span class=n>zip</span> <span class=o>=</span> <span class=k>new</span> <span class=n>ZipDirectory</span> <span class=o>(</span><span class=n>fileDirectory</span><span class=o>,</span> <span class=n>zipDirectory</span><span class=o>)</span><span class=o>;</span>
+        <span class=n>ZipDirectory</span> <span class=n>zip</span> <span class=o>=</span> <span class=k>new</span> <span class=n>ZipDirectory</span> <span class=o>(</span><span class=n>fileDirectory</span><span class=o>,</span> <span class=n>zipDirectory</span><span class=o>);</span>
 
         <span class=k>try</span> <span class=o>{</span>
-            <span class=n>zip</span><span class=o>.</span><span class=na>zip</span><span class=o>(</span><span class=o>)</span><span class=o>;</span>
+            <span class=n>zip</span><span class=o>.</span><span class=na>zip</span><span class=o>();</span>
         <span class=o>}</span> <span class=k>catch</span> <span class=o>(</span><span class=n>IOException</span> <span class=n>e</span><span class=o>)</span> <span class=o>{</span>
-            <span class=n>e</span><span class=o>.</span><span class=na>printStackTrace</span><span class=o>(</span><span class=o>)</span><span class=o>;</span>
+            <span class=n>e</span><span class=o>.</span><span class=na>printStackTrace</span><span class=o>();</span>
         <span class=o>}</span>
     <span class=o>}</span>
 <span class=o>}</span>
@@ -270,16 +270,16 @@ gtag('js',new Date());gtag('config','UA-65400010-1');</script><script data-ad-cl
 
 <span class=kd>public</span> <span class=kd>class</span> <span class=nc>test</span> <span class=o>{</span>
 
-    <span class=kd>public</span> <span class=kd>static</span> <span class=kt>void</span> <span class=nf>main</span><span class=o>(</span><span class=n>String</span><span class=o>[</span><span class=o>]</span> <span class=n>args</span><span class=o>)</span> <span class=o>{</span>
+    <span class=kd>public</span> <span class=kd>static</span> <span class=kt>void</span> <span class=nf>main</span><span class=o>(</span><span class=n>String</span><span class=o>[]</span> <span class=n>args</span><span class=o>)</span> <span class=o>{</span>
 
         <span class=n>String</span> <span class=n>zipDirectory</span> <span class=o>=</span> <span class=s>&#34;/Users/dlanza/Desktop/Test.zip&#34;</span><span class=o>;</span>
 
-        <span class=n>ZipDirectory</span> <span class=n>zip</span> <span class=o>=</span> <span class=k>new</span> <span class=n>ZipDirectory</span> <span class=o>(</span><span class=n>zipDirectory</span><span class=o>)</span><span class=o>;</span>
+        <span class=n>ZipDirectory</span> <span class=n>zip</span> <span class=o>=</span> <span class=k>new</span> <span class=n>ZipDirectory</span> <span class=o>(</span><span class=n>zipDirectory</span><span class=o>);</span>
 
         <span class=k>try</span> <span class=o>{</span>
-            <span class=n>zip</span><span class=o>.</span><span class=na>unzip</span><span class=o>(</span><span class=o>)</span><span class=o>;</span>
+            <span class=n>zip</span><span class=o>.</span><span class=na>unzip</span><span class=o>();</span>
         <span class=o>}</span> <span class=k>catch</span> <span class=o>(</span><span class=n>IOException</span> <span class=n>e</span><span class=o>)</span> <span class=o>{</span>
-            <span class=n>e</span><span class=o>.</span><span class=na>printStackTrace</span><span class=o>(</span><span class=o>)</span><span class=o>;</span>
+            <span class=n>e</span><span class=o>.</span><span class=na>printStackTrace</span><span class=o>();</span>
         <span class=o>}</span>
     <span class=o>}</span>
 <span class=o>}</span>
@@ -303,4 +303,4 @@ These Java classes will let us calculate MD5 checksum for any single file.
 Maven dependencies &lt;dependencies> &lt;dependency> &lt;groupId>commons-codec&lt;/groupId> &lt;artifactId>commons-codec&lt;/artifactId> &lt;version>1.10&lt;/version> &lt;/dependency> &lt;dependency> &lt;groupId>commons-io&lt;/groupId> &lt;artifactId>commons-io&lt;/artifactId> &lt;version>2.4&lt;/version> &lt;/dependency> &lt;/dependencies> MD5 Java class package com.dalanz.file; import java.io.File; import java.io.FileInputStream; import java.io.IOException; import org.</p><a href=https://dalanzg.github.io/tips-tutorials/posts/2016/03/22/how-to-get-md5-checksum-for-a-file-in-java/ class="btn btn-primary">Read more</a></div><div class="col-md mb-3"><p class="lead mb-0"><a class=text-body href=https://dalanzg.github.io/tips-tutorials/posts/2016/03/21/how-to-set-java_home-on-mac-os-x/>How to set JAVA_HOME on Mac OS X</a></p><p class="font-weight-light mt-3">If you are planing to develop Java Apps on your Mac, you may have to set $JAVA_HOME environment variable.
 Install the latest Java Virtual Machine Go to How to install JDK on Mac OS X) to install a new Java Virtual Machine. Download the latest Java JDK package from Oracle.
 Check Java Virtual Machines List directories in the following root -> /Library/Java/JavaVirtualMachines
-$ ls -l /Library/Java/JavaVirtualMachines drwxr-xr-x 3 root wheel 102 23 dic 20:36 jdk1.</p><a href=https://dalanzg.github.io/tips-tutorials/posts/2016/03/21/how-to-set-java_home-on-mac-os-x/ class="btn btn-primary">Read more</a></div></div></div></div><footer class=blog-footer><p><nav class="nav justify-content-center"><a class=nav-link href=https://dalanzg.github.io/tips-tutorials/index.xml target=_blank><i class="fas fa-rss-square fa-2x"></i></a><a class=nav-link href=https://twitter.com/dalanzg target=_blank><i class="fab fa-twitter fa-2x"></i></a><a class=nav-link href=https://github.com/dalanzg target=_blank><i class="fab fa-github fa-2x"></i></a><a class=nav-link href=https://www.linkedin.com/in/danilanza target=_blank><i class="fab fa-linkedin fa-2x"></i></a></nav></p><p class=text-muted>Copyright &copy; Tips and Tutorials 2020</p><p class=text-muted><small>All rights reserved. Blog powered by <a href=https://gohugo.io/>Hugo</a> and hosted on <a href=https://www.github.com>GitHub.</a></small></p><p class=text-muted><small><a href=https://opensource.org/licenses/MIT>MIT License</a></small></p></footer><script src=https://dalanzg.github.io/tips-tutorials/js/bundle.min.3c076178e0edaadba36f58dbf916f5e1e5e429a0478e7b62e8e0b02a1b6cede2.js></script></body></html>
+$ ls -l /Library/Java/JavaVirtualMachines drwxr-xr-x 3 root wheel 102 23 dic 20:36 jdk1.</p><a href=https://dalanzg.github.io/tips-tutorials/posts/2016/03/21/how-to-set-java_home-on-mac-os-x/ class="btn btn-primary">Read more</a></div></div></div></div><footer class=blog-footer><p><nav class="nav justify-content-center"><a class=nav-link href=https://dalanzg.github.io/tips-tutorials/index.xml target=_blank><i class="fas fa-rss-square fa-2x"></i></a><a class=nav-link href=https://twitter.com/dalanzg target=_blank><i class="fab fa-twitter fa-2x"></i></a><a class=nav-link href=https://github.com/dalanzg target=_blank><i class="fab fa-github fa-2x"></i></a><a class=nav-link href=https://www.linkedin.com/in/danilanza target=_blank><i class="fab fa-linkedin fa-2x"></i></a></nav></p><p class=text-muted>Copyright &copy; Tips and Tutorials 2020</p><p class=text-muted><small>All rights reserved. Blog powered by <a href=https://gohugo.io/>Hugo</a> and hosted on <a href=https://www.github.com>GitHub.</a></small></p><p class=text-muted><small><a href=https://opensource.org/licenses/MIT>MIT License</a></small></p></footer><script src=https://dalanzg.github.io/tips-tutorials/js/bundle.min.b6d760cd86cd83445e08066f8304ca40b0cc4ab404b9c4c2591be0cdd101571c.js></script></body></html>
